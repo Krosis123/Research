@@ -1,0 +1,47 @@
+{
+  "format": "synchronous_boolean_network_v1",
+  "model_type": "deterministic_synchronous",
+  "name": "skewed_10",
+  "n": 10,
+  "node_order": [
+    "g00",
+    "g01",
+    "g02",
+    "g03",
+    "g04",
+    "g05",
+    "g06",
+    "g07",
+    "g08",
+    "g09"
+  ],
+  "rules": {
+    "g00": "(g00 & g01)",
+    "g01": "(g00 & g01)",
+    "g02": "(g00 & g01)",
+    "g03": "~(g00 & g01)",
+    "g04": "(g00 & g01)",
+    "g05": "~(g00 & g01)",
+    "g06": "(g00 & g01)",
+    "g07": "~(g00 & g01)",
+    "g08": "(g00 & g01)",
+    "g09": "~(g00 & g01)"
+  },
+  "transient_bound_exact": 1,
+  "attractor_truth": [
+    {
+      "cycle": [
+        "0001010101"
+      ],
+      "basin_size": 768
+    },
+    {
+      "cycle": [
+        "1110101010"
+      ],
+      "basin_size": 256
+    }
+  ],
+  "provenance": "synthetic except rossini4 from uploaded reproduction",
+  "note": "Ground-truth data must be excluded from the quantum solver input."
+}

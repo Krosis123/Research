@@ -1,0 +1,57 @@
+{
+  "format": "synchronous_boolean_network_v1",
+  "model_type": "deterministic_synchronous",
+  "name": "long_chain_15",
+  "n": 15,
+  "node_order": [
+    "g00",
+    "g01",
+    "g02",
+    "g03",
+    "g04",
+    "g05",
+    "g06",
+    "g07",
+    "g08",
+    "g09",
+    "g10",
+    "g11",
+    "g12",
+    "g13",
+    "g14"
+  ],
+  "rules": {
+    "g00": "g00",
+    "g01": "g00",
+    "g02": "g01",
+    "g03": "g02",
+    "g04": "g03",
+    "g05": "g04",
+    "g06": "g05",
+    "g07": "g06",
+    "g08": "g07",
+    "g09": "g08",
+    "g10": "g09",
+    "g11": "g10",
+    "g12": "g11",
+    "g13": "g12",
+    "g14": "g13"
+  },
+  "transient_bound_exact": 14,
+  "attractor_truth": [
+    {
+      "cycle": [
+        "000000000000000"
+      ],
+      "basin_size": 16384
+    },
+    {
+      "cycle": [
+        "111111111111111"
+      ],
+      "basin_size": 16384
+    }
+  ],
+  "provenance": "synthetic except rossini4 from uploaded reproduction",
+  "note": "Ground-truth data must be excluded from the quantum solver input."
+}

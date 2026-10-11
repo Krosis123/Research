@@ -1,0 +1,29 @@
+{
+  "command": [
+    "/mnt/data/ross_work/quantum_benchmark/ross_bench/runner.py",
+    "--nodes",
+    "4",
+    "--families",
+    "rossini4",
+    "--engine",
+    "reduced",
+    "--counting-mode",
+    "exact",
+    "--repetitions",
+    "1",
+    "--shots",
+    "64",
+    "--output",
+    "results/legacy_regression.csv"
+  ],
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "memory_note": "peak_rss_mib is cumulative high-water RSS of the entire process; use per-job subprocess isolation for per-case peak.",
+  "engine_note": "reduced is an exact ideal basin-phase mathematical surrogate, not a full n(T+1) quantum circuit simulation.",
+  "counting_note": "exact uses classical ground truth M; qpe_ideal uses the ideal QPE distribution as an estimator, no QPE circuit executed.",
+  "noise_note": "readout_flip is an independent final measurement bit-flip proxy, NOT a hardware-calibrated circuit noise model.",
+  "source_notes": "Original four-gene Qiskit source untouched in original/ directory.",
+  "discovery_mode": "legacy",
+  "completion_note": "adaptive_qpe is HEURISTIC; classical_audit is exact but O(2^n*T). T is user specified.",
+  "rows": 1
+}

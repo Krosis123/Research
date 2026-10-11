@@ -1,0 +1,11 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env/Implementation_ross/Ross.zip
+/ATLANTIS/
+/ATLANTIS/
+/Implementation_ross/Ross.zip
+__pycache__/
+.venv/
+.env

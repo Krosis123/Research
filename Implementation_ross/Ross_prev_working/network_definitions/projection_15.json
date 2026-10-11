@@ -1,0 +1,93 @@
+{
+  "format": "synchronous_boolean_network_v1",
+  "model_type": "deterministic_synchronous",
+  "name": "projection_15",
+  "n": 15,
+  "node_order": [
+    "g00",
+    "g01",
+    "g02",
+    "g03",
+    "g04",
+    "g05",
+    "g06",
+    "g07",
+    "g08",
+    "g09",
+    "g10",
+    "g11",
+    "g12",
+    "g13",
+    "g14"
+  ],
+  "rules": {
+    "g00": "g00",
+    "g01": "g01",
+    "g02": "g02",
+    "g03": "g00 & g01",
+    "g04": "g00 | g02",
+    "g05": "g01 ^ g02",
+    "g06": "~g00",
+    "g07": "g00 & ~g02",
+    "g08": "g00 ^ g01",
+    "g09": "g01 | g02",
+    "g10": "g00 & g01",
+    "g11": "g00 | g02",
+    "g12": "g01 ^ g02",
+    "g13": "~g00",
+    "g14": "g00 & ~g02"
+  },
+  "transient_bound_exact": 1,
+  "attractor_truth": [
+    {
+      "cycle": [
+        "000000100000010"
+      ],
+      "basin_size": 4096
+    },
+    {
+      "cycle": [
+        "001011100101110"
+      ],
+      "basin_size": 4096
+    },
+    {
+      "cycle": [
+        "010001101100110"
+      ],
+      "basin_size": 4096
+    },
+    {
+      "cycle": [
+        "011010101101010"
+      ],
+      "basin_size": 4096
+    },
+    {
+      "cycle": [
+        "100010011001001"
+      ],
+      "basin_size": 4096
+    },
+    {
+      "cycle": [
+        "101011001101100"
+      ],
+      "basin_size": 4096
+    },
+    {
+      "cycle": [
+        "110111010111101"
+      ],
+      "basin_size": 4096
+    },
+    {
+      "cycle": [
+        "111110000111000"
+      ],
+      "basin_size": 4096
+    }
+  ],
+  "provenance": "synthetic except rossini4 from uploaded reproduction",
+  "note": "Ground-truth data must be excluded from the quantum solver input."
+}

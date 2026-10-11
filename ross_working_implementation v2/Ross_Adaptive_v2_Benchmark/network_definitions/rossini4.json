@@ -1,0 +1,53 @@
+{
+  "format": "synchronous_boolean_network_v1",
+  "model_type": "deterministic_synchronous",
+  "name": "rossini4",
+  "n": 4,
+  "node_order": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "rules": {
+    "A": "A & D",
+    "B": "A & B",
+    "C": "C & D",
+    "D": "B | C"
+  },
+  "transient_bound_exact": 3,
+  "attractor_truth": [
+    {
+      "cycle": [
+        "0000"
+      ],
+      "basin_size": 11
+    },
+    {
+      "cycle": [
+        "0011"
+      ],
+      "basin_size": 2
+    },
+    {
+      "cycle": [
+        "1011"
+      ],
+      "basin_size": 1
+    },
+    {
+      "cycle": [
+        "1101"
+      ],
+      "basin_size": 1
+    },
+    {
+      "cycle": [
+        "1111"
+      ],
+      "basin_size": 1
+    }
+  ],
+  "provenance": "synthetic except rossini4 from uploaded reproduction",
+  "note": "Ground-truth data must be excluded from the quantum solver input."
+}

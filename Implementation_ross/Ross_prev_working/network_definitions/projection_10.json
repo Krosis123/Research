@@ -1,0 +1,83 @@
+{
+  "format": "synchronous_boolean_network_v1",
+  "model_type": "deterministic_synchronous",
+  "name": "projection_10",
+  "n": 10,
+  "node_order": [
+    "g00",
+    "g01",
+    "g02",
+    "g03",
+    "g04",
+    "g05",
+    "g06",
+    "g07",
+    "g08",
+    "g09"
+  ],
+  "rules": {
+    "g00": "g00",
+    "g01": "g01",
+    "g02": "g02",
+    "g03": "g00 & g01",
+    "g04": "g00 | g02",
+    "g05": "g01 ^ g02",
+    "g06": "~g00",
+    "g07": "g00 & ~g02",
+    "g08": "g00 ^ g01",
+    "g09": "g01 | g02"
+  },
+  "transient_bound_exact": 1,
+  "attractor_truth": [
+    {
+      "cycle": [
+        "0000001000"
+      ],
+      "basin_size": 128
+    },
+    {
+      "cycle": [
+        "0010111001"
+      ],
+      "basin_size": 128
+    },
+    {
+      "cycle": [
+        "0100011011"
+      ],
+      "basin_size": 128
+    },
+    {
+      "cycle": [
+        "0110101011"
+      ],
+      "basin_size": 128
+    },
+    {
+      "cycle": [
+        "1000100110"
+      ],
+      "basin_size": 128
+    },
+    {
+      "cycle": [
+        "1010110011"
+      ],
+      "basin_size": 128
+    },
+    {
+      "cycle": [
+        "1101110101"
+      ],
+      "basin_size": 128
+    },
+    {
+      "cycle": [
+        "1111100001"
+      ],
+      "basin_size": 128
+    }
+  ],
+  "provenance": "synthetic except rossini4 from uploaded reproduction",
+  "note": "Ground-truth data must be excluded from the quantum solver input."
+}
