@@ -1,0 +1,455 @@
+
+FILE Toolbox\Generate Network\GenerateNetwork.m
+function varargout = GenerateNetwork(varargin)
+gui_Singleton = 1;
+gui_State = struct('gui_Name',       mfilename, ...
+    'gui_Singleton',  gui_Singleton, ...
+    'gui_OpeningFcn', @GenerateNetwork_OpeningFcn, ...
+    'gui_OutputFcn',  @GenerateNetwork_OutputFcn, ...
+    'gui_LayoutFcn',  [] , ...
+    'gui_Callback',   []);
+if nargin && ischar(varargin{1})
+    gui_State.gui_Callback = str2func(varargin{1});
+end
+if nargout
+    [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
+else
+    gui_mainfcn(gui_State, varargin{:});
+end
+function GenerateNetwork_OpeningFcn(hObject, eventdata, handles, varargin)
+handles.output = hObject;
+enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+movegui(hObject, 'center');
+guidata(hObject, handles);
+function varargout = GenerateNetwork_OutputFcn(hObject, eventdata, handles)
+varargout{1} = handles.output;
+function Ok_Callback(hObject, eventdata, handles)
+GenerationMethod = get(handles.NetworkType1, 'Value');
+if GenerationMethod == 1
+    set(handles.Console, 'String', 'Method 1 selected.');
+    NetworkInputMenu1;
+    pause(0.4);
+    delete(handles.GenerateNetworkMenu);
+elseif GenerationMethod == 0
+    set(handles.Console, 'String', 'Method 2 selected.');
+    NetworkInputMenu2;
+    pause(0.4);
+    delete(handles.GenerateNetworkMenu);
+end
+function Help_Callback(hObject, eventdata, handles)
+choice = questdlg('Open ATLANTIS GitHub Page?', ...
+    'Help', ...
+    'Yes', 'No', 'No');
+enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+switch choice
+    case 'Yes'
+        url = 'https://github.com/BIRL/ATLANTIS';
+        web(url,'-browser');
+    otherwise
+        return;
+end
+function GenerateNetworkMenu_CloseRequestFcn(hObject, eventdata, handles)
+choice = questdlg('Close this menu?', ...
+                         'Exit', ...
+                         'Yes', 'No', 'No');              
+switch choice
+    case 'Yes'
+        enableATLANTIS;
+        delete(hObject);
+    otherwise
+        enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+        return;
+end
+
+FILE Toolbox\Generate Network\Logic weigths method\NetworkInputMenu1.m
+function varargout = NetworkInputMenu1(varargin)
+gui_Singleton = 1;
+gui_State = struct('gui_Name',       mfilename, ...
+    'gui_Singleton',  gui_Singleton, ...
+    'gui_OpeningFcn', @NetworkInputMenu1_OpeningFcn, ...
+    'gui_OutputFcn',  @NetworkInputMenu1_OutputFcn, ...
+    'gui_LayoutFcn',  [] , ...
+    'gui_Callback',   []);
+if nargin && ischar(varargin{1})
+    gui_State.gui_Callback = str2func(varargin{1});
+end
+if nargout
+    [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
+else
+    gui_mainfcn(gui_State, varargin{:});
+end
+function NetworkInputMenu1_OpeningFcn(hObject, eventdata, handles, varargin)
+handles.output = hObject;
+path = ['Supplementary Functions',filesep, 'Images', filesep];
+OpenFileImage = imread([path, 'OpenFile.jpg']);
+OpenFileImageResize = imresize(OpenFileImage, [20 20]);
+set(handles.BrowseNetworkFile, 'CData', OpenFileImageResize);
+movegui(hObject, 'center');
+guidata(hObject, handles);
+function varargout = NetworkInputMenu1_OutputFcn(hObject, eventdata, handles)
+varargout{1} = handles.output;
+function BrowseNetworkFile_Callback(hObject, eventdata, handles)
+networkFile = get(hObject, 'UserData');
+if ~isempty(networkFile)
+    choice = questdlg(['You already selected "', networkFile{2},...
+        ' ". Do you want to replace this file?'], ...
+        'Exit', 'Yes', 'No', 'No');
+    switch choice
+        case 'Yes'
+            set(hObject, 'UserData', []);
+            set(0, 'UserData', []);
+        otherwise
+            return;
+    end
+end
+[filename, pathname] = uigetfile({'*.txt', 'Plain text'; '*.csv',...
+                            'Comma seperated values file'},...
+                             'Select file containing network information');
+if ( pathname == 0 )
+    set(handles.BrowseFile, 'String', 'Browse file...', 'ForegroundColor', [20 43 140]./250);
+    set(handles.Console, 'String', 'File input cancelled by the user');
+    return;
+end
+myNetwork = NetworkDataStructure();
+myNetwork.NetworkType = 'WeightsBased';
+try
+    bool = parse_NetworkFile(myNetwork, filename, pathname);
+    if bool
+        set(handles.BrowseFile, 'String', filename, 'ForegroundColor', [1 0.3 0.5]);
+        set(handles.Console, 'String', 'Valid file selected. Press ok to continue');
+        set(hObject, 'UserData', {pathname, filename});
+        set(0, 'UserData', myNetwork);
+        myNetwork.ResultFolderName = generate_OutputFolderName(filename);
+        enableDisableFig(findall(0, 'tag','NetworkInputMenu1'), 'off');
+        enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+        uiwait(msgbox('Network successfully generated. Please proceed with network modification, sketching or analysis.'));
+        enableDisableFig(findall(0, 'tag','NetworkInputMenu1'), 'on');
+        bringToFocus(findall(0, 'tag','NetworkInputMenu1'));
+        guidata(hObject, handles);
+    else 
+        undefined;
+    end
+catch
+    set(handles.BrowseFile, 'String', 'Browse file...', 'ForegroundColor', [20 43 140]./250);
+    set(handles.Console, 'String','Invalid file selected. Enter a valid file. To see network file format details press help.');
+    enableDisableFig(findall(0, 'tag','NetworkInputMenu1'), 'off');
+    enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+    uiwait(errordlg('Please input a valid network file. Press help for more information.', 'Invalid Input'));
+    enableDisableFig(findall(0, 'tag','NetworkInputMenu1'), 'on');
+    bringToFocus(findall(0, 'tag','NetworkInputMenu1'));
+end
+guidata(hObject, handles);
+function Ok_Callback(hObject, eventdata, handles)
+myNetwork = get(0, 'UserData');
+if isobject(myNetwork)
+    delete(NetworkInputMenu1);
+    enableATLANTIS;
+    updateGraphics;
+else
+    enableDisableFig(findall(0, 'tag','NetworkInputMenu1'), 'off');
+    enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+    uiwait(errordlg('Please select a network file or press help for more information.', 'Invalid Input'));
+    enableDisableFig(findall(0, 'tag','NetworkInputMenu1'), 'on');
+    bringToFocus(findall(0, 'tag','NetworkInputMenu1'));
+end
+function Help_Callback(hObject, eventdata, handles)
+choice = questdlg('Open ATLANTIS GitHub Page?', ...
+    'Help', ...
+    'Yes', 'No', 'No');
+enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+switch choice
+    case 'Yes'
+        url = 'https://github.com/BIRL/ATLANTIS';
+        web(url,'-browser');
+    otherwise
+        return;
+end
+function NetworkInputMenu1_CloseRequestFcn(hObject, eventdata, handles)
+choice = questdlg('Close this menu?', ...
+                         'Exit', ...
+                         'Yes', 'No', 'No');
+switch choice
+    case 'Yes'
+        enableATLANTIS;
+        delete(hObject);
+    otherwise
+        enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+        return;
+end
+
+FILE Toolbox\Generate Network\Logic weigths method\parse_NetworkFile.m
+function bool = parse_NetworkFile(myNetwork, fileName, filePath)
+try
+    allData = importdata(fullfile(filePath, fileName));
+    numericData = allData.data;
+    textData = allData.textdata;
+    token = {textData{1, :}};
+    token(1) = [];
+    nodeNames = token;
+    numOfNodes = numel(nodeNames);
+    interactionWeights = numericData(1:numOfNodes, :);
+    numericData(1:numOfNodes, :) = [];
+    NaNs = isnan(numericData);
+    basalValues = numericData(~NaNs);
+    if numOfNodes ~= numel(basalValues) || ~iscellstr(nodeNames) || ~isnumeric(interactionWeights) || ~isnumeric(basalValues) || ~all( size(interactionWeights) == [numOfNodes, numOfNodes])
+       undefined/0;
+    end
+    myNetwork.NodeNames = nodeNames;  % cellfun(@(n) lower(strrep(n, ' ', '')), , 'un', 0);
+    myNetwork.EdgeWeights = interactionWeights;
+    myNetwork.BasalValues = basalValues;
+    myNetwork.NodeCount = numel(nodeNames);
+    bool = 1;
+catch
+    bool = 0;
+    return;
+end
+end
+
+FILE Toolbox\Generate Network\Logical expression method\NetworkInputMenu2.m
+function varargout = NetworkInputMenu2(varargin)
+gui_Singleton = 1;
+gui_State = struct('gui_Name',       mfilename, ...
+    'gui_Singleton',  gui_Singleton, ...
+    'gui_OpeningFcn', @RulesBasedMenu_OpeningFcn, ...
+    'gui_OutputFcn',  @RulesBasedMenu_OutputFcn, ...
+    'gui_LayoutFcn',  [] , ...
+    'gui_Callback',   []);
+if nargin && ischar(varargin{1})
+    gui_State.gui_Callback = str2func(varargin{1});
+end
+if nargout
+    [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
+else
+    gui_mainfcn(gui_State, varargin{:});
+end
+function RulesBasedMenu_OpeningFcn(hObject, eventdata, handles, varargin)
+handles.output = hObject;
+path = ['Supplementary Functions', filesep, 'Images', filesep];
+OpenFileImage = imread([path, 'OpenFile.jpg']);
+OpenFileImageResize = imresize(OpenFileImage, [20 20]);
+set(handles.BrowseNodeLogicTables, 'CData', OpenFileImageResize);
+set(handles.BrowseNodeList, 'CData', OpenFileImageResize);
+movegui(hObject, 'center');
+guidata(hObject, handles);
+function varargout = RulesBasedMenu_OutputFcn(hObject, eventdata, handles)
+varargout{1} = handles.output;
+function BrowseNodeLogicTables_Callback(hObject, eventdata, handles)
+nodeLogicInput = get(hObject, 'UserData');
+if ~isempty(nodeLogicInput)
+    tempDirectory = nodeLogicInput{1};
+    [~, deepestFolder, ~] = fileparts(tempDirectory);
+    choice = questdlg(['You already selected "', deepestFolder,...
+        '" folder. Do you want to replace this folder?'], ...
+        'Exit', 'Yes', 'No', 'No');
+    switch choice
+        case 'Yes'
+        otherwise
+            return;
+    end
+end
+directory = uigetdir;
+if directory == 0
+    set(handles.BrowseFolder, 'String', 'Browse file...', 'ForegroundColor', [20 43 140]./250);
+    set(handles.Console, 'String', 'Folder selection cancelled by user.');
+    enableDisableFig(findall(0, 'tag','NetworkInputMenu2'), 'off');
+    enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+    uiwait(errordlg('Folder selection cancelled by user. Please select folder containing logic tables to proceed.', 'Selection cancelled'));
+    enableDisableFig(findall(0, 'tag','NetworkInputMenu2'), 'on');
+    bringToFocus(findall(0, 'tag','NetworkInputMenu2'));
+    return;
+end
+logicFileDirectory = dir(fullfile(directory, '*.txt'));
+if size(logicFileDirectory, 1) == 0
+    set(handles.Console, 'String', 'Selected folder is empty or does not contain valid files. Please select a folder containing logic tables.');
+    enableDisableFig(findall(0, 'tag','NetworkInputMenu2'), 'off');
+    enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+    uiwait(errordlg('Selected folder is empty or does not contain valid files. Please select a folder containing logic tables.', 'Invalid selection'));
+    enableDisableFig(findall(0, 'tag','NetworkInputMenu2'), 'off');
+    bringToFocus(findall(0, 'tag','NetworkInputMenu2'));
+    return;
+end
+set(hObject, 'UserData', {directory, logicFileDirectory});
+[~, deepestFolder, ~] = fileparts(directory);
+set(handles.BrowseFolder, 'String', deepestFolder, 'ForegroundColor', [1 0.3 0.5]);
+nodeList = get(handles.BrowseNodeList, 'UserData');
+if isempty(nodeList)
+    set(handles.Console, 'String', 'Folder conatiaining node update logic files selected. Please select file containing node list to proceed.');
+else
+    set(handles.Console, 'String', 'Data loaded. Press Ok to procced.');
+    enableDisableFig(findall(0, 'tag','NetworkInputMenu2'), 'off');
+    enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+    uiwait(msgbox('Press "Ok" to load data.', 'Press Ok'));
+    enableDisableFig(findall(0, 'tag','NetworkInputMenu2'), 'on');
+    bringToFocus(findall(0, 'tag','NetworkInputMenu2'));
+end
+guidata(hObject, handles);
+function BrowseNodeList_Callback(hObject, eventdata, handles)
+nodeList = get(hObject, 'UserData');
+if ~isempty(nodeList)
+    choice = questdlg(['You already selected "', nodeList{2},...
+        ' ". Do you want to replace this file?'], ...
+        'Exit', 'Yes', 'No', 'No');
+    switch choice
+        case 'Yes'
+        otherwise
+            return;
+    end
+end
+[filename, pathname] = uigetfile({'*.txt', 'Plain text'; '*.csv',...
+    'Comma seperated values file'},...
+    'Select file containing network information');
+if ( pathname == 0 )
+    set(handles.BrowseFile, 'String', 'Browse file...', 'ForegroundColor', [20 43 140]./250);
+    set(handles.Console, 'String', 'File input cancelled by the user');
+    enableDisableFig(findall(0, 'tag','NetworkInputMenu2'), 'off');
+    enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+    uiwait(errordlg('File selection cancelled by user. Please select file containing node list to proceed.', 'Selection cancelled'));
+    enableDisableFig(findall(0, 'tag','NetworkInputMenu2'), 'on');
+    bringToFocus(findall(0, 'tag','NetworkInputMenu2'));
+    return;
+end
+nodeList = importdata(fullfile(pathname, filename));
+if ~iscellstr(nodeList) || ~( size(nodeList, 1) == 1 || size(nodeList, 2) == 1 ) || sum(size(nodeList)) <= 2
+    set(handles.Console, 'String', 'The selected node list file is invalid. Please see help to see format details.');
+    enableDisableFig(findall(0, 'tag','NetworkInputMenu2'), 'off');
+    enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+    uiwait(errordlg('The selected node list file is invalid. Please see help to see format details.', 'Invalid input'));
+    enableDisableFig(findall(0, 'tag','NetworkInputMenu2'), 'on');
+    bringToFocus(findall(0, 'tag','NetworkInputMenu2'));
+    return;
+end
+set(hObject, 'UserData', {pathname, filename, nodeList});
+set(handles.BrowseFile, 'String', filename, 'ForegroundColor', [1 0.3 0.5]);
+nodeLogicInput = get(handles.BrowseNodeLogicTables, 'UserData');
+if isempty(nodeLogicInput)
+    set(handles.Console, 'String', 'Node list selected. Please select folder containing node update logic tables to proceed.');
+else
+    set(handles.Console, 'String', 'Data loaded. Press Ok to proceed.');
+    enableDisableFig(findall(0, 'tag','NetworkInputMenu2'), 'off');
+    enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+    uiwait(msgbox('Press "Ok" to load data.', 'Press Ok'));
+    enableDisableFig(findall(0, 'tag','NetworkInputMenu2'), 'on');
+    bringToFocus(findall(0, 'tag','NetworkInputMenu2'));
+end
+guidata(hObject, handles);
+function Ok_Callback(hObject, eventdata, handles)
+nodeLogicInput = get(handles.BrowseNodeLogicTables, 'UserData');
+nodeList = get(handles.BrowseNodeList, 'UserData');
+if ~isempty(nodeLogicInput) && ~isempty(nodeList)
+    myNetwork = NetworkDataStructure();
+    myNetwork.NetworkType = 'RulesBased';
+    myNetwork.ResultFolderName = generate_OutputFolderName(nodeList{2});
+    folderPath = nodeLogicInput{1};
+    bool = parse_LogicTables(myNetwork, folderPath, nodeList{3});
+    if bool 
+        set(0, 'UserData', myNetwork);
+        guidata(hObject, handles);
+        delete(NetworkInputMenu2);
+        enableATLANTIS;
+        updateGraphics;
+    end
+else
+    enableDisableFig(findall(0, 'tag','NetworkInputMenu2'), 'off');
+    enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+    if isempty(nodeLogicInput) && isempty(nodeList)
+        uiwait(errordlg('Node list and Node state update logic tables input missing. Please add input to proceed.', 'Missing input'));
+    elseif isempty(nodeList)
+        uiwait(errordlg('Node list input missing. Please select add node list to proceed.', 'Missing input'));
+    else
+        uiwait(errordlg('Node state update logic tables missing. Please add logic tables to proceed.', 'Missing input'));
+    end
+    enableDisableFig(findall(0, 'tag','NetworkInputMenu2'), 'on');
+    bringToFocus(findall(0, 'tag','NetworkInputMenu2'));
+end
+function Help_Callback(hObject, eventdata, handles)
+choice = questdlg('Open ATLANTIS GitHub Page?', ...
+    'Help', ...
+    'Yes', 'No', 'No');
+enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+switch choice
+    case 'Yes'
+        url = 'https://github.com/BIRL/ATLANTIS';
+        web(url,'-browser');
+    otherwise
+        return;
+end
+function NetworkInputMenu2_CloseRequestFcn(hObject, eventdata, handles)
+choice = questdlg('Close this menu?', ...
+    'Exit', ...
+    'Yes', 'No', 'No');
+switch choice
+    case 'Yes'
+        enableATLANTIS;
+        delete(hObject);
+    otherwise
+        enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+        return;
+end
+
+FILE Toolbox\Generate Network\Logical expression method\parse_LogicTables.m
+function [bool] = parse_LogicTables(myNetwork, logicTableFolderInfo, nodeList)
+bool = 0;
+nodeCount = size(nodeList, 1);
+progressbar('Parsing Logic Tables....');
+SourceNodesnames  = cell(nodeCount, 1);
+SourceNodeindices = cell(nodeCount, 1);
+TargetNodenames   = cell(nodeCount, 1);
+TargetNodeindices = cell(nodeCount, 1);
+NodeUpdatelogic   = cell(nodeCount, 1);
+interactionMatrix = zeros(nodeCount, nodeCount);
+errorLog = '';
+for i = 1:nodeCount
+    logicTableName = strcat(nodeList{i},'.txt');
+    progressbar(i / nodeCount);
+    try
+        token1 = importdata(fullfile(logicTableFolderInfo, logicTableName));
+        token2 = token1.data;
+        token3 = token1.textdata;
+        sourceNodes = lower(token3(1:end-1));
+        targetNode = lower(token3(end));
+        nodeList = lower(nodeList);
+        if ~all(ismember(sourceNodes, nodeList)) || ~ismember(targetNode, nodeList);
+            undefined/0; 
+        end
+        targetNodeIndex = i;
+        [~, sourceNodeIndices] = ismember (sourceNodes, nodeList);
+        outputs = token2(:,end);
+        isboolean = all((outputs == 1) == (outputs ~= 0));
+        if  ~isboolean || ~(size(token2, 2)-1 == numel(sourceNodes))
+            undefined/0;
+        end
+        interactionMatrix(sourceNodeIndices, i) = 1;
+        SourceNodesnames{i}  = sourceNodes;
+        SourceNodeindices{i} = sourceNodeIndices;
+        TargetNodenames{i}   = targetNode;
+        TargetNodeindices{i} = targetNodeIndex;
+        NodeUpdatelogic{i}   = outputs;
+    catch
+        targetNodeIndex = i;
+        SourceNodesnames{i}  = {'N/A'};
+        TargetNodenames{i}   = {'N/A'};
+        TargetNodeindices{i} = targetNodeIndex;
+        errorLog = [errorLog, ' "', nodeList{i}, '" , ' ];
+    end
+end
+if ~isequal(errorLog,'')
+    choice = questdlg(['Logic files for the following nodes: ',...
+        errorLog,' were either not found or contain invalid enteries (e.g. parent/child node name present in logic table is missing from node list, logic table contains non-logicals etc). Do you want to continue? (Select "No" to reselect the inputs).'], 'Warning', 'Yes', 'No', 'No');
+    switch choice
+        case 'Yes'
+            bool = 1;
+        case 'No'
+            return;
+    end
+else
+    bool = 1;
+end
+myNetwork.NodeNames = nodeList;
+myNetwork.NodeCount = nodeCount;
+myNetwork.SourceNodesNames  = SourceNodesnames;
+myNetwork.SourceNodeIndices = SourceNodeindices;
+myNetwork.TargetNodeNames   = TargetNodenames;
+myNetwork.TargetNodeIndices = TargetNodeindices;
+myNetwork.NodeUpdateLogic   = NodeUpdatelogic;
+myNetwork.InteractionMatrix = interactionMatrix;
+end

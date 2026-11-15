@@ -1,0 +1,24 @@
+{
+  "eligible": false,
+  "reasons": [
+    "600 circuit qubits exceed budget 22",
+    "Statevector plus 3x working allowance exceeds 1024 MiB",
+    "Classical reference/count/audit needs 2^150 states; budget 65536"
+  ],
+  "logical_evolution_qubits": 600,
+  "logical_counting_qubits": 0,
+  "circuit_qubits": 600,
+  "statevector_bytes_lower_bound": 66392249102095887336198525819058578416199139715878990399930517275050444982606530342395312783153660708611166185780812626918322417206588404926189997345823418992978908854424152378966016,
+  "anf_terms": null,
+  "transpiled_depth": null,
+  "transpiled_width": null,
+  "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced.",
+  "classical_sampled": {
+    "taxonomy": "sampled or bounded classical result",
+    "initial_state_count": 128,
+    "unique_initial_states": 128,
+    "unresolved": 0,
+    "distribution": "empirical input rows; duplicates count as repeated observations"
+  },
+  "classical_attractors": 1
+}

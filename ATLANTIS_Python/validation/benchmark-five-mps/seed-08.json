@@ -1,0 +1,170 @@
+{
+  "cycles": [
+    [
+      "01001"
+    ],
+    [
+      "10110"
+    ]
+  ],
+  "status": "complete_classically_certified",
+  "completion_reason": "Exhaustive F^T coverage audit; classical O(2^n*T), not a quantum certificate",
+  "search_attempts": 2,
+  "counting_calls": 1,
+  "rejected_measurements": 0,
+  "total_measurements": 256,
+  "invalid_measurements": 0,
+  "compiled_depth_max": 5117,
+  "compiled_size_max": 7250,
+  "compiled_2q_count_max": 2988,
+  "oracle_calls_ideal": 6,
+  "search_runtime_s": 0.7091799001209438,
+  "counting_runtime_s": 2.800021320581436e-06,
+  "simulation_runtime_s": 1.6295981002040207,
+  "max_suppressed_leakage": null,
+  "classical_audit_runtime_s": 0.000511400168761611,
+  "classical_audit_states_scanned": 64,
+  "history": [
+    {
+      "kind": "circuit_execution",
+      "resources": {
+        "compiled_depth": 835,
+        "compiled_size": 1386,
+        "compiled_2q_count": 524,
+        "raw_depth": 3,
+        "raw_size": 11,
+        "logical_qubits": 25,
+        "transpiled_qubits": 25,
+        "transpilation_s": 1.3023682001512498,
+        "execution_s": 0.09022890008054674
+      }
+    },
+    {
+      "round": 0,
+      "kind": "measurements",
+      "counts": {
+        "10110": 20,
+        "01001": 108
+      }
+    },
+    {
+      "round": 0,
+      "kind": "new_cycle",
+      "cycle": [
+        "01001"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    },
+    {
+      "round": 1,
+      "kind": "count",
+      "M_est": 28,
+      "full_fraction": 0.0,
+      "cycles_found_before": 1
+    },
+    {
+      "kind": "circuit_execution",
+      "resources": {
+        "compiled_depth": 5117,
+        "compiled_size": 7250,
+        "compiled_2q_count": 2988,
+        "raw_depth": 23,
+        "raw_size": 71,
+        "logical_qubits": 25,
+        "transpiled_qubits": 25,
+        "transpilation_s": 0.012419400038197637,
+        "execution_s": 0.19386889995075762
+      }
+    },
+    {
+      "round": 1,
+      "kind": "measurements",
+      "counts": {
+        "10110": 128
+      }
+    },
+    {
+      "round": 1,
+      "kind": "new_cycle",
+      "cycle": [
+        "10110"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    }
+  ],
+  "schema_version": 1,
+  "network": {
+    "names": [
+      "Fgf8",
+      "Emx2",
+      "Pax6",
+      "Sp8",
+      "Coup_tfi"
+    ],
+    "name": "giacomantonio5",
+    "weights": null,
+    "basal": null,
+    "rules": [
+      {
+        "expression": "Fgf8 & !Emx2 & Sp8"
+      },
+      {
+        "expression": "!Fgf8 & !Pax6 & Coup_tfi & !Sp8"
+      },
+      {
+        "expression": "!Emx2 & !Coup_tfi & Sp8"
+      },
+      {
+        "expression": "Fgf8 & ! Emx2"
+      },
+      {
+        "expression": "!Fgf8 & ! Sp8"
+      }
+    ],
+    "positions": {},
+    "clamped": {},
+    "metadata": {}
+  },
+  "network_hash": "c6e0f95720fbb7a50255b6ba0448e37d277ab61dad141e643a70819ef927d7c9",
+  "parameters": {
+    "T": 4,
+    "engine": "aer_mps",
+    "counting_mode": "exact",
+    "shots": 128,
+    "counting_precision": 3,
+    "counting_shots": 128,
+    "seed": 8,
+    "max_rounds": 12,
+    "stop_policy": "classical_audit",
+    "max_qubits": 25,
+    "max_reference_states": 65536,
+    "max_memory_mib": 1024,
+    "max_compiled_depth": 200000,
+    "max_compiled_gates": 500000,
+    "max_verification_steps": 10000,
+    "timeout_seconds": 120,
+    "noise_probability": 0.0
+  },
+  "resources": {
+    "eligible": true,
+    "reasons": [],
+    "logical_evolution_qubits": 25,
+    "logical_counting_qubits": 0,
+    "circuit_qubits": 25,
+    "statevector_bytes_lower_bound": 536870912,
+    "anf_terms": 20,
+    "transpiled_depth": null,
+    "transpiled_width": null,
+    "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+  },
+  "T_selection": "user supplied",
+  "taxonomy": "actual quantum circuit simulation",
+  "basin_sizes": null,
+  "basin_size_origin": "unavailable; counting history estimates combined excluded coverage",
+  "classical_information": "enumerated F^T for exact M",
+  "total_runtime_s": 2.341844700044021,
+  "job_id": "73ba282a806641db94748628ab5583da",
+  "isolated_wall_s": 2.9527483999263495
+}

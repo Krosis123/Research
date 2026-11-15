@@ -1,0 +1,940 @@
+ 
+  
+ ATLANTIS             
+Attractor Landscape Analysis Toolbox                 
+for Cell Fate Discovery and Reprogramming 
+For Use with MATLAB® 
+ 
+ 
+ 
+                                                        
+                                                                                             
+ 
+ 
+ 
+ 
+ 
+User Manual                                                                                  
+                                          
+              
+                                                                                             
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+This page has been intentionally left blank 
+ 
+Table of Contents                                  
+ 
+1. Introduction to ATLANTIS .................................................................................................................. 1 
+1.1. About ATLANTIS ......................................................................................................................... 1 
+1.2. License and Copyright Information ............................................................................................ 1 
+1.3. Features .......................................................................................................................................... 1 
+2. Getting Started with ATLANTIS ......................................................................................................... 2 
+2.1. System Requirements .................................................................................................................... 2 
+2.1.1. Hardware ........................................................................................................................... 2 
+2.1.2. Software .............................................................................................................................. 2 
+2.1.3. Compatibility with Windows and MATLAB .................................................................. 2 
+2.1.4. Running ATLANTIS without MATLAB ........................................................................ 2 
+2.2. Installation ................................................................................................................................... 12 
+2.2.1. Setup ATLANTIS ............................................................................................................ 12 
+2.2.2. Install Graphviz for Windows ........................................................................................ 12 
+2.2.3. Setting Up Graphviz for Windows................................................................................. 12 
+2.2.4. Setting Up Graphviz for macOS .................................................................................... 15 
+2.2.5. Install Graphviz for macOS ........................................................................................... 16 
+3. Using ATLANTIS ................................................................................................................................. 17 
+3.1. Setting Up MATLAB and Launching the Application ............................................................ 17 
+3.2. Data Preparation ......................................................................................................................... 18 
+3.3. Using ATLANTIS Graphical User Interface ............................................................................ 20 
+4. Interpreting Results ............................................................................................................................. 27 
+4.1. Network Visualization using Graphviz and Biograph ............................................................. 27 
+4.2. Cell fate prediction using potential energy landscape ............................................................. 28 
+4.3. Classifying phenotypes ................................................................................................................ 29 
+5. Worked Examples ................................................................................................................................ 29 
+1. Decoding Yeast Cell Cycle Progression using Attractor Landscape Analysis ....................... 29 
+2. Investigating the Evolution of Cell Fate Landscape during Colorectal Tumorigenesis ....... 32 
+3. Demonstrating the use of ‘Trajectory Mapping’ in Yeast Cell Cycle Progression 
+Network ........................................................................................................................................ 33 
+4. Demonstrating the use of ‘Fixed Nodes States’ feature in 201-node network for 
+Colorectal Tumorigenesis ........................................................................................................... 37 
+5. Demonstrating the use of ‘Custom States’ feature in PA of Yeast Cell Cycle Progression 
+Network ........................................................................................................................................ 38 
+6. Cancel Simulation in ATLANTIS .............................................................................................. 40 
+6. Bibliography .......................................................................................................................................... 42 
+1                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+ 
+1. Introduction to ATLANTIS 
+ 
+1.1. About ATLANTIS 
+ATLANTIS is  a MATLAB toolbox for attractor landscape analysis  of biomolecular 
+networks. This interactive toolbox provides an environment rich for creation, modification, 
+visualization and analysis of Boolean regulatory networks. It can be used to analyze  user-
+created networks and to study them under the influence of different mutations and 
+perturbations. This toolbox also provides various analyse s options where a user can perform 
+both deterministic and probabilistic analysis of a Boolean network. Results are made available 
+in the form of visual plots including potential energy landscapes, attractor landscapes and area-
+based phenotype classification maps. 
+ 
+1.2. License and Copyright Information 
+ATLANTIS is an open source, open architecture and freely available MATLAB too lbox. 
+The toolbox is available under the GNU GENERAL PUBLIC LICENSE (ver. 3.0). 
+1.3. Features 
+ATLANTIS includes the following features:  
+• User defined network import 
+• Network visualization  
+• Network modification 
+• Deterministic analysis of networks 
+• Biological interpretation of networks 
+• Probabilistic analysis of networks  
+• Cell fate prediction using potential energy landscaping 
+• Phenotype landscaping 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+2. Getting Started with ATLANTIS 
+ 
+2.1. System Requirements 
+ 
+2.1.1. Hardware 
+  ATLANTIS requires a minimum of 2 GB of disk space and 4 GB RAM for functioning. 
+Note that MATLAB installation might take an additional amount of space depending on the 
+number of toolboxes selected for installation. 
+ 
+2.1.2. Software 
+  ATLANTIS has been tested to work optimally with ‘Windows 7, Windows 8, Windows 
+10 or Windows Server 2012 R2’ and ‘MATLAB R2016a’ for functioning. 
+ 
+2.1.3. Compatibility with Windows and MATLAB 
+  All testing is based upon the following Operating System Releases:  
+• Windows 7, 64-bit 
+• Windows 10, 64-bit 
+• Windows Server 2012 R2, 64-bit 
+  All testing is based upon the following MATLAB versions: 
+• MATLAB R2014a 
+• MATLAB R2015a 
+• MATLAB R2016a 
+• MATLAB R2016b 
+• MATLAB R2017a 
+2.1.4. Running ATLANTIS without MATLAB 
+ATLANTIS has been developed as a MATLAB toolbox for cell fate discovery and 
+reprogramming. However, for running ATLANTIS without MATLAB, we provide support  for 
+executing the toolbox using MATLAB -independent executables. We have provided ATLANTIS 
+executable for Windows 64-bit. In case the user has a n operating system or version which is not 
+compatible with the precompiled executables provided herewith, we have also included a tutorial 
+on building custom executables targeting other operating systems. 
+Generating Executable file (.exe) for Windows 
+For generating the executable (.exe) file the following steps can be followed. A video tutorial is 
+also presented to help the user build and install the executable file. 
+3                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+1. Open MATLAB (for compilation use R2017b) and change the current working 
+directory in order to view the ‘ATLANTIS.m’ file. 
+2. Click on Apps as highlighted in the figure below. 
+ 
+ 
+3. Click on ‘Application Compiler’ as highlighted in figure below: 
+ 
+ 
+4. Click on the button highlighted in the image below in order to add the main file and write 
+ATLANTIS in the first input field under ‘Application Information’ section. 
+ 
+ 
+5. Add ‘ATLANTIS.m’ file as shown in the figure below. 
+
+4                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+ 
+ 
+6. After adding the main file, click on the button highlighted below. 
+ 
+ 
+7. After clicking, select the files as shown in figure below. 
+
+5                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+ 
+ 
+8. Click on the radio button ‘Runtime included in package’. 
+ 
+ 
+9. Click on ‘Package’ as shown in the figure below. 
+
+6                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+ 
+ 
+10. The following screen will appear, save the package in your desired folder. 
+ 
+ 
+11. After the user has selected the desired folder, the following screen will appear. After the 
+process is complete, close the MATLAB window.  
+
+7                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+ 
+ 
+Installing Executable file (.exe) for Windows (PC with MATLAB Runtime) 
+For installing the (.exe) file in a computer with MATLAB, the following steps can be followed: 
+1. Open the folder where ‘.exe’ file is downloaded and go to ‘for redistribution’ folder.  
+ 
+ 
+2. Click on ‘MyAppInstaller_mcr.exe’ and grant access to install the executable file. Keep 
+the installation folder ‘C:\Program Files\Atlantis’ and click on ‘Next’. 
+
+8                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+ 
+ 
+3. The following window will appear, click on ‘Install’. 
+ 
+ 
+4. After the installation is complete, check desktop for the shortcut generated and click on 
+the shortcut to run ATLANTIS.  
+
+9                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+ 
+ 
+Installing Executable file (.exe) for Windows (PC without MATLAB Runtime) 
+For installing the (.exe) file in a computer with MATLAB the following steps can be followed: 
+1. Open the folder where ‘.exe’ file is downloaded and go to ‘for redistribution’ folder.  
+ 
+ 
+2. Click on ‘MyAppInstaller_mcr.exe’ and grant access to install the executable file. The 
+following window will appear. 
+
+10                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+ 
+ 
+3. Click on ‘Next’ button and proceed with the installation path given as ‘C:\Program 
+Files\ATLANTIS’. Make sure to check the ‘Add a shortcut to the desktop’ checkbox for 
+easy access to the application. 
+ 
+ 
+
+11                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+4. Since your PC does not have MATLAB installed, the following window will appear. The 
+path for installation should be ‘C:\Program Files\MATLAB\MATLAB Runtime’. Click 
+on ‘Next’ to proceed. 
+ 
+ 
+5. Accept the License Agreement and proceed with installation. Once the installation is 
+complete find the desktop shortcut and click on it.  
+ 
+ 
+
+12                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+2.2. Installation  
+ 
+2.2.1. Setup ATLANTIS 
+ATLANTIS can be downloaded from this link in ‘.zip’ format. After downloading 
+is complete, extract the files in a folder. Note the path to this folder for later use. 
+2.2.2. Install Graphviz for Windows 
+Download and install the latest release of Graphviz1 (Graph visualization 
+software) here.  
+To make Graphviz compatible with MATLAB, follow the steps provided in the 
+next subsection below. 
+2.2.3. Setting Up Graphviz for Windows 
+The following steps should be followed in order to set up Graphviz. A detailed 
+video tutorial is also presented to set up Graphviz. 
+1. Go to the directory where Graphviz is installed and select ‘bin’ folder. Copy 
+path to this folder for u se later. It should resemble ‘C:\Program 
+Files\Graphviz2.38\bin’. 
+ 
+ 
+ 
+2. Next, go to Start, select Control Panel and then double click ‘System and 
+Security’. 
+ 
+ 
+ 
+3. Next, click on ‘System’. 
+
+13                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+ 
+ 
+ 
+4. Select ‘Advanced system settings’ on the left side of the page.  
+ 
+ 
+ 
+ 
+5. A window titled ‘System Properties’ will pop up . Click ‘Environment 
+Variables’ at the bottom left of the window.  
+ 
+
+14                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+ 
+ 
+6. A new window titled ‘Environment Variables’ appears. Double click on the 
+specified path. 
+ 
+ 
+ 
+7. Click on ‘New’ to add the path copied earlier ‘C:\Program 
+Files\Graphviz2.38\bin’ and then press ‘OK’. 
+ 
+
+15                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+ 
+8. For further assistance, you can view the YouTube tutorial. 
+ 
+2.2.4. Setting Up Graphviz for macOS 
+1. Open ‘Terminal’ on your computer. 
+ 
+ 
+2. Enter the following command on your terminal: ‘/usr/bin/ruby -e "$(curl -fsSL 
+https://raw.githubusercontent.com/Homebrew/install/master/install)"’ 
+ 
+ 
+3. Enter the password to install Homebrew.  
+
+16                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+ 
+ 
+4. Enter the following command on your terminal: ‘brew install wget’ 
+ 
+ 
+2.2.5. Install Graphviz for macOS 
+1. Enter the following command on your terminal: ‘brew install graphviz’ 
+ 
+ 
+2. Test Graphviz using ATLANTIS. 
+ 
+
+17                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+ 
+3. Using ATLANTIS 
+ 
+3.1. Setting Up MATLAB and Launching the Application 
+ 
+1. Launch MATLAB on your computer. 
+ 
+ 
+2. Copy full path to the folder that contains ATLANTIS. Assuming that this 
+folder is kept in ‘C’ drive, the path will resemble this 
+‘C:\Users\User\Desktop\ATLANTIS’ 
+ 
+ 
+ 
+3. Select the space highlighted in the figure below and paste the path copied in 
+the previous step. 
+ 
+ 
+ 
+
+18                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+4. Check the ‘Current Folder’ window to ensure that you have changed the 
+current directory successfully. 
+ 
+ 
+ 
+5. Type ‘ATLANTIS.m’ in MATLAB command line to start the toolbox or 
+simply run the ATLANTIS.m file. 
+6. A detailed video tutorial is also presented to help users launch ATLANTIS. 
+ 
+3.2. Data Preparation 
+ATLANTIS works off a flat text file (‘.txt’) or a comma separated file (‘.csv’) containing 
+description of biomolecular networks. Flat text files (‘.txt’) can be generated using Notepad, 
+Notepad++, Sublime Text or any suitable text editor. Comma separated files (‘.c sv’) can be 
+created using Microsoft Excel®, LibreOffice® and Apple Numbers® spreadsheet software. 
+Below, a description of the data preparation process is provided (for both .txt and .csv files) 
+using a simple example. 
+ 
+1. Network description file 
+Network description file for use with ATLANTIS contains two data elements, (i) node 
+interaction weights matrix and (ii) a vector of node basal values indicating background 
+expression of each node. Figure (a, b) below shows the contents of a sample tab-delimited 
+text and spreadsheet data file for generating network. The file contents include 
+components-interaction weights and basal values. The interaction weights matrix contains 
+the names of nodes and strengths of their interactions (termed interaction weights). 
+
+19                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+ 
+ 
+2. Network Modification File for Modifying Node States and Interactions 
+Networks can be modified by inclusion of ‘mutation’ information. These mutations can be 
+introduced into the network by modifying it in two different ways. Firstly, the network can 
+be modified by altering node states (either from 0 to 1 or from 1 to 0). Secondly, network 
+modification can also be made by deleting the interaction link between two nodes. To 
+modify a user-defined network in ATLANTIS, a comma separated file (Figure c below) or 
+a simple text file (Figure d below) is required. These files can be used to mutate a node by 
+providing node name and its new (i.e. mutated) state (Figure c, d below) or by removing 
+the interaction between two nodes through providing names of two interacting nodes (e.g. 
+A and B) in the following format ‘A>B 2’ (Figure c, d below). In case of link deletion, 
+ATLANTIS identifies the type of modification by node names followed by the label ‘2’. 
+ 
+
+20                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+3.3. Using ATLANTIS Graphical User Interface 
+ 
+1. ATLANTIS - Main Menu 
+ 
+ 
+ 
+A. At the top of the ATLANTIS interface is the ‘Title bar’, which displays the name of 
+the program and the title of the current document. 
+B. Click on ‘Generate Network’ to provide user with options to create Boolean models 
+of biological networks using node name, interaction weights and basal values or node 
+names and node state update logic tables 
+C. Click on ‘Deterministic Analysis’ to update the network states overtime to find stable 
+state(s) [attractor(s)] and their occurrence frequency (basin size) in absence of noise. 
+D. Click on ‘Probabilistic Analysis’ to associate probabilities with each network state 
+and update these probabilities to find steady state probability of each network state in 
+presence of external noise. 
+E. Click on ‘Modify Network’ to add mutations (knock down and overexpression of 
+nodes and deletion of links) to the network. 
+F. Click on ‘Sketch Network’ to provide the option to display their input network. 
+G. Click on ‘Visualize Results’ to plot attractor landscape using potential energies or 
+basin ratios. Plot Treemaps to visualize the phenotype landscape. 
+ 
+2. ATLANTIS - Generate Network 
+ 
+
+21                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+ 
+ 
+A. At the top of the ATLANTIS interface is the ‘Title bar’, which displays the name of 
+the program and the title of the current document. 
+B. Select between generating network using interaction weights and basal values or 
+Node state update logic tables 
+C. Console indicates the progress within the GUI. 
+D. Click on ‘OK’ to proceed to GUI 3 or 4 based on your selected network input type. 
+E. Click on ‘Help’ for a detailed User Manual in PDF format.  
+ 
+3. ATLANTIS – Network Input as node Interaction Weights Matrix 
+ 
+ 
+ 
+A. At the top of the ATLANTIS interface is the ‘Title bar’, which displays the name of 
+the program and the title of the current document. 
+B. Console indicates the progress within the GUI. 
+C. Press to browse network file containing node names, interaction weights and basal 
+values. 
+
+22                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+D. Press ‘OK’ to generate network using the input information. 
+E. Click on ‘Help’ for a detailed User Manual in PDF format. 
+ 
+4. ATLANTIS - Network Input as a set of Update Logic Tables 
+ 
+ 
+ 
+A. At the top of the ATLANTIS interface is the ‘Title bar’, which displays the name of the 
+program and the title of the current document. 
+B. Console indicates the progress within the GUI. 
+C. Press to browse Node list file. 
+D. Press to browse the folder containing Node update logic table files. 
+E. Press ‘OK’ to generate network using the input information. 
+F. Click on ‘Help’ for a detailed User Manual in PDF format. 
+ 
+5. ATLANTIS – Modify Network 
+ 
+
+23                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+ 
+ 
+A. At the top of the ATLANTIS interface is the ‘Title bar’, which displays the name of the 
+program and the title of the current document. 
+B. Console indicates the progress within the GUI. 
+C. Press to browse file containing information related to mutations (Node deletion or Node 
+overexpression or Link deletion information. (Can be left empty to simulate network in 
+absence of mutation when performing batch simulations). 
+D. Press ‘Done’ to incorporate mutations into the network. 
+E. Click on ‘Help’ for a detailed User Manual in PDF format. 
+ 
+6. ATLANTIS – Sketch Network 
+ 
+ 
+ 
+A. At the top of the ATLANTIS interface is the ‘Title bar’, which displays the name of 
+the program and the title of the current document. 
+B. Select the option to sketch network using MATLAB’s Biograph or Graphviz’s 
+Engine for visualization of the network  
+C. Press ‘OK’ to display the current network. 
+D. Click on ‘Help’ for a detailed User Manual in PDF format. 
+ 
+7. ATLANTIS – Deterministic Analysis 
+ 
+
+24                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+ 
+ 
+A. At the top of the ATLANTIS interface is the ‘Title bar’, which displays the 
+name of the program and the title of the current document. 
+B. Press to generate initial network states list, whereby the user has two different 
+options, (i) state-space generated by ATLANTIS and (ii) user-specified subset 
+of the complete state-space. 
+C. Console indicates the progress within the GUI. 
+D. Option to specify time steps utilized towards discovering attractors of various 
+cell fates. 
+E. Browse and input the file containing names and values of nodes whose state 
+values need to be fixed for complete simulation. 
+F. Browse and Input the Cell Fate Determination Logic Information File. 
+G. Press ‘OK’ to start the determinsitic analysis. 
+H. Click on ‘Help’ for a detailed User Manual in PDF format. 
+ 
+ 
+ 
+8. ATLANTIS – Probabilistic Analysis 
+ 
+
+25                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+ 
+ 
+A. At the top of the ATLANTIS interface is the ‘Title bar’, which displays the name of 
+the program and the title of the current document. 
+B. Press to generate states space of the network (Exhaustive or Random). 
+C. Press to generate custom states, as a sample from the complete state space specified 
+by user. 
+D. Enter a value of external noise between (between 0-5, default: 5). 
+E. Enter a value to indicate that how long the simulation will run (between 1 and 10000, 
+default: 1000). 
+F. Console indicates the progress within the GUI. 
+G. Check to find the transient states that a network assumes in going from the start 
+boundary state to the final boundary state. These boundary states are specified in the 
+file uploaded under ‘Trajectory Bounds’ (L). 
+H. Enter a value to define what is the error margin. (0 – 10-4, default: 10-8). Lower the 
+error margin longer the time taken to complete probabilisitic analysis (PA).  
+
+26                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+I. Enter a value for degradation constant (Between 0-1, default: 0.001). 
+J. Browse and input the file containing names and values of nodes whose state values 
+need to be fixed for complete 
+K. Browse and Input Cell Fate Determination Logic Information File. 
+L. Browse file mentioning the initial and final states of the trajectory under 
+consideration. 
+M. Press ‘OK’ to start the PA. 
+N. Click on ‘Help’ for a detailed User Manual in PDF format. 
+ 
+9. ATLANTIS – Generate States 
+ 
+ 
+ 
+A. At the top of the ATLANTIS interface is the ‘Title bar’, which displays the name of 
+the program and the title of the current document. 
+B. Generate all possible state combinations of network states (2n where n is the total 
+number of nodes) or generate a specified number of network state combinations (for 
+Probabilistic Analysis). 
+C. Specify the number of states to generate in the Sample size (in case of Random 
+Sampling) edit box. 
+D. Prune State Space works for PA only (for Exhaustive state space generation it is 
+optional and for Random Sampling it is always on). 
+E. Click on ‘OK’ to proceed. 
+F. Click on ‘Help’ for a detailed User Manual in PDF format. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+27                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+10. ATLANTIS – Visualize Results 
+ 
+ 
+ 
+A. At the top of the ATLANTIS interface is the ‘Title bar’, which displays the name 
+of the program and the title of the current document. 
+B. Check boxes to plot different landscapes including Potential Energy Landscape 
+(PEL), Probablity Landscape (PL), Cell Fate Landscape (CFL) and Basin Size 
+Landscape (BSL). 
+C. Treemap plotting options. 
+D. Press ‘Plot’ to plot the selected plots. 
+E. Click on ‘Help’ for a detailed User Manual in pdf format. 
+F. Choose mapping scheme for Generating Landscapes (Attractor and Potential 
+Energy). 
+G. Noise reduction factor for landscape generation. 
+H. Landscape format options. 
+4. Interpreting Results 
+The results shown below involve the Boolean model of P53 regulatory network, as studied 
+by Choi et al. in their work on ‘Attractor landscape analysis reveals feedback loops in the 
+P53 network that control the cellular response to DNA damage’. ATLANTIS was used to 
+construct its gene regulatory network, potential energy landscape and phenotype 
+classification. 
+ 
+4.1. Network Visualization using Graphviz and Biograph 
+ 
+
+28                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+ 
+4.2. Cell fate prediction using potential energy landscape 
+ 
+ 
+ 
+
+29                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+4.3. Classifying phenotypes 
+ 
+ 
+5. Worked Examples 
+To facilitate the ease of use, we present two elaborate worked out attractor landscape analysis 
+(Case Study-1 and Case Study-3) examples using ATLANTIS. The first worked out example 
+details the procedure for performing the deterministic analysis (DA) and probabilistic analysis 
+(PA) of yeast cell cycle network presented by Han et al2. The second example illustrates the 
+rules-based DA of the 201-node network presented by Cho et al3. In addition, a few worked 
+examples have been provided to highlight some specific features presented by ATLANTIS. 
+Detailed tutorials of case studies and novel features of ATLANTIS are available as a YouTube 
+playlist. 
+ 
+1. Decoding Yeast Cell Cycle Progression using Attractor Landscape Analysis 
+Step-1.  Click the ‘Generate Network’ button, select the option with ‘Node Names, Basal Values 
+and Interaction Weights’. Next, click Browse file to select the network. The network file for 
+yeast cell cycle network can be found at: ATLANTIS\Sample Data \Case Study 1 \Input 
+Files\NetworkFile.txt 
+ 
+
+30                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+ 
+ 
+Step-2.  After loading the network information file, click on ‘Sketch Network’ button. Select 
+Graphviz or Biograph to visualize the specified network. You can export the generated figure 
+by right clicking on the figure.   
+ 
+Step-3.  After visualizing the network, click on ‘Deterministic Analysis’ button. This would open 
+the DA menu. The first step, now, would be generating the network states. Click on 
+‘Generate States’, select ‘Exhaustive (Complete State Space)’ option and press ‘Ok’. After 
+this step move back to the DA window, click on the Browse file icon under ‘Cell Fate 
+Determination’ and select the folder with the following path: ATLANTIS\Sample Data\Case 
+Study 1\Input Files\Cell Fate Determination Logic.csv 
+ 
+ 
+Step-4.  After performing DA, the next step is to visualize the results. Click on the ‘Visualize 
+Results’ button. Select ‘CFL’ and ‘BSL’ from the ‘Plot Selection’ pane. Specify the ‘Treemap 
+Plot Options’ as shown in figure. Select ‘Naïve Random’ from the ‘Mapping Method’ pane, 
+specify ‘Attractor Plot Options’ and click ‘Plot’. You can export the generated figures as well. 
+ 
+
+31                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+ 
+ 
+Step-5.  In order to perform PA, click on ‘Probabilistic Analysis’ button. Click on ‘Generate 
+States’, if no modification is required in the network then continue and check the ‘Find 
+Transient States’ from ‘Trajectory Mapping’. Click on the ‘Browse file’ option under 
+‘Trajectory Bounds’ and select file with the following path: ATLANTIS\Sample Data\Case 
+Study 1\Input Files\TrajectoryBounds.csv 
+ 
+Step-6.  After performing the PA, the next step is to visualize the results. Click on the ‘Visualize 
+Results’ button. Select ‘PEL’ and ‘PL’ from ‘Plot Selection Options’. Select ‘Naïve Random’ 
+from Mapping Method and specify ‘Attractor Plot Options’ and press ‘Plot’. You can export 
+the generated figures as well. 
+ 
+
+32                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+ 
+ 
+ 
+2. Investigating the Evolution of Cell Fate Landscape during Colorectal 
+Tumorigenesis 
+Step-1.  After clicking the ‘Generate Network’ button, select the option with ‘Node Names and 
+State Update Logic Tables’. Next, browse the file and folder at given link: ATLANTIS\Sample 
+Data\Case Study 3\Input Files\Network Details for further analysis. 
+ 
+ 
+Step-2.  Click on ‘Deterministic Analysis’ button. This would open the  DA menu. The first step, 
+now, would be generating the network state-space. Click on ‘Custom States’ and upload the 
+file containing custom network states. The path of the file is given as: ATLANTIS\Sample 
+Data\Case Study 3\Input Files\Network State Lists\Simulation 1.  
+ 
+Important Note: While loading the network, a warning message might pop-up to warn the users 
+about possibly missing or wrongly named logic files nodes present in the node list file. This 
+warning should be ignored if the message mentions names of the nodes which the user wishes 
+not to update during the network analyses. An example of such nodes can be unregulated input 
+nodes (as was the case in case study 3 and 4) which do not require to be updated during 
+simulation. 
+ 
+
+33                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+ 
+Step-3.  On completion of DA move on to visualizing the results. Here, to visualize the Treemap 
+plot for phenotype classification, check ‘CFL’, enter a title for your plot and then click ‘Plot’. 
+ 
+ 
+ 
+Step-4.  To visualize the attractor landscape, check ‘BSL’, enter remaining parameters and click 
+‘Plot’.  
+ 
+3. Demonstrating the use of ‘Trajectory Mapping’ in Yeast Cell Cycle Progression 
+Network 
+Step-1.  Create ‘Trajectory Bounds.csv’ file for use in Step-4. The first and second row in the file 
+represents the initial and final boundary state for the complete trajectory respectively. 
+
+34                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+ 
+ 
+ 
+Step-2.  Click the ‘Generate Network’ button, select the option with ‘Node Names, Basal Values 
+and Interaction Weights’. Next, browse the file at given link for further analysis. The network 
+file for yeast cell cycle can be found at: ATLANTIS\Sample Data \Case Study 1 \Input 
+Files\NetworkFile.txt 
+ 
+ 
+ 
+Step-3.  After generating the network, click on ‘Deterministic Analysis’ button. This would open 
+the DA menu. The first step, now, would generating the network states. Click on ‘Generate 
+States’ and select ‘Exhaustive (Complete State Space)’ and press ‘Ok’. After this step, move 
+back to the DA window, click on the ‘Browse file’ icon under ‘Cell Fate Determination’ and 
+select the folder with the following path: ATLANTIS\Sample Data\Case Study 1\Input 
+Files\Cell Fate Determination Logic.csv 
+ 
+ 
+ 
+Step-4.  Next to perform PA, click on ‘Probabilistic Analysis’ button. Click on ‘Generate States’ 
+followed by exhaustive sampling of the initial state-space. Under ‘Trajectory Mapping’, 
+select ‘Find Transient States’ checkbox. Click on the ‘Browse file’ option under ‘Trajectory 
+Bounds’ and select file stored in Step-1. 
+ 
+
+35                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+ 
+Step-5.  After performing the analyses, the next step is to visualize the results. Click on the 
+‘Visualize Results’ button. Select ‘PEL’ and ‘PL’ from ‘Plot Selection’ options. Select 
+‘Naïve Random’ from ‘Mapping Method’ and check annotation and tooltips options and 
+press ‘Plot’.  
+ 
+ 
+ 
+Step-6.  To display transient states trajectory with in the attractor landscape, right-click on the 
+figure, click ‘Toggle Annotations’ and then click ‘Show Arrows Linking States in 
+Trajectory’.  
+ 
+
+36                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+ 
+ 
+Step-7.  To view the trajectory path alone, right-click on the screen, click ‘Toggle Plot 
+Properties’ and then click ‘Hide Surface Plot’.  
+ 
+ 
+ 
+Step-8.  A variety of visualization options can be used to clearly view trajectory path and 
+transient states. The trajectory path traces the route from the initial boundary state to the final 
+boundary state, passing through all the intermediate transient states. The color intensity at 
+every point along the path corresponds to its probability. 
+ 
+
+37                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+4. Demonstrating the use of ‘Fixed Nodes States’ feature in 201 -node network 
+for Colorectal Tumorigenesis 
+Step-1.  Create ‘Input Node States.csv’ file for use in Step-4. The first row shows the names of 
+the input nodes to be updated and the second row shows their fixed values. Once fixed, the 
+values for these input nodes will remain constant throughout the simulation. 
+ 
+ 
+ 
+Step-2.  The network file and update logic folder for colorectal tumorigenesis network can be 
+found at: ATLANTIS\Sample Data\Case Study 3\Input Files\Network Details. After clicking 
+the ‘Generate Network’ button, select the option with ‘Node Names and State Update Logic 
+Tables’. Next, browse the file and folder at given link for further analysis. 
+ 
+ 
+Step-3.  Click on ‘Deterministic Analysis’ button. This would open the DA menu. The first step, 
+now, would be generating the network state-space. Click on ‘Custom States’ and upload the 
+file containing custom network states. The path of the file is given as: ATLANTIS\Sample 
+Data\Case Study 3\Input Files\Network State Lists\Simulation 1 
+ 
+
+38                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+ 
+ 
+Step-4.  To set the values of input nodes in a modular network, select the ‘Fixed Node States’ 
+file. Click on the ‘Browse file’ option under ‘Fixed Node States’ and select file stored in 
+Step-1. 
+ 
+ 
+Step-5.   Click ‘Ok’ on the DA menu to perform onward analysis. 
+ 
+5. Demonstrating the use of ‘Custom States’ feature in PA of Yeast Cell Cycle 
+Progression Network 
+Step-1.  Create ‘Custom States file.csv’ file for use in Step-3. Each row in the file represents a 
+state and each column represents a node’s value in each state. 
+ 
+ 
+ 
+
+39                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+Step-2.  Click the ‘Generate Network’ button, select the option with ‘Node Names, Basal Values 
+and Interaction Weights’. Next, browse the file at given link for further analysis. The 
+network file for yeast cell cycle network can be found at: ATLANTIS\Sample Data\Case 
+Study 1\Input Files\NetworkFile.txt 
+ 
+ 
+ 
+ 
+Step-3.  Next to perform PA, click on ‘Probabilistic Analysis’ button. Click on ‘Custom States’ 
+to upload the custom states file created in Step-1. Then click ‘Ok’ to perform analysis. 
+ 
+  
+
+40                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+6. Cancel Simulation in ATLANTIS 
+Step-1.  The network file and update logic folder for colorectal tumorigenesis network can be 
+found at: ATLANTIS\Sample Data\Case Study 3\Input Files\Network Details. After 
+clicking the ‘Generate Network’ button, select the option with ‘Node Names and State 
+Update Logic Tables’. Next, browse the file and folder at given link for further analysis. 
+ 
+ 
+Step-2.  Click on ‘Deterministic Analysis’ button. This would open the DA menu. The first step, 
+now, would be selecting the Network States. Click on ‘Custom States’ button and upload the file 
+containing custom network states. The path of the file is given: ATLANTIS\Sample Data\Case 
+Study 3\Input Files\Network State Lists\Simulation 1 
+ 
+ 
+Step-3.  Once the analysis starts the following pop up also appears on the screen. In order to stop 
+the simulation, click on ‘Cancel Simulation’. A video tutorial is also available for this 
+functionality. 
+ 
+ 
+
+41                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+ 
+  
+
+42                                                                                                                                            ATLANTIS: User Manual 
+ 
+2017 © Biomedical Informatics Research Laboratory, LUMS. All Rights Reserved.  
+ 
+6. Bibliography 
+ 
+1. Ellson, J., Gansner, E., Koutsofios, L., North, S. C. & Woodhull, G. Graphviz—open 
+source graph drawing tools. Graph Drawing (2002). doi:10.1007/3-540-68339-9_34 
+2. Han, B. & Wang, J. Quantifying robustness and dissipation cost of yeast cell cycle 
+network: the funneled energy landscape perspectives. Biophys. J. 92, 3755–3763 (2007). 
+3. Cho, S.-H., Park, S.-M., Lee, H.-S., Lee, H.-Y. & Cho, K.-H. Attractor landscape analysis 
+of colorectal tumorigenesis and its reversion. BMC Syst. Biol. 10, 96 (2016). 
+ 

@@ -1,0 +1,8 @@
+numpy==2.5.4
+scipy==1.18.1
+matplotlib==3.11.2
+networkx==3.7
+PySide6-Essentials==6.12.0
+h5py==3.16.0
+pytest==9.2.0
+-r requirements-quantum.txt

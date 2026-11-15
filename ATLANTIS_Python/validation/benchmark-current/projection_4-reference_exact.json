@@ -1,0 +1,317 @@
+{
+  "cycles": [
+    [
+      "0000"
+    ],
+    [
+      "0010"
+    ],
+    [
+      "0100"
+    ],
+    [
+      "0110"
+    ],
+    [
+      "1000"
+    ],
+    [
+      "1010"
+    ],
+    [
+      "1101"
+    ],
+    [
+      "1111"
+    ]
+  ],
+  "status": "complete_classically_certified",
+  "completion_reason": "Exhaustive F^T coverage audit; classical O(2^n*T), not a quantum certificate",
+  "search_attempts": 8,
+  "counting_calls": 7,
+  "rejected_measurements": 0,
+  "total_measurements": 1024,
+  "invalid_measurements": 0,
+  "compiled_depth_max": 0,
+  "compiled_size_max": 0,
+  "compiled_2q_count_max": 0,
+  "oracle_calls_ideal": 24,
+  "search_runtime_s": 0.001654899911954999,
+  "counting_runtime_s": 2.9499875381588936e-05,
+  "simulation_runtime_s": 0.0016273995861411095,
+  "max_suppressed_leakage": 3.605340855892905e-31,
+  "classical_audit_runtime_s": 4.679989069700241e-05,
+  "classical_audit_states_scanned": 128,
+  "history": [
+    {
+      "round": 0,
+      "kind": "measurements",
+      "counts": {
+        "0000": 18,
+        "0010": 12,
+        "0100": 12,
+        "0110": 16,
+        "1000": 15,
+        "1010": 16,
+        "1101": 14,
+        "1111": 25
+      }
+    },
+    {
+      "round": 0,
+      "kind": "new_cycle",
+      "cycle": [
+        "0000"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    },
+    {
+      "round": 1,
+      "kind": "count",
+      "M_est": 2,
+      "full_fraction": 0.0,
+      "cycles_found_before": 1
+    },
+    {
+      "round": 1,
+      "kind": "measurements",
+      "counts": {
+        "0010": 16,
+        "0100": 13,
+        "0110": 19,
+        "1000": 18,
+        "1010": 18,
+        "1101": 19,
+        "1111": 25
+      }
+    },
+    {
+      "round": 1,
+      "kind": "new_cycle",
+      "cycle": [
+        "0010"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    },
+    {
+      "round": 2,
+      "kind": "count",
+      "M_est": 4,
+      "full_fraction": 0.0,
+      "cycles_found_before": 2
+    },
+    {
+      "round": 2,
+      "kind": "measurements",
+      "counts": {
+        "0100": 21,
+        "0110": 18,
+        "1000": 21,
+        "1010": 20,
+        "1101": 28,
+        "1111": 20
+      }
+    },
+    {
+      "round": 2,
+      "kind": "new_cycle",
+      "cycle": [
+        "1000"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    },
+    {
+      "round": 3,
+      "kind": "count",
+      "M_est": 6,
+      "full_fraction": 0.0,
+      "cycles_found_before": 3
+    },
+    {
+      "round": 3,
+      "kind": "measurements",
+      "counts": {
+        "0100": 20,
+        "0110": 23,
+        "1010": 27,
+        "1101": 30,
+        "1111": 28
+      }
+    },
+    {
+      "round": 3,
+      "kind": "new_cycle",
+      "cycle": [
+        "1111"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    },
+    {
+      "round": 4,
+      "kind": "count",
+      "M_est": 8,
+      "full_fraction": 0.0,
+      "cycles_found_before": 4
+    },
+    {
+      "round": 4,
+      "kind": "measurements",
+      "counts": {
+        "0100": 34,
+        "0110": 35,
+        "1010": 37,
+        "1101": 22
+      }
+    },
+    {
+      "round": 4,
+      "kind": "new_cycle",
+      "cycle": [
+        "1101"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    },
+    {
+      "round": 5,
+      "kind": "count",
+      "M_est": 10,
+      "full_fraction": 0.0,
+      "cycles_found_before": 5
+    },
+    {
+      "round": 5,
+      "kind": "measurements",
+      "counts": {
+        "0100": 44,
+        "0110": 37,
+        "1010": 47
+      }
+    },
+    {
+      "round": 5,
+      "kind": "new_cycle",
+      "cycle": [
+        "1010"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    },
+    {
+      "round": 6,
+      "kind": "count",
+      "M_est": 12,
+      "full_fraction": 0.0,
+      "cycles_found_before": 6
+    },
+    {
+      "round": 6,
+      "kind": "measurements",
+      "counts": {
+        "0100": 64,
+        "0110": 64
+      }
+    },
+    {
+      "round": 6,
+      "kind": "new_cycle",
+      "cycle": [
+        "0110"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    },
+    {
+      "round": 7,
+      "kind": "count",
+      "M_est": 14,
+      "full_fraction": 0.0,
+      "cycles_found_before": 7
+    },
+    {
+      "round": 7,
+      "kind": "measurements",
+      "counts": {
+        "0100": 128
+      }
+    },
+    {
+      "round": 7,
+      "kind": "new_cycle",
+      "cycle": [
+        "0100"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    }
+  ],
+  "schema_version": 1,
+  "network": {
+    "names": [
+      "g00",
+      "g01",
+      "g02",
+      "g03"
+    ],
+    "name": "projection_4",
+    "weights": null,
+    "basal": null,
+    "rules": [
+      {
+        "expression": "g00"
+      },
+      {
+        "expression": "g01"
+      },
+      {
+        "expression": "g02"
+      },
+      {
+        "expression": "g00 & g01"
+      }
+    ],
+    "positions": {}
+  },
+  "network_hash": "e29bf193ae28beec86cbbef1d16f0930973c73c80759c84b8fb430d7c5d69b2d",
+  "parameters": {
+    "T": 1,
+    "engine": "reduced",
+    "counting_mode": "exact",
+    "shots": 128,
+    "counting_precision": 3,
+    "counting_shots": 128,
+    "seed": 0,
+    "max_rounds": 12,
+    "stop_policy": "classical_audit",
+    "max_qubits": 22,
+    "max_reference_states": 65536,
+    "max_memory_mib": 1024,
+    "max_compiled_depth": 200000,
+    "max_compiled_gates": 500000,
+    "max_verification_steps": 10000,
+    "timeout_seconds": 120,
+    "noise_probability": 0.0
+  },
+  "resources": {
+    "eligible": true,
+    "reasons": [],
+    "logical_evolution_qubits": 8,
+    "logical_counting_qubits": 0,
+    "circuit_qubits": 8,
+    "statevector_bytes_lower_bound": 4096,
+    "anf_terms": 4,
+    "transpiled_depth": null,
+    "transpiled_width": null,
+    "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+  },
+  "T_selection": "user supplied",
+  "taxonomy": "ideal mathematical quantum reference",
+  "basin_sizes": null,
+  "basin_size_origin": "unavailable; counting history estimates combined excluded coverage",
+  "classical_information": "enumerated F^T for exact M",
+  "total_runtime_s": 0.005425299983471632
+}

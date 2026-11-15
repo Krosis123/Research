@@ -1,0 +1,398 @@
+[
+  {
+    "width": 2,
+    "fixture_seed": 11,
+    "T": 3,
+    "seed": 23,
+    "cached": false,
+    "cache_hits": 0,
+    "wall_s": 2.702062200056389,
+    "transpile_s": 1.682590100215748,
+    "simulation_s": 0.8394760000519454,
+    "status": "complete_qpe_heuristic",
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "10"
+          ],
+          "basin": 4
+        }
+      ],
+      "max_transient": 2,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 0,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    }
+  },
+  {
+    "width": 2,
+    "fixture_seed": 11,
+    "T": 3,
+    "seed": 23,
+    "cached": true,
+    "cache_hits": 1,
+    "wall_s": 1.9678871999494731,
+    "transpile_s": 0.40799789992161095,
+    "simulation_s": 1.2652669998351485,
+    "status": "complete_qpe_heuristic",
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "10"
+          ],
+          "basin": 4
+        }
+      ],
+      "max_transient": 2,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 0,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    }
+  },
+  {
+    "width": 2,
+    "fixture_seed": 11,
+    "T": 3,
+    "seed": 47,
+    "cached": false,
+    "cache_hits": 0,
+    "wall_s": 2.3536793999373913,
+    "transpile_s": 0.683578500058502,
+    "simulation_s": 1.368389599956572,
+    "status": "complete_qpe_heuristic",
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "10"
+          ],
+          "basin": 4
+        }
+      ],
+      "max_transient": 2,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 0,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    }
+  },
+  {
+    "width": 2,
+    "fixture_seed": 11,
+    "T": 3,
+    "seed": 47,
+    "cached": true,
+    "cache_hits": 1,
+    "wall_s": 2.2117754998616874,
+    "transpile_s": 0.44503919989801943,
+    "simulation_s": 1.403815799858421,
+    "status": "complete_qpe_heuristic",
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "10"
+          ],
+          "basin": 4
+        }
+      ],
+      "max_transient": 2,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 0,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    }
+  },
+  {
+    "width": 3,
+    "fixture_seed": 17,
+    "T": 4,
+    "seed": 23,
+    "cached": false,
+    "cache_hits": 0,
+    "wall_s": 4.478048499906436,
+    "transpile_s": 0.8897466000635177,
+    "simulation_s": 3.0378675998654217,
+    "status": "complete_qpe_heuristic",
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "000",
+            "001"
+          ],
+          "basin": 3
+        },
+        {
+          "cycle": [
+            "010"
+          ],
+          "basin": 5
+        }
+      ],
+      "max_transient": 4,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 4,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 3,
+          "estimate": 4,
+          "signed_error": 1
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        },
+        {
+          "call": 3,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    }
+  },
+  {
+    "width": 3,
+    "fixture_seed": 17,
+    "T": 4,
+    "seed": 23,
+    "cached": true,
+    "cache_hits": 1,
+    "wall_s": 4.2034271999727935,
+    "transpile_s": 0.7050960997585207,
+    "simulation_s": 2.930033100070432,
+    "status": "complete_qpe_heuristic",
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "000",
+            "001"
+          ],
+          "basin": 3
+        },
+        {
+          "cycle": [
+            "010"
+          ],
+          "basin": 5
+        }
+      ],
+      "max_transient": 4,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 4,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 3,
+          "estimate": 4,
+          "signed_error": 1
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        },
+        {
+          "call": 3,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    }
+  },
+  {
+    "width": 3,
+    "fixture_seed": 17,
+    "T": 4,
+    "seed": 47,
+    "cached": false,
+    "cache_hits": 0,
+    "wall_s": 4.59754310012795,
+    "transpile_s": 0.9336000001057982,
+    "simulation_s": 3.0855490998364985,
+    "status": "complete_qpe_heuristic",
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "000",
+            "001"
+          ],
+          "basin": 3
+        },
+        {
+          "cycle": [
+            "010"
+          ],
+          "basin": 5
+        }
+      ],
+      "max_transient": 4,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 4,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 3,
+          "estimate": 4,
+          "signed_error": 1
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        },
+        {
+          "call": 3,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    }
+  },
+  {
+    "width": 3,
+    "fixture_seed": 17,
+    "T": 4,
+    "seed": 47,
+    "cached": true,
+    "cache_hits": 1,
+    "wall_s": 4.243186800042167,
+    "transpile_s": 0.6525106001645327,
+    "simulation_s": 3.0145636005327106,
+    "status": "complete_qpe_heuristic",
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "000",
+            "001"
+          ],
+          "basin": 3
+        },
+        {
+          "cycle": [
+            "010"
+          ],
+          "basin": 5
+        }
+      ],
+      "max_transient": 4,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 4,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 3,
+          "estimate": 4,
+          "signed_error": 1
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        },
+        {
+          "call": 3,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    }
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "weighted_yeast_states": 2048,
+  "yeast_attractors": 7,
+  "dominant_basin": 0.861328125,
+  "pruned_states": 242,
+  "max_transition_absolute_error": 3.3306690738754696e-16,
+  "max_probability_absolute_error": 4.596323321948148e-14,
+  "master_equation_iterations": 200,
+  "master_equation_converged": false,
+  "python_sammon_energy_rendered": true
+}

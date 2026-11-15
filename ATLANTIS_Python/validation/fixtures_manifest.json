@@ -1,0 +1,75 @@
+{
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "dependencies": {
+    "numpy": "2.4.4",
+    "scipy": "1.18.0",
+    "matplotlib": "3.10.8",
+    "networkx": "3.6.1",
+    "PySide6-Essentials": "6.12.0",
+    "h5py": "3.16.0",
+    "pytest": "9.1.1"
+  },
+  "matlab_fixtures": [
+    {
+      "file": "matlab_colors.mat",
+      "sha256": "73d34e167fbbe172ff9cf61f9c8cfb5b9a1beba8b1d03b747f7fb714c1eabfa0",
+      "bytes": 10215
+    },
+    {
+      "file": "matlab_naive.mat",
+      "sha256": "de79bd752ac916183886abf2b2d0c9da2a5951ed332398a2f6f2755beed7f082",
+      "bytes": 4043
+    },
+    {
+      "file": "matlab_natural.mat",
+      "sha256": "56de343792b2aac80a74f09e5051dd31619e0f800113687c667f263958ad5439",
+      "bytes": 1166
+    },
+    {
+      "file": "matlab_parula.mat",
+      "sha256": "6aa0bc33045eb2072f092c22ef8756e24ea30a8c621eaba744b2afebfcf0451f",
+      "bytes": 2477
+    },
+    {
+      "file": "matlab_rules_deterministic.mat",
+      "sha256": "e80ef2c72837df34eea7dd92d651d29ed4a008efd49de44e860adb98b03f7123",
+      "bytes": 246
+    },
+    {
+      "file": "matlab_sammon.mat",
+      "sha256": "45afbfd65965f92fd6cf375f142c5d01b59b7b70504cb65a11a2407651e32ea3",
+      "bytes": 291
+    },
+    {
+      "file": "matlab_sammon_step.mat",
+      "sha256": "c6ad9d28f95d2eb28a63fe9a057d6fb41a43175ab0d64e0dba06c49480ac4833",
+      "bytes": 318
+    },
+    {
+      "file": "matlab_sammon_valid.mat",
+      "sha256": "401b35499e2a744b2ae21de063e9ee5780d89037e9a5324ddd9cf3565cf4c350",
+      "bytes": 307
+    },
+    {
+      "file": "matlab_treemap.mat",
+      "sha256": "149ec41873d85085bed29b767e89feeeecf0df96db5d13db75349fc47439ebb0",
+      "bytes": 305
+    },
+    {
+      "file": "matlab_yeast_deterministic.mat",
+      "sha256": "55f41a9c28930072a36ec3f9f3e1695bedff025f0b2478c0d9b732d247153e2e",
+      "bytes": 830
+    },
+    {
+      "file": "matlab_yeast_fates.mat",
+      "sha256": "14be12492969fa075c69f24c3195e0830579083814e63e611effe26926e56c24",
+      "bytes": 466
+    },
+    {
+      "file": "matlab_yeast_probabilistic.mat",
+      "sha256": "9dc45c9f218cc7f80c79c8ba2e955a696bc52c979b78f7be6f4b78bf376a4ae5",
+      "bytes": 290211
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "6": {
+    "seed": 24006,
+    "boolean_cycles": [
+      {
+        "states": [
+          "010011",
+          "100001"
+        ],
+        "basin": 0.5
+      },
+      {
+        "states": [
+          "111100"
+        ],
+        "basin": 0.25
+      },
+      {
+        "states": [
+          "000111"
+        ],
+        "basin": 0.25
+      }
+    ],
+    "aer_initial_counts": {
+      "100001": 56,
+      "010011": 69,
+      "000111": 65,
+      "111100": 66
+    },
+    "weighted_attractors": 2,
+    "weighted_unresolved": 0,
+    "weighted_pruned_states": 7,
+    "weighted_historical_convergence": false
+  },
+  "8": {
+    "seed": 24008,
+    "boolean_cycles": [
+      {
+        "states": [
+          "01101011",
+          "11011101"
+        ],
+        "basin": 0.5
+      },
+      {
+        "states": [
+          "00011100",
+          "10110101"
+        ],
+        "basin": 0.5
+      }
+    ],
+    "aer_initial_counts": {
+      "00011100": 61,
+      "11011101": 78,
+      "01101011": 62,
+      "10110101": 55
+    },
+    "weighted_attractors": 1,
+    "weighted_unresolved": 0,
+    "weighted_pruned_states": 30,
+    "weighted_historical_convergence": false
+  }
+}

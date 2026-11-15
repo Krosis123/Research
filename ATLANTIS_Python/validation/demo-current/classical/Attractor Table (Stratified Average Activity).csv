@@ -1,0 +1,6 @@
+﻿Attractor #,Attractor Type,Associated Cell Fate,Basin Size,A,B,C,D
+1,Point,,0.6875,0,0,0,0
+2,Point,,0.125,0,0,1,1
+3,Point,,0.0625,1,1,1,1
+4,Point,,0.0625,1,1,0,1
+5,Point,,0.0625,1,0,1,1

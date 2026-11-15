@@ -1,0 +1,231 @@
+{
+  "type": "figure",
+  "properties": {
+    "Tag": "FigureExportMenu",
+    "Position": [
+      135.8,
+      45.0,
+      70.19999999999999,
+      6.153846153846153
+    ],
+    "Units": "characters",
+    "Visible": "on",
+    "Name": "Figure Export Menu",
+    "Color": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "children": [
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel6",
+        "Position": [
+          51.0,
+          0.8461538461538463,
+          16.799999999999997,
+          4.384615384615385
+        ],
+        "Units": "characters",
+        "BackgroundColor": [
+          0.8941176470588236,
+          0.9411764705882353,
+          0.9019607843137255
+        ],
+        "Title": []
+      },
+      "children": [
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "Done",
+            "Position": [
+              2.1714285714285717,
+              0.6651583710407232,
+              13.0,
+              2.9411764705882355
+            ],
+            "Units": "characters",
+            "String": "Done",
+            "Style": "pushbutton",
+            "Value": 0.0,
+            "Min": 0.0,
+            "Max": 1.0,
+            "Enable": "on",
+            "Visible": "on",
+            "BackgroundColor": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0,
+            "FontWeight": "bold",
+            "HorizontalAlignment": "center",
+            "TooltipString": []
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "uitools.uibuttongroup",
+      "properties": {
+        "Tag": "uibuttongroup6",
+        "Position": [
+          2.4000000000000004,
+          0.7692307692307693,
+          46.6,
+          4.615384615384616
+        ],
+        "Units": "characters",
+        "Visible": "on",
+        "BackgroundColor": [
+          0.8941176470588236,
+          0.9411764705882353,
+          0.9019607843137255
+        ],
+        "ForegroundColor": [
+          0.0784313725490196,
+          0.16862745098039217,
+          0.5490196078431373
+        ],
+        "FontName": "Calibri",
+        "FontSize": 12.0,
+        "FontWeight": "bold",
+        "Title": "Figure Export Options"
+      },
+      "children": [
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "text14",
+            "Position": [
+              0.6000000000000001,
+              0.8461538461538463,
+              6.4,
+              1.3846153846153846
+            ],
+            "Units": "characters",
+            "String": "DPI:",
+            "Style": "text",
+            "BackgroundColor": [
+              0.8941176470588236,
+              0.9411764705882353,
+              0.9019607843137255
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0,
+            "FontWeight": "normal",
+            "TooltipString": "Dots per inch (Resolution)"
+          },
+          "children": []
+        },
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "EditResolution",
+            "Position": [
+              7.200000000000002,
+              0.6153846153846154,
+              12.0,
+              2.0
+            ],
+            "Units": "characters",
+            "String": "300",
+            "Style": "edit",
+            "Enable": "on",
+            "BackgroundColor": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "ForegroundColor": [
+              0.15294117647058825,
+              0.22745098039215686,
+              0.37254901960784315
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0,
+            "TooltipString": "Enter a value between 100 and 2000"
+          },
+          "children": []
+        },
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "SelectFormat",
+            "Position": [
+              32.0,
+              0.6923076923076923,
+              11.799999999999997,
+              1.9230769230769231
+            ],
+            "Units": "characters",
+            "String": [
+              "PNG",
+              "JPG",
+              "TIFF"
+            ],
+            "Style": "popupmenu",
+            "Value": 1.0,
+            "Enable": "on",
+            "BackgroundColor": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "ForegroundColor": [
+              0.15294117647058825,
+              0.22745098039215686,
+              0.37254901960784315
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0
+          },
+          "children": []
+        },
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "text15",
+            "Position": [
+              21.200000000000003,
+              0.8461538461538463,
+              10.600000000000001,
+              1.3846153846153846
+            ],
+            "Units": "characters",
+            "String": "Format:",
+            "Style": "text",
+            "BackgroundColor": [
+              0.8941176470588236,
+              0.9411764705882353,
+              0.9019607843137255
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "type": "figure",
+  "properties": {
+    "Tag": "SketchNetworkMenu",
+    "Position": [
+      135.8,
+      37.0,
+      99.0,
+      8.53846153846154
+    ],
+    "Units": "characters",
+    "Visible": "on",
+    "Name": "ATLANTIS - Sketch Network",
+    "Color": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "children": [
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "text2",
+        "Position": [
+          68.60000000000001,
+          5.6923076923076925,
+          27.799999999999997,
+          2.3076923076923075
+        ],
+        "Units": "characters",
+        "String": "A T L A N T I S",
+        "Style": "text",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "ForegroundColor": [
+          0.0784313725490196,
+          0.16862745098039217,
+          0.5490196078431373
+        ],
+        "FontName": "Calibri",
+        "FontSize": 18.0,
+        "FontWeight": "bold",
+        "HorizontalAlignment": "right"
+      },
+      "children": []
+    },
+    {
+      "type": "uitools.uibuttongroup",
+      "properties": {
+        "Tag": "uibuttongroup1",
+        "Position": [
+          1.8,
+          0.7692307692307693,
+          59.0,
+          4.538461538461538
+        ],
+        "Units": "characters",
+        "Visible": "on",
+        "BackgroundColor": [
+          0.8941176470588236,
+          0.9411764705882353,
+          0.9019607843137255
+        ],
+        "ForegroundColor": [
+          0.0784313725490196,
+          0.16862745098039217,
+          0.5490196078431373
+        ],
+        "FontName": "Calibri",
+        "FontSize": 12.0,
+        "FontWeight": "bold",
+        "Title": "Sketch Network Using"
+      },
+      "children": [
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "GraphViz",
+            "Position": [
+              30.6,
+              0.6153846153846154,
+              26.0,
+              1.923076923076923
+            ],
+            "Units": "characters",
+            "String": "GraphViz's Engine",
+            "Style": "radiobutton",
+            "Value": 0.0,
+            "Min": 0.0,
+            "Max": 1.0,
+            "Enable": "on",
+            "Visible": "on",
+            "BackgroundColor": [
+              0.8941176470588236,
+              0.9411764705882353,
+              0.9019607843137255
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0,
+            "FontWeight": "normal",
+            "HorizontalAlignment": "center",
+            "TooltipString": "Visualize input network using GraphViz engine (Please note this feature requires GraphViz to be installed on your PC)"
+          },
+          "children": []
+        },
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "BioGraph",
+            "Position": [
+              1.8,
+              0.6153846153846154,
+              28.0,
+              1.923076923076923
+            ],
+            "Units": "characters",
+            "String": "MATLAB's Biograph",
+            "Style": "radiobutton",
+            "Value": 1.0,
+            "Min": 0.0,
+            "Max": 1.0,
+            "Enable": "on",
+            "Visible": "on",
+            "BackgroundColor": [
+              0.8941176470588236,
+              0.9411764705882353,
+              0.9019607843137255
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0,
+            "FontWeight": "normal",
+            "HorizontalAlignment": "center",
+            "TooltipString": "Visualize input network using MATLAB's Biograph"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel1",
+        "Position": [
+          63.2,
+          0.7692307692307693,
+          33.2,
+          4.538461538461538
+        ],
+        "Units": "characters",
+        "BackgroundColor": [
+          0.8941176470588236,
+          0.9411764705882353,
+          0.9019607843137255
+        ],
+        "ForegroundColor": [
+          0.8941176470588236,
+          0.9411764705882353,
+          0.9019607843137255
+        ],
+        "Title": []
+      },
+      "children": [
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "Help",
+            "Position": [
+              17.400000000000002,
+              0.6153846153846152,
+              13.0,
+              2.9230769230769234
+            ],
+            "Units": "characters",
+            "String": "Help",
+            "Style": "pushbutton",
+            "BackgroundColor": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0,
+            "FontWeight": "bold"
+          },
+          "children": []
+        },
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "Ok",
+            "Position": [
+              2.0,
+              0.6153846153846154,
+              13.0,
+              2.9230769230769234
+            ],
+            "Units": "characters",
+            "String": "Ok",
+            "Style": "pushbutton",
+            "BackgroundColor": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0,
+            "FontWeight": "bold"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

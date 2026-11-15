@@ -1,0 +1,224 @@
+{
+  "type": "figure",
+  "properties": {
+    "Tag": "StateSpaceSizeSelectionMenu",
+    "Position": [
+      135.8,
+      46.0,
+      69.4,
+      7.384615384615387
+    ],
+    "Units": "characters",
+    "Visible": "on",
+    "Name": "State Space Modifcation Menu",
+    "Color": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "children": [
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "text2",
+        "Position": [
+          40.6,
+          4.6923076923076925,
+          27.6,
+          2.153846153846154
+        ],
+        "Units": "characters",
+        "String": "A T L A N T I S",
+        "Style": "text",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "ForegroundColor": [
+          0.0784313725490196,
+          0.16862745098039217,
+          0.5490196078431373
+        ],
+        "FontName": "Calibri",
+        "FontSize": 18.0,
+        "FontWeight": "bold",
+        "HorizontalAlignment": "left"
+      },
+      "children": []
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel3",
+        "Position": [
+          50.0,
+          0.6923076923076923,
+          17.200000000000003,
+          3.846153846153846
+        ],
+        "Units": "characters",
+        "BackgroundColor": [
+          0.8941176470588236,
+          0.9411764705882353,
+          0.9019607843137255
+        ],
+        "Title": []
+      },
+      "children": [
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "Ok",
+            "Position": [
+              1.6857142857142862,
+              0.4343891402714934,
+              13.0,
+              2.9411764705882355
+            ],
+            "Units": "characters",
+            "String": "Ok",
+            "Style": "pushbutton",
+            "BackgroundColor": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0,
+            "FontWeight": "bold",
+            "TooltipString": []
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "uitools.uibuttongroup",
+      "properties": {
+        "Tag": "uibuttongroup1",
+        "Position": [
+          1.8,
+          0.6153846153846154,
+          46.2,
+          3.923076923076923
+        ],
+        "Units": "characters",
+        "Visible": "on",
+        "BackgroundColor": [
+          0.8941176470588236,
+          0.9411764705882353,
+          0.9019607843137255
+        ],
+        "ForegroundColor": [
+          0.0784313725490196,
+          0.16862745098039217,
+          0.5490196078431373
+        ],
+        "FontName": "Calibri",
+        "FontSize": 12.0,
+        "FontWeight": "bold",
+        "Title": "State Space Size"
+      },
+      "children": [
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "OptimalSize",
+            "Position": [
+              1.6,
+              0.5972850678733033,
+              15.600000000000003,
+              1.4615384615384617
+            ],
+            "Units": "characters",
+            "String": "Optimal",
+            "Style": "radiobutton",
+            "Value": 1.0,
+            "BackgroundColor": [
+              0.8941176470588236,
+              0.9411764705882353,
+              0.9019607843137255
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0,
+            "FontWeight": "normal"
+          },
+          "children": []
+        },
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "CustomSize",
+            "Position": [
+              18.2,
+              0.6153846153846154,
+              17.000000000000004,
+              1.4615384615384617
+            ],
+            "Units": "characters",
+            "String": "Custom:",
+            "Style": "radiobutton",
+            "Value": 0.0,
+            "BackgroundColor": [
+              0.8941176470588236,
+              0.9411764705882353,
+              0.9019607843137255
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0
+          },
+          "children": []
+        },
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "StateSpaceSelection",
+            "Position": [
+              33.6,
+              0.7692307692307693,
+              10.0,
+              1.5384615384615388
+            ],
+            "Units": "characters",
+            "String": [
+              "2^7",
+              "2^8",
+              "2^9",
+              "2^10",
+              "2^11",
+              "2^12"
+            ],
+            "Style": "popupmenu",
+            "Value": 1.0,
+            "Enable": "off",
+            "BackgroundColor": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "FontName": "Calibri",
+            "FontSize": 10.0
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

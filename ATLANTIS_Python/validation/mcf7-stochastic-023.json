@@ -1,0 +1,260 @@
+{
+  "noise": 5,
+  "degradation": 0.001,
+  "max_steps": 1000,
+  "tolerance": 1e-07,
+  "results": [
+    {
+      "condition": "Control",
+      "states": 1758,
+      "iterations": 11,
+      "converged": true,
+      "mass": 1.0000000000000002,
+      "flux_residual_inf": 3.372402357371129e-11,
+      "flux_residual_l1": 6.765573199643574e-11,
+      "mass_by_fate": {
+        "": 6.407647660082547e-08,
+        "Apoptosis": 1.8934266029982955e-13,
+        "Proliferation": 0.9999544596197465,
+        "Senescence": 4.5476303587845614e-05
+      },
+      "archive": "reference\\Toolbox\\Results\\2026-09-15 22-27-56 Control_MCF7 (0)\\Control\\Probabilistic Analysis Output\\Control - Steady State Probabilities.csv",
+      "state_set_difference": 1064,
+      "archived_state_replay": {
+        "states": 694,
+        "iterations": 1000,
+        "converged": false,
+        "max_abs_error": 3.8003694871058258e-06,
+        "l1_error": 4.992592276910006e-06,
+        "archived_mass": 1.0000037210208736
+      }
+    },
+    {
+      "condition": "Nutlin",
+      "states": 1438,
+      "iterations": 11,
+      "converged": true,
+      "mass": 0.9999999999999988,
+      "flux_residual_inf": 0.0012859343710556193,
+      "flux_residual_l1": 0.0026434697178450636,
+      "mass_by_fate": {
+        "": 0.0005085792026435439,
+        "Apoptosis": 0.2796005369824245,
+        "Proliferation": 0.00018067327244305307,
+        "Senescence": 0.7197102105424877
+      },
+      "archive": "reference\\Toolbox\\Results\\2026-09-18 14-39-57 Control_MCF7 (0)\\Nutlin\\Probabilistic Analysis Output\\Nutlin - Steady State Probabilities.csv",
+      "state_set_difference": 785,
+      "archived_state_replay": {
+        "states": 653,
+        "iterations": 1000,
+        "converged": false,
+        "max_abs_error": 4.562947363423442e-06,
+        "l1_error": 1.3366270033363038e-05,
+        "archived_mass": 0.9999925263228207
+      }
+    },
+    {
+      "condition": "Wip1 KD",
+      "states": 1686,
+      "iterations": 11,
+      "converged": true,
+      "mass": 0.9999999999999994,
+      "flux_residual_inf": 4.2299497238218464e-14,
+      "flux_residual_l1": 9.242953622744427e-14,
+      "mass_by_fate": {
+        "": 6.615848386956009e-08,
+        "Apoptosis": 2.83178665404344e-13,
+        "Proliferation": 0.9999544513431441,
+        "Senescence": 4.548249808831634e-05
+      }
+    },
+    {
+      "condition": "Nutlin + Wip KD",
+      "states": 1382,
+      "iterations": 11,
+      "converged": true,
+      "mass": 0.9999999999999991,
+      "flux_residual_inf": 0.0010804548712857187,
+      "flux_residual_l1": 0.0022146361143860877,
+      "mass_by_fate": {
+        "": 0.00042260492075264804,
+        "Apoptosis": 0.45129120883452317,
+        "Proliferation": 4.849732328861485e-05,
+        "Senescence": 0.5482376889214348
+      }
+    },
+    {
+      "condition": "Etoposide + Control",
+      "states": 2242,
+      "iterations": 1000,
+      "converged": false,
+      "mass": 0.9999999999998548,
+      "flux_residual_inf": 0.08966008987507505,
+      "flux_residual_l1": 0.4089354715725881,
+      "mass_by_fate": {
+        "": 0.3390079810429351,
+        "Apoptosis": 1.8511650748098135e-07,
+        "Proliferation": 0.24798969513986927,
+        "Senescence": 0.413002138700543
+      }
+    },
+    {
+      "condition": "Etoposide + Nutlin",
+      "states": 2052,
+      "iterations": 1000,
+      "converged": false,
+      "mass": 0.9999999999998599,
+      "flux_residual_inf": 0.0359060712490193,
+      "flux_residual_l1": 0.11174531921680383,
+      "mass_by_fate": {
+        "": 0.2111115901752278,
+        "Apoptosis": 0.4338809837698157,
+        "Proliferation": 0.10372934595130442,
+        "Senescence": 0.25127808010351205
+      }
+    },
+    {
+      "condition": "Etoposide + Wip1 KD",
+      "states": 2162,
+      "iterations": 1000,
+      "converged": false,
+      "mass": 1.0000000000000633,
+      "flux_residual_inf": 0.01814333790786235,
+      "flux_residual_l1": 0.0632220983948773,
+      "mass_by_fate": {
+        "": 0.48625241921714524,
+        "Apoptosis": 0.021581766978488744,
+        "Proliferation": 0.0010505049785471782,
+        "Senescence": 0.49111530882588217
+      }
+    },
+    {
+      "condition": "Etoposide + Nutlin + Wip KD",
+      "states": 1974,
+      "iterations": 11,
+      "converged": true,
+      "mass": 0.9999999999999998,
+      "flux_residual_inf": 0.0006548809831894431,
+      "flux_residual_l1": 0.001950955817286785,
+      "mass_by_fate": {
+        "": 0.0011578505231293044,
+        "Apoptosis": 0.6001441182766902,
+        "Proliferation": 2.9362712433326116e-10,
+        "Senescence": 0.3986980309065531
+      },
+      "point_attractors": [
+        {
+          "state": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "fate": "Apoptosis",
+          "probability": 0.4151047496791401
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "fate": "Apoptosis",
+          "probability": 0.18413781540937016
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "fate": "Senescence",
+          "probability": 0.2354510302231921
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "fate": "Senescence",
+          "probability": 0.14068912118440247
+        },
+        {
+          "state": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "fate": "Senescence",
+          "probability": 0.01898113330804737
+        }
+      ]
+    }
+  ]
+}

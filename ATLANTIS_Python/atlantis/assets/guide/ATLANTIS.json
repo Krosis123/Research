@@ -1,0 +1,1063 @@
+{
+  "type": "figure",
+  "properties": {
+    "Tag": "ATLANTIS_Main",
+    "Position": [
+      237.60000000000002,
+      50.92307692307693,
+      113.39999999999998,
+      32.84615384615385
+    ],
+    "Units": "characters",
+    "Visible": "on",
+    "Name": "ATLANTIS - Attractor Landscape Analysis Toolbox",
+    "Color": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "children": [
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "LogoButton",
+        "Position": [
+          0.015873015873015872,
+          0.7939110070257612,
+          0.19223985890652556,
+          0.20140515222482436
+        ],
+        "Units": "normalized",
+        "String": [],
+        "Style": "togglebutton",
+        "Value": 0.0,
+        "Min": 0.0,
+        "Max": 1.0,
+        "Enable": "inactive",
+        "Visible": "on",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "ForegroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "FontName": "Calibri",
+        "FontSize": 0.12403100775193798,
+        "FontWeight": "normal",
+        "HorizontalAlignment": "center",
+        "TooltipString": []
+      },
+      "children": []
+    },
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "Title1",
+        "Position": [
+          30.600000000000005,
+          27.552036199094992,
+          56.2,
+          4.38461538461538
+        ],
+        "Units": "characters",
+        "String": "ATLANTIS",
+        "Style": "text",
+        "Value": 0.0,
+        "Min": 0.0,
+        "Max": 1.0,
+        "Enable": "on",
+        "Visible": "on",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "ForegroundColor": [
+          0.0784313725490196,
+          0.16862745098039217,
+          0.5490196078431373
+        ],
+        "FontName": "Calibri",
+        "FontSize": 29.0,
+        "FontWeight": "bold",
+        "HorizontalAlignment": "center",
+        "TooltipString": []
+      },
+      "children": []
+    },
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "GenerateNetwork",
+        "Position": [
+          2.571428571428571,
+          13.941176470588236,
+          34.857142857142854,
+          11.411764705882351
+        ],
+        "Units": "characters",
+        "String": [],
+        "Style": "pushbutton",
+        "Value": 0.0,
+        "Min": 0.0,
+        "Max": 1.0,
+        "Enable": "on",
+        "Visible": "on",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "ForegroundColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "FontName": "MS Sans Serif",
+        "FontSize": 8.0,
+        "FontWeight": "normal",
+        "HorizontalAlignment": "center",
+        "TooltipString": "Press to generate a network using input information"
+      },
+      "children": []
+    },
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "SketchNetwork",
+        "Position": [
+          76.0,
+          13.941176470588236,
+          34.85714285714286,
+          11.411764705882351
+        ],
+        "Units": "characters",
+        "String": [],
+        "Style": "pushbutton",
+        "Value": 0.0,
+        "Min": 0.0,
+        "Max": 1.0,
+        "Enable": "inactive",
+        "Visible": "on",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "ForegroundColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "FontName": "MS Sans Serif",
+        "FontSize": 8.0,
+        "FontWeight": "normal",
+        "HorizontalAlignment": "center",
+        "TooltipString": "Press to visualize/sketch input network"
+      },
+      "children": []
+    },
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "ProbabilisticAnalysis",
+        "Position": [
+          39.42857142857142,
+          1.8823529411764706,
+          34.857142857142854,
+          11.411764705882353
+        ],
+        "Units": "characters",
+        "String": [],
+        "Style": "pushbutton",
+        "Value": 0.0,
+        "Min": 0.0,
+        "Max": 1.0,
+        "Enable": "inactive",
+        "Visible": "on",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "ForegroundColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "FontName": "MS Sans Serif",
+        "FontSize": 8.0,
+        "FontWeight": "normal",
+        "HorizontalAlignment": "center",
+        "TooltipString": "Press to perform probabilistic analysis on input network"
+      },
+      "children": []
+    },
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "VisualizeResults",
+        "Position": [
+          76.0,
+          1.9230769230769231,
+          34.80000000000001,
+          11.384615384615385
+        ],
+        "Units": "characters",
+        "String": [],
+        "Style": "pushbutton",
+        "Value": 0.0,
+        "Min": 0.0,
+        "Max": 1.0,
+        "Enable": "inactive",
+        "Visible": "on",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "ForegroundColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "FontName": "MS Sans Serif",
+        "FontSize": 8.0,
+        "FontWeight": "normal",
+        "HorizontalAlignment": "center",
+        "TooltipString": "Press to visualize the results of the analyses performed"
+      },
+      "children": []
+    },
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "Title2",
+        "Position": [
+          24.400000000000002,
+          26.461538461538463,
+          70.60000000000001,
+          2.0769230769230766
+        ],
+        "Units": "characters",
+        "String": "Attractor Landscape Analysis Toolbox",
+        "Style": "text",
+        "Value": 0.0,
+        "Min": 0.0,
+        "Max": 1.0,
+        "Enable": "on",
+        "Visible": "on",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "ForegroundColor": [
+          0.0784313725490196,
+          0.16862745098039217,
+          0.5490196078431373
+        ],
+        "FontName": "Calibri",
+        "FontSize": 16.0,
+        "FontWeight": "bold",
+        "HorizontalAlignment": "center",
+        "TooltipString": []
+      },
+      "children": []
+    },
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "text9",
+        "Position": [
+          23.0,
+          25.76923076923077,
+          2.0,
+          7.0000000000000036
+        ],
+        "Units": "characters",
+        "String": [],
+        "Style": "text",
+        "Value": 0.0,
+        "Min": 0.0,
+        "Max": 1.0,
+        "Enable": "on",
+        "Visible": "on",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "ForegroundColor": [
+          0.0,
+          0.4470588235294118,
+          0.7411764705882353
+        ],
+        "FontName": "Calibri",
+        "FontSize": 36.0,
+        "FontWeight": "bold",
+        "HorizontalAlignment": "center",
+        "TooltipString": []
+      },
+      "children": []
+    },
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "text11",
+        "Position": [
+          1.7142857142857144,
+          32.130392798627135,
+          21.7904761904762,
+          0.5856079404466499
+        ],
+        "Units": "characters",
+        "String": [],
+        "Style": "text",
+        "Value": 0.0,
+        "Min": 0.0,
+        "Max": 1.0,
+        "Enable": "on",
+        "Visible": "on",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "ForegroundColor": [
+          0.0,
+          0.4470588235294118,
+          0.7411764705882353
+        ],
+        "FontName": "Calibri",
+        "FontSize": 36.0,
+        "FontWeight": "bold",
+        "HorizontalAlignment": "center",
+        "TooltipString": []
+      },
+      "children": []
+    },
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "text12",
+        "Position": [
+          0.6000000000000001,
+          25.923076923076923,
+          1.8000000000000003,
+          6.84615384615385
+        ],
+        "Units": "characters",
+        "String": [],
+        "Style": "text",
+        "Value": 0.0,
+        "Min": 0.0,
+        "Max": 1.0,
+        "Enable": "on",
+        "Visible": "on",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "ForegroundColor": [
+          0.0,
+          0.4470588235294118,
+          0.7411764705882353
+        ],
+        "FontName": "Calibri",
+        "FontSize": 36.0,
+        "FontWeight": "bold",
+        "HorizontalAlignment": "center",
+        "TooltipString": []
+      },
+      "children": []
+    },
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "ModifyNetwork",
+        "Position": [
+          39.42857142857142,
+          13.941176470588236,
+          34.857142857142854,
+          11.411764705882351
+        ],
+        "Units": "characters",
+        "String": [],
+        "Style": "pushbutton",
+        "Value": 0.0,
+        "Min": 0.0,
+        "Max": 1.0,
+        "Enable": "inactive",
+        "Visible": "on",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "ForegroundColor": [
+          0.0,
+          0.4470588235294118,
+          0.7411764705882353
+        ],
+        "FontName": "MS Sans Serif",
+        "FontSize": 8.0,
+        "FontWeight": "normal",
+        "HorizontalAlignment": "center",
+        "TooltipString": "Press to add mutations to input network"
+      },
+      "children": []
+    },
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "DeterministicAnalysis",
+        "Position": [
+          2.571428571428571,
+          1.9411764705882353,
+          34.857142857142854,
+          11.411764705882353
+        ],
+        "Units": "characters",
+        "String": [],
+        "Style": "pushbutton",
+        "Value": 0.0,
+        "Min": 0.0,
+        "Max": 1.0,
+        "Enable": "inactive",
+        "Visible": "on",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "ForegroundColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "FontName": "MS Sans Serif",
+        "FontSize": 8.0,
+        "FontWeight": "normal",
+        "HorizontalAlignment": "center",
+        "TooltipString": "Press to perform deterministic analysis on input network"
+      },
+      "children": []
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel2",
+        "Position": [
+          1.5714285714285716,
+          13.882352941176471,
+          1.4285714285714284,
+          11.705882352941174
+        ],
+        "Units": "characters",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Title": []
+      },
+      "children": []
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel3",
+        "Position": [
+          2.0,
+          13.47058823529412,
+          35.857142857142854,
+          0.6470588235294112
+        ],
+        "Units": "characters",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Title": []
+      },
+      "children": []
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel4",
+        "Position": [
+          2.2857142857142856,
+          25.11764705882353,
+          35.857142857142854,
+          0.5882352941176485
+        ],
+        "Units": "characters",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Title": []
+      },
+      "children": []
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel8",
+        "Position": [
+          36.800000000000004,
+          13.764705882352942,
+          1.4285714285714306,
+          11.705882352941178
+        ],
+        "Units": "characters",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Title": []
+      },
+      "children": []
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel9",
+        "Position": [
+          38.57142857142857,
+          13.76470588235294,
+          1.4285714285714306,
+          11.705882352941176
+        ],
+        "Units": "characters",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Title": []
+      },
+      "children": []
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel10",
+        "Position": [
+          39.14285714285714,
+          13.470588235294118,
+          35.85714285714286,
+          0.6470588235294112
+        ],
+        "Units": "characters",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Title": []
+      },
+      "children": []
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel11",
+        "Position": [
+          39.285714285714285,
+          25.11764705882353,
+          35.857142857142854,
+          0.647058823529413
+        ],
+        "Units": "characters",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Title": []
+      },
+      "children": []
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel12",
+        "Position": [
+          73.85714285714285,
+          13.705882352941176,
+          1.4285714285714306,
+          11.705882352941176
+        ],
+        "Units": "characters",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Title": []
+      },
+      "children": []
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel13",
+        "Position": [
+          75.14285714285714,
+          13.764705882352942,
+          1.4285714285714306,
+          11.705882352941178
+        ],
+        "Units": "characters",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Title": []
+      },
+      "children": []
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel14",
+        "Position": [
+          75.71428571428571,
+          13.529411764705882,
+          35.85714285714285,
+          0.6470588235294112
+        ],
+        "Units": "characters",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Title": []
+      },
+      "children": []
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel15",
+        "Position": [
+          75.57142857142857,
+          25.176470588235297,
+          36.000000000000014,
+          0.5882352941176485
+        ],
+        "Units": "characters",
+        "Visible": "on",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "ForegroundColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "FontName": "MS Sans Serif",
+        "FontSize": 8.0,
+        "FontWeight": "normal",
+        "Title": []
+      },
+      "children": []
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel16",
+        "Position": [
+          110.48571428571427,
+          13.647058823529413,
+          1.4285714285714164,
+          11.705882352941174
+        ],
+        "Units": "characters",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Title": []
+      },
+      "children": []
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel17",
+        "Position": [
+          38.48571428571429,
+          1.7647058823529413,
+          1.4285714285714306,
+          11.705882352941174
+        ],
+        "Units": "characters",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Title": []
+      },
+      "children": []
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel18",
+        "Position": [
+          38.14285714285714,
+          1.4524886877828056,
+          35.85714285714286,
+          0.6470588235294117
+        ],
+        "Units": "characters",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Title": []
+      },
+      "children": []
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel19",
+        "Position": [
+          38.285714285714285,
+          13.058823529411764,
+          35.857142857142854,
+          0.6470588235294112
+        ],
+        "Units": "characters",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Title": []
+      },
+      "children": []
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel20",
+        "Position": [
+          73.85714285714285,
+          1.6470588235294117,
+          1.4285714285714306,
+          11.705882352941176
+        ],
+        "Units": "characters",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Title": []
+      },
+      "children": []
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel21",
+        "Position": [
+          75.14285714285714,
+          1.7647058823529413,
+          1.4285714285714306,
+          11.705882352941174
+        ],
+        "Units": "characters",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Title": []
+      },
+      "children": []
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel22",
+        "Position": [
+          75.28571428571428,
+          1.5294117647058825,
+          35.85714285714286,
+          0.6470588235294119
+        ],
+        "Units": "characters",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Title": []
+      },
+      "children": []
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel23",
+        "Position": [
+          75.42857142857143,
+          13.135746606334841,
+          35.85714285714283,
+          0.6470588235294112
+        ],
+        "Units": "characters",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Title": []
+      },
+      "children": []
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel24",
+        "Position": [
+          110.48571428571427,
+          1.6470588235294117,
+          1.4285714285714164,
+          11.705882352941176
+        ],
+        "Units": "characters",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Title": []
+      },
+      "children": []
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel25",
+        "Position": [
+          1.5142857142857142,
+          1.8823529411764706,
+          1.428571428571428,
+          11.705882352941176
+        ],
+        "Units": "characters",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Title": []
+      },
+      "children": []
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel26",
+        "Position": [
+          1.857142857142857,
+          1.5294117647058825,
+          35.857142857142854,
+          0.6470588235294119
+        ],
+        "Units": "characters",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Title": []
+      },
+      "children": []
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel27",
+        "Position": [
+          2.0,
+          13.11764705882353,
+          35.857142857142854,
+          0.6470588235294112
+        ],
+        "Units": "characters",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Title": []
+      },
+      "children": []
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel28",
+        "Position": [
+          36.800000000000004,
+          1.7647058823529413,
+          1.4285714285714306,
+          11.705882352941174
+        ],
+        "Units": "characters",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "Title": []
+      },
+      "children": []
+    },
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "versionHistory",
+        "Position": [
+          74.2,
+          28.76923076923077,
+          15.400000000000006,
+          1.3076923076923066
+        ],
+        "Units": "characters",
+        "String": "Version 1.0.0",
+        "Style": "text",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "ForegroundColor": [
+          0.5019607843137255,
+          0.5019607843137255,
+          0.5019607843137255
+        ],
+        "FontName": "Calibri",
+        "FontSize": 9.0
+      },
+      "children": []
+    },
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "banner",
+        "Position": [
+          0.0,
+          0.09049773755652817,
+          109.5714285714286,
+          1.4705882352941173
+        ],
+        "Units": "characters",
+        "String": "Copyrights 2017 \u00a9 Biomedical Informatics Research Lab, SBASSE, LUMS",
+        "Style": "text",
+        "Value": 0.0,
+        "Min": 0.0,
+        "Max": 1.0,
+        "Enable": "on",
+        "Visible": "on",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "ForegroundColor": [
+          0.5019607843137255,
+          0.5019607843137255,
+          0.5019607843137255
+        ],
+        "FontName": "Calibri",
+        "FontSize": 10.0,
+        "FontWeight": "normal",
+        "HorizontalAlignment": "center",
+        "TooltipString": []
+      },
+      "children": []
+    },
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "text10",
+        "Position": [
+          0.8,
+          25.846153846153847,
+          24.200000000000003,
+          0.6153846153846168
+        ],
+        "Units": "characters",
+        "String": [],
+        "Style": "text",
+        "Value": 0.0,
+        "Min": 0.0,
+        "Max": 1.0,
+        "Enable": "on",
+        "Visible": "on",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "ForegroundColor": [
+          0.0,
+          0.4470588235294118,
+          0.7411764705882353
+        ],
+        "FontName": "Calibri",
+        "FontSize": 36.0,
+        "FontWeight": "bold",
+        "HorizontalAlignment": "center",
+        "TooltipString": []
+      },
+      "children": []
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel29",
+        "Position": [
+          2.4000000000000004,
+          25.923076923076923,
+          108.0,
+          0.07692307692307665
+        ],
+        "Units": "characters",
+        "BackgroundColor": [
+          0.8,
+          0.8,
+          0.8
+        ],
+        "Title": []
+      },
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="5" skipped="1" tests="117" time="23.572" timestamp="2026-11-08T04:06:01.130036+05:00" hostname="legion_5"><testcase classname="tests.test_core" name="test_state_encoding" time="0.001" /><testcase classname="tests.test_core" name="test_zero_input_retains_state" time="0.000" /><testcase classname="tests.test_core" name="test_source_target_orientation" time="0.000" /><testcase classname="tests.test_core" name="test_rules_synchronous" time="0.000" /><testcase classname="tests.test_core" name="test_rules_constants_and_missing" time="0.000" /><testcase classname="tests.test_core" name="test_cyclic_attractor_and_basins" time="0.001" /><testcase classname="tests.test_core" name="test_timeout_is_reported" time="0.000" /><testcase classname="tests.test_core" name="test_weighted_mutation_basal_semantics" time="0.000" /><testcase classname="tests.test_core" name="test_rule_link_deletion_fixes_source_off" time="0.000" /><testcase classname="tests.test_core" name="test_sampling_unique_and_repeatable" time="0.001" /><testcase classname="tests.test_core" name="test_initial_fixed_nodes_are_not_clamped" time="0.000" /><testcase classname="tests.test_core" name="test_transition_hand_calculated" time="0.001" /><testcase classname="tests.test_core" name="test_subset_flux_is_not_renormalized" time="0.001" /><testcase classname="tests.test_core" name="test_pruning_one_synchronous_step" time="0.000" /><testcase classname="tests.test_core" name="test_trajectory_is_probability_rank_interval" time="0.000" /><testcase classname="tests.test_core" name="test_invalid_inputs[&lt;lambda&gt;0]" time="0.000" /><testcase classname="tests.test_core" name="test_invalid_inputs[&lt;lambda&gt;1]" time="0.000" /><testcase classname="tests.test_core" name="test_invalid_inputs[&lt;lambda&gt;2]" time="0.000" /><testcase classname="tests.test_core" name="test_invalid_inputs[&lt;lambda&gt;3]" time="0.000" /><testcase classname="tests.test_core" name="test_invalid_inputs[&lt;lambda&gt;4]" time="0.000" /><testcase classname="tests.test_core" name="test_invalid_inputs[&lt;lambda&gt;5]" time="0.000" /><testcase classname="tests.test_core" name="test_cancelled" time="0.000" /><testcase classname="tests.test_core" name="test_rules_pa_rejected" time="0.000" /><testcase classname="tests.test_core" name="test_sampling_fair_bit_distribution" time="0.006" /><testcase classname="tests.test_gui" name="test_all_guide_windows_render[ATLANTIS]" time="0.262" /><testcase classname="tests.test_gui" name="test_all_guide_windows_render[CancelSimulationButton]" time="0.028" /><testcase classname="tests.test_gui" name="test_all_guide_windows_render[DeterministicAnalysisMenu]" time="0.078" /><testcase classname="tests.test_gui" name="test_all_guide_windows_render[ExportFigureMenu]" time="0.021" /><testcase classname="tests.test_gui" name="test_all_guide_windows_render[GenerateNetwork]" time="0.038" /><testcase classname="tests.test_gui" name="test_all_guide_windows_render[GenerateStates]" time="0.029" /><testcase classname="tests.test_gui" name="test_all_guide_windows_render[GraphVizMenu]" time="0.042" /><testcase classname="tests.test_gui" name="test_all_guide_windows_render[ModifyNetwork]" time="0.040" /><testcase classname="tests.test_gui" name="test_all_guide_windows_render[NetworkInputMenu1]" time="0.058" /><testcase classname="tests.test_gui" name="test_all_guide_windows_render[NetworkInputMenu2]" time="0.070" /><testcase classname="tests.test_gui" name="test_all_guide_windows_render[NetworkSketchingOptions]" time="0.058" /><testcase classname="tests.test_gui" name="test_all_guide_windows_render[ProbabilisticAnalysisMenu]" time="0.079" /><testcase classname="tests.test_gui" name="test_all_guide_windows_render[StateSpaceSizeSelectionMenu]" time="0.050" /><testcase classname="tests.test_gui" name="test_all_guide_windows_render[VisualizeResultsMenu]" time="0.089" /><testcase classname="tests.test_gui" name="test_gui_network_import_workflow" time="0.337" /><testcase classname="tests.test_gui" name="test_gui_analysis_worker_and_result_table" time="0.183" /><testcase classname="tests.test_gui" name="test_gui_plot_worker" time="1.818" /><testcase classname="tests.test_gui" name="test_figure_controls" time="0.963" /><testcase classname="tests.test_gui" name="test_result_reopening" time="0.186" /><testcase classname="tests.test_gui" name="test_native_graphviz_svg_viewer" time="0.112"><failure message="FileNotFoundError: Install Graphviz and add its bin folder to PATH to use Graphviz layouts">qtapp = &lt;PySide6.QtWidgets.QApplication(0x1c2724f07c0) at 0x000001C27F58BF80&gt;
+yeast = Network(names=['Cln3', 'MBF', 'SBF', 'Cln1-2', 'Cdh1', 'Swi5', 'Cdc20', 'Clb5-6', 'Sic1', 'Clb1-2', 'Mcm1'], weights=a...,  1., -1.]]), basal=array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.]), rules=None, name='NetworkFile', positions={})
+tmp_path = WindowsPath('C:/Users/usman/AppData/Local/Temp/pytest-of-usman/pytest-2/test_native_graphviz_svg_viewe0')
+
+    def test_native_graphviz_svg_viewer(qtapp,yeast,tmp_path):
+        from atlantis.graphviz_window import graphviz_svg,GraphvizWindow
+        from atlantis.plots import network_dot
+&gt;       svg=graphviz_svg(network_dot(yeast))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_gui.py:81: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+atlantis\graphviz_window.py:9: in graphviz_svg
+    result=subprocess.run([find_graphviz(engine),'-Tsvg'],input=dot,text=True,capture_output=True,check=True)
+                           ^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+engine = 'dot'
+
+    def find_graphviz(engine='dot'):
+        local=Path(__file__).resolve().parent.parent/'.graphviz'/'bin'/(engine+'.exe')
+        if local.exists(): return str(local)
+        path=shutil.which(engine)
+        if path: return path
+        for base in [Path('C:/Program Files/Graphviz'),Path('C:/Program Files (x86)/Graphviz2.38')]:
+            p=base/'bin'/(engine+'.exe')
+            if p.exists(): return str(p)
+&gt;       raise FileNotFoundError('Install Graphviz and add its bin folder to PATH to use Graphviz layouts')
+E       FileNotFoundError: Install Graphviz and add its bin folder to PATH to use Graphviz layouts
+
+atlantis\plots.py:57: FileNotFoundError</failure></testcase><testcase classname="tests.test_gui" name="test_svg_figure_exports[png]" time="0.039"><failure message="FileNotFoundError: Install Graphviz and add its bin folder to PATH to use Graphviz layouts">qtapp = &lt;PySide6.QtWidgets.QApplication(0x1c2724f07c0) at 0x000001C27F58BF80&gt;
+yeast = Network(names=['Cln3', 'MBF', 'SBF', 'Cln1-2', 'Cdh1', 'Swi5', 'Cdc20', 'Clb5-6', 'Sic1', 'Clb1-2', 'Mcm1'], weights=a...,  1., -1.]]), basal=array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.]), rules=None, name='NetworkFile', positions={})
+tmp_path = WindowsPath('C:/Users/usman/AppData/Local/Temp/pytest-of-usman/pytest-2/test_svg_figure_exports_png_0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001C222022510&gt;
+extension = 'png'
+
+    @pytest.mark.parametrize('extension',['png','jpg','tiff','pdf'])
+    def test_svg_figure_exports(qtapp,yeast,tmp_path,monkeypatch,extension):
+        from atlantis.graphviz_window import graphviz_svg,GraphvizWindow
+        from atlantis.plots import network_dot
+&gt;       w=GraphvizWindow(graphviz_svg(network_dot(yeast)));path=tmp_path/('network.'+extension)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_gui.py:92: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+atlantis\graphviz_window.py:9: in graphviz_svg
+    result=subprocess.run([find_graphviz(engine),'-Tsvg'],input=dot,text=True,capture_output=True,check=True)
+                           ^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+engine = 'dot'
+
+    def find_graphviz(engine='dot'):
+        local=Path(__file__).resolve().parent.parent/'.graphviz'/'bin'/(engine+'.exe')
+        if local.exists(): return str(local)
+        path=shutil.which(engine)
+        if path: return path
+        for base in [Path('C:/Program Files/Graphviz'),Path('C:/Program Files (x86)/Graphviz2.38')]:
+            p=base/'bin'/(engine+'.exe')
+            if p.exists(): return str(p)
+&gt;       raise FileNotFoundError('Install Graphviz and add its bin folder to PATH to use Graphviz layouts')
+E       FileNotFoundError: Install Graphviz and add its bin folder to PATH to use Graphviz layouts
+
+atlantis\plots.py:57: FileNotFoundError</failure></testcase><testcase classname="tests.test_gui" name="test_svg_figure_exports[jpg]" time="0.042"><failure message="FileNotFoundError: Install Graphviz and add its bin folder to PATH to use Graphviz layouts">qtapp = &lt;PySide6.QtWidgets.QApplication(0x1c2724f07c0) at 0x000001C27F58BF80&gt;
+yeast = Network(names=['Cln3', 'MBF', 'SBF', 'Cln1-2', 'Cdh1', 'Swi5', 'Cdc20', 'Clb5-6', 'Sic1', 'Clb1-2', 'Mcm1'], weights=a...,  1., -1.]]), basal=array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.]), rules=None, name='NetworkFile', positions={})
+tmp_path = WindowsPath('C:/Users/usman/AppData/Local/Temp/pytest-of-usman/pytest-2/test_svg_figure_exports_jpg_0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001C2220228D0&gt;
+extension = 'jpg'
+
+    @pytest.mark.parametrize('extension',['png','jpg','tiff','pdf'])
+    def test_svg_figure_exports(qtapp,yeast,tmp_path,monkeypatch,extension):
+        from atlantis.graphviz_window import graphviz_svg,GraphvizWindow
+        from atlantis.plots import network_dot
+&gt;       w=GraphvizWindow(graphviz_svg(network_dot(yeast)));path=tmp_path/('network.'+extension)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_gui.py:92: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+atlantis\graphviz_window.py:9: in graphviz_svg
+    result=subprocess.run([find_graphviz(engine),'-Tsvg'],input=dot,text=True,capture_output=True,check=True)
+                           ^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+engine = 'dot'
+
+    def find_graphviz(engine='dot'):
+        local=Path(__file__).resolve().parent.parent/'.graphviz'/'bin'/(engine+'.exe')
+        if local.exists(): return str(local)
+        path=shutil.which(engine)
+        if path: return path
+        for base in [Path('C:/Program Files/Graphviz'),Path('C:/Program Files (x86)/Graphviz2.38')]:
+            p=base/'bin'/(engine+'.exe')
+            if p.exists(): return str(p)
+&gt;       raise FileNotFoundError('Install Graphviz and add its bin folder to PATH to use Graphviz layouts')
+E       FileNotFoundError: Install Graphviz and add its bin folder to PATH to use Graphviz layouts
+
+atlantis\plots.py:57: FileNotFoundError</failure></testcase><testcase classname="tests.test_gui" name="test_svg_figure_exports[tiff]" time="0.047"><failure message="FileNotFoundError: Install Graphviz and add its bin folder to PATH to use Graphviz layouts">qtapp = &lt;PySide6.QtWidgets.QApplication(0x1c2724f07c0) at 0x000001C27F58BF80&gt;
+yeast = Network(names=['Cln3', 'MBF', 'SBF', 'Cln1-2', 'Cdh1', 'Swi5', 'Cdc20', 'Clb5-6', 'Sic1', 'Clb1-2', 'Mcm1'], weights=a...,  1., -1.]]), basal=array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.]), rules=None, name='NetworkFile', positions={})
+tmp_path = WindowsPath('C:/Users/usman/AppData/Local/Temp/pytest-of-usman/pytest-2/test_svg_figure_exports_tiff_0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001C222021940&gt;
+extension = 'tiff'
+
+    @pytest.mark.parametrize('extension',['png','jpg','tiff','pdf'])
+    def test_svg_figure_exports(qtapp,yeast,tmp_path,monkeypatch,extension):
+        from atlantis.graphviz_window import graphviz_svg,GraphvizWindow
+        from atlantis.plots import network_dot
+&gt;       w=GraphvizWindow(graphviz_svg(network_dot(yeast)));path=tmp_path/('network.'+extension)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_gui.py:92: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+atlantis\graphviz_window.py:9: in graphviz_svg
+    result=subprocess.run([find_graphviz(engine),'-Tsvg'],input=dot,text=True,capture_output=True,check=True)
+                           ^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+engine = 'dot'
+
+    def find_graphviz(engine='dot'):
+        local=Path(__file__).resolve().parent.parent/'.graphviz'/'bin'/(engine+'.exe')
+        if local.exists(): return str(local)
+        path=shutil.which(engine)
+        if path: return path
+        for base in [Path('C:/Program Files/Graphviz'),Path('C:/Program Files (x86)/Graphviz2.38')]:
+            p=base/'bin'/(engine+'.exe')
+            if p.exists(): return str(p)
+&gt;       raise FileNotFoundError('Install Graphviz and add its bin folder to PATH to use Graphviz layouts')
+E       FileNotFoundError: Install Graphviz and add its bin folder to PATH to use Graphviz layouts
+
+atlantis\plots.py:57: FileNotFoundError</failure></testcase><testcase classname="tests.test_gui" name="test_svg_figure_exports[pdf]" time="0.039"><failure message="FileNotFoundError: Install Graphviz and add its bin folder to PATH to use Graphviz layouts">qtapp = &lt;PySide6.QtWidgets.QApplication(0x1c2724f07c0) at 0x000001C27F58BF80&gt;
+yeast = Network(names=['Cln3', 'MBF', 'SBF', 'Cln1-2', 'Cdh1', 'Swi5', 'Cdc20', 'Clb5-6', 'Sic1', 'Clb1-2', 'Mcm1'], weights=a...,  1., -1.]]), basal=array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.]), rules=None, name='NetworkFile', positions={})
+tmp_path = WindowsPath('C:/Users/usman/AppData/Local/Temp/pytest-of-usman/pytest-2/test_svg_figure_exports_pdf_0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001C222021610&gt;
+extension = 'pdf'
+
+    @pytest.mark.parametrize('extension',['png','jpg','tiff','pdf'])
+    def test_svg_figure_exports(qtapp,yeast,tmp_path,monkeypatch,extension):
+        from atlantis.graphviz_window import graphviz_svg,GraphvizWindow
+        from atlantis.plots import network_dot
+&gt;       w=GraphvizWindow(graphviz_svg(network_dot(yeast)));path=tmp_path/('network.'+extension)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_gui.py:92: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+atlantis\graphviz_window.py:9: in graphviz_svg
+    result=subprocess.run([find_graphviz(engine),'-Tsvg'],input=dot,text=True,capture_output=True,check=True)
+                           ^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+engine = 'dot'
+
+    def find_graphviz(engine='dot'):
+        local=Path(__file__).resolve().parent.parent/'.graphviz'/'bin'/(engine+'.exe')
+        if local.exists(): return str(local)
+        path=shutil.which(engine)
+        if path: return path
+        for base in [Path('C:/Program Files/Graphviz'),Path('C:/Program Files (x86)/Graphviz2.38')]:
+            p=base/'bin'/(engine+'.exe')
+            if p.exists(): return str(p)
+&gt;       raise FileNotFoundError('Install Graphviz and add its bin folder to PATH to use Graphviz layouts')
+E       FileNotFoundError: Install Graphviz and add its bin folder to PATH to use Graphviz layouts
+
+atlantis\plots.py:57: FileNotFoundError</failure></testcase><testcase classname="tests.test_io" name="test_state_roundtrip[.csv]" time="0.036" /><testcase classname="tests.test_io" name="test_state_roundtrip[.mat]" time="0.026" /><testcase classname="tests.test_io" name="test_weighted_roundtrip" time="0.033" /><testcase classname="tests.test_io" name="test_json_roundtrip" time="0.008" /><testcase classname="tests.test_io" name="test_rules_roundtrip" time="0.091" /><testcase classname="tests.test_io" name="test_original_fate_expansion_wildcards" time="0.030" /><testcase classname="tests.test_io" name="test_all_weighted_case_study_networks" time="0.050" /><testcase classname="tests.test_io" name="test_large_rule_networks[Case Study 3]" time="3.822" /><testcase classname="tests.test_io" name="test_large_rule_networks[Case Study 4]" time="1.212" /><testcase classname="tests.test_io" name="test_export_results" time="0.206" /><testcase classname="tests.test_io" name="test_bad_state_file" time="0.014" /><testcase classname="tests.test_io" name="test_original_mapping_files_load" time="0.035" /><testcase classname="tests.test_io" name="test_archived_p53_attractors[Control]" time="2.630" /><testcase classname="tests.test_io" name="test_archived_p53_attractors[Nutlin]" time="1.922" /><testcase classname="tests.test_io" name="test_supplementary_boolnet_conversion" time="0.037" /><testcase classname="tests.test_matlab_reference" name="test_matlab_yeast_attractors" time="0.056" /><testcase classname="tests.test_matlab_reference" name="test_matlab_yeast_fates" time="0.062" /><testcase classname="tests.test_matlab_reference" name="test_matlab_probabilities" time="0.028" /><testcase classname="tests.test_matlab_reference" name="test_matlab_rules_cycles" time="0.022" /><testcase classname="tests.test_matlab_reference" name="test_matlab_natural_neighbor" time="0.038" /><testcase classname="tests.test_matlab_reference" name="test_matlab_treemap_geometry" time="0.018" /><testcase classname="tests.test_matlab_reference" name="test_matlab_saved_naive_grid" time="0.013" /><testcase classname="tests.test_matlab_reference" name="test_matlab_sammon_newton_step" time="0.021" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[1-jet]" time="0.022" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[1-hot]" time="0.001" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[1-spring]" time="0.001" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[1-summer]" time="0.001" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[1-autumn]" time="0.001" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[1-winter]" time="0.001" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[1-cool]" time="0.001" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[1-gray]" time="0.001" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[1-hsv]" time="0.001" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[1-prism]" time="0.001" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[1-parula]" time="0.024" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[4-jet]" time="0.002" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[4-hot]" time="0.001" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[4-spring]" time="0.001" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[4-summer]" time="0.001" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[4-autumn]" time="0.001" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[4-winter]" time="0.001" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[4-cool]" time="0.001" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[4-gray]" time="0.001" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[4-hsv]" time="0.001" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[4-prism]" time="0.001" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[4-parula]" time="0.001" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[100-jet]" time="0.001" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[100-hot]" time="0.001" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[100-spring]" time="0.001" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[100-summer]" time="0.001" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[100-autumn]" time="0.001" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[100-winter]" time="0.001" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[100-cool]" time="0.001" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[100-gray]" time="0.001" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[100-hsv]" time="0.001" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[100-prism]" time="0.001" /><testcase classname="tests.test_matlab_reference" name="test_matlab_color_maps[100-parula]" time="0.001" /><testcase classname="tests.test_plots" name="test_sammon_finite_with_appropriate_data" time="0.003" /><testcase classname="tests.test_plots" name="test_natural_linear_precision" time="0.004" /><testcase classname="tests.test_plots" name="test_scientific_figures_render" time="1.167" /><testcase classname="tests.test_plots" name="test_sammon_surface_figure" time="0.076" /><testcase classname="tests.test_plots" name="test_invalid_energy_transform_is_reported" time="0.006" /><testcase classname="tests.test_plots" name="test_dot_uses_original_edge_order_and_colors" time="0.000" /><testcase classname="tests.test_plots" name="test_graphviz_if_installed" time="0.012"><skipped type="pytest.skip" message="Graphviz external executable not installed">C:\Bio_research\ATLANTIS_Python\tests\test_plots.py:61: Graphviz external executable not installed</skipped></testcase><testcase classname="tests.test_plots" name="test_scientific_export_formats[png]" time="0.296" /><testcase classname="tests.test_plots" name="test_scientific_export_formats[jpg]" time="0.183" /><testcase classname="tests.test_plots" name="test_scientific_export_formats[tiff]" time="0.352" /><testcase classname="tests.test_plots" name="test_scientific_export_formats[svg]" time="1.460" /><testcase classname="tests.test_plots" name="test_scientific_export_formats[pdf]" time="1.533" /><testcase classname="tests.test_plots" name="test_scientific_export_formats[eps]" time="0.913" /></testsuite></testsuites>

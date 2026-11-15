@@ -1,0 +1,30 @@
+{
+  "archive": "reference\\Toolbox\\Results\\2026-09-15 22-55-49 Node List\\APC+RAS+PTEN+P53\\Deterministic Analysis Output\\Network State List DA.mat",
+  "n": 1024,
+  "seed": 20261108,
+  "horizon": 200,
+  "pinned_at_time_zero": {
+    "False": {
+      "fate_counts": {
+        "Quiescence": 107,
+        "Metastasis + Normal Proliferation": 264,
+        "Abnormal Proliferation": 11,
+        "Abnormal Proliferation + Metastasis": 404,
+        "Normal Proliferation": 85,
+        "Metastasis": 151
+      },
+      "unresolved": 2
+    },
+    "True": {
+      "fate_counts": {
+        "Quiescence": 101,
+        "Metastasis + Normal Proliferation": 200,
+        "Abnormal Proliferation": 14,
+        "Abnormal Proliferation + Metastasis": 524,
+        "Normal Proliferation": 66,
+        "Metastasis": 113
+      },
+      "unresolved": 6
+    }
+  }
+}

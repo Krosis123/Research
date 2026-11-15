@@ -1,0 +1,826 @@
+[
+  {
+    "width": 2,
+    "fixture_seed": 11,
+    "T": 3,
+    "seed": 23,
+    "cached": true,
+    "cached_first": true,
+    "position": 1,
+    "cache_hits": 1,
+    "wall_s": 3.679026799974963,
+    "transpile_s": 1.522855499992147,
+    "simulation_s": 1.0975413001142442,
+    "status": "complete_qpe_heuristic",
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "10"
+          ],
+          "basin": 4
+        }
+      ],
+      "max_transient": 2,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 0,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    }
+  },
+  {
+    "width": 2,
+    "fixture_seed": 11,
+    "T": 3,
+    "seed": 23,
+    "cached": false,
+    "cached_first": true,
+    "position": 2,
+    "cache_hits": 0,
+    "wall_s": 2.186741800047457,
+    "transpile_s": 0.716244500130415,
+    "simulation_s": 1.181515800068155,
+    "status": "complete_qpe_heuristic",
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "10"
+          ],
+          "basin": 4
+        }
+      ],
+      "max_transient": 2,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 0,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    }
+  },
+  {
+    "width": 2,
+    "fixture_seed": 11,
+    "T": 3,
+    "seed": 47,
+    "cached": true,
+    "cached_first": true,
+    "position": 1,
+    "cache_hits": 1,
+    "wall_s": 1.8874718002043664,
+    "transpile_s": 0.36215530009940267,
+    "simulation_s": 1.2428820000495762,
+    "status": "complete_qpe_heuristic",
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "10"
+          ],
+          "basin": 4
+        }
+      ],
+      "max_transient": 2,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 0,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    }
+  },
+  {
+    "width": 2,
+    "fixture_seed": 11,
+    "T": 3,
+    "seed": 47,
+    "cached": false,
+    "cached_first": true,
+    "position": 2,
+    "cache_hits": 0,
+    "wall_s": 2.2517484999261796,
+    "transpile_s": 0.7162559002172202,
+    "simulation_s": 1.2511907999869436,
+    "status": "complete_qpe_heuristic",
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "10"
+          ],
+          "basin": 4
+        }
+      ],
+      "max_transient": 2,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 0,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    }
+  },
+  {
+    "width": 2,
+    "fixture_seed": 11,
+    "T": 3,
+    "seed": 71,
+    "cached": true,
+    "cached_first": true,
+    "position": 1,
+    "cache_hits": 1,
+    "wall_s": 1.94397890008986,
+    "transpile_s": 0.43814919982105494,
+    "simulation_s": 1.1976407999172807,
+    "status": "complete_qpe_heuristic",
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "10"
+          ],
+          "basin": 4
+        }
+      ],
+      "max_transient": 2,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 0,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    }
+  },
+  {
+    "width": 2,
+    "fixture_seed": 11,
+    "T": 3,
+    "seed": 71,
+    "cached": false,
+    "cached_first": true,
+    "position": 2,
+    "cache_hits": 0,
+    "wall_s": 2.1883390999864787,
+    "transpile_s": 0.6921778998803347,
+    "simulation_s": 1.1954978003632277,
+    "status": "complete_qpe_heuristic",
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "10"
+          ],
+          "basin": 4
+        }
+      ],
+      "max_transient": 2,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 0,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    }
+  },
+  {
+    "width": 2,
+    "fixture_seed": 11,
+    "T": 3,
+    "seed": 89,
+    "cached": false,
+    "cached_first": false,
+    "position": 1,
+    "cache_hits": 0,
+    "wall_s": 2.2587949000298977,
+    "transpile_s": 0.6976524998899549,
+    "simulation_s": 1.257933699991554,
+    "status": "complete_qpe_heuristic",
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "10"
+          ],
+          "basin": 4
+        }
+      ],
+      "max_transient": 2,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 0,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    }
+  },
+  {
+    "width": 2,
+    "fixture_seed": 11,
+    "T": 3,
+    "seed": 89,
+    "cached": true,
+    "cached_first": false,
+    "position": 2,
+    "cache_hits": 1,
+    "wall_s": 1.9757298999466002,
+    "transpile_s": 0.4055385999381542,
+    "simulation_s": 1.2782260000240058,
+    "status": "complete_qpe_heuristic",
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "10"
+          ],
+          "basin": 4
+        }
+      ],
+      "max_transient": 2,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 0,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    }
+  },
+  {
+    "width": 3,
+    "fixture_seed": 17,
+    "T": 4,
+    "seed": 23,
+    "cached": true,
+    "cached_first": true,
+    "position": 1,
+    "cache_hits": 1,
+    "wall_s": 3.9678321999963373,
+    "transpile_s": 0.5858330002520233,
+    "simulation_s": 2.871206999756396,
+    "status": "complete_qpe_heuristic",
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "000",
+            "001"
+          ],
+          "basin": 3
+        },
+        {
+          "cycle": [
+            "010"
+          ],
+          "basin": 5
+        }
+      ],
+      "max_transient": 4,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 4,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 3,
+          "estimate": 4,
+          "signed_error": 1
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        },
+        {
+          "call": 3,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    }
+  },
+  {
+    "width": 3,
+    "fixture_seed": 17,
+    "T": 4,
+    "seed": 23,
+    "cached": false,
+    "cached_first": true,
+    "position": 2,
+    "cache_hits": 0,
+    "wall_s": 4.583544800058007,
+    "transpile_s": 0.940709300339222,
+    "simulation_s": 2.9721740998793393,
+    "status": "complete_qpe_heuristic",
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "000",
+            "001"
+          ],
+          "basin": 3
+        },
+        {
+          "cycle": [
+            "010"
+          ],
+          "basin": 5
+        }
+      ],
+      "max_transient": 4,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 4,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 3,
+          "estimate": 4,
+          "signed_error": 1
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        },
+        {
+          "call": 3,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    }
+  },
+  {
+    "width": 3,
+    "fixture_seed": 17,
+    "T": 4,
+    "seed": 47,
+    "cached": false,
+    "cached_first": false,
+    "position": 1,
+    "cache_hits": 0,
+    "wall_s": 4.4966331999748945,
+    "transpile_s": 0.9619734000880271,
+    "simulation_s": 2.973441200098023,
+    "status": "complete_qpe_heuristic",
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "000",
+            "001"
+          ],
+          "basin": 3
+        },
+        {
+          "cycle": [
+            "010"
+          ],
+          "basin": 5
+        }
+      ],
+      "max_transient": 4,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 4,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 3,
+          "estimate": 4,
+          "signed_error": 1
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        },
+        {
+          "call": 3,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    }
+  },
+  {
+    "width": 3,
+    "fixture_seed": 17,
+    "T": 4,
+    "seed": 47,
+    "cached": true,
+    "cached_first": false,
+    "position": 2,
+    "cache_hits": 1,
+    "wall_s": 4.136388200102374,
+    "transpile_s": 0.640807599760592,
+    "simulation_s": 2.933138800319284,
+    "status": "complete_qpe_heuristic",
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "000",
+            "001"
+          ],
+          "basin": 3
+        },
+        {
+          "cycle": [
+            "010"
+          ],
+          "basin": 5
+        }
+      ],
+      "max_transient": 4,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 4,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 3,
+          "estimate": 4,
+          "signed_error": 1
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        },
+        {
+          "call": 3,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    }
+  },
+  {
+    "width": 3,
+    "fixture_seed": 17,
+    "T": 4,
+    "seed": 71,
+    "cached": false,
+    "cached_first": false,
+    "position": 1,
+    "cache_hits": 0,
+    "wall_s": 4.323490099981427,
+    "transpile_s": 0.8991344003006816,
+    "simulation_s": 2.879531899932772,
+    "status": "complete_qpe_heuristic",
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "000",
+            "001"
+          ],
+          "basin": 3
+        },
+        {
+          "cycle": [
+            "010"
+          ],
+          "basin": 5
+        }
+      ],
+      "max_transient": 4,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 8,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 5,
+          "estimate": 4,
+          "signed_error": -1
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        },
+        {
+          "call": 3,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    }
+  },
+  {
+    "width": 3,
+    "fixture_seed": 17,
+    "T": 4,
+    "seed": 71,
+    "cached": true,
+    "cached_first": false,
+    "position": 2,
+    "cache_hits": 1,
+    "wall_s": 4.061600500019267,
+    "transpile_s": 0.7489391001872718,
+    "simulation_s": 2.781939100008458,
+    "status": "complete_qpe_heuristic",
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "000",
+            "001"
+          ],
+          "basin": 3
+        },
+        {
+          "cycle": [
+            "010"
+          ],
+          "basin": 5
+        }
+      ],
+      "max_transient": 4,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 8,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 5,
+          "estimate": 4,
+          "signed_error": -1
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        },
+        {
+          "call": 3,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    }
+  },
+  {
+    "width": 3,
+    "fixture_seed": 17,
+    "T": 4,
+    "seed": 89,
+    "cached": false,
+    "cached_first": false,
+    "position": 1,
+    "cache_hits": 0,
+    "wall_s": 4.107811399968341,
+    "transpile_s": 0.8885228000581264,
+    "simulation_s": 2.6930638002231717,
+    "status": "complete_qpe_heuristic",
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "000",
+            "001"
+          ],
+          "basin": 3
+        },
+        {
+          "cycle": [
+            "010"
+          ],
+          "basin": 5
+        }
+      ],
+      "max_transient": 4,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 1,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 5,
+          "estimate": 4,
+          "signed_error": -1
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        },
+        {
+          "call": 3,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    }
+  },
+  {
+    "width": 3,
+    "fixture_seed": 17,
+    "T": 4,
+    "seed": 89,
+    "cached": true,
+    "cached_first": false,
+    "position": 2,
+    "cache_hits": 1,
+    "wall_s": 3.840885399840772,
+    "transpile_s": 0.5562407001852989,
+    "simulation_s": 2.7813617000356317,
+    "status": "complete_qpe_heuristic",
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "000",
+            "001"
+          ],
+          "basin": 3
+        },
+        {
+          "cycle": [
+            "010"
+          ],
+          "basin": 5
+        }
+      ],
+      "max_transient": 4,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 1,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 5,
+          "estimate": 4,
+          "signed_error": -1
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        },
+        {
+          "call": 3,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    }
+  }
+]

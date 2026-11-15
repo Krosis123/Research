@@ -1,0 +1,3684 @@
+[
+  {
+    "width": 2,
+    "fixture_seed": 11,
+    "fanin": 2,
+    "T": 3,
+    "shots": 32,
+    "seed": 23,
+    "optimization_level": 0,
+    "wall_s": 2.3101505001541227,
+    "process_rss_bytes": 176316416,
+    "observed_peak_rss_bytes": 186355712,
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "10"
+          ],
+          "basin": 4
+        }
+      ],
+      "max_transient": 2,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 0,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    },
+    "result": {
+      "cycles": [
+        [
+          "10"
+        ]
+      ],
+      "status": "complete_qpe_heuristic",
+      "completion_reason": "Repeated finite-precision QPE suggested full basin coverage; NOT certified",
+      "search_attempts": 1,
+      "counting_calls": 2,
+      "rejected_measurements": 0,
+      "total_measurements": 32,
+      "invalid_measurements": 0,
+      "compiled_depth_max": 9610,
+      "compiled_size_max": 12622,
+      "compiled_2q_count_max": 4741,
+      "oracle_calls_ideal": 15,
+      "search_runtime_s": 0.6041375999338925,
+      "counting_runtime_s": 0.6470480998978019,
+      "simulation_runtime_s": 1.0574944000691175,
+      "verification_runtime_s": 1.4899997040629387e-05,
+      "max_suppressed_leakage": null,
+      "classical_audit_runtime_s": 0.0,
+      "classical_audit_states_scanned": 0,
+      "history": [
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 60,
+            "compiled_size": 97,
+            "compiled_1q_count": 59,
+            "compiled_2q_count": 36,
+            "raw_depth": 3,
+            "raw_size": 5,
+            "logical_qubits": 8,
+            "transpiled_qubits": 8,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 1.0476072998717427,
+            "execution_s": 0.009215799858793616
+          }
+        },
+        {
+          "round": 0,
+          "kind": "measurements",
+          "counts": {
+            "10": 32
+          }
+        },
+        {
+          "round": 0,
+          "kind": "new_cycle",
+          "cycle": [
+            "10"
+          ],
+          "retry": 0,
+          "rejected_measurements": 0
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 9610,
+            "compiled_size": 12622,
+            "compiled_1q_count": 7878,
+            "compiled_2q_count": 4741,
+            "raw_depth": 10,
+            "raw_size": 16,
+            "logical_qubits": 11,
+            "transpiled_qubits": 11,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.018906000070273876,
+            "execution_s": 0.23582220007665455
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 1,
+          "marked_terminal_states": [
+            "10"
+          ],
+          "phase_counts": {
+            "100": 32
+          },
+          "M_histogram": {
+            "4": 32
+          }
+        },
+        {
+          "round": 1,
+          "kind": "count",
+          "M_est": 4,
+          "full_fraction": 1.0,
+          "cycles_found_before": 1
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 9610,
+            "compiled_size": 12622,
+            "compiled_1q_count": 7878,
+            "compiled_2q_count": 4741,
+            "raw_depth": 10,
+            "raw_size": 16,
+            "logical_qubits": 11,
+            "transpiled_qubits": 11,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.054259799886494875,
+            "execution_s": 0.23639230011031032
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 2,
+          "marked_terminal_states": [
+            "10"
+          ],
+          "phase_counts": {
+            "100": 32
+          },
+          "M_histogram": {
+            "4": 32
+          }
+        },
+        {
+          "round": 1,
+          "kind": "stop_confirmation",
+          "M_est": 4,
+          "full_fraction": 1.0
+        }
+      ],
+      "schema_version": 1,
+      "network": {
+        "names": [
+          "locus_0_r11",
+          "locus_1_r11"
+        ],
+        "name": "Boolean network",
+        "weights": null,
+        "basal": null,
+        "rules": [
+          {
+            "expression": "(~locus_0_r11 & ~locus_1_r11) | (~locus_0_r11 & locus_1_r11) | (locus_0_r11 & ~locus_1_r11)"
+          },
+          {
+            "expression": "(locus_0_r11 & locus_1_r11)"
+          }
+        ],
+        "positions": {},
+        "clamped": {},
+        "metadata": {}
+      },
+      "network_hash": "271c2683046a05dab381c481d1e899f3ace5f67903cb113a0e50bc8e0d57f092",
+      "parameters": {
+        "T": 3,
+        "engine": "aer_mps",
+        "counting_mode": "qpe_aer",
+        "shots": 32,
+        "counting_precision": 3,
+        "counting_shots": 32,
+        "seed": 23,
+        "max_rounds": 8,
+        "stop_policy": "qpe",
+        "max_qubits": 22,
+        "max_reference_states": 65536,
+        "max_memory_mib": 1024,
+        "max_compiled_depth": 200000,
+        "max_compiled_gates": 500000,
+        "max_verification_steps": 10000,
+        "timeout_seconds": 120,
+        "noise_probability": 0.0
+      },
+      "resources": {
+        "eligible": true,
+        "reasons": [],
+        "logical_evolution_qubits": 8,
+        "logical_counting_qubits": 3,
+        "circuit_qubits": 11,
+        "statevector_bytes_lower_bound": 32768,
+        "anf_terms": 3,
+        "transpiled_depth": null,
+        "transpiled_width": null,
+        "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+      },
+      "T_selection": "user supplied",
+      "taxonomy": "actual quantum circuit simulation",
+      "basin_sizes": null,
+      "basin_size_origin": "unavailable; counting history estimates combined excluded coverage",
+      "classical_information": "candidate trajectories only; optional audit separately labeled",
+      "preprocessing_runtime_s": 0.00032650004141032696,
+      "total_runtime_s": 2.3094101001042873
+    }
+  },
+  {
+    "width": 2,
+    "fixture_seed": 11,
+    "fanin": 2,
+    "T": 3,
+    "shots": 128,
+    "seed": 23,
+    "optimization_level": 0,
+    "wall_s": 1.8168715999927372,
+    "process_rss_bytes": 180936704,
+    "observed_peak_rss_bytes": 191078400,
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "10"
+          ],
+          "basin": 4
+        }
+      ],
+      "max_transient": 2,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 0,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    },
+    "result": {
+      "cycles": [
+        [
+          "10"
+        ]
+      ],
+      "status": "complete_qpe_heuristic",
+      "completion_reason": "Repeated finite-precision QPE suggested full basin coverage; NOT certified",
+      "search_attempts": 1,
+      "counting_calls": 2,
+      "rejected_measurements": 0,
+      "total_measurements": 128,
+      "invalid_measurements": 0,
+      "compiled_depth_max": 9610,
+      "compiled_size_max": 12622,
+      "compiled_2q_count_max": 4741,
+      "oracle_calls_ideal": 15,
+      "search_runtime_s": 0.0003003000747412443,
+      "counting_runtime_s": 1.8062821000348777,
+      "simulation_runtime_s": 0.00876039988361299,
+      "verification_runtime_s": 1.1699972674250603e-05,
+      "max_suppressed_leakage": null,
+      "classical_audit_runtime_s": 0.0,
+      "classical_audit_states_scanned": 0,
+      "history": [
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 60,
+            "compiled_size": 97,
+            "compiled_1q_count": 59,
+            "compiled_2q_count": 36,
+            "raw_depth": 3,
+            "raw_size": 5,
+            "logical_qubits": 8,
+            "transpiled_qubits": 8,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.0017669000662863255,
+            "execution_s": 0.006524399854242802
+          }
+        },
+        {
+          "round": 0,
+          "kind": "measurements",
+          "counts": {
+            "10": 128
+          }
+        },
+        {
+          "round": 0,
+          "kind": "new_cycle",
+          "cycle": [
+            "10"
+          ],
+          "retry": 0,
+          "rejected_measurements": 0
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 9610,
+            "compiled_size": 12622,
+            "compiled_1q_count": 7878,
+            "compiled_2q_count": 4741,
+            "raw_depth": 10,
+            "raw_size": 16,
+            "logical_qubits": 11,
+            "transpiled_qubits": 11,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.019153800094500184,
+            "execution_s": 0.6661939001642168
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 1,
+          "marked_terminal_states": [
+            "10"
+          ],
+          "phase_counts": {
+            "100": 128
+          },
+          "M_histogram": {
+            "4": 128
+          }
+        },
+        {
+          "round": 1,
+          "kind": "count",
+          "M_est": 4,
+          "full_fraction": 1.0,
+          "cycles_found_before": 1
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 9610,
+            "compiled_size": 12622,
+            "compiled_1q_count": 7878,
+            "compiled_2q_count": 4741,
+            "raw_depth": 10,
+            "raw_size": 16,
+            "logical_qubits": 11,
+            "transpiled_qubits": 11,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.06430339999496937,
+            "execution_s": 0.8466674999799579
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 2,
+          "marked_terminal_states": [
+            "10"
+          ],
+          "phase_counts": {
+            "100": 128
+          },
+          "M_histogram": {
+            "4": 128
+          }
+        },
+        {
+          "round": 1,
+          "kind": "stop_confirmation",
+          "M_est": 4,
+          "full_fraction": 1.0
+        }
+      ],
+      "schema_version": 1,
+      "network": {
+        "names": [
+          "locus_0_r11",
+          "locus_1_r11"
+        ],
+        "name": "Boolean network",
+        "weights": null,
+        "basal": null,
+        "rules": [
+          {
+            "expression": "(~locus_0_r11 & ~locus_1_r11) | (~locus_0_r11 & locus_1_r11) | (locus_0_r11 & ~locus_1_r11)"
+          },
+          {
+            "expression": "(locus_0_r11 & locus_1_r11)"
+          }
+        ],
+        "positions": {},
+        "clamped": {},
+        "metadata": {}
+      },
+      "network_hash": "271c2683046a05dab381c481d1e899f3ace5f67903cb113a0e50bc8e0d57f092",
+      "parameters": {
+        "T": 3,
+        "engine": "aer_mps",
+        "counting_mode": "qpe_aer",
+        "shots": 128,
+        "counting_precision": 3,
+        "counting_shots": 128,
+        "seed": 23,
+        "max_rounds": 8,
+        "stop_policy": "qpe",
+        "max_qubits": 22,
+        "max_reference_states": 65536,
+        "max_memory_mib": 1024,
+        "max_compiled_depth": 200000,
+        "max_compiled_gates": 500000,
+        "max_verification_steps": 10000,
+        "timeout_seconds": 120,
+        "noise_probability": 0.0
+      },
+      "resources": {
+        "eligible": true,
+        "reasons": [],
+        "logical_evolution_qubits": 8,
+        "logical_counting_qubits": 3,
+        "circuit_qubits": 11,
+        "statevector_bytes_lower_bound": 32768,
+        "anf_terms": 3,
+        "transpiled_depth": null,
+        "transpiled_width": null,
+        "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+      },
+      "T_selection": "user supplied",
+      "taxonomy": "actual quantum circuit simulation",
+      "basin_sizes": null,
+      "basin_size_origin": "unavailable; counting history estimates combined excluded coverage",
+      "classical_information": "candidate trajectories only; optional audit separately labeled",
+      "preprocessing_runtime_s": 0.0002951999194920063,
+      "total_runtime_s": 1.8162054000422359
+    }
+  },
+  {
+    "width": 2,
+    "fixture_seed": 11,
+    "fanin": 2,
+    "T": 3,
+    "shots": 128,
+    "seed": 47,
+    "optimization_level": 0,
+    "wall_s": 2.2014425999950618,
+    "process_rss_bytes": 186945536,
+    "observed_peak_rss_bytes": 197136384,
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "10"
+          ],
+          "basin": 4
+        }
+      ],
+      "max_transient": 2,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 0,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    },
+    "result": {
+      "cycles": [
+        [
+          "10"
+        ]
+      ],
+      "status": "complete_qpe_heuristic",
+      "completion_reason": "Repeated finite-precision QPE suggested full basin coverage; NOT certified",
+      "search_attempts": 1,
+      "counting_calls": 2,
+      "rejected_measurements": 0,
+      "total_measurements": 128,
+      "invalid_measurements": 0,
+      "compiled_depth_max": 9610,
+      "compiled_size_max": 12622,
+      "compiled_2q_count_max": 4741,
+      "oracle_calls_ideal": 15,
+      "search_runtime_s": 0.0005562000442296267,
+      "counting_runtime_s": 2.1600856999866664,
+      "simulation_runtime_s": 0.038188999984413385,
+      "verification_runtime_s": 2.9799994081258774e-05,
+      "max_suppressed_leakage": null,
+      "classical_audit_runtime_s": 0.0,
+      "classical_audit_states_scanned": 0,
+      "history": [
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 60,
+            "compiled_size": 97,
+            "compiled_1q_count": 59,
+            "compiled_2q_count": 36,
+            "raw_depth": 3,
+            "raw_size": 5,
+            "logical_qubits": 8,
+            "transpiled_qubits": 8,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.008312700083479285,
+            "execution_s": 0.027778899995610118
+          }
+        },
+        {
+          "round": 0,
+          "kind": "measurements",
+          "counts": {
+            "10": 128
+          }
+        },
+        {
+          "round": 0,
+          "kind": "new_cycle",
+          "cycle": [
+            "10"
+          ],
+          "retry": 0,
+          "rejected_measurements": 0
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 9610,
+            "compiled_size": 12622,
+            "compiled_1q_count": 7878,
+            "compiled_2q_count": 4741,
+            "raw_depth": 10,
+            "raw_size": 16,
+            "logical_qubits": 11,
+            "transpiled_qubits": 11,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.06266080006025732,
+            "execution_s": 0.8107797999400645
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 1,
+          "marked_terminal_states": [
+            "10"
+          ],
+          "phase_counts": {
+            "100": 128
+          },
+          "M_histogram": {
+            "4": 128
+          }
+        },
+        {
+          "round": 1,
+          "kind": "count",
+          "M_est": 4,
+          "full_fraction": 1.0,
+          "cycles_found_before": 1
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 9610,
+            "compiled_size": 12622,
+            "compiled_1q_count": 7878,
+            "compiled_2q_count": 4741,
+            "raw_depth": 10,
+            "raw_size": 16,
+            "logical_qubits": 11,
+            "transpiled_qubits": 11,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.07328150002285838,
+            "execution_s": 0.7715992999728769
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 2,
+          "marked_terminal_states": [
+            "10"
+          ],
+          "phase_counts": {
+            "100": 128
+          },
+          "M_histogram": {
+            "4": 128
+          }
+        },
+        {
+          "round": 1,
+          "kind": "stop_confirmation",
+          "M_est": 4,
+          "full_fraction": 1.0
+        }
+      ],
+      "schema_version": 1,
+      "network": {
+        "names": [
+          "locus_0_r11",
+          "locus_1_r11"
+        ],
+        "name": "Boolean network",
+        "weights": null,
+        "basal": null,
+        "rules": [
+          {
+            "expression": "(~locus_0_r11 & ~locus_1_r11) | (~locus_0_r11 & locus_1_r11) | (locus_0_r11 & ~locus_1_r11)"
+          },
+          {
+            "expression": "(locus_0_r11 & locus_1_r11)"
+          }
+        ],
+        "positions": {},
+        "clamped": {},
+        "metadata": {}
+      },
+      "network_hash": "271c2683046a05dab381c481d1e899f3ace5f67903cb113a0e50bc8e0d57f092",
+      "parameters": {
+        "T": 3,
+        "engine": "aer_mps",
+        "counting_mode": "qpe_aer",
+        "shots": 128,
+        "counting_precision": 3,
+        "counting_shots": 128,
+        "seed": 47,
+        "max_rounds": 8,
+        "stop_policy": "qpe",
+        "max_qubits": 22,
+        "max_reference_states": 65536,
+        "max_memory_mib": 1024,
+        "max_compiled_depth": 200000,
+        "max_compiled_gates": 500000,
+        "max_verification_steps": 10000,
+        "timeout_seconds": 120,
+        "noise_probability": 0.0
+      },
+      "resources": {
+        "eligible": true,
+        "reasons": [],
+        "logical_evolution_qubits": 8,
+        "logical_counting_qubits": 3,
+        "circuit_qubits": 11,
+        "statevector_bytes_lower_bound": 32768,
+        "anf_terms": 3,
+        "transpiled_depth": null,
+        "transpiled_width": null,
+        "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+      },
+      "T_selection": "user supplied",
+      "taxonomy": "actual quantum circuit simulation",
+      "basin_sizes": null,
+      "basin_size_origin": "unavailable; counting history estimates combined excluded coverage",
+      "classical_information": "candidate trajectories only; optional audit separately labeled",
+      "preprocessing_runtime_s": 0.0005099999252706766,
+      "total_runtime_s": 2.199965399922803
+    }
+  },
+  {
+    "width": 2,
+    "fixture_seed": 11,
+    "fanin": 2,
+    "T": 3,
+    "shots": 128,
+    "seed": 47,
+    "optimization_level": 2,
+    "wall_s": 2.3062221999280155,
+    "process_rss_bytes": 228945920,
+    "observed_peak_rss_bytes": 234352640,
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "10"
+          ],
+          "basin": 4
+        }
+      ],
+      "max_transient": 2,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 0,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 4,
+          "estimate": 4,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    },
+    "result": {
+      "cycles": [
+        [
+          "10"
+        ]
+      ],
+      "status": "complete_qpe_heuristic",
+      "completion_reason": "Repeated finite-precision QPE suggested full basin coverage; NOT certified",
+      "search_attempts": 1,
+      "counting_calls": 2,
+      "rejected_measurements": 0,
+      "total_measurements": 128,
+      "invalid_measurements": 0,
+      "compiled_depth_max": 8166,
+      "compiled_size_max": 10336,
+      "compiled_2q_count_max": 4402,
+      "oracle_calls_ideal": 15,
+      "search_runtime_s": 0.0004786001518368721,
+      "counting_runtime_s": 2.2598462000023574,
+      "simulation_runtime_s": 0.04160799994133413,
+      "verification_runtime_s": 1.4999881386756897e-05,
+      "max_suppressed_leakage": null,
+      "classical_audit_runtime_s": 0.0,
+      "classical_audit_states_scanned": 0,
+      "history": [
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 57,
+            "compiled_size": 88,
+            "compiled_1q_count": 50,
+            "compiled_2q_count": 36,
+            "raw_depth": 3,
+            "raw_size": 5,
+            "logical_qubits": 8,
+            "transpiled_qubits": 8,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.018913500010967255,
+            "execution_s": 0.02046910021454096
+          }
+        },
+        {
+          "round": 0,
+          "kind": "measurements",
+          "counts": {
+            "10": 128
+          }
+        },
+        {
+          "round": 0,
+          "kind": "new_cycle",
+          "cycle": [
+            "10"
+          ],
+          "retry": 0,
+          "rejected_measurements": 0
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 8166,
+            "compiled_size": 10336,
+            "compiled_1q_count": 5931,
+            "compiled_2q_count": 4402,
+            "raw_depth": 10,
+            "raw_size": 16,
+            "logical_qubits": 11,
+            "transpiled_qubits": 11,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.30306120007298887,
+            "execution_s": 0.6125691002234817
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 1,
+          "marked_terminal_states": [
+            "10"
+          ],
+          "phase_counts": {
+            "100": 128
+          },
+          "M_histogram": {
+            "4": 128
+          }
+        },
+        {
+          "round": 1,
+          "kind": "count",
+          "M_est": 4,
+          "full_fraction": 1.0,
+          "cycles_found_before": 1
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 8166,
+            "compiled_size": 10336,
+            "compiled_1q_count": 5931,
+            "compiled_2q_count": 4402,
+            "raw_depth": 10,
+            "raw_size": 16,
+            "logical_qubits": 11,
+            "transpiled_qubits": 11,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.35847119987010956,
+            "execution_s": 0.6696210999507457
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 2,
+          "marked_terminal_states": [
+            "10"
+          ],
+          "phase_counts": {
+            "100": 128
+          },
+          "M_histogram": {
+            "4": 128
+          }
+        },
+        {
+          "round": 1,
+          "kind": "stop_confirmation",
+          "M_est": 4,
+          "full_fraction": 1.0
+        }
+      ],
+      "schema_version": 1,
+      "network": {
+        "names": [
+          "locus_0_r11",
+          "locus_1_r11"
+        ],
+        "name": "Boolean network",
+        "weights": null,
+        "basal": null,
+        "rules": [
+          {
+            "expression": "(~locus_0_r11 & ~locus_1_r11) | (~locus_0_r11 & locus_1_r11) | (locus_0_r11 & ~locus_1_r11)"
+          },
+          {
+            "expression": "(locus_0_r11 & locus_1_r11)"
+          }
+        ],
+        "positions": {},
+        "clamped": {},
+        "metadata": {}
+      },
+      "network_hash": "271c2683046a05dab381c481d1e899f3ace5f67903cb113a0e50bc8e0d57f092",
+      "parameters": {
+        "T": 3,
+        "engine": "aer_mps",
+        "counting_mode": "qpe_aer",
+        "shots": 128,
+        "counting_precision": 3,
+        "counting_shots": 128,
+        "seed": 47,
+        "max_rounds": 8,
+        "stop_policy": "qpe",
+        "max_qubits": 22,
+        "max_reference_states": 65536,
+        "max_memory_mib": 1024,
+        "max_compiled_depth": 200000,
+        "max_compiled_gates": 500000,
+        "max_verification_steps": 10000,
+        "timeout_seconds": 120,
+        "noise_probability": 0.0
+      },
+      "resources": {
+        "eligible": true,
+        "reasons": [],
+        "logical_evolution_qubits": 8,
+        "logical_counting_qubits": 3,
+        "circuit_qubits": 11,
+        "statevector_bytes_lower_bound": 32768,
+        "anf_terms": 3,
+        "transpiled_depth": null,
+        "transpiled_width": null,
+        "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+      },
+      "T_selection": "user supplied",
+      "taxonomy": "actual quantum circuit simulation",
+      "basin_sizes": null,
+      "basin_size_origin": "unavailable; counting history estimates combined excluded coverage",
+      "classical_information": "candidate trajectories only; optional audit separately labeled",
+      "preprocessing_runtime_s": 0.0005272999405860901,
+      "total_runtime_s": 2.30312000005506
+    }
+  },
+  {
+    "width": 3,
+    "fixture_seed": 17,
+    "fanin": 2,
+    "T": 4,
+    "shots": 32,
+    "seed": 23,
+    "optimization_level": 0,
+    "wall_s": 4.147349399980158,
+    "process_rss_bytes": 232894464,
+    "observed_peak_rss_bytes": 244744192,
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "000",
+            "001"
+          ],
+          "basin": 3
+        },
+        {
+          "cycle": [
+            "010"
+          ],
+          "basin": 5
+        }
+      ],
+      "max_transient": 4,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 2,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 3,
+          "estimate": 4,
+          "signed_error": 1
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        },
+        {
+          "call": 3,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    },
+    "result": {
+      "cycles": [
+        [
+          "000",
+          "001"
+        ],
+        [
+          "010"
+        ]
+      ],
+      "status": "complete_qpe_heuristic",
+      "completion_reason": "Repeated finite-precision QPE suggested full basin coverage; NOT certified",
+      "search_attempts": 2,
+      "counting_calls": 3,
+      "rejected_measurements": 2,
+      "total_measurements": 64,
+      "invalid_measurements": 0,
+      "compiled_depth_max": 10947,
+      "compiled_size_max": 15003,
+      "compiled_2q_count_max": 5903,
+      "oracle_calls_ideal": 25,
+      "search_runtime_s": 0.0028035996947437525,
+      "counting_runtime_s": 4.04960919986479,
+      "simulation_runtime_s": 0.09252710011787713,
+      "verification_runtime_s": 7.230020128190517e-05,
+      "max_suppressed_leakage": null,
+      "classical_audit_runtime_s": 0.0,
+      "classical_audit_states_scanned": 0,
+      "history": [
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 54,
+            "compiled_size": 86,
+            "compiled_1q_count": 43,
+            "compiled_2q_count": 40,
+            "raw_depth": 3,
+            "raw_size": 7,
+            "logical_qubits": 15,
+            "transpiled_qubits": 15,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.005613500019535422,
+            "execution_s": 0.023203300079330802
+          }
+        },
+        {
+          "round": 0,
+          "kind": "measurements",
+          "counts": {
+            "010": 20,
+            "001": 5,
+            "000": 7
+          }
+        },
+        {
+          "round": 0,
+          "kind": "new_cycle",
+          "cycle": [
+            "000",
+            "001"
+          ],
+          "retry": 0,
+          "rejected_measurements": 0
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 10310,
+            "compiled_size": 14142,
+            "compiled_1q_count": 8614,
+            "compiled_2q_count": 5525,
+            "raw_depth": 10,
+            "raw_size": 17,
+            "logical_qubits": 18,
+            "transpiled_qubits": 18,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.03682120004668832,
+            "execution_s": 1.2923250999301672
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 1,
+          "marked_terminal_states": [
+            "000",
+            "001"
+          ],
+          "phase_counts": {
+            "110": 11,
+            "010": 11,
+            "100": 2,
+            "111": 3,
+            "001": 4,
+            "101": 1
+          },
+          "M_histogram": {
+            "4": 22,
+            "8": 2,
+            "1": 7,
+            "7": 1
+          }
+        },
+        {
+          "round": 1,
+          "kind": "count",
+          "M_est": 4,
+          "full_fraction": 0.0625,
+          "cycles_found_before": 1
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 191,
+            "compiled_size": 307,
+            "compiled_1q_count": 166,
+            "compiled_2q_count": 138,
+            "raw_depth": 16,
+            "raw_size": 34,
+            "logical_qubits": 15,
+            "transpiled_qubits": 15,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.009313700022175908,
+            "execution_s": 0.04901109985075891
+          }
+        },
+        {
+          "round": 1,
+          "kind": "measurements",
+          "counts": {
+            "010": 30,
+            "001": 2
+          }
+        },
+        {
+          "round": 1,
+          "kind": "new_cycle",
+          "cycle": [
+            "010"
+          ],
+          "retry": 0,
+          "rejected_measurements": 2
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 10947,
+            "compiled_size": 15003,
+            "compiled_1q_count": 9097,
+            "compiled_2q_count": 5903,
+            "raw_depth": 10,
+            "raw_size": 17,
+            "logical_qubits": 18,
+            "transpiled_qubits": 18,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.04356319992803037,
+            "execution_s": 1.0682391999289393
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 2,
+          "marked_terminal_states": [
+            "000",
+            "001",
+            "010"
+          ],
+          "phase_counts": {
+            "100": 32
+          },
+          "M_histogram": {
+            "8": 32
+          }
+        },
+        {
+          "round": 2,
+          "kind": "count",
+          "M_est": 8,
+          "full_fraction": 1.0,
+          "cycles_found_before": 2
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 10947,
+            "compiled_size": 15003,
+            "compiled_1q_count": 9097,
+            "compiled_2q_count": 5903,
+            "raw_depth": 10,
+            "raw_size": 17,
+            "logical_qubits": 18,
+            "transpiled_qubits": 18,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.046090800082311034,
+            "execution_s": 0.8909751002211124
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 3,
+          "marked_terminal_states": [
+            "000",
+            "001",
+            "010"
+          ],
+          "phase_counts": {
+            "100": 32
+          },
+          "M_histogram": {
+            "8": 32
+          }
+        },
+        {
+          "round": 2,
+          "kind": "stop_confirmation",
+          "M_est": 8,
+          "full_fraction": 1.0
+        }
+      ],
+      "schema_version": 1,
+      "network": {
+        "names": [
+          "locus_0_r17",
+          "locus_1_r17",
+          "locus_2_r17"
+        ],
+        "name": "Boolean network",
+        "weights": null,
+        "basal": null,
+        "rules": [
+          {
+            "expression": "(locus_1_r17 & locus_2_r17)"
+          },
+          {
+            "expression": "(~locus_0_r17 & locus_1_r17) | (locus_0_r17 & ~locus_1_r17)"
+          },
+          {
+            "expression": "(~locus_1_r17 & ~locus_2_r17) | (locus_1_r17 & locus_2_r17)"
+          }
+        ],
+        "positions": {},
+        "clamped": {},
+        "metadata": {}
+      },
+      "network_hash": "d73791e99f69ae7de5b9641670a2540bc74d66462ea9fa610b07f1e38f037610",
+      "parameters": {
+        "T": 4,
+        "engine": "aer_mps",
+        "counting_mode": "qpe_aer",
+        "shots": 32,
+        "counting_precision": 3,
+        "counting_shots": 32,
+        "seed": 23,
+        "max_rounds": 8,
+        "stop_policy": "qpe",
+        "max_qubits": 22,
+        "max_reference_states": 65536,
+        "max_memory_mib": 1024,
+        "max_compiled_depth": 200000,
+        "max_compiled_gates": 500000,
+        "max_verification_steps": 10000,
+        "timeout_seconds": 120,
+        "noise_probability": 0.0
+      },
+      "resources": {
+        "eligible": true,
+        "reasons": [],
+        "logical_evolution_qubits": 15,
+        "logical_counting_qubits": 3,
+        "circuit_qubits": 18,
+        "statevector_bytes_lower_bound": 4194304,
+        "anf_terms": 6,
+        "transpiled_depth": null,
+        "transpiled_width": null,
+        "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+      },
+      "T_selection": "user supplied",
+      "taxonomy": "actual quantum circuit simulation",
+      "basin_sizes": null,
+      "basin_size_origin": "unavailable; counting history estimates combined excluded coverage",
+      "classical_information": "candidate trajectories only; optional audit separately labeled",
+      "preprocessing_runtime_s": 0.0006136998999863863,
+      "total_runtime_s": 4.1465138997882605
+    }
+  },
+  {
+    "width": 3,
+    "fixture_seed": 17,
+    "fanin": 2,
+    "T": 4,
+    "shots": 128,
+    "seed": 23,
+    "optimization_level": 0,
+    "wall_s": 4.31808550003916,
+    "process_rss_bytes": 232435712,
+    "observed_peak_rss_bytes": 246669312,
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "000",
+            "001"
+          ],
+          "basin": 3
+        },
+        {
+          "cycle": [
+            "010"
+          ],
+          "basin": 5
+        }
+      ],
+      "max_transient": 4,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 4,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 3,
+          "estimate": 4,
+          "signed_error": 1
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        },
+        {
+          "call": 3,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    },
+    "result": {
+      "cycles": [
+        [
+          "000",
+          "001"
+        ],
+        [
+          "010"
+        ]
+      ],
+      "status": "complete_qpe_heuristic",
+      "completion_reason": "Repeated finite-precision QPE suggested full basin coverage; NOT certified",
+      "search_attempts": 2,
+      "counting_calls": 3,
+      "rejected_measurements": 4,
+      "total_measurements": 256,
+      "invalid_measurements": 0,
+      "compiled_depth_max": 10947,
+      "compiled_size_max": 15003,
+      "compiled_2q_count_max": 5903,
+      "oracle_calls_ideal": 25,
+      "search_runtime_s": 0.00313810002990067,
+      "counting_runtime_s": 4.142673399997875,
+      "simulation_runtime_s": 0.1693086999002844,
+      "verification_runtime_s": 0.00011649983935058117,
+      "max_suppressed_leakage": null,
+      "classical_audit_runtime_s": 0.0,
+      "classical_audit_states_scanned": 0,
+      "history": [
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 54,
+            "compiled_size": 86,
+            "compiled_1q_count": 43,
+            "compiled_2q_count": 40,
+            "raw_depth": 3,
+            "raw_size": 7,
+            "logical_qubits": 15,
+            "transpiled_qubits": 15,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.007164499955251813,
+            "execution_s": 0.05011410010047257
+          }
+        },
+        {
+          "round": 0,
+          "kind": "measurements",
+          "counts": {
+            "010": 73,
+            "001": 36,
+            "000": 19
+          }
+        },
+        {
+          "round": 0,
+          "kind": "new_cycle",
+          "cycle": [
+            "000",
+            "001"
+          ],
+          "retry": 0,
+          "rejected_measurements": 0
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 10310,
+            "compiled_size": 14142,
+            "compiled_1q_count": 8614,
+            "compiled_2q_count": 5525,
+            "raw_depth": 10,
+            "raw_size": 17,
+            "logical_qubits": 18,
+            "transpiled_qubits": 18,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.04480489995330572,
+            "execution_s": 1.2940114999655634
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 1,
+          "marked_terminal_states": [
+            "000",
+            "001"
+          ],
+          "phase_counts": {
+            "110": 50,
+            "100": 5,
+            "010": 44,
+            "111": 14,
+            "101": 4,
+            "001": 8,
+            "000": 1,
+            "011": 2
+          },
+          "M_histogram": {
+            "4": 94,
+            "8": 5,
+            "1": 22,
+            "7": 6,
+            "0": 1
+          }
+        },
+        {
+          "round": 1,
+          "kind": "count",
+          "M_est": 4,
+          "full_fraction": 0.0390625,
+          "cycles_found_before": 1
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 191,
+            "compiled_size": 307,
+            "compiled_1q_count": 166,
+            "compiled_2q_count": 138,
+            "raw_depth": 16,
+            "raw_size": 34,
+            "logical_qubits": 15,
+            "transpiled_qubits": 15,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.009831100003793836,
+            "execution_s": 0.09698870009742677
+          }
+        },
+        {
+          "round": 1,
+          "kind": "measurements",
+          "counts": {
+            "010": 124,
+            "001": 3,
+            "000": 1
+          }
+        },
+        {
+          "round": 1,
+          "kind": "new_cycle",
+          "cycle": [
+            "010"
+          ],
+          "retry": 0,
+          "rejected_measurements": 4
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 10947,
+            "compiled_size": 15003,
+            "compiled_1q_count": 9097,
+            "compiled_2q_count": 5903,
+            "raw_depth": 10,
+            "raw_size": 17,
+            "logical_qubits": 18,
+            "transpiled_qubits": 18,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.1468519999179989,
+            "execution_s": 0.9709785000886768
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 2,
+          "marked_terminal_states": [
+            "000",
+            "001",
+            "010"
+          ],
+          "phase_counts": {
+            "100": 128
+          },
+          "M_histogram": {
+            "8": 128
+          }
+        },
+        {
+          "round": 2,
+          "kind": "count",
+          "M_est": 8,
+          "full_fraction": 1.0,
+          "cycles_found_before": 2
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 10947,
+            "compiled_size": 15003,
+            "compiled_1q_count": 9097,
+            "compiled_2q_count": 5903,
+            "raw_depth": 10,
+            "raw_size": 17,
+            "logical_qubits": 18,
+            "transpiled_qubits": 18,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.046781300101429224,
+            "execution_s": 0.991459600161761
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 3,
+          "marked_terminal_states": [
+            "000",
+            "001",
+            "010"
+          ],
+          "phase_counts": {
+            "100": 128
+          },
+          "M_histogram": {
+            "8": 128
+          }
+        },
+        {
+          "round": 2,
+          "kind": "stop_confirmation",
+          "M_est": 8,
+          "full_fraction": 1.0
+        }
+      ],
+      "schema_version": 1,
+      "network": {
+        "names": [
+          "locus_0_r17",
+          "locus_1_r17",
+          "locus_2_r17"
+        ],
+        "name": "Boolean network",
+        "weights": null,
+        "basal": null,
+        "rules": [
+          {
+            "expression": "(locus_1_r17 & locus_2_r17)"
+          },
+          {
+            "expression": "(~locus_0_r17 & locus_1_r17) | (locus_0_r17 & ~locus_1_r17)"
+          },
+          {
+            "expression": "(~locus_1_r17 & ~locus_2_r17) | (locus_1_r17 & locus_2_r17)"
+          }
+        ],
+        "positions": {},
+        "clamped": {},
+        "metadata": {}
+      },
+      "network_hash": "d73791e99f69ae7de5b9641670a2540bc74d66462ea9fa610b07f1e38f037610",
+      "parameters": {
+        "T": 4,
+        "engine": "aer_mps",
+        "counting_mode": "qpe_aer",
+        "shots": 128,
+        "counting_precision": 3,
+        "counting_shots": 128,
+        "seed": 23,
+        "max_rounds": 8,
+        "stop_policy": "qpe",
+        "max_qubits": 22,
+        "max_reference_states": 65536,
+        "max_memory_mib": 1024,
+        "max_compiled_depth": 200000,
+        "max_compiled_gates": 500000,
+        "max_verification_steps": 10000,
+        "timeout_seconds": 120,
+        "noise_probability": 0.0
+      },
+      "resources": {
+        "eligible": true,
+        "reasons": [],
+        "logical_evolution_qubits": 15,
+        "logical_counting_qubits": 3,
+        "circuit_qubits": 18,
+        "statevector_bytes_lower_bound": 4194304,
+        "anf_terms": 6,
+        "transpiled_depth": null,
+        "transpiled_width": null,
+        "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+      },
+      "T_selection": "user supplied",
+      "taxonomy": "actual quantum circuit simulation",
+      "basin_sizes": null,
+      "basin_size_origin": "unavailable; counting history estimates combined excluded coverage",
+      "classical_information": "candidate trajectories only; optional audit separately labeled",
+      "preprocessing_runtime_s": 0.0006277000065892935,
+      "total_runtime_s": 4.316799600142986
+    }
+  },
+  {
+    "width": 3,
+    "fixture_seed": 17,
+    "fanin": 2,
+    "T": 4,
+    "shots": 128,
+    "seed": 47,
+    "optimization_level": 0,
+    "wall_s": 4.258355500176549,
+    "process_rss_bytes": 239542272,
+    "observed_peak_rss_bytes": 247410688,
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "000",
+            "001"
+          ],
+          "basin": 3
+        },
+        {
+          "cycle": [
+            "010"
+          ],
+          "basin": 5
+        }
+      ],
+      "max_transient": 4,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 4,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 3,
+          "estimate": 4,
+          "signed_error": 1
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        },
+        {
+          "call": 3,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    },
+    "result": {
+      "cycles": [
+        [
+          "000",
+          "001"
+        ],
+        [
+          "010"
+        ]
+      ],
+      "status": "complete_qpe_heuristic",
+      "completion_reason": "Repeated finite-precision QPE suggested full basin coverage; NOT certified",
+      "search_attempts": 2,
+      "counting_calls": 3,
+      "rejected_measurements": 4,
+      "total_measurements": 256,
+      "invalid_measurements": 0,
+      "compiled_depth_max": 10947,
+      "compiled_size_max": 15003,
+      "compiled_2q_count_max": 5903,
+      "oracle_calls_ideal": 25,
+      "search_runtime_s": 0.0036331999581307173,
+      "counting_runtime_s": 4.090480800019577,
+      "simulation_runtime_s": 0.1605068997014314,
+      "verification_runtime_s": 0.00010730000212788582,
+      "max_suppressed_leakage": null,
+      "classical_audit_runtime_s": 0.0,
+      "classical_audit_states_scanned": 0,
+      "history": [
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 54,
+            "compiled_size": 86,
+            "compiled_1q_count": 43,
+            "compiled_2q_count": 40,
+            "raw_depth": 3,
+            "raw_size": 7,
+            "logical_qubits": 15,
+            "transpiled_qubits": 15,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.005200200015679002,
+            "execution_s": 0.05132309999316931
+          }
+        },
+        {
+          "round": 0,
+          "kind": "measurements",
+          "counts": {
+            "010": 83,
+            "001": 34,
+            "000": 11
+          }
+        },
+        {
+          "round": 0,
+          "kind": "new_cycle",
+          "cycle": [
+            "000",
+            "001"
+          ],
+          "retry": 0,
+          "rejected_measurements": 0
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 10310,
+            "compiled_size": 14142,
+            "compiled_1q_count": 8614,
+            "compiled_2q_count": 5525,
+            "raw_depth": 10,
+            "raw_size": 17,
+            "logical_qubits": 18,
+            "transpiled_qubits": 18,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.04764120001345873,
+            "execution_s": 1.2736019999720156
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 1,
+          "marked_terminal_states": [
+            "000",
+            "001"
+          ],
+          "phase_counts": {
+            "010": 47,
+            "110": 44,
+            "111": 13,
+            "011": 4,
+            "001": 12,
+            "101": 3,
+            "100": 3,
+            "000": 2
+          },
+          "M_histogram": {
+            "4": 91,
+            "1": 25,
+            "7": 7,
+            "8": 3,
+            "0": 2
+          }
+        },
+        {
+          "round": 1,
+          "kind": "count",
+          "M_est": 4,
+          "full_fraction": 0.0234375,
+          "cycles_found_before": 1
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 191,
+            "compiled_size": 307,
+            "compiled_1q_count": 166,
+            "compiled_2q_count": 138,
+            "raw_depth": 16,
+            "raw_size": 34,
+            "logical_qubits": 15,
+            "transpiled_qubits": 15,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.009293399984017015,
+            "execution_s": 0.08936490002088249
+          }
+        },
+        {
+          "round": 1,
+          "kind": "measurements",
+          "counts": {
+            "010": 124,
+            "000": 1,
+            "001": 3
+          }
+        },
+        {
+          "round": 1,
+          "kind": "new_cycle",
+          "cycle": [
+            "010"
+          ],
+          "retry": 0,
+          "rejected_measurements": 4
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 10947,
+            "compiled_size": 15003,
+            "compiled_1q_count": 9097,
+            "compiled_2q_count": 5903,
+            "raw_depth": 10,
+            "raw_size": 17,
+            "logical_qubits": 18,
+            "transpiled_qubits": 18,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.052493799943476915,
+            "execution_s": 0.991595699917525
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 2,
+          "marked_terminal_states": [
+            "000",
+            "001",
+            "010"
+          ],
+          "phase_counts": {
+            "100": 128
+          },
+          "M_histogram": {
+            "8": 128
+          }
+        },
+        {
+          "round": 2,
+          "kind": "count",
+          "M_est": 8,
+          "full_fraction": 1.0,
+          "cycles_found_before": 2
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 10947,
+            "compiled_size": 15003,
+            "compiled_1q_count": 9097,
+            "compiled_2q_count": 5903,
+            "raw_depth": 10,
+            "raw_size": 17,
+            "logical_qubits": 18,
+            "transpiled_qubits": 18,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.06717519997619092,
+            "execution_s": 1.0318374999333173
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 3,
+          "marked_terminal_states": [
+            "000",
+            "001",
+            "010"
+          ],
+          "phase_counts": {
+            "100": 128
+          },
+          "M_histogram": {
+            "8": 128
+          }
+        },
+        {
+          "round": 2,
+          "kind": "stop_confirmation",
+          "M_est": 8,
+          "full_fraction": 1.0
+        }
+      ],
+      "schema_version": 1,
+      "network": {
+        "names": [
+          "locus_0_r17",
+          "locus_1_r17",
+          "locus_2_r17"
+        ],
+        "name": "Boolean network",
+        "weights": null,
+        "basal": null,
+        "rules": [
+          {
+            "expression": "(locus_1_r17 & locus_2_r17)"
+          },
+          {
+            "expression": "(~locus_0_r17 & locus_1_r17) | (locus_0_r17 & ~locus_1_r17)"
+          },
+          {
+            "expression": "(~locus_1_r17 & ~locus_2_r17) | (locus_1_r17 & locus_2_r17)"
+          }
+        ],
+        "positions": {},
+        "clamped": {},
+        "metadata": {}
+      },
+      "network_hash": "d73791e99f69ae7de5b9641670a2540bc74d66462ea9fa610b07f1e38f037610",
+      "parameters": {
+        "T": 4,
+        "engine": "aer_mps",
+        "counting_mode": "qpe_aer",
+        "shots": 128,
+        "counting_precision": 3,
+        "counting_shots": 128,
+        "seed": 47,
+        "max_rounds": 8,
+        "stop_policy": "qpe",
+        "max_qubits": 22,
+        "max_reference_states": 65536,
+        "max_memory_mib": 1024,
+        "max_compiled_depth": 200000,
+        "max_compiled_gates": 500000,
+        "max_verification_steps": 10000,
+        "timeout_seconds": 120,
+        "noise_probability": 0.0
+      },
+      "resources": {
+        "eligible": true,
+        "reasons": [],
+        "logical_evolution_qubits": 15,
+        "logical_counting_qubits": 3,
+        "circuit_qubits": 18,
+        "statevector_bytes_lower_bound": 4194304,
+        "anf_terms": 6,
+        "transpiled_depth": null,
+        "transpiled_width": null,
+        "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+      },
+      "T_selection": "user supplied",
+      "taxonomy": "actual quantum circuit simulation",
+      "basin_sizes": null,
+      "basin_size_origin": "unavailable; counting history estimates combined excluded coverage",
+      "classical_information": "candidate trajectories only; optional audit separately labeled",
+      "preprocessing_runtime_s": 0.0012672001030296087,
+      "total_runtime_s": 4.257010699948296
+    }
+  },
+  {
+    "width": 3,
+    "fixture_seed": 17,
+    "fanin": 2,
+    "T": 4,
+    "shots": 128,
+    "seed": 47,
+    "optimization_level": 2,
+    "wall_s": 4.356841899920255,
+    "process_rss_bytes": 264613888,
+    "observed_peak_rss_bytes": 271241216,
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "000",
+            "001"
+          ],
+          "basin": 3
+        },
+        {
+          "cycle": [
+            "010"
+          ],
+          "basin": 5
+        }
+      ],
+      "max_transient": 4,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 4,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 3,
+          "estimate": 4,
+          "signed_error": 1
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        },
+        {
+          "call": 3,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    },
+    "result": {
+      "cycles": [
+        [
+          "000",
+          "001"
+        ],
+        [
+          "010"
+        ]
+      ],
+      "status": "complete_qpe_heuristic",
+      "completion_reason": "Repeated finite-precision QPE suggested full basin coverage; NOT certified",
+      "search_attempts": 2,
+      "counting_calls": 3,
+      "rejected_measurements": 4,
+      "total_measurements": 256,
+      "invalid_measurements": 0,
+      "compiled_depth_max": 9673,
+      "compiled_size_max": 12625,
+      "compiled_2q_count_max": 5550,
+      "oracle_calls_ideal": 25,
+      "search_runtime_s": 0.002593599958345294,
+      "counting_runtime_s": 4.150963499676436,
+      "simulation_runtime_s": 0.1999075000640005,
+      "verification_runtime_s": 0.0001370999962091446,
+      "max_suppressed_leakage": null,
+      "classical_audit_runtime_s": 0.0,
+      "classical_audit_states_scanned": 0,
+      "history": [
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 54,
+            "compiled_size": 82,
+            "compiled_1q_count": 39,
+            "compiled_2q_count": 40,
+            "raw_depth": 3,
+            "raw_size": 7,
+            "logical_qubits": 15,
+            "transpiled_qubits": 15,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.015361200086772442,
+            "execution_s": 0.0751939001493156
+          }
+        },
+        {
+          "round": 0,
+          "kind": "measurements",
+          "counts": {
+            "010": 83,
+            "001": 34,
+            "000": 11
+          }
+        },
+        {
+          "round": 0,
+          "kind": "new_cycle",
+          "cycle": [
+            "000",
+            "001"
+          ],
+          "retry": 0,
+          "rejected_measurements": 0
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 9085,
+            "compiled_size": 11876,
+            "compiled_1q_count": 6659,
+            "compiled_2q_count": 5214,
+            "raw_depth": 10,
+            "raw_size": 17,
+            "logical_qubits": 18,
+            "transpiled_qubits": 18,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.2784579999279231,
+            "execution_s": 1.0204512001946568
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 1,
+          "marked_terminal_states": [
+            "000",
+            "001"
+          ],
+          "phase_counts": {
+            "001": 11,
+            "110": 61,
+            "010": 37,
+            "111": 13,
+            "101": 3,
+            "100": 2,
+            "000": 1
+          },
+          "M_histogram": {
+            "1": 24,
+            "4": 98,
+            "7": 3,
+            "8": 2,
+            "0": 1
+          }
+        },
+        {
+          "round": 1,
+          "kind": "count",
+          "M_est": 4,
+          "full_fraction": 0.015625,
+          "cycles_found_before": 1
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 184,
+            "compiled_size": 265,
+            "compiled_1q_count": 124,
+            "compiled_2q_count": 138,
+            "raw_depth": 16,
+            "raw_size": 34,
+            "logical_qubits": 15,
+            "transpiled_qubits": 15,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.01562660001218319,
+            "execution_s": 0.08784670010209084
+          }
+        },
+        {
+          "round": 1,
+          "kind": "measurements",
+          "counts": {
+            "010": 124,
+            "000": 1,
+            "001": 3
+          }
+        },
+        {
+          "round": 1,
+          "kind": "new_cycle",
+          "cycle": [
+            "010"
+          ],
+          "retry": 0,
+          "rejected_measurements": 4
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 9673,
+            "compiled_size": 12625,
+            "compiled_1q_count": 7072,
+            "compiled_2q_count": 5550,
+            "raw_depth": 10,
+            "raw_size": 17,
+            "logical_qubits": 18,
+            "transpiled_qubits": 18,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.2545135000254959,
+            "execution_s": 0.8653395001310855
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 2,
+          "marked_terminal_states": [
+            "000",
+            "001",
+            "010"
+          ],
+          "phase_counts": {
+            "100": 128
+          },
+          "M_histogram": {
+            "8": 128
+          }
+        },
+        {
+          "round": 2,
+          "kind": "count",
+          "M_est": 8,
+          "full_fraction": 1.0,
+          "cycles_found_before": 2
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 9673,
+            "compiled_size": 12625,
+            "compiled_1q_count": 7072,
+            "compiled_2q_count": 5550,
+            "raw_depth": 10,
+            "raw_size": 17,
+            "logical_qubits": 18,
+            "transpiled_qubits": 18,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.28462240006774664,
+            "execution_s": 0.910871900152415
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 3,
+          "marked_terminal_states": [
+            "000",
+            "001",
+            "010"
+          ],
+          "phase_counts": {
+            "100": 128
+          },
+          "M_histogram": {
+            "8": 128
+          }
+        },
+        {
+          "round": 2,
+          "kind": "stop_confirmation",
+          "M_est": 8,
+          "full_fraction": 1.0
+        }
+      ],
+      "schema_version": 1,
+      "network": {
+        "names": [
+          "locus_0_r17",
+          "locus_1_r17",
+          "locus_2_r17"
+        ],
+        "name": "Boolean network",
+        "weights": null,
+        "basal": null,
+        "rules": [
+          {
+            "expression": "(locus_1_r17 & locus_2_r17)"
+          },
+          {
+            "expression": "(~locus_0_r17 & locus_1_r17) | (locus_0_r17 & ~locus_1_r17)"
+          },
+          {
+            "expression": "(~locus_1_r17 & ~locus_2_r17) | (locus_1_r17 & locus_2_r17)"
+          }
+        ],
+        "positions": {},
+        "clamped": {},
+        "metadata": {}
+      },
+      "network_hash": "d73791e99f69ae7de5b9641670a2540bc74d66462ea9fa610b07f1e38f037610",
+      "parameters": {
+        "T": 4,
+        "engine": "aer_mps",
+        "counting_mode": "qpe_aer",
+        "shots": 128,
+        "counting_precision": 3,
+        "counting_shots": 128,
+        "seed": 47,
+        "max_rounds": 8,
+        "stop_policy": "qpe",
+        "max_qubits": 22,
+        "max_reference_states": 65536,
+        "max_memory_mib": 1024,
+        "max_compiled_depth": 200000,
+        "max_compiled_gates": 500000,
+        "max_verification_steps": 10000,
+        "timeout_seconds": 120,
+        "noise_probability": 0.0
+      },
+      "resources": {
+        "eligible": true,
+        "reasons": [],
+        "logical_evolution_qubits": 15,
+        "logical_counting_qubits": 3,
+        "circuit_qubits": 18,
+        "statevector_bytes_lower_bound": 4194304,
+        "anf_terms": 6,
+        "transpiled_depth": null,
+        "transpiled_width": null,
+        "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+      },
+      "T_selection": "user supplied",
+      "taxonomy": "actual quantum circuit simulation",
+      "basin_sizes": null,
+      "basin_size_origin": "unavailable; counting history estimates combined excluded coverage",
+      "classical_information": "candidate trajectories only; optional audit separately labeled",
+      "preprocessing_runtime_s": 0.0010987999849021435,
+      "total_runtime_s": 4.355577299837023
+    }
+  },
+  {
+    "width": 3,
+    "fixture_seed": 39,
+    "fanin": 3,
+    "T": 3,
+    "shots": 32,
+    "seed": 23,
+    "optimization_level": 0,
+    "wall_s": 21.229837799910456,
+    "process_rss_bytes": 291999744,
+    "observed_peak_rss_bytes": 349753344,
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "100"
+          ],
+          "basin": 2
+        },
+        {
+          "cycle": [
+            "101"
+          ],
+          "basin": 6
+        }
+      ],
+      "max_transient": 2,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 16,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 6,
+          "estimate": 7,
+          "signed_error": 1
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        },
+        {
+          "call": 3,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    },
+    "result": {
+      "cycles": [
+        [
+          "100"
+        ],
+        [
+          "101"
+        ]
+      ],
+      "status": "complete_qpe_heuristic",
+      "completion_reason": "Repeated finite-precision QPE suggested full basin coverage; NOT certified",
+      "search_attempts": 2,
+      "counting_calls": 3,
+      "rejected_measurements": 16,
+      "total_measurements": 64,
+      "invalid_measurements": 0,
+      "compiled_depth_max": 65134,
+      "compiled_size_max": 83386,
+      "compiled_2q_count_max": 31887,
+      "oracle_calls_ideal": 27,
+      "search_runtime_s": 0.0072870999574661255,
+      "counting_runtime_s": 20.89981159963645,
+      "simulation_runtime_s": 0.3168993000872433,
+      "verification_runtime_s": 0.00011119991540908813,
+      "max_suppressed_leakage": null,
+      "classical_audit_runtime_s": 0.0,
+      "classical_audit_states_scanned": 0,
+      "history": [
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 392,
+            "compiled_size": 628,
+            "compiled_1q_count": 380,
+            "compiled_2q_count": 245,
+            "raw_depth": 3,
+            "raw_size": 7,
+            "logical_qubits": 12,
+            "transpiled_qubits": 12,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.008217499824240804,
+            "execution_s": 0.05565840005874634
+          }
+        },
+        {
+          "round": 0,
+          "kind": "measurements",
+          "counts": {
+            "101": 24,
+            "100": 8
+          }
+        },
+        {
+          "round": 0,
+          "kind": "new_cycle",
+          "cycle": [
+            "101"
+          ],
+          "retry": 0,
+          "rejected_measurements": 0
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 64469,
+            "compiled_size": 82525,
+            "compiled_1q_count": 51013,
+            "compiled_2q_count": 31509,
+            "raw_depth": 10,
+            "raw_size": 17,
+            "logical_qubits": 15,
+            "transpiled_qubits": 15,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.4874609000980854,
+            "execution_s": 6.101101400097832
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 1,
+          "marked_terminal_states": [
+            "101"
+          ],
+          "phase_counts": {
+            "101": 16,
+            "011": 12,
+            "110": 2,
+            "010": 2
+          },
+          "M_histogram": {
+            "7": 28,
+            "4": 4
+          }
+        },
+        {
+          "round": 1,
+          "kind": "count",
+          "M_est": 7,
+          "full_fraction": 0.0,
+          "cycles_found_before": 1
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 2140,
+            "compiled_size": 3132,
+            "compiled_1q_count": 1816,
+            "compiled_2q_count": 1313,
+            "raw_depth": 23,
+            "raw_size": 43,
+            "logical_qubits": 12,
+            "transpiled_qubits": 12,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.018129499861970544,
+            "execution_s": 0.18433329998515546
+          }
+        },
+        {
+          "round": 1,
+          "kind": "measurements",
+          "counts": {
+            "100": 16,
+            "101": 16
+          }
+        },
+        {
+          "round": 1,
+          "kind": "new_cycle",
+          "cycle": [
+            "100"
+          ],
+          "retry": 0,
+          "rejected_measurements": 16
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 65134,
+            "compiled_size": 83386,
+            "compiled_1q_count": 51496,
+            "compiled_2q_count": 31887,
+            "raw_depth": 10,
+            "raw_size": 17,
+            "logical_qubits": 15,
+            "transpiled_qubits": 15,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.3322982001118362,
+            "execution_s": 5.206591799855232
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 2,
+          "marked_terminal_states": [
+            "100",
+            "101"
+          ],
+          "phase_counts": {
+            "100": 32
+          },
+          "M_histogram": {
+            "8": 32
+          }
+        },
+        {
+          "round": 2,
+          "kind": "count",
+          "M_est": 8,
+          "full_fraction": 1.0,
+          "cycles_found_before": 2
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 65134,
+            "compiled_size": 83386,
+            "compiled_1q_count": 51496,
+            "compiled_2q_count": 31887,
+            "raw_depth": 10,
+            "raw_size": 17,
+            "logical_qubits": 15,
+            "transpiled_qubits": 15,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.4536586001049727,
+            "execution_s": 5.087614099960774
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 3,
+          "marked_terminal_states": [
+            "100",
+            "101"
+          ],
+          "phase_counts": {
+            "100": 32
+          },
+          "M_histogram": {
+            "8": 32
+          }
+        },
+        {
+          "round": 2,
+          "kind": "stop_confirmation",
+          "M_est": 8,
+          "full_fraction": 1.0
+        }
+      ],
+      "schema_version": 1,
+      "network": {
+        "names": [
+          "locus_0_r39",
+          "locus_1_r39",
+          "locus_2_r39"
+        ],
+        "name": "Boolean network",
+        "weights": null,
+        "basal": null,
+        "rules": [
+          {
+            "expression": "(~locus_0_r39 & ~locus_1_r39 & ~locus_2_r39) | (~locus_0_r39 & locus_1_r39 & ~locus_2_r39) | (locus_0_r39 & ~locus_1_r39 & ~locus_2_r39) | (locus_0_r39 & ~locus_1_r39 & locus_2_r39) | (locus_0_r39 & locus_1_r39 & locus_2_r39)"
+          },
+          {
+            "expression": "(~locus_0_r39 & ~locus_1_r39 & locus_2_r39) | (~locus_0_r39 & locus_1_r39 & locus_2_r39) | (locus_0_r39 & locus_1_r39 & ~locus_2_r39)"
+          },
+          {
+            "expression": "(~locus_0_r39 & locus_1_r39 & ~locus_2_r39) | (locus_0_r39 & ~locus_1_r39 & locus_2_r39) | (locus_0_r39 & locus_1_r39 & locus_2_r39)"
+          }
+        ],
+        "positions": {},
+        "clamped": {},
+        "metadata": {}
+      },
+      "network_hash": "bf78c5f1744c991c7bfe7a191988a9a4027b38d6795cbc652f6fb856c728c790",
+      "parameters": {
+        "T": 3,
+        "engine": "aer_mps",
+        "counting_mode": "qpe_aer",
+        "shots": 32,
+        "counting_precision": 3,
+        "counting_shots": 32,
+        "seed": 23,
+        "max_rounds": 8,
+        "stop_policy": "qpe",
+        "max_qubits": 22,
+        "max_reference_states": 65536,
+        "max_memory_mib": 1024,
+        "max_compiled_depth": 200000,
+        "max_compiled_gates": 500000,
+        "max_verification_steps": 10000,
+        "timeout_seconds": 120,
+        "noise_probability": 0.0
+      },
+      "resources": {
+        "eligible": true,
+        "reasons": [],
+        "logical_evolution_qubits": 12,
+        "logical_counting_qubits": 3,
+        "circuit_qubits": 15,
+        "statevector_bytes_lower_bound": 524288,
+        "anf_terms": 14,
+        "transpiled_depth": null,
+        "transpiled_width": null,
+        "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+      },
+      "T_selection": "user supplied",
+      "taxonomy": "actual quantum circuit simulation",
+      "basin_sizes": null,
+      "basin_size_origin": "unavailable; counting history estimates combined excluded coverage",
+      "classical_information": "candidate trajectories only; optional audit separately labeled",
+      "preprocessing_runtime_s": 0.003232700051739812,
+      "total_runtime_s": 21.228380699874833
+    }
+  },
+  {
+    "width": 3,
+    "fixture_seed": 39,
+    "fanin": 3,
+    "T": 3,
+    "shots": 128,
+    "seed": 23,
+    "optimization_level": 0,
+    "wall_s": 20.894731800071895,
+    "process_rss_bytes": 293949440,
+    "observed_peak_rss_bytes": 363470848,
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "100"
+          ],
+          "basin": 2
+        },
+        {
+          "cycle": [
+            "101"
+          ],
+          "basin": 6
+        }
+      ],
+      "max_transient": 2,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 52,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 6,
+          "estimate": 7,
+          "signed_error": 1
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        },
+        {
+          "call": 3,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    },
+    "result": {
+      "cycles": [
+        [
+          "100"
+        ],
+        [
+          "101"
+        ]
+      ],
+      "status": "complete_qpe_heuristic",
+      "completion_reason": "Repeated finite-precision QPE suggested full basin coverage; NOT certified",
+      "search_attempts": 2,
+      "counting_calls": 3,
+      "rejected_measurements": 52,
+      "total_measurements": 256,
+      "invalid_measurements": 0,
+      "compiled_depth_max": 65134,
+      "compiled_size_max": 83386,
+      "compiled_2q_count_max": 31887,
+      "oracle_calls_ideal": 27,
+      "search_runtime_s": 0.010159699944779277,
+      "counting_runtime_s": 20.418085700133815,
+      "simulation_runtime_s": 0.46125880000181496,
+      "verification_runtime_s": 5.759997293353081e-05,
+      "max_suppressed_leakage": null,
+      "classical_audit_runtime_s": 0.0,
+      "classical_audit_states_scanned": 0,
+      "history": [
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 392,
+            "compiled_size": 628,
+            "compiled_1q_count": 380,
+            "compiled_2q_count": 245,
+            "raw_depth": 3,
+            "raw_size": 7,
+            "logical_qubits": 12,
+            "transpiled_qubits": 12,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.004944700049236417,
+            "execution_s": 0.052323900163173676
+          }
+        },
+        {
+          "round": 0,
+          "kind": "measurements",
+          "counts": {
+            "101": 103,
+            "100": 25
+          }
+        },
+        {
+          "round": 0,
+          "kind": "new_cycle",
+          "cycle": [
+            "101"
+          ],
+          "retry": 0,
+          "rejected_measurements": 0
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 64469,
+            "compiled_size": 82525,
+            "compiled_1q_count": 51013,
+            "compiled_2q_count": 31509,
+            "raw_depth": 10,
+            "raw_size": 17,
+            "logical_qubits": 15,
+            "transpiled_qubits": 15,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.3065450999420136,
+            "execution_s": 5.803573400015011
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 1,
+          "marked_terminal_states": [
+            "101"
+          ],
+          "phase_counts": {
+            "100": 4,
+            "110": 13,
+            "101": 59,
+            "011": 35,
+            "010": 15,
+            "111": 1,
+            "001": 1
+          },
+          "M_histogram": {
+            "8": 4,
+            "4": 28,
+            "7": 94,
+            "1": 2
+          }
+        },
+        {
+          "round": 1,
+          "kind": "count",
+          "M_est": 7,
+          "full_fraction": 0.03125,
+          "cycles_found_before": 1
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 2140,
+            "compiled_size": 3132,
+            "compiled_1q_count": 1816,
+            "compiled_2q_count": 1313,
+            "raw_depth": 23,
+            "raw_size": 43,
+            "logical_qubits": 12,
+            "transpiled_qubits": 12,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.145984300179407,
+            "execution_s": 0.21270469995215535
+          }
+        },
+        {
+          "round": 1,
+          "kind": "measurements",
+          "counts": {
+            "101": 52,
+            "100": 76
+          }
+        },
+        {
+          "round": 1,
+          "kind": "new_cycle",
+          "cycle": [
+            "100"
+          ],
+          "retry": 0,
+          "rejected_measurements": 52
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 65134,
+            "compiled_size": 83386,
+            "compiled_1q_count": 51496,
+            "compiled_2q_count": 31887,
+            "raw_depth": 10,
+            "raw_size": 17,
+            "logical_qubits": 15,
+            "transpiled_qubits": 15,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.30993430013768375,
+            "execution_s": 4.832638199906796
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 2,
+          "marked_terminal_states": [
+            "100",
+            "101"
+          ],
+          "phase_counts": {
+            "100": 128
+          },
+          "M_histogram": {
+            "8": 128
+          }
+        },
+        {
+          "round": 2,
+          "kind": "count",
+          "M_est": 8,
+          "full_fraction": 1.0,
+          "cycles_found_before": 2
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 65134,
+            "compiled_size": 83386,
+            "compiled_1q_count": 51496,
+            "compiled_2q_count": 31887,
+            "raw_depth": 10,
+            "raw_size": 17,
+            "logical_qubits": 15,
+            "transpiled_qubits": 15,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.5661150999367237,
+            "execution_s": 5.2493221999611706
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 3,
+          "marked_terminal_states": [
+            "100",
+            "101"
+          ],
+          "phase_counts": {
+            "100": 128
+          },
+          "M_histogram": {
+            "8": 128
+          }
+        },
+        {
+          "round": 2,
+          "kind": "stop_confirmation",
+          "M_est": 8,
+          "full_fraction": 1.0
+        }
+      ],
+      "schema_version": 1,
+      "network": {
+        "names": [
+          "locus_0_r39",
+          "locus_1_r39",
+          "locus_2_r39"
+        ],
+        "name": "Boolean network",
+        "weights": null,
+        "basal": null,
+        "rules": [
+          {
+            "expression": "(~locus_0_r39 & ~locus_1_r39 & ~locus_2_r39) | (~locus_0_r39 & locus_1_r39 & ~locus_2_r39) | (locus_0_r39 & ~locus_1_r39 & ~locus_2_r39) | (locus_0_r39 & ~locus_1_r39 & locus_2_r39) | (locus_0_r39 & locus_1_r39 & locus_2_r39)"
+          },
+          {
+            "expression": "(~locus_0_r39 & ~locus_1_r39 & locus_2_r39) | (~locus_0_r39 & locus_1_r39 & locus_2_r39) | (locus_0_r39 & locus_1_r39 & ~locus_2_r39)"
+          },
+          {
+            "expression": "(~locus_0_r39 & locus_1_r39 & ~locus_2_r39) | (locus_0_r39 & ~locus_1_r39 & locus_2_r39) | (locus_0_r39 & locus_1_r39 & locus_2_r39)"
+          }
+        ],
+        "positions": {},
+        "clamped": {},
+        "metadata": {}
+      },
+      "network_hash": "bf78c5f1744c991c7bfe7a191988a9a4027b38d6795cbc652f6fb856c728c790",
+      "parameters": {
+        "T": 3,
+        "engine": "aer_mps",
+        "counting_mode": "qpe_aer",
+        "shots": 128,
+        "counting_precision": 3,
+        "counting_shots": 128,
+        "seed": 23,
+        "max_rounds": 8,
+        "stop_policy": "qpe",
+        "max_qubits": 22,
+        "max_reference_states": 65536,
+        "max_memory_mib": 1024,
+        "max_compiled_depth": 200000,
+        "max_compiled_gates": 500000,
+        "max_verification_steps": 10000,
+        "timeout_seconds": 120,
+        "noise_probability": 0.0
+      },
+      "resources": {
+        "eligible": true,
+        "reasons": [],
+        "logical_evolution_qubits": 12,
+        "logical_counting_qubits": 3,
+        "circuit_qubits": 15,
+        "statevector_bytes_lower_bound": 524288,
+        "anf_terms": 14,
+        "transpiled_depth": null,
+        "transpiled_width": null,
+        "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+      },
+      "T_selection": "user supplied",
+      "taxonomy": "actual quantum circuit simulation",
+      "basin_sizes": null,
+      "basin_size_origin": "unavailable; counting history estimates combined excluded coverage",
+      "classical_information": "candidate trajectories only; optional audit separately labeled",
+      "preprocessing_runtime_s": 0.002679100027307868,
+      "total_runtime_s": 20.89318020013161
+    }
+  },
+  {
+    "width": 3,
+    "fixture_seed": 39,
+    "fanin": 3,
+    "T": 3,
+    "shots": 128,
+    "seed": 47,
+    "optimization_level": 0,
+    "wall_s": 21.74088459997438,
+    "process_rss_bytes": 309940224,
+    "observed_peak_rss_bytes": 363622400,
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "100"
+          ],
+          "basin": 2
+        },
+        {
+          "cycle": [
+            "101"
+          ],
+          "basin": 6
+        }
+      ],
+      "max_transient": 2,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 56,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 6,
+          "estimate": 7,
+          "signed_error": 1
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        },
+        {
+          "call": 3,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    },
+    "result": {
+      "cycles": [
+        [
+          "100"
+        ],
+        [
+          "101"
+        ]
+      ],
+      "status": "complete_qpe_heuristic",
+      "completion_reason": "Repeated finite-precision QPE suggested full basin coverage; NOT certified",
+      "search_attempts": 2,
+      "counting_calls": 3,
+      "rejected_measurements": 56,
+      "total_measurements": 256,
+      "invalid_measurements": 0,
+      "compiled_depth_max": 65134,
+      "compiled_size_max": 83386,
+      "compiled_2q_count_max": 31887,
+      "oracle_calls_ideal": 27,
+      "search_runtime_s": 0.006791500141844153,
+      "counting_runtime_s": 21.408681800123304,
+      "simulation_runtime_s": 0.32121860003098845,
+      "verification_runtime_s": 8.539995178580284e-05,
+      "max_suppressed_leakage": null,
+      "classical_audit_runtime_s": 0.0,
+      "classical_audit_states_scanned": 0,
+      "history": [
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 392,
+            "compiled_size": 628,
+            "compiled_1q_count": 380,
+            "compiled_2q_count": 245,
+            "raw_depth": 3,
+            "raw_size": 7,
+            "logical_qubits": 12,
+            "transpiled_qubits": 12,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.008842000039294362,
+            "execution_s": 0.04852820001542568
+          }
+        },
+        {
+          "round": 0,
+          "kind": "measurements",
+          "counts": {
+            "101": 96,
+            "100": 32
+          }
+        },
+        {
+          "round": 0,
+          "kind": "new_cycle",
+          "cycle": [
+            "101"
+          ],
+          "retry": 0,
+          "rejected_measurements": 0
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 64469,
+            "compiled_size": 82525,
+            "compiled_1q_count": 51013,
+            "compiled_2q_count": 31509,
+            "raw_depth": 10,
+            "raw_size": 17,
+            "logical_qubits": 15,
+            "transpiled_qubits": 15,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.38284610002301633,
+            "execution_s": 6.318301199935377
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 1,
+          "marked_terminal_states": [
+            "101"
+          ],
+          "phase_counts": {
+            "011": 51,
+            "101": 50,
+            "100": 7,
+            "010": 9,
+            "001": 2,
+            "110": 6,
+            "111": 2,
+            "000": 1
+          },
+          "M_histogram": {
+            "7": 101,
+            "8": 7,
+            "4": 15,
+            "1": 4,
+            "0": 1
+          }
+        },
+        {
+          "round": 1,
+          "kind": "count",
+          "M_est": 7,
+          "full_fraction": 0.0546875,
+          "cycles_found_before": 1
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 2140,
+            "compiled_size": 3132,
+            "compiled_1q_count": 1816,
+            "compiled_2q_count": 1313,
+            "raw_depth": 23,
+            "raw_size": 43,
+            "logical_qubits": 12,
+            "transpiled_qubits": 12,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.020206000190228224,
+            "execution_s": 0.20156890014186502
+          }
+        },
+        {
+          "round": 1,
+          "kind": "measurements",
+          "counts": {
+            "101": 56,
+            "100": 72
+          }
+        },
+        {
+          "round": 1,
+          "kind": "new_cycle",
+          "cycle": [
+            "100"
+          ],
+          "retry": 0,
+          "rejected_measurements": 56
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 65134,
+            "compiled_size": 83386,
+            "compiled_1q_count": 51496,
+            "compiled_2q_count": 31887,
+            "raw_depth": 10,
+            "raw_size": 17,
+            "logical_qubits": 15,
+            "transpiled_qubits": 15,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.4530023999977857,
+            "execution_s": 5.112755100009963
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 2,
+          "marked_terminal_states": [
+            "100",
+            "101"
+          ],
+          "phase_counts": {
+            "100": 128
+          },
+          "M_histogram": {
+            "8": 128
+          }
+        },
+        {
+          "round": 2,
+          "kind": "count",
+          "M_est": 8,
+          "full_fraction": 1.0,
+          "cycles_found_before": 2
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 65134,
+            "compiled_size": 83386,
+            "compiled_1q_count": 51496,
+            "compiled_2q_count": 31887,
+            "raw_depth": 10,
+            "raw_size": 17,
+            "logical_qubits": 15,
+            "transpiled_qubits": 15,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.30927289999090135,
+            "execution_s": 5.538417199859396
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 3,
+          "marked_terminal_states": [
+            "100",
+            "101"
+          ],
+          "phase_counts": {
+            "100": 128
+          },
+          "M_histogram": {
+            "8": 128
+          }
+        },
+        {
+          "round": 2,
+          "kind": "stop_confirmation",
+          "M_est": 8,
+          "full_fraction": 1.0
+        }
+      ],
+      "schema_version": 1,
+      "network": {
+        "names": [
+          "locus_0_r39",
+          "locus_1_r39",
+          "locus_2_r39"
+        ],
+        "name": "Boolean network",
+        "weights": null,
+        "basal": null,
+        "rules": [
+          {
+            "expression": "(~locus_0_r39 & ~locus_1_r39 & ~locus_2_r39) | (~locus_0_r39 & locus_1_r39 & ~locus_2_r39) | (locus_0_r39 & ~locus_1_r39 & ~locus_2_r39) | (locus_0_r39 & ~locus_1_r39 & locus_2_r39) | (locus_0_r39 & locus_1_r39 & locus_2_r39)"
+          },
+          {
+            "expression": "(~locus_0_r39 & ~locus_1_r39 & locus_2_r39) | (~locus_0_r39 & locus_1_r39 & locus_2_r39) | (locus_0_r39 & locus_1_r39 & ~locus_2_r39)"
+          },
+          {
+            "expression": "(~locus_0_r39 & locus_1_r39 & ~locus_2_r39) | (locus_0_r39 & ~locus_1_r39 & locus_2_r39) | (locus_0_r39 & locus_1_r39 & locus_2_r39)"
+          }
+        ],
+        "positions": {},
+        "clamped": {},
+        "metadata": {}
+      },
+      "network_hash": "bf78c5f1744c991c7bfe7a191988a9a4027b38d6795cbc652f6fb856c728c790",
+      "parameters": {
+        "T": 3,
+        "engine": "aer_mps",
+        "counting_mode": "qpe_aer",
+        "shots": 128,
+        "counting_precision": 3,
+        "counting_shots": 128,
+        "seed": 47,
+        "max_rounds": 8,
+        "stop_policy": "qpe",
+        "max_qubits": 22,
+        "max_reference_states": 65536,
+        "max_memory_mib": 1024,
+        "max_compiled_depth": 200000,
+        "max_compiled_gates": 500000,
+        "max_verification_steps": 10000,
+        "timeout_seconds": 120,
+        "noise_probability": 0.0
+      },
+      "resources": {
+        "eligible": true,
+        "reasons": [],
+        "logical_evolution_qubits": 12,
+        "logical_counting_qubits": 3,
+        "circuit_qubits": 15,
+        "statevector_bytes_lower_bound": 524288,
+        "anf_terms": 14,
+        "transpiled_depth": null,
+        "transpiled_width": null,
+        "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+      },
+      "T_selection": "user supplied",
+      "taxonomy": "actual quantum circuit simulation",
+      "basin_sizes": null,
+      "basin_size_origin": "unavailable; counting history estimates combined excluded coverage",
+      "classical_information": "candidate trajectories only; optional audit separately labeled",
+      "preprocessing_runtime_s": 0.00160910002887249,
+      "total_runtime_s": 21.739527700003237
+    }
+  },
+  {
+    "width": 3,
+    "fixture_seed": 39,
+    "fanin": 3,
+    "T": 3,
+    "shots": 128,
+    "seed": 47,
+    "optimization_level": 2,
+    "wall_s": 25.25080579984933,
+    "process_rss_bytes": 370638848,
+    "observed_peak_rss_bytes": 416755712,
+    "score": {
+      "ground_truth": [
+        {
+          "cycle": [
+            "100"
+          ],
+          "basin": 2
+        },
+        {
+          "cycle": [
+            "101"
+          ],
+          "basin": 6
+        }
+      ],
+      "max_transient": 2,
+      "missed_attractors": [],
+      "false_discoveries": [],
+      "duplicate_discoveries": 0,
+      "duplicate_shots": 56,
+      "count_errors": [
+        {
+          "call": 1,
+          "actual_at_horizon": 6,
+          "estimate": 7,
+          "signed_error": 1
+        },
+        {
+          "call": 2,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        },
+        {
+          "call": 3,
+          "actual_at_horizon": 8,
+          "estimate": 8,
+          "signed_error": 0
+        }
+      ],
+      "exact_match": true,
+      "heuristic_false_completion": false
+    },
+    "result": {
+      "cycles": [
+        [
+          "100"
+        ],
+        [
+          "101"
+        ]
+      ],
+      "status": "complete_qpe_heuristic",
+      "completion_reason": "Repeated finite-precision QPE suggested full basin coverage; NOT certified",
+      "search_attempts": 2,
+      "counting_calls": 3,
+      "rejected_measurements": 56,
+      "total_measurements": 256,
+      "invalid_measurements": 0,
+      "compiled_depth_max": 55612,
+      "compiled_size_max": 69245,
+      "compiled_2q_count_max": 30078,
+      "oracle_calls_ideal": 27,
+      "search_runtime_s": 0.006400899961590767,
+      "counting_runtime_s": 24.86586430016905,
+      "simulation_runtime_s": 0.37478099996224046,
+      "verification_runtime_s": 9.460002183914185e-05,
+      "max_suppressed_leakage": null,
+      "classical_audit_runtime_s": 0.0,
+      "classical_audit_states_scanned": 0,
+      "history": [
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 340,
+            "compiled_size": 535,
+            "compiled_1q_count": 296,
+            "compiled_2q_count": 236,
+            "raw_depth": 3,
+            "raw_size": 7,
+            "logical_qubits": 12,
+            "transpiled_qubits": 12,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.02294440008699894,
+            "execution_s": 0.05417549982666969
+          }
+        },
+        {
+          "round": 0,
+          "kind": "measurements",
+          "counts": {
+            "101": 96,
+            "100": 32
+          }
+        },
+        {
+          "round": 0,
+          "kind": "new_cycle",
+          "cycle": [
+            "101"
+          ],
+          "retry": 0,
+          "rejected_measurements": 0
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 55003,
+            "compiled_size": 68489,
+            "compiled_1q_count": 38744,
+            "compiled_2q_count": 29742,
+            "raw_depth": 10,
+            "raw_size": 17,
+            "logical_qubits": 15,
+            "transpiled_qubits": 15,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 2.3535549000371248,
+            "execution_s": 5.298868499929085
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 1,
+          "marked_terminal_states": [
+            "101"
+          ],
+          "phase_counts": {
+            "011": 37,
+            "101": 51,
+            "010": 7,
+            "100": 6,
+            "110": 18,
+            "000": 3,
+            "111": 5,
+            "001": 1
+          },
+          "M_histogram": {
+            "7": 88,
+            "4": 25,
+            "8": 6,
+            "0": 3,
+            "1": 6
+          }
+        },
+        {
+          "round": 1,
+          "kind": "count",
+          "M_est": 7,
+          "full_fraction": 0.046875,
+          "cycles_found_before": 1
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 1974,
+            "compiled_size": 2769,
+            "compiled_1q_count": 1492,
+            "compiled_2q_count": 1274,
+            "raw_depth": 23,
+            "raw_size": 43,
+            "logical_qubits": 12,
+            "transpiled_qubits": 12,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 0.04636169993318617,
+            "execution_s": 0.20911190006881952
+          }
+        },
+        {
+          "round": 1,
+          "kind": "measurements",
+          "counts": {
+            "101": 56,
+            "100": 72
+          }
+        },
+        {
+          "round": 1,
+          "kind": "new_cycle",
+          "cycle": [
+            "100"
+          ],
+          "retry": 0,
+          "rejected_measurements": 56
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 55612,
+            "compiled_size": 69245,
+            "compiled_1q_count": 39164,
+            "compiled_2q_count": 30078,
+            "raw_depth": 10,
+            "raw_size": 17,
+            "logical_qubits": 15,
+            "transpiled_qubits": 15,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 2.57119799987413,
+            "execution_s": 4.4349347001407295
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 2,
+          "marked_terminal_states": [
+            "100",
+            "101"
+          ],
+          "phase_counts": {
+            "100": 128
+          },
+          "M_histogram": {
+            "8": 128
+          }
+        },
+        {
+          "round": 2,
+          "kind": "count",
+          "M_est": 8,
+          "full_fraction": 1.0,
+          "cycles_found_before": 2
+        },
+        {
+          "kind": "circuit_execution",
+          "resources": {
+            "compiled_depth": 55612,
+            "compiled_size": 69245,
+            "compiled_1q_count": 39164,
+            "compiled_2q_count": 30078,
+            "raw_depth": 10,
+            "raw_size": 17,
+            "logical_qubits": 15,
+            "transpiled_qubits": 15,
+            "logical_ancillas": 0,
+            "transpiled_ancillas": 0,
+            "transpilation_s": 2.421668699942529,
+            "execution_s": 4.718922099797055
+          }
+        },
+        {
+          "kind": "qpe_measurements",
+          "call": 3,
+          "marked_terminal_states": [
+            "100",
+            "101"
+          ],
+          "phase_counts": {
+            "100": 128
+          },
+          "M_histogram": {
+            "8": 128
+          }
+        },
+        {
+          "round": 2,
+          "kind": "stop_confirmation",
+          "M_est": 8,
+          "full_fraction": 1.0
+        }
+      ],
+      "schema_version": 1,
+      "network": {
+        "names": [
+          "locus_0_r39",
+          "locus_1_r39",
+          "locus_2_r39"
+        ],
+        "name": "Boolean network",
+        "weights": null,
+        "basal": null,
+        "rules": [
+          {
+            "expression": "(~locus_0_r39 & ~locus_1_r39 & ~locus_2_r39) | (~locus_0_r39 & locus_1_r39 & ~locus_2_r39) | (locus_0_r39 & ~locus_1_r39 & ~locus_2_r39) | (locus_0_r39 & ~locus_1_r39 & locus_2_r39) | (locus_0_r39 & locus_1_r39 & locus_2_r39)"
+          },
+          {
+            "expression": "(~locus_0_r39 & ~locus_1_r39 & locus_2_r39) | (~locus_0_r39 & locus_1_r39 & locus_2_r39) | (locus_0_r39 & locus_1_r39 & ~locus_2_r39)"
+          },
+          {
+            "expression": "(~locus_0_r39 & locus_1_r39 & ~locus_2_r39) | (locus_0_r39 & ~locus_1_r39 & locus_2_r39) | (locus_0_r39 & locus_1_r39 & locus_2_r39)"
+          }
+        ],
+        "positions": {},
+        "clamped": {},
+        "metadata": {}
+      },
+      "network_hash": "bf78c5f1744c991c7bfe7a191988a9a4027b38d6795cbc652f6fb856c728c790",
+      "parameters": {
+        "T": 3,
+        "engine": "aer_mps",
+        "counting_mode": "qpe_aer",
+        "shots": 128,
+        "counting_precision": 3,
+        "counting_shots": 128,
+        "seed": 47,
+        "max_rounds": 8,
+        "stop_policy": "qpe",
+        "max_qubits": 22,
+        "max_reference_states": 65536,
+        "max_memory_mib": 1024,
+        "max_compiled_depth": 200000,
+        "max_compiled_gates": 500000,
+        "max_verification_steps": 10000,
+        "timeout_seconds": 120,
+        "noise_probability": 0.0
+      },
+      "resources": {
+        "eligible": true,
+        "reasons": [],
+        "logical_evolution_qubits": 12,
+        "logical_counting_qubits": 3,
+        "circuit_qubits": 15,
+        "statevector_bytes_lower_bound": 524288,
+        "anf_terms": 14,
+        "transpiled_depth": null,
+        "transpiled_width": null,
+        "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+      },
+      "T_selection": "user supplied",
+      "taxonomy": "actual quantum circuit simulation",
+      "basin_sizes": null,
+      "basin_size_origin": "unavailable; counting history estimates combined excluded coverage",
+      "classical_information": "candidate trajectories only; optional audit separately labeled",
+      "preprocessing_runtime_s": 0.0015116001013666391,
+      "total_runtime_s": 25.24976330017671
+    }
+  }
+]

@@ -1,0 +1,2009 @@
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+
+	Academic License
+
+End of Attractor FindingTime: 0.055755
+End of Rules based Deterministic analysis successfulTime elapsed: 0.076103
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 
+[Warning: MaxHalves exceeded. Sammon mapping may not converge...] 
+[> In sammonMapping (line 107)
+  In matlab_reference (line 25)
+  In run (line 96)] 

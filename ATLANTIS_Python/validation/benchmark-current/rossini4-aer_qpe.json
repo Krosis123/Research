@@ -1,0 +1,394 @@
+{
+  "cycles": [
+    [
+      "0000"
+    ],
+    [
+      "0011"
+    ],
+    [
+      "1011"
+    ],
+    [
+      "1101"
+    ],
+    [
+      "1111"
+    ]
+  ],
+  "status": "complete_qpe_heuristic",
+  "completion_reason": "Repeated finite-precision QPE suggested full basin coverage; NOT certified",
+  "search_attempts": 5,
+  "counting_calls": 6,
+  "rejected_measurements": 48,
+  "total_measurements": 640,
+  "invalid_measurements": 0,
+  "compiled_depth_max": 32532,
+  "compiled_size_max": 43816,
+  "compiled_2q_count_max": 16781,
+  "oracle_calls_ideal": 61,
+  "search_runtime_s": 0.009226399939507246,
+  "counting_runtime_s": 45.02923440001905,
+  "simulation_runtime_s": 0.7020950000733137,
+  "max_suppressed_leakage": null,
+  "classical_audit_runtime_s": 0.0,
+  "classical_audit_states_scanned": 0,
+  "history": [
+    {
+      "kind": "circuit_execution",
+      "resources": {
+        "compiled_depth": 95,
+        "compiled_size": 194,
+        "compiled_2q_count": 78,
+        "raw_depth": 3,
+        "raw_size": 9,
+        "logical_qubits": 16,
+        "transpiled_qubits": 16,
+        "transpilation_s": 0.004534499952569604,
+        "execution_s": 0.02711339993402362
+      }
+    },
+    {
+      "round": 0,
+      "kind": "measurements",
+      "counts": {
+        "0000": 89,
+        "1011": 8,
+        "1111": 8,
+        "0011": 17,
+        "1101": 6
+      }
+    },
+    {
+      "round": 0,
+      "kind": "new_cycle",
+      "cycle": [
+        "0000"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    },
+    {
+      "kind": "circuit_execution",
+      "resources": {
+        "compiled_depth": 23446,
+        "compiled_size": 31356,
+        "compiled_2q_count": 11853,
+        "raw_depth": 10,
+        "raw_size": 18,
+        "logical_qubits": 19,
+        "transpiled_qubits": 19,
+        "transpilation_s": 0.13376589980907738,
+        "execution_s": 5.885363099863753
+      }
+    },
+    {
+      "round": 1,
+      "kind": "count",
+      "M_est": 8,
+      "full_fraction": 0.078125,
+      "cycles_found_before": 1
+    },
+    {
+      "kind": "circuit_execution",
+      "resources": {
+        "compiled_depth": 348,
+        "compiled_size": 688,
+        "compiled_2q_count": 274,
+        "raw_depth": 13,
+        "raw_size": 37,
+        "logical_qubits": 16,
+        "transpiled_qubits": 16,
+        "transpilation_s": 0.008453299989923835,
+        "execution_s": 0.09246270009316504
+      }
+    },
+    {
+      "round": 1,
+      "kind": "measurements",
+      "counts": {
+        "0011": 54,
+        "1101": 22,
+        "1011": 20,
+        "1111": 24,
+        "0000": 8
+      }
+    },
+    {
+      "round": 1,
+      "kind": "new_cycle",
+      "cycle": [
+        "0011"
+      ],
+      "retry": 0,
+      "rejected_measurements": 8
+    },
+    {
+      "kind": "circuit_execution",
+      "resources": {
+        "compiled_depth": 25735,
+        "compiled_size": 34485,
+        "compiled_2q_count": 13099,
+        "raw_depth": 10,
+        "raw_size": 18,
+        "logical_qubits": 19,
+        "transpiled_qubits": 19,
+        "transpilation_s": 0.23399639991112053,
+        "execution_s": 6.503110500052571
+      }
+    },
+    {
+      "round": 2,
+      "kind": "count",
+      "M_est": 14,
+      "full_fraction": 0.015625,
+      "cycles_found_before": 2
+    },
+    {
+      "kind": "circuit_execution",
+      "resources": {
+        "compiled_depth": 673,
+        "compiled_size": 1288,
+        "compiled_2q_count": 510,
+        "raw_depth": 29,
+        "raw_size": 75,
+        "logical_qubits": 16,
+        "transpiled_qubits": 16,
+        "transpilation_s": 0.011266999877989292,
+        "execution_s": 0.1469558000098914
+      }
+    },
+    {
+      "round": 2,
+      "kind": "measurements",
+      "counts": {
+        "1101": 32,
+        "1011": 49,
+        "0000": 8,
+        "1111": 36,
+        "0011": 3
+      }
+    },
+    {
+      "round": 2,
+      "kind": "new_cycle",
+      "cycle": [
+        "1101"
+      ],
+      "retry": 0,
+      "rejected_measurements": 11
+    },
+    {
+      "kind": "circuit_execution",
+      "resources": {
+        "compiled_depth": 28003,
+        "compiled_size": 37600,
+        "compiled_2q_count": 14331,
+        "raw_depth": 10,
+        "raw_size": 18,
+        "logical_qubits": 19,
+        "transpiled_qubits": 19,
+        "transpilation_s": 0.11841160012409091,
+        "execution_s": 6.105698300059885
+      }
+    },
+    {
+      "round": 3,
+      "kind": "count",
+      "M_est": 14,
+      "full_fraction": 0.0078125,
+      "cycles_found_before": 3
+    },
+    {
+      "kind": "circuit_execution",
+      "resources": {
+        "compiled_depth": 745,
+        "compiled_size": 1390,
+        "compiled_2q_count": 550,
+        "raw_depth": 33,
+        "raw_size": 81,
+        "logical_qubits": 16,
+        "transpiled_qubits": 16,
+        "transpilation_s": 0.01598199992440641,
+        "execution_s": 0.1583169000223279
+      }
+    },
+    {
+      "round": 3,
+      "kind": "measurements",
+      "counts": {
+        "1011": 68,
+        "1111": 60
+      }
+    },
+    {
+      "round": 3,
+      "kind": "new_cycle",
+      "cycle": [
+        "1011"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    },
+    {
+      "kind": "circuit_execution",
+      "resources": {
+        "compiled_depth": 30278,
+        "compiled_size": 40715,
+        "compiled_2q_count": 15563,
+        "raw_depth": 10,
+        "raw_size": 18,
+        "logical_qubits": 19,
+        "transpiled_qubits": 19,
+        "transpilation_s": 0.15928740007802844,
+        "execution_s": 6.7906575000379235
+      }
+    },
+    {
+      "round": 4,
+      "kind": "count",
+      "M_est": 14,
+      "full_fraction": 0.1484375,
+      "cycles_found_before": 4
+    },
+    {
+      "kind": "circuit_execution",
+      "resources": {
+        "compiled_depth": 819,
+        "compiled_size": 1492,
+        "compiled_2q_count": 590,
+        "raw_depth": 39,
+        "raw_size": 87,
+        "logical_qubits": 16,
+        "transpiled_qubits": 16,
+        "transpilation_s": 0.01644890010356903,
+        "execution_s": 0.16310880007222295
+      }
+    },
+    {
+      "round": 4,
+      "kind": "measurements",
+      "counts": {
+        "1111": 99,
+        "1101": 3,
+        "0011": 2,
+        "0000": 24
+      }
+    },
+    {
+      "round": 4,
+      "kind": "new_cycle",
+      "cycle": [
+        "1111"
+      ],
+      "retry": 0,
+      "rejected_measurements": 29
+    },
+    {
+      "kind": "circuit_execution",
+      "resources": {
+        "compiled_depth": 32532,
+        "compiled_size": 43816,
+        "compiled_2q_count": 16781,
+        "raw_depth": 10,
+        "raw_size": 18,
+        "logical_qubits": 19,
+        "transpiled_qubits": 19,
+        "transpilation_s": 0.14183970005251467,
+        "execution_s": 7.815330600133166
+      }
+    },
+    {
+      "round": 5,
+      "kind": "count",
+      "M_est": 16,
+      "full_fraction": 1.0,
+      "cycles_found_before": 5
+    },
+    {
+      "kind": "circuit_execution",
+      "resources": {
+        "compiled_depth": 32532,
+        "compiled_size": 43816,
+        "compiled_2q_count": 16781,
+        "raw_depth": 10,
+        "raw_size": 18,
+        "logical_qubits": 19,
+        "transpiled_qubits": 19,
+        "transpilation_s": 0.14261600002646446,
+        "execution_s": 7.9953199999872595
+      }
+    },
+    {
+      "round": 5,
+      "kind": "stop_confirmation",
+      "M_est": 16,
+      "full_fraction": 1.0
+    }
+  ],
+  "schema_version": 1,
+  "network": {
+    "names": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "name": "rossini4",
+    "weights": null,
+    "basal": null,
+    "rules": [
+      {
+        "expression": "A & D"
+      },
+      {
+        "expression": "A & B"
+      },
+      {
+        "expression": "C & D"
+      },
+      {
+        "expression": "B | C"
+      }
+    ],
+    "positions": {}
+  },
+  "network_hash": "ce7ed7afeb67332427a75707679dd4fb8ee612358fe642034ad6982b75f44fa6",
+  "parameters": {
+    "T": 3,
+    "engine": "aer",
+    "counting_mode": "qpe_aer",
+    "shots": 128,
+    "counting_precision": 3,
+    "counting_shots": 128,
+    "seed": 0,
+    "max_rounds": 12,
+    "stop_policy": "qpe",
+    "max_qubits": 22,
+    "max_reference_states": 65536,
+    "max_memory_mib": 1024,
+    "max_compiled_depth": 200000,
+    "max_compiled_gates": 500000,
+    "max_verification_steps": 10000,
+    "timeout_seconds": 120,
+    "noise_probability": 0.0
+  },
+  "resources": {
+    "eligible": true,
+    "reasons": [],
+    "logical_evolution_qubits": 16,
+    "logical_counting_qubits": 3,
+    "circuit_qubits": 19,
+    "statevector_bytes_lower_bound": 8388608,
+    "anf_terms": 6,
+    "transpiled_depth": null,
+    "transpiled_width": null,
+    "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+  },
+  "T_selection": "user supplied",
+  "taxonomy": "actual quantum circuit simulation",
+  "basin_sizes": null,
+  "basin_size_origin": "unavailable; counting history estimates combined excluded coverage",
+  "classical_information": "candidate trajectories only; optional audit separately labeled",
+  "total_runtime_s": 45.74360349983908
+}

@@ -1,0 +1,24 @@
+{
+  "backend": "fake_brisbane",
+  "logical_qubits": 16,
+  "transpiled_width": 127,
+  "depth": 471,
+  "gates": 1264,
+  "shots": 128,
+  "cost": "Provider plan determines charges; no price estimate available",
+  "status": "offline estimate only",
+  "experiment": "unsuppressed Rossini4 terminal sampling",
+  "compiled_two_qubit_gates": 225,
+  "active_qubits": 16,
+  "circuit_duration_s": 9.293999999999969e-05,
+  "repetition_delay_s": 0.00025,
+  "shot_duration_subtotal_s": 0.04389631999999996,
+  "proposed_usage_cap_s": 60,
+  "expected_terminal_probabilities": {
+    "0000": 0.6875,
+    "0011": 0.125,
+    "1011": 0.0625,
+    "1101": 0.0625,
+    "1111": 0.0625
+  }
+}

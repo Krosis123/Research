@@ -1,0 +1,361 @@
+{
+  "cycles": [
+    [
+      "000000100000010"
+    ],
+    [
+      "001011100101110"
+    ],
+    [
+      "010001101100110"
+    ],
+    [
+      "011010101101010"
+    ],
+    [
+      "100010011001001"
+    ],
+    [
+      "101011001101100"
+    ],
+    [
+      "110111010111101"
+    ],
+    [
+      "111110000111000"
+    ]
+  ],
+  "status": "complete_classically_certified",
+  "completion_reason": "Exhaustive F^T coverage audit; classical O(2^n*T), not a quantum certificate",
+  "search_attempts": 8,
+  "counting_calls": 7,
+  "rejected_measurements": 0,
+  "total_measurements": 1024,
+  "invalid_measurements": 0,
+  "compiled_depth_max": 0,
+  "compiled_size_max": 0,
+  "compiled_2q_count_max": 0,
+  "oracle_calls_ideal": 24,
+  "search_runtime_s": 0.9501231000758708,
+  "counting_runtime_s": 0.02274349983781576,
+  "simulation_runtime_s": 0.0021805998403578997,
+  "max_suppressed_leakage": 3.605340855892905e-31,
+  "classical_audit_runtime_s": 0.022938399808481336,
+  "classical_audit_states_scanned": 262144,
+  "history": [
+    {
+      "round": 0,
+      "kind": "measurements",
+      "counts": {
+        "000000100000010": 18,
+        "001011100101110": 12,
+        "010001101100110": 12,
+        "011010101101010": 16,
+        "100010011001001": 15,
+        "101011001101100": 16,
+        "110111010111101": 14,
+        "111110000111000": 25
+      }
+    },
+    {
+      "round": 0,
+      "kind": "new_cycle",
+      "cycle": [
+        "000000100000010"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    },
+    {
+      "round": 1,
+      "kind": "count",
+      "M_est": 4096,
+      "full_fraction": 0.0,
+      "cycles_found_before": 1
+    },
+    {
+      "round": 1,
+      "kind": "measurements",
+      "counts": {
+        "001011100101110": 16,
+        "010001101100110": 13,
+        "011010101101010": 19,
+        "100010011001001": 18,
+        "101011001101100": 18,
+        "110111010111101": 19,
+        "111110000111000": 25
+      }
+    },
+    {
+      "round": 1,
+      "kind": "new_cycle",
+      "cycle": [
+        "001011100101110"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    },
+    {
+      "round": 2,
+      "kind": "count",
+      "M_est": 8192,
+      "full_fraction": 0.0,
+      "cycles_found_before": 2
+    },
+    {
+      "round": 2,
+      "kind": "measurements",
+      "counts": {
+        "010001101100110": 21,
+        "011010101101010": 18,
+        "100010011001001": 21,
+        "101011001101100": 20,
+        "110111010111101": 28,
+        "111110000111000": 20
+      }
+    },
+    {
+      "round": 2,
+      "kind": "new_cycle",
+      "cycle": [
+        "100010011001001"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    },
+    {
+      "round": 3,
+      "kind": "count",
+      "M_est": 12288,
+      "full_fraction": 0.0,
+      "cycles_found_before": 3
+    },
+    {
+      "round": 3,
+      "kind": "measurements",
+      "counts": {
+        "010001101100110": 20,
+        "011010101101010": 23,
+        "101011001101100": 27,
+        "110111010111101": 30,
+        "111110000111000": 28
+      }
+    },
+    {
+      "round": 3,
+      "kind": "new_cycle",
+      "cycle": [
+        "111110000111000"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    },
+    {
+      "round": 4,
+      "kind": "count",
+      "M_est": 16384,
+      "full_fraction": 0.0,
+      "cycles_found_before": 4
+    },
+    {
+      "round": 4,
+      "kind": "measurements",
+      "counts": {
+        "010001101100110": 34,
+        "011010101101010": 35,
+        "101011001101100": 37,
+        "110111010111101": 22
+      }
+    },
+    {
+      "round": 4,
+      "kind": "new_cycle",
+      "cycle": [
+        "110111010111101"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    },
+    {
+      "round": 5,
+      "kind": "count",
+      "M_est": 20480,
+      "full_fraction": 0.0,
+      "cycles_found_before": 5
+    },
+    {
+      "round": 5,
+      "kind": "measurements",
+      "counts": {
+        "010001101100110": 44,
+        "011010101101010": 37,
+        "101011001101100": 47
+      }
+    },
+    {
+      "round": 5,
+      "kind": "new_cycle",
+      "cycle": [
+        "101011001101100"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    },
+    {
+      "round": 6,
+      "kind": "count",
+      "M_est": 24576,
+      "full_fraction": 0.0,
+      "cycles_found_before": 6
+    },
+    {
+      "round": 6,
+      "kind": "measurements",
+      "counts": {
+        "010001101100110": 64,
+        "011010101101010": 64
+      }
+    },
+    {
+      "round": 6,
+      "kind": "new_cycle",
+      "cycle": [
+        "011010101101010"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    },
+    {
+      "round": 7,
+      "kind": "count",
+      "M_est": 28672,
+      "full_fraction": 0.0,
+      "cycles_found_before": 7
+    },
+    {
+      "round": 7,
+      "kind": "measurements",
+      "counts": {
+        "010001101100110": 128
+      }
+    },
+    {
+      "round": 7,
+      "kind": "new_cycle",
+      "cycle": [
+        "010001101100110"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    }
+  ],
+  "schema_version": 1,
+  "network": {
+    "names": [
+      "g00",
+      "g01",
+      "g02",
+      "g03",
+      "g04",
+      "g05",
+      "g06",
+      "g07",
+      "g08",
+      "g09",
+      "g10",
+      "g11",
+      "g12",
+      "g13",
+      "g14"
+    ],
+    "name": "projection_15",
+    "weights": null,
+    "basal": null,
+    "rules": [
+      {
+        "expression": "g00"
+      },
+      {
+        "expression": "g01"
+      },
+      {
+        "expression": "g02"
+      },
+      {
+        "expression": "g00 & g01"
+      },
+      {
+        "expression": "g00 | g02"
+      },
+      {
+        "expression": "g01 ^ g02"
+      },
+      {
+        "expression": "~g00"
+      },
+      {
+        "expression": "g00 & ~g02"
+      },
+      {
+        "expression": "g00 ^ g01"
+      },
+      {
+        "expression": "g01 | g02"
+      },
+      {
+        "expression": "g00 & g01"
+      },
+      {
+        "expression": "g00 | g02"
+      },
+      {
+        "expression": "g01 ^ g02"
+      },
+      {
+        "expression": "~g00"
+      },
+      {
+        "expression": "g00 & ~g02"
+      }
+    ],
+    "positions": {}
+  },
+  "network_hash": "cda493fe065b3acee8432bf426dfa01a9065f9d238d88ad0d6895bf675b137f3",
+  "parameters": {
+    "T": 1,
+    "engine": "reduced",
+    "counting_mode": "exact",
+    "shots": 128,
+    "counting_precision": 3,
+    "counting_shots": 128,
+    "seed": 0,
+    "max_rounds": 12,
+    "stop_policy": "classical_audit",
+    "max_qubits": 22,
+    "max_reference_states": 65536,
+    "max_memory_mib": 1024,
+    "max_compiled_depth": 200000,
+    "max_compiled_gates": 500000,
+    "max_verification_steps": 10000,
+    "timeout_seconds": 120,
+    "noise_probability": 0.0
+  },
+  "resources": {
+    "eligible": true,
+    "reasons": [],
+    "logical_evolution_qubits": 30,
+    "logical_counting_qubits": 0,
+    "circuit_qubits": 30,
+    "statevector_bytes_lower_bound": 17179869184,
+    "anf_terms": 28,
+    "transpiled_depth": null,
+    "transpiled_width": null,
+    "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+  },
+  "T_selection": "user supplied",
+  "taxonomy": "ideal mathematical quantum reference",
+  "basin_sizes": null,
+  "basin_size_origin": "unavailable; counting history estimates combined excluded coverage",
+  "classical_information": "enumerated F^T for exact M",
+  "total_runtime_s": 1.0022817000281066
+}

@@ -1,0 +1,352 @@
+[
+  {
+    "network": "rossini4",
+    "n": 4,
+    "T": 3,
+    "classical_truth_s": 6.969994865357876e-05,
+    "basins": {
+      "(0,)": 11,
+      "(3,)": 2,
+      "(11,)": 1,
+      "(13,)": 1,
+      "(15,)": 1
+    },
+    "preflight": {
+      "eligible": true,
+      "reasons": [],
+      "logical_evolution_qubits": 16,
+      "logical_counting_qubits": 0,
+      "circuit_qubits": 16,
+      "statevector_bytes_lower_bound": 1048576,
+      "anf_terms": 6,
+      "transpiled_depth": null,
+      "transpiled_width": null,
+      "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+    }
+  },
+  {
+    "network": "giacomantonio5",
+    "n": 5,
+    "T": 4,
+    "classical_truth_s": 0.00015309988521039486,
+    "basins": {
+      "(9,)": 28,
+      "(22,)": 4
+    },
+    "preflight": {
+      "eligible": false,
+      "reasons": [
+        "25 circuit qubits exceed budget 22",
+        "Statevector plus 3x working allowance exceeds 1024 MiB"
+      ],
+      "logical_evolution_qubits": 25,
+      "logical_counting_qubits": 0,
+      "circuit_qubits": 25,
+      "statevector_bytes_lower_bound": 536870912,
+      "anf_terms": null,
+      "transpiled_depth": null,
+      "transpiled_width": null,
+      "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+    }
+  },
+  {
+    "network": "projection_4",
+    "n": 4,
+    "T": 1,
+    "classical_truth_s": 0.0002841001842170954,
+    "basins": {
+      "(0,)": 2,
+      "(2,)": 2,
+      "(4,)": 2,
+      "(6,)": 2,
+      "(8,)": 2,
+      "(10,)": 2,
+      "(13,)": 2,
+      "(15,)": 2
+    },
+    "preflight": {
+      "eligible": true,
+      "reasons": [],
+      "logical_evolution_qubits": 8,
+      "logical_counting_qubits": 0,
+      "circuit_qubits": 8,
+      "statevector_bytes_lower_bound": 4096,
+      "anf_terms": 4,
+      "transpiled_depth": null,
+      "transpiled_width": null,
+      "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+    }
+  },
+  {
+    "network": "skewed_4",
+    "n": 4,
+    "T": 1,
+    "classical_truth_s": 0.00011159991845488548,
+    "basins": {
+      "(1,)": 12,
+      "(14,)": 4
+    },
+    "preflight": {
+      "eligible": true,
+      "reasons": [],
+      "logical_evolution_qubits": 8,
+      "logical_counting_qubits": 0,
+      "circuit_qubits": 8,
+      "statevector_bytes_lower_bound": 4096,
+      "anf_terms": 5,
+      "transpiled_depth": null,
+      "transpiled_width": null,
+      "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+    }
+  },
+  {
+    "network": "cycle2_4",
+    "n": 4,
+    "T": 1,
+    "classical_truth_s": 0.000260000117123127,
+    "basins": {
+      "(0,)": 4,
+      "(6, 9)": 8,
+      "(15,)": 4
+    },
+    "preflight": {
+      "eligible": true,
+      "reasons": [],
+      "logical_evolution_qubits": 8,
+      "logical_counting_qubits": 0,
+      "circuit_qubits": 8,
+      "statevector_bytes_lower_bound": 4096,
+      "anf_terms": 4,
+      "transpiled_depth": null,
+      "transpiled_width": null,
+      "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+    }
+  },
+  {
+    "network": "long_chain_4",
+    "n": 4,
+    "T": 3,
+    "classical_truth_s": 8.66998452693224e-05,
+    "basins": {
+      "(0,)": 8,
+      "(15,)": 8
+    },
+    "preflight": {
+      "eligible": true,
+      "reasons": [],
+      "logical_evolution_qubits": 16,
+      "logical_counting_qubits": 0,
+      "circuit_qubits": 16,
+      "statevector_bytes_lower_bound": 1048576,
+      "anf_terms": 4,
+      "transpiled_depth": null,
+      "transpiled_width": null,
+      "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+    }
+  },
+  {
+    "network": "projection_10",
+    "n": 10,
+    "T": 1,
+    "classical_truth_s": 0.021705699851736426,
+    "basins": {
+      "(8,)": 128,
+      "(185,)": 128,
+      "(283,)": 128,
+      "(427,)": 128,
+      "(550,)": 128,
+      "(691,)": 128,
+      "(885,)": 128,
+      "(993,)": 128
+    },
+    "preflight": {
+      "eligible": true,
+      "reasons": [],
+      "logical_evolution_qubits": 20,
+      "logical_counting_qubits": 0,
+      "circuit_qubits": 20,
+      "statevector_bytes_lower_bound": 16777216,
+      "anf_terms": 18,
+      "transpiled_depth": null,
+      "transpiled_width": null,
+      "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+    }
+  },
+  {
+    "network": "skewed_10",
+    "n": 10,
+    "T": 1,
+    "classical_truth_s": 0.018324899952858686,
+    "basins": {
+      "(85,)": 768,
+      "(938,)": 256
+    },
+    "preflight": {
+      "eligible": true,
+      "reasons": [],
+      "logical_evolution_qubits": 20,
+      "logical_counting_qubits": 0,
+      "circuit_qubits": 20,
+      "statevector_bytes_lower_bound": 16777216,
+      "anf_terms": 14,
+      "transpiled_depth": null,
+      "transpiled_width": null,
+      "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+    }
+  },
+  {
+    "network": "cycle2_10",
+    "n": 10,
+    "T": 1,
+    "classical_truth_s": 0.017582299886271358,
+    "basins": {
+      "(6,)": 256,
+      "(411, 604)": 512,
+      "(1009,)": 256
+    },
+    "preflight": {
+      "eligible": true,
+      "reasons": [],
+      "logical_evolution_qubits": 20,
+      "logical_counting_qubits": 0,
+      "circuit_qubits": 20,
+      "statevector_bytes_lower_bound": 16777216,
+      "anf_terms": 15,
+      "transpiled_depth": null,
+      "transpiled_width": null,
+      "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+    }
+  },
+  {
+    "network": "long_chain_10",
+    "n": 10,
+    "T": 9,
+    "classical_truth_s": 0.012721099890768528,
+    "basins": {
+      "(0,)": 512,
+      "(1023,)": 512
+    },
+    "preflight": {
+      "eligible": false,
+      "reasons": [
+        "100 circuit qubits exceed budget 22",
+        "Statevector plus 3x working allowance exceeds 1024 MiB"
+      ],
+      "logical_evolution_qubits": 100,
+      "logical_counting_qubits": 0,
+      "circuit_qubits": 100,
+      "statevector_bytes_lower_bound": 20282409603651670423947251286016,
+      "anf_terms": null,
+      "transpiled_depth": null,
+      "transpiled_width": null,
+      "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+    }
+  },
+  {
+    "network": "projection_15",
+    "n": 15,
+    "T": 1,
+    "classical_truth_s": 0.7365804999135435,
+    "basins": {
+      "(258,)": 4096,
+      "(5934,)": 4096,
+      "(9062,)": 4096,
+      "(13674,)": 4096,
+      "(17609,)": 4096,
+      "(22124,)": 4096,
+      "(28349,)": 4096,
+      "(31800,)": 4096
+    },
+    "preflight": {
+      "eligible": false,
+      "reasons": [
+        "30 circuit qubits exceed budget 22",
+        "Statevector plus 3x working allowance exceeds 1024 MiB"
+      ],
+      "logical_evolution_qubits": 30,
+      "logical_counting_qubits": 0,
+      "circuit_qubits": 30,
+      "statevector_bytes_lower_bound": 17179869184,
+      "anf_terms": null,
+      "transpiled_depth": null,
+      "transpiled_width": null,
+      "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+    }
+  },
+  {
+    "network": "skewed_15",
+    "n": 15,
+    "T": 1,
+    "classical_truth_s": 0.7665526000782847,
+    "basins": {
+      "(2730,)": 24576,
+      "(30037,)": 8192
+    },
+    "preflight": {
+      "eligible": false,
+      "reasons": [
+        "30 circuit qubits exceed budget 22",
+        "Statevector plus 3x working allowance exceeds 1024 MiB"
+      ],
+      "logical_evolution_qubits": 30,
+      "logical_counting_qubits": 0,
+      "circuit_qubits": 30,
+      "statevector_bytes_lower_bound": 17179869184,
+      "anf_terms": null,
+      "transpiled_depth": null,
+      "transpiled_width": null,
+      "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+    }
+  },
+  {
+    "network": "cycle2_15",
+    "n": 15,
+    "T": 1,
+    "classical_truth_s": 0.6970144999213517,
+    "basins": {
+      "(193,)": 8192,
+      "(13158, 19351)": 16384,
+      "(32316,)": 8192
+    },
+    "preflight": {
+      "eligible": false,
+      "reasons": [
+        "30 circuit qubits exceed budget 22",
+        "Statevector plus 3x working allowance exceeds 1024 MiB"
+      ],
+      "logical_evolution_qubits": 30,
+      "logical_counting_qubits": 0,
+      "circuit_qubits": 30,
+      "statevector_bytes_lower_bound": 17179869184,
+      "anf_terms": null,
+      "transpiled_depth": null,
+      "transpiled_width": null,
+      "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+    }
+  },
+  {
+    "network": "long_chain_15",
+    "n": 15,
+    "T": 14,
+    "classical_truth_s": 0.6849785000085831,
+    "basins": {
+      "(0,)": 16384,
+      "(32767,)": 16384
+    },
+    "preflight": {
+      "eligible": false,
+      "reasons": [
+        "225 circuit qubits exceed budget 22",
+        "Statevector plus 3x working allowance exceeds 1024 MiB"
+      ],
+      "logical_evolution_qubits": 225,
+      "logical_counting_qubits": 0,
+      "circuit_qubits": 225,
+      "statevector_bytes_lower_bound": 862718293348820473429344482784628181556388621521298319395315527974912,
+      "anf_terms": null,
+      "transpiled_depth": null,
+      "transpiled_width": null,
+      "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+    }
+  }
+]

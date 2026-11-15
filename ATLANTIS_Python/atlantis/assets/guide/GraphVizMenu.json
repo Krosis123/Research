@@ -1,0 +1,531 @@
+{
+  "type": "figure",
+  "properties": {
+    "Tag": "GraphVizMenu",
+    "Position": [
+      135.8,
+      15.615384615384617,
+      68.5,
+      22.600000000000005
+    ],
+    "Units": "characters",
+    "Visible": "on",
+    "Name": "ATLANTIS - GraphViz Options",
+    "Color": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "children": [
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel2",
+        "Position": [
+          50.97142857142857,
+          0.9900452488688082,
+          15.428571428571438,
+          7.23529411764706
+        ],
+        "Units": "characters",
+        "Visible": "on",
+        "BackgroundColor": [
+          0.8941176470588236,
+          0.9411764705882353,
+          0.9019607843137255
+        ],
+        "ForegroundColor": [
+          0.0784313725490196,
+          0.16862745098039217,
+          0.5490196078431373
+        ],
+        "FontName": "Calibri",
+        "FontSize": 10.0,
+        "FontWeight": "bold",
+        "Title": []
+      },
+      "children": [
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "Draw",
+            "Position": [
+              1.1428571428571428,
+              3.764705882352941,
+              13.000000000000002,
+              2.9411764705882346
+            ],
+            "Units": "characters",
+            "String": "Draw",
+            "Style": "pushbutton",
+            "BackgroundColor": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0,
+            "FontWeight": "bold"
+          },
+          "children": []
+        },
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "Help",
+            "Position": [
+              1.1428571428571428,
+              0.47058823529411764,
+              13.000000000000002,
+              2.9411764705882346
+            ],
+            "Units": "characters",
+            "String": "Help",
+            "Style": "pushbutton",
+            "Value": 0.0,
+            "Min": 0.0,
+            "Max": 1.0,
+            "Enable": "on",
+            "Visible": "on",
+            "BackgroundColor": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0,
+            "FontWeight": "bold",
+            "HorizontalAlignment": "center",
+            "TooltipString": []
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "text2",
+        "Position": [
+          38.80000000000001,
+          20.107692307692343,
+          27.599999999999994,
+          2.3076923076923066
+        ],
+        "Units": "characters",
+        "String": "A T L A N T I S",
+        "Style": "text",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "ForegroundColor": [
+          0.0784313725490196,
+          0.16862745098039217,
+          0.5490196078431373
+        ],
+        "FontName": "Calibri",
+        "FontSize": 18.0,
+        "FontWeight": "bold",
+        "HorizontalAlignment": "right"
+      },
+      "children": []
+    },
+    {
+      "type": "uitools.uibuttongroup",
+      "properties": {
+        "Tag": "DotFileOptions",
+        "Position": [
+          2.2,
+          16.492307692307726,
+          64.2,
+          3.6153846153846168
+        ],
+        "Units": "characters",
+        "Visible": "on",
+        "BackgroundColor": [
+          0.8941176470588236,
+          0.9411764705882353,
+          0.9019607843137255
+        ],
+        "ForegroundColor": [
+          0.0784313725490196,
+          0.16862745098039217,
+          0.5490196078431373
+        ],
+        "FontName": "Calibri",
+        "FontSize": 12.0,
+        "FontWeight": "bold",
+        "Title": "Dot File"
+      },
+      "children": [
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "CustomDotFile",
+            "Position": [
+              1.4000000000000001,
+              0.3619909502262453,
+              25.8,
+              1.8461538461538463
+            ],
+            "Units": "characters",
+            "String": " User - Defined",
+            "Style": "radiobutton",
+            "Value": 0.0,
+            "Min": 0.0,
+            "Max": 1.0,
+            "Enable": "on",
+            "Visible": "on",
+            "BackgroundColor": [
+              0.8941176470588236,
+              0.9411764705882353,
+              0.9019607843137255
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0,
+            "FontWeight": "normal",
+            "HorizontalAlignment": "center",
+            "TooltipString": []
+          },
+          "children": []
+        },
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "MatlabGeneratedDotFile",
+            "Position": [
+              29.8,
+              0.3619909502262453,
+              32.80000000000001,
+              1.8461538461538463
+            ],
+            "Units": "characters",
+            "String": " MATLAB - Generated",
+            "Style": "radiobutton",
+            "Value": 1.0,
+            "Min": 0.0,
+            "Max": 1.0,
+            "Enable": "on",
+            "Visible": "on",
+            "BackgroundColor": [
+              0.8941176470588236,
+              0.9411764705882353,
+              0.9019607843137255
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0,
+            "FontWeight": "normal",
+            "HorizontalAlignment": "center",
+            "TooltipString": []
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel7",
+        "Position": [
+          2.1142857142857143,
+          0.9900452488688082,
+          47.14285714285714,
+          7.23529411764706
+        ],
+        "Units": "characters",
+        "Visible": "on",
+        "BackgroundColor": [
+          0.8941176470588236,
+          0.9411764705882353,
+          0.9019607843137255
+        ],
+        "ForegroundColor": [
+          0.0784313725490196,
+          0.16862745098039217,
+          0.5490196078431373
+        ],
+        "FontName": "Calibri",
+        "FontSize": 12.0,
+        "FontWeight": "bold",
+        "Title": "Console"
+      },
+      "children": [
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "Console",
+            "Position": [
+              1.4285714285714284,
+              0.9411764705882344,
+              43.000000000000014,
+              4.588235294117647
+            ],
+            "Units": "characters",
+            "String": "Welcome to sketch network menu.",
+            "Style": "text",
+            "BackgroundColor": [
+              0.8941176470588236,
+              0.9411764705882353,
+              0.9019607843137255
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0,
+            "FontWeight": "normal",
+            "HorizontalAlignment": "left"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "uitools.uibuttongroup",
+      "properties": {
+        "Tag": "uibuttongroup2",
+        "Position": [
+          2.2,
+          8.95384615384619,
+          64.2,
+          6.76923076923077
+        ],
+        "Units": "characters",
+        "Visible": "on",
+        "BackgroundColor": [
+          0.8941176470588236,
+          0.9411764705882353,
+          0.9019607843137255
+        ],
+        "ForegroundColor": [
+          0.0784313725490196,
+          0.16862745098039217,
+          0.5490196078431373
+        ],
+        "FontName": "Calibri",
+        "FontSize": 12.0,
+        "FontWeight": "bold",
+        "Title": "Sketching Options"
+      },
+      "children": [
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "text5",
+            "Position": [
+              1.8,
+              3.076923076923077,
+              11.8,
+              1.4615384615384612
+            ],
+            "Units": "characters",
+            "String": "BG Color:",
+            "Style": "text",
+            "BackgroundColor": [
+              0.8941176470588236,
+              0.9411764705882353,
+              0.9019607843137255
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0,
+            "FontWeight": "normal",
+            "HorizontalAlignment": "left"
+          },
+          "children": []
+        },
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "SelectedBGColor",
+            "Position": [
+              15.4,
+              3.0,
+              15.6,
+              1.9230769230769234
+            ],
+            "Units": "characters",
+            "String": [
+              "White",
+              "Black",
+              "Grey"
+            ],
+            "Style": "popupmenu",
+            "Value": 1.0,
+            "Min": 0.0,
+            "Max": 1.0,
+            "Enable": "on",
+            "Visible": "on",
+            "BackgroundColor": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0,
+            "FontWeight": "normal",
+            "HorizontalAlignment": "center",
+            "TooltipString": []
+          },
+          "children": []
+        },
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "text6",
+            "Position": [
+              32.800000000000004,
+              3.076923076923077,
+              12.600000000000001,
+              1.4615384615384612
+            ],
+            "Units": "characters",
+            "String": "Plot type:",
+            "Style": "text",
+            "BackgroundColor": [
+              0.8941176470588236,
+              0.9411764705882353,
+              0.9019607843137255
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0,
+            "FontWeight": "normal",
+            "HorizontalAlignment": "left"
+          },
+          "children": []
+        },
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "SelectedPlotType",
+            "Position": [
+              46.6,
+              3.0,
+              15.800000000000004,
+              1.9230769230769234
+            ],
+            "Units": "characters",
+            "String": [
+              "Circos",
+              "Dot",
+              "Default"
+            ],
+            "Style": "popupmenu",
+            "Value": 1.0,
+            "Enable": "on",
+            "BackgroundColor": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0
+          },
+          "children": []
+        },
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "text7",
+            "Position": [
+              1.8,
+              0.7692307692307693,
+              12.600000000000001,
+              1.3846153846153846
+            ],
+            "Units": "characters",
+            "String": "Plot Title:",
+            "Style": "text",
+            "BackgroundColor": [
+              0.8941176470588236,
+              0.9411764705882353,
+              0.9019607843137255
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0,
+            "FontWeight": "normal"
+          },
+          "children": []
+        },
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "PlotTitle",
+            "Position": [
+              15.4,
+              0.46153846153846156,
+              47.2,
+              2.076923076923077
+            ],
+            "Units": "characters",
+            "String": "Plot 1",
+            "Style": "edit",
+            "Enable": "on",
+            "BackgroundColor": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

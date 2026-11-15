@@ -1,0 +1,476 @@
+{
+  "type": "figure",
+  "properties": {
+    "Tag": "NetworkInputMenu2",
+    "Position": [
+      135.8,
+      33.61538461538462,
+      67.5,
+      19.61538461538462
+    ],
+    "Units": "characters",
+    "Visible": "on",
+    "Name": "ATLANTIS - Network Input",
+    "Color": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "children": [
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "text17",
+        "Position": [
+          2.4000000000000004,
+          8.992760180995482,
+          55.14285714285714,
+          2.3846153846153832
+        ],
+        "Units": "characters",
+        "String": [],
+        "Style": "text",
+        "Value": 0.0,
+        "Min": 0.0,
+        "Max": 1.0,
+        "Enable": "on",
+        "Visible": "on",
+        "BackgroundColor": [
+          0.8941176470588236,
+          0.9411764705882353,
+          0.9019607843137255
+        ],
+        "ForegroundColor": [
+          0.0784313725490196,
+          0.16862745098039217,
+          0.5490196078431373
+        ],
+        "FontName": "Calibri",
+        "FontSize": 10.0,
+        "FontWeight": "bold",
+        "HorizontalAlignment": "left",
+        "TooltipString": []
+      },
+      "children": []
+    },
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "BrowseFolder",
+        "Position": [
+          2.6857142857142855,
+          9.316742081447973,
+          52.14285714285714,
+          1.5294117647058822
+        ],
+        "Units": "characters",
+        "String": "Browse folder...",
+        "Style": "text",
+        "Value": 0.0,
+        "Min": 0.0,
+        "Max": 1.0,
+        "Enable": "on",
+        "Visible": "on",
+        "BackgroundColor": [
+          0.8941176470588236,
+          0.9411764705882353,
+          0.9019607843137255
+        ],
+        "ForegroundColor": [
+          0.0784313725490196,
+          0.16862745098039217,
+          0.5490196078431373
+        ],
+        "FontName": "Calibri",
+        "FontSize": 12.0,
+        "FontWeight": "normal",
+        "HorizontalAlignment": "left",
+        "TooltipString": []
+      },
+      "children": []
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel1",
+        "Position": [
+          2.2,
+          0.769230769230778,
+          44.800000000000004,
+          7.384615384615386
+        ],
+        "Units": "characters",
+        "Visible": "on",
+        "BackgroundColor": [
+          0.8941176470588236,
+          0.9411764705882353,
+          0.9019607843137255
+        ],
+        "ForegroundColor": [
+          0.0784313725490196,
+          0.16862745098039217,
+          0.5490196078431373
+        ],
+        "FontName": "Calibri",
+        "FontSize": 12.0,
+        "FontWeight": "bold",
+        "Title": "Console"
+      },
+      "children": [
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "Console",
+            "Position": [
+              1.571428571428572,
+              1.104977375565616,
+              41.0,
+              4.6
+            ],
+            "Units": "characters",
+            "String": "Please input list of nodes and destination of node state update logic files.",
+            "Style": "text",
+            "BackgroundColor": [
+              0.8941176470588236,
+              0.9411764705882353,
+              0.9019607843137255
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0,
+            "FontWeight": "normal",
+            "HorizontalAlignment": "left"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel2",
+        "Position": [
+          49.2,
+          0.769230769230778,
+          15.799999999999997,
+          7.384615384615386
+        ],
+        "Units": "characters",
+        "Visible": "on",
+        "BackgroundColor": [
+          0.8941176470588236,
+          0.9411764705882353,
+          0.9019607843137255
+        ],
+        "ForegroundColor": [
+          0.0784313725490196,
+          0.16862745098039217,
+          0.5490196078431373
+        ],
+        "FontName": "Calibri",
+        "FontSize": 12.0,
+        "FontWeight": "bold",
+        "Title": []
+      },
+      "children": [
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "Ok",
+            "Position": [
+              1.4285714285714286,
+              3.8552036199095037,
+              13.000000000000007,
+              2.9411764705882346
+            ],
+            "Units": "characters",
+            "String": "Ok",
+            "Style": "pushbutton",
+            "BackgroundColor": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0,
+            "FontWeight": "bold"
+          },
+          "children": []
+        },
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "Help",
+            "Position": [
+              1.4285714285714286,
+              0.5022624434389152,
+              13.000000000000007,
+              2.941176470588235
+            ],
+            "Units": "characters",
+            "String": "Help",
+            "Style": "pushbutton",
+            "BackgroundColor": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0,
+            "FontWeight": "bold"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "text2",
+        "Position": [
+          37.4,
+          17.076923076923087,
+          27.6,
+          2.3076923076923066
+        ],
+        "Units": "characters",
+        "String": "A T L A N T I S",
+        "Style": "text",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "ForegroundColor": [
+          0.0784313725490196,
+          0.16862745098039217,
+          0.5490196078431373
+        ],
+        "FontName": "Calibri",
+        "FontSize": 18.0,
+        "FontWeight": "bold",
+        "HorizontalAlignment": "right"
+      },
+      "children": []
+    },
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "text9",
+        "Position": [
+          2.257142857142857,
+          16.06153846153847,
+          23.71428571428571,
+          1.235294117647058
+        ],
+        "Units": "characters",
+        "String": "List of Nodes",
+        "Style": "text",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "ForegroundColor": [
+          0.0784313725490196,
+          0.16862745098039217,
+          0.5490196078431373
+        ],
+        "FontName": "Calibri",
+        "FontSize": 12.0,
+        "FontWeight": "bold",
+        "HorizontalAlignment": "left"
+      },
+      "children": []
+    },
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "text10",
+        "Position": [
+          2.257142857142857,
+          13.382805429864257,
+          55.14285714285714,
+          2.3846153846153815
+        ],
+        "Units": "characters",
+        "String": [],
+        "Style": "text",
+        "Value": 0.0,
+        "Min": 0.0,
+        "Max": 1.0,
+        "Enable": "on",
+        "Visible": "on",
+        "BackgroundColor": [
+          0.8941176470588236,
+          0.9411764705882353,
+          0.9019607843137255
+        ],
+        "ForegroundColor": [
+          0.0784313725490196,
+          0.16862745098039217,
+          0.5490196078431373
+        ],
+        "FontName": "Calibri",
+        "FontSize": 10.0,
+        "FontWeight": "bold",
+        "HorizontalAlignment": "left",
+        "TooltipString": []
+      },
+      "children": []
+    },
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "BrowseFile",
+        "Position": [
+          2.5428571428571427,
+          14.072398190045257,
+          52.57142857142857,
+          1.2352941176470598
+        ],
+        "Units": "characters",
+        "String": "Browse file...",
+        "Style": "text",
+        "Value": 0.0,
+        "Min": 0.0,
+        "Max": 1.0,
+        "Enable": "on",
+        "Visible": "on",
+        "BackgroundColor": [
+          0.8941176470588236,
+          0.9411764705882353,
+          0.9019607843137255
+        ],
+        "ForegroundColor": [
+          0.0784313725490196,
+          0.16862745098039217,
+          0.5490196078431373
+        ],
+        "FontName": "Calibri",
+        "FontSize": 12.0,
+        "FontWeight": "normal",
+        "HorizontalAlignment": "left",
+        "TooltipString": []
+      },
+      "children": []
+    },
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "BrowseNodeList",
+        "Position": [
+          56.800000000000004,
+          13.384615384615394,
+          8.199999999999996,
+          2.384615384615385
+        ],
+        "Units": "characters",
+        "String": [],
+        "Style": "pushbutton",
+        "Value": 0.0,
+        "Min": 0.0,
+        "Max": 1.0,
+        "Enable": "on",
+        "Visible": "on",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "ForegroundColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "FontName": "Calibri",
+        "FontSize": 8.0,
+        "FontWeight": "bold",
+        "HorizontalAlignment": "center",
+        "TooltipString": []
+      },
+      "children": []
+    },
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "text13",
+        "Position": [
+          2.257142857142857,
+          11.636199095022631,
+          39.71428571428572,
+          1.2352941176470598
+        ],
+        "Units": "characters",
+        "String": "Node State Update Logic Tables",
+        "Style": "text",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "ForegroundColor": [
+          0.0784313725490196,
+          0.16862745098039217,
+          0.5490196078431373
+        ],
+        "FontName": "Calibri",
+        "FontSize": 12.0,
+        "FontWeight": "bold",
+        "HorizontalAlignment": "left"
+      },
+      "children": []
+    },
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "BrowseNodeLogicTables",
+        "Position": [
+          56.800000000000004,
+          9.000000000000009,
+          8.199999999999996,
+          2.384615384615385
+        ],
+        "Units": "characters",
+        "String": [],
+        "Style": "pushbutton",
+        "Value": 0.0,
+        "Min": 0.0,
+        "Max": 1.0,
+        "Enable": "on",
+        "Visible": "on",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "ForegroundColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "FontName": "Calibri",
+        "FontSize": 8.0,
+        "FontWeight": "bold",
+        "HorizontalAlignment": "center",
+        "TooltipString": []
+      },
+      "children": []
+    }
+  ]
+}

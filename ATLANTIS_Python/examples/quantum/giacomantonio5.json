@@ -1,0 +1,30 @@
+{
+  "names": [
+    "Fgf8",
+    "Emx2",
+    "Pax6",
+    "Sp8",
+    "Coup_tfi"
+  ],
+  "name": "giacomantonio5",
+  "weights": null,
+  "basal": null,
+  "rules": [
+    {
+      "expression": "Fgf8 & !Emx2 & Sp8"
+    },
+    {
+      "expression": "!Fgf8 & !Pax6 & Coup_tfi & !Sp8"
+    },
+    {
+      "expression": "!Emx2 & !Coup_tfi & Sp8"
+    },
+    {
+      "expression": "Fgf8 & ! Emx2"
+    },
+    {
+      "expression": "!Fgf8 & ! Sp8"
+    }
+  ],
+  "positions": {}
+}

@@ -1,0 +1,341 @@
+{
+  "cycles": [
+    [
+      "0000001000"
+    ],
+    [
+      "0010111001"
+    ],
+    [
+      "0100011011"
+    ],
+    [
+      "0110101011"
+    ],
+    [
+      "1000100110"
+    ],
+    [
+      "1010110011"
+    ],
+    [
+      "1101110101"
+    ],
+    [
+      "1111100001"
+    ]
+  ],
+  "status": "complete_classically_certified",
+  "completion_reason": "Exhaustive F^T coverage audit; classical O(2^n*T), not a quantum certificate",
+  "search_attempts": 8,
+  "counting_calls": 7,
+  "rejected_measurements": 0,
+  "total_measurements": 1024,
+  "invalid_measurements": 0,
+  "compiled_depth_max": 0,
+  "compiled_size_max": 0,
+  "compiled_2q_count_max": 0,
+  "oracle_calls_ideal": 24,
+  "search_runtime_s": 0.025393099524080753,
+  "counting_runtime_s": 0.0005684997886419296,
+  "simulation_runtime_s": 0.001429300056770444,
+  "max_suppressed_leakage": 4.144601240321331e-31,
+  "classical_audit_runtime_s": 0.0007044000085443258,
+  "classical_audit_states_scanned": 8192,
+  "history": [
+    {
+      "round": 0,
+      "kind": "measurements",
+      "counts": {
+        "0000001000": 18,
+        "0010111001": 12,
+        "0100011011": 12,
+        "0110101011": 16,
+        "1000100110": 15,
+        "1010110011": 16,
+        "1101110101": 14,
+        "1111100001": 25
+      }
+    },
+    {
+      "round": 0,
+      "kind": "new_cycle",
+      "cycle": [
+        "0000001000"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    },
+    {
+      "round": 1,
+      "kind": "count",
+      "M_est": 128,
+      "full_fraction": 0.0,
+      "cycles_found_before": 1
+    },
+    {
+      "round": 1,
+      "kind": "measurements",
+      "counts": {
+        "0010111001": 16,
+        "0100011011": 13,
+        "0110101011": 19,
+        "1000100110": 18,
+        "1010110011": 18,
+        "1101110101": 19,
+        "1111100001": 25
+      }
+    },
+    {
+      "round": 1,
+      "kind": "new_cycle",
+      "cycle": [
+        "0010111001"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    },
+    {
+      "round": 2,
+      "kind": "count",
+      "M_est": 256,
+      "full_fraction": 0.0,
+      "cycles_found_before": 2
+    },
+    {
+      "round": 2,
+      "kind": "measurements",
+      "counts": {
+        "0100011011": 21,
+        "0110101011": 18,
+        "1000100110": 21,
+        "1010110011": 20,
+        "1101110101": 28,
+        "1111100001": 20
+      }
+    },
+    {
+      "round": 2,
+      "kind": "new_cycle",
+      "cycle": [
+        "1000100110"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    },
+    {
+      "round": 3,
+      "kind": "count",
+      "M_est": 384,
+      "full_fraction": 0.0,
+      "cycles_found_before": 3
+    },
+    {
+      "round": 3,
+      "kind": "measurements",
+      "counts": {
+        "0100011011": 20,
+        "0110101011": 23,
+        "1010110011": 27,
+        "1101110101": 30,
+        "1111100001": 28
+      }
+    },
+    {
+      "round": 3,
+      "kind": "new_cycle",
+      "cycle": [
+        "1111100001"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    },
+    {
+      "round": 4,
+      "kind": "count",
+      "M_est": 512,
+      "full_fraction": 0.0,
+      "cycles_found_before": 4
+    },
+    {
+      "round": 4,
+      "kind": "measurements",
+      "counts": {
+        "0100011011": 34,
+        "0110101011": 35,
+        "1010110011": 37,
+        "1101110101": 22
+      }
+    },
+    {
+      "round": 4,
+      "kind": "new_cycle",
+      "cycle": [
+        "1101110101"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    },
+    {
+      "round": 5,
+      "kind": "count",
+      "M_est": 640,
+      "full_fraction": 0.0,
+      "cycles_found_before": 5
+    },
+    {
+      "round": 5,
+      "kind": "measurements",
+      "counts": {
+        "0100011011": 44,
+        "0110101011": 37,
+        "1010110011": 47
+      }
+    },
+    {
+      "round": 5,
+      "kind": "new_cycle",
+      "cycle": [
+        "1010110011"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    },
+    {
+      "round": 6,
+      "kind": "count",
+      "M_est": 768,
+      "full_fraction": 0.0,
+      "cycles_found_before": 6
+    },
+    {
+      "round": 6,
+      "kind": "measurements",
+      "counts": {
+        "0100011011": 64,
+        "0110101011": 64
+      }
+    },
+    {
+      "round": 6,
+      "kind": "new_cycle",
+      "cycle": [
+        "0110101011"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    },
+    {
+      "round": 7,
+      "kind": "count",
+      "M_est": 896,
+      "full_fraction": 0.0,
+      "cycles_found_before": 7
+    },
+    {
+      "round": 7,
+      "kind": "measurements",
+      "counts": {
+        "0100011011": 128
+      }
+    },
+    {
+      "round": 7,
+      "kind": "new_cycle",
+      "cycle": [
+        "0100011011"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    }
+  ],
+  "schema_version": 1,
+  "network": {
+    "names": [
+      "g00",
+      "g01",
+      "g02",
+      "g03",
+      "g04",
+      "g05",
+      "g06",
+      "g07",
+      "g08",
+      "g09"
+    ],
+    "name": "projection_10",
+    "weights": null,
+    "basal": null,
+    "rules": [
+      {
+        "expression": "g00"
+      },
+      {
+        "expression": "g01"
+      },
+      {
+        "expression": "g02"
+      },
+      {
+        "expression": "g00 & g01"
+      },
+      {
+        "expression": "g00 | g02"
+      },
+      {
+        "expression": "g01 ^ g02"
+      },
+      {
+        "expression": "~g00"
+      },
+      {
+        "expression": "g00 & ~g02"
+      },
+      {
+        "expression": "g00 ^ g01"
+      },
+      {
+        "expression": "g01 | g02"
+      }
+    ],
+    "positions": {}
+  },
+  "network_hash": "6421c02d31162860ce24910222be32b85efa070725d0fc0eac78dc551662b380",
+  "parameters": {
+    "T": 1,
+    "engine": "reduced",
+    "counting_mode": "exact",
+    "shots": 128,
+    "counting_precision": 3,
+    "counting_shots": 128,
+    "seed": 0,
+    "max_rounds": 12,
+    "stop_policy": "classical_audit",
+    "max_qubits": 22,
+    "max_reference_states": 65536,
+    "max_memory_mib": 1024,
+    "max_compiled_depth": 200000,
+    "max_compiled_gates": 500000,
+    "max_verification_steps": 10000,
+    "timeout_seconds": 120,
+    "noise_probability": 0.0
+  },
+  "resources": {
+    "eligible": true,
+    "reasons": [],
+    "logical_evolution_qubits": 20,
+    "logical_counting_qubits": 0,
+    "circuit_qubits": 20,
+    "statevector_bytes_lower_bound": 16777216,
+    "anf_terms": 18,
+    "transpiled_depth": null,
+    "transpiled_width": null,
+    "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+  },
+  "T_selection": "user supplied",
+  "taxonomy": "ideal mathematical quantum reference",
+  "basin_sizes": null,
+  "basin_size_origin": "unavailable; counting history estimates combined excluded coverage",
+  "classical_information": "enumerated F^T for exact M",
+  "total_runtime_s": 0.032235599821433425
+}

@@ -1,0 +1,8 @@
+{
+  "iterations": 200,
+  "converged": false,
+  "noise": 5,
+  "degradation": 0.001,
+  "error": 1e-07,
+  "pruned": true
+}

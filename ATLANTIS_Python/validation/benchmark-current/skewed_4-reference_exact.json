@@ -1,0 +1,134 @@
+{
+  "cycles": [
+    [
+      "0001"
+    ],
+    [
+      "1110"
+    ]
+  ],
+  "status": "complete_classically_certified",
+  "completion_reason": "Exhaustive F^T coverage audit; classical O(2^n*T), not a quantum certificate",
+  "search_attempts": 2,
+  "counting_calls": 1,
+  "rejected_measurements": 0,
+  "total_measurements": 256,
+  "invalid_measurements": 0,
+  "compiled_depth_max": 0,
+  "compiled_size_max": 0,
+  "compiled_2q_count_max": 0,
+  "oracle_calls_ideal": 4,
+  "search_runtime_s": 0.0004963998217135668,
+  "counting_runtime_s": 4.499917849898338e-06,
+  "simulation_runtime_s": 0.0003886998165398836,
+  "max_suppressed_leakage": 3.6053408558929055e-31,
+  "classical_audit_runtime_s": 1.2799864634871483e-05,
+  "classical_audit_states_scanned": 32,
+  "history": [
+    {
+      "round": 0,
+      "kind": "measurements",
+      "counts": {
+        "0001": 89,
+        "1110": 39
+      }
+    },
+    {
+      "round": 0,
+      "kind": "new_cycle",
+      "cycle": [
+        "0001"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    },
+    {
+      "round": 1,
+      "kind": "count",
+      "M_est": 12,
+      "full_fraction": 0.0,
+      "cycles_found_before": 1
+    },
+    {
+      "round": 1,
+      "kind": "measurements",
+      "counts": {
+        "1110": 128
+      }
+    },
+    {
+      "round": 1,
+      "kind": "new_cycle",
+      "cycle": [
+        "1110"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    }
+  ],
+  "schema_version": 1,
+  "network": {
+    "names": [
+      "g00",
+      "g01",
+      "g02",
+      "g03"
+    ],
+    "name": "skewed_4",
+    "weights": null,
+    "basal": null,
+    "rules": [
+      {
+        "expression": "(g00 & g01)"
+      },
+      {
+        "expression": "(g00 & g01)"
+      },
+      {
+        "expression": "(g00 & g01)"
+      },
+      {
+        "expression": "~(g00 & g01)"
+      }
+    ],
+    "positions": {}
+  },
+  "network_hash": "a5dc3e57c682f9d65877989f98467955e79636189c5da789359fc9ae5390cbb7",
+  "parameters": {
+    "T": 1,
+    "engine": "reduced",
+    "counting_mode": "exact",
+    "shots": 128,
+    "counting_precision": 3,
+    "counting_shots": 128,
+    "seed": 0,
+    "max_rounds": 12,
+    "stop_policy": "classical_audit",
+    "max_qubits": 22,
+    "max_reference_states": 65536,
+    "max_memory_mib": 1024,
+    "max_compiled_depth": 200000,
+    "max_compiled_gates": 500000,
+    "max_verification_steps": 10000,
+    "timeout_seconds": 120,
+    "noise_probability": 0.0
+  },
+  "resources": {
+    "eligible": true,
+    "reasons": [],
+    "logical_evolution_qubits": 8,
+    "logical_counting_qubits": 0,
+    "circuit_qubits": 8,
+    "statevector_bytes_lower_bound": 4096,
+    "anf_terms": 5,
+    "transpiled_depth": null,
+    "transpiled_width": null,
+    "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+  },
+  "T_selection": "user supplied",
+  "taxonomy": "ideal mathematical quantum reference",
+  "basin_sizes": null,
+  "basin_size_origin": "unavailable; counting history estimates combined excluded coverage",
+  "classical_information": "enumerated F^T for exact M",
+  "total_runtime_s": 0.0025792999658733606
+}

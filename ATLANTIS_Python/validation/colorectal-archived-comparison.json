@@ -1,0 +1,33 @@
+{
+  "archive": "reference\\Toolbox\\Results\\2026-09-15 22-55-49 Node List\\APC+RAS+PTEN+P53\\Deterministic Analysis Output\\Network State List DA.mat",
+  "n": 10000,
+  "horizon": 200,
+  "initialization": "archived states with original mutation-node starting values",
+  "counts": {
+    "unresolved": 23,
+    "Quiescence": 900,
+    "Metastasis": 1383,
+    "Metastasis + Normal Proliferation": 2706,
+    "Abnormal Proliferation": 126,
+    "Abnormal Proliferation + Metastasis": 4201,
+    "Normal Proliferation": 661
+  },
+  "resolved_conditional_proportions": {
+    "Quiescence": 0.09020747719755437,
+    "Metastasis": 0.13861882329357522,
+    "Metastasis + Normal Proliferation": 0.27122381477398017,
+    "Abnormal Proliferation": 0.012629046807657612,
+    "Abnormal Proliferation + Metastasis": 0.42106845745213994,
+    "Normal Proliferation": 0.06625238047509271
+  },
+  "saved_matlab_proportions": {
+    "Abnormal Proliferation + Metastasis": 0.42107,
+    "Metastasis + Normal Proliferation": 0.27122,
+    "Metastasis": 0.13862,
+    "Quiescence": 0.090207,
+    "Normal Proliferation": 0.066252,
+    "Abnormal Proliferation": 0.012629
+  },
+  "total_variation": 3.719254284836361e-06,
+  "wall_s": 14.54414699994959
+}

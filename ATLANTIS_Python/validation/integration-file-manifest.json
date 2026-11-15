@@ -1,0 +1,352 @@
+[
+  {
+    "path": "atlantis/analysis.py",
+    "status": "modified",
+    "sha256": "c4ef5bf56b68b4e2248322e62807c422d46a88f277bf6853463606966da772b3"
+  },
+  {
+    "path": "atlantis/classical_jobs.py",
+    "status": "created",
+    "sha256": "42d42f3b7c7d2845b99e1cee521ee3f64f1993cc003a78fa8b513dc01d6973ab"
+  },
+  {
+    "path": "atlantis/experiments.py",
+    "status": "created",
+    "sha256": "9d63d13cb01dfa374293816ca8c0d40e40b32a7d04b5b7c200491dc98d7ac68a"
+  },
+  {
+    "path": "atlantis/expressions.py",
+    "status": "created",
+    "sha256": "751ad070914fe2b2f76c76a6c2f638c7a7c8b14daae0b2065526e71e77466b46"
+  },
+  {
+    "path": "atlantis/gui.py",
+    "status": "modified",
+    "sha256": "8b9d02c7ba0e66a8ad60b55857d9ab07d0574976a0190f973937ebdf66894799"
+  },
+  {
+    "path": "atlantis/io.py",
+    "status": "modified",
+    "sha256": "f03e8be31501aa9f2bea9fd391e9dcf4ed99a349ab83989e7a14ae97d12ae776"
+  },
+  {
+    "path": "atlantis/model.py",
+    "status": "modified",
+    "sha256": "9582339088e3ec870d51df7fb66cb20c13600ade72a1cb7209330f9340008625"
+  },
+  {
+    "path": "atlantis/quantum/__init__.py",
+    "status": "created",
+    "sha256": "2bcda5b77948554b735ca3db249b32aef859c3e4a1851ce42ad819458e6bdcb6"
+  },
+  {
+    "path": "atlantis/quantum/adapter.py",
+    "status": "created",
+    "sha256": "3944626c1dc97932cb9bae7af04dcc41e4d036f26606327a9592c00f208fd74c"
+  },
+  {
+    "path": "atlantis/quantum/engine.py",
+    "status": "created",
+    "sha256": "363abe8b2fe60dace930a5ba10b68dc09445f576906ccfa8ffaa07dd17ad7af2"
+  },
+  {
+    "path": "atlantis/quantum/hardware.py",
+    "status": "created",
+    "sha256": "e383ff3ce168aca4434bea62db95a4437264baf85baaa403098c7dd6967ef3bb"
+  },
+  {
+    "path": "atlantis/quantum/ibm.py",
+    "status": "created",
+    "sha256": "2c569e8f29a81481c5a48b15c54a634453730b994eda9bd1c1de5f5929d12da2"
+  },
+  {
+    "path": "atlantis/quantum/ross/__init__.py",
+    "status": "created",
+    "sha256": "84fdf328a43448891a399d7ce98a6068594d0b41bc0147c6ad0c1058fd3cb5ae"
+  },
+  {
+    "path": "atlantis/quantum/ross/adaptive.py",
+    "status": "created",
+    "sha256": "85ea846cdcedc570d14971e83d6f3fd9327bfe2adec2976761269c8f444082a0"
+  },
+  {
+    "path": "atlantis/quantum/ross/campaign.py",
+    "status": "created",
+    "sha256": "af15e7b672d742695e5e55ae262e7da6caee887aa7b3738fe3b7867e48c7cd8f"
+  },
+  {
+    "path": "atlantis/quantum/ross/circuits.py",
+    "status": "created",
+    "sha256": "79c9a3e7ad89c9270301eb8727cf537a397300f5bebd113b453d68093f6ae3c1"
+  },
+  {
+    "path": "atlantis/quantum/ross/export_networks.py",
+    "status": "created",
+    "sha256": "943859d2a695cd674cbde291ebca581d463c6cbfb0afdcdd59d60d5a1d07adfd"
+  },
+  {
+    "path": "atlantis/quantum/ross/inspect_resources.py",
+    "status": "created",
+    "sha256": "0b2ca900e3939ff65096682c640d40e3b53221f4480a6ee2dddd6a7f4006883a"
+  },
+  {
+    "path": "atlantis/quantum/ross/model.py",
+    "status": "created",
+    "sha256": "2b444c56a1517b8daea2c03091b8ee032e61c988bf9cd7667cedd5a7dea4f177"
+  },
+  {
+    "path": "atlantis/quantum/ross/reference.py",
+    "status": "created",
+    "sha256": "fc0b9839855b7bc89aa40cd8388b61a00cb81ddcfd81350d766132ba2bc0d621"
+  },
+  {
+    "path": "atlantis/quantum/ross/reports.py",
+    "status": "created",
+    "sha256": "ba375666271a5b06d71c547bca48e825d6f6120bc600d57e907cc4e0b12717fa"
+  },
+  {
+    "path": "atlantis/quantum/ross/runner.py",
+    "status": "created",
+    "sha256": "1c61ec49af867c183dda9d86f5dd42990b8eabd2bbdfc28c61f60fe3d46a54ef"
+  },
+  {
+    "path": "atlantis/quantum_ui.py",
+    "status": "created",
+    "sha256": "75225602d6333a5180e9542d7219d3b5d8d6c7221b303d65d945e0b4f79d53df"
+  },
+  {
+    "path": "docs/BENCHMARK_CURRENT.md",
+    "status": "created",
+    "sha256": "a2a101426819f485f05af59ceb40b71b709c6794354f9816601769143dca42d4"
+  },
+  {
+    "path": "docs/IBM_READINESS_023.md",
+    "status": "created",
+    "sha256": "9c8255f8e6e1364f7e949268865fb2f677040f22c663f45e5f14fa7ff3fb7a15"
+  },
+  {
+    "path": "docs/IBM_READINESS_024.md",
+    "status": "created",
+    "sha256": "9e6f5b2370ee29cfe96891c23404af7256438b9c670f22eb9f93b04581c4a5ed"
+  },
+  {
+    "path": "docs/INTEGRATION_AUDIT.md",
+    "status": "created",
+    "sha256": "22943fe4a7107015d83c8fd5bd79dddd5342343816965c0e84042bb5916f734e"
+  },
+  {
+    "path": "docs/QUANTUM_CORRECTNESS.md",
+    "status": "created",
+    "sha256": "6d491115b3c02850f38caa78c363e771ee8a8282651f33b01d4080951e029624"
+  },
+  {
+    "path": "docs/QUANTUM_USER_GUIDE.md",
+    "status": "created",
+    "sha256": "b2a29a8ed80e6d725719674fe524541cc421403e21473cd404af47298e594a82"
+  },
+  {
+    "path": "docs/SCIENTIFIC_VERIFICATION_022.md",
+    "status": "created",
+    "sha256": "757190f83e00189094c68b7c215782dd32fc46376df1f780a386e1c428a487fb"
+  },
+  {
+    "path": "docs/SCIENTIFIC_VERIFICATION_023.md",
+    "status": "created",
+    "sha256": "ca291cc4b8edcfa61469ba32a32fcbd520f236af232cb78b8ad87c69207309f0"
+  },
+  {
+    "path": "docs/SCIENTIFIC_VERIFICATION_024.md",
+    "status": "created",
+    "sha256": "14cf339be4aa1f148c63e297688a03d1cd248c6f1d184b699d58633ecd96ed66"
+  },
+  {
+    "path": "docs/VERIFICATION_CURRENT.md",
+    "status": "created",
+    "sha256": "e4e5dd253ef19e124334e385d969788d51d4302ff9b935520f09981bc6737082"
+  },
+  {
+    "path": "HANDOFF.md",
+    "status": "created",
+    "sha256": "179d470e8fdb87e1a7ee747c4d14e2505bff2ac245408dd699cbd0d605a9ee86"
+  },
+  {
+    "path": "install_windows.bat",
+    "status": "modified",
+    "sha256": "3cb07864553eb5f06dc043cf17e206740ba972609adebcf9aeaf1119e60dd5dc"
+  },
+  {
+    "path": "pyproject.toml",
+    "status": "modified",
+    "sha256": "a8017cc6d8343c0a6a2a22c93d74af025eb07987b716e0ec420044d864e65c07"
+  },
+  {
+    "path": "README.md",
+    "status": "modified",
+    "sha256": "45e60f918c0254f9385b1400c436c41c091ed99205731941f959e45323bb51f4"
+  },
+  {
+    "path": "requirements-integrated.lock.txt",
+    "status": "created",
+    "sha256": "e94d950cc24d7c01d2a56f76f22aa0e78e0b5e4ce02643b94d05cb7831381ae7"
+  },
+  {
+    "path": "requirements-quantum.txt",
+    "status": "created",
+    "sha256": "8a4d599812c275da1da81a43a18baf42b9b640157deee54c8cdaa23f5ab16939"
+  },
+  {
+    "path": "requirements.txt",
+    "status": "modified",
+    "sha256": "7d359f3545cd272a3d49f7efd8ce36bc760ce26ff91d894fc60ae016627480d1"
+  },
+  {
+    "path": "tests/test_classical_recovery.py",
+    "status": "created",
+    "sha256": "74e81b690103a773a7d26f1de75049ae91f3a2c8d418a0e231bd280f1def310c"
+  },
+  {
+    "path": "tests/test_gui.py",
+    "status": "modified",
+    "sha256": "cec22ff580003b9ee26280536338d9ecde1647dec5f741aafe3d8722b978a457"
+  },
+  {
+    "path": "tests/test_hardware_recovery_024.py",
+    "status": "created",
+    "sha256": "3b3711b220183b8ce4d27c179ab6de78d9aea848b0ea0854a77d3ee06dbfa6dd"
+  },
+  {
+    "path": "tests/test_io.py",
+    "status": "modified",
+    "sha256": "9457f410987af527c3fa0b4c998a49e5930406e6e6d9397b33c3859238b78a97"
+  },
+  {
+    "path": "tests/test_network_generality.py",
+    "status": "created",
+    "sha256": "049a9add010e94416f2208fdb765f009dd921e2fa221df1f2791ff6427d9b7e2"
+  },
+  {
+    "path": "tests/test_quantum_integration.py",
+    "status": "created",
+    "sha256": "7ee88f66e71a993a54465cea55e1a3d289da832d3442d11b229e079daaee3a8f"
+  },
+  {
+    "path": "THIRD_PARTY_NOTICES.md",
+    "status": "modified",
+    "sha256": "0cd5111886019c4c8e5e854c51b26c6fdba24227c57e158e408d183046d008d0"
+  },
+  {
+    "path": "tools/benchmark_discovery_cache_024.py",
+    "status": "created",
+    "sha256": "945c079d8eea20d2eab49cdbd6f54b3f013a70ebd6fce2dbb3292117a2c2a248"
+  },
+  {
+    "path": "tools/benchmark_five_mps.py",
+    "status": "created",
+    "sha256": "6c4354fcaf934fba6e813a7173e59d7bb4eb597e79e8ccc31c53bc1f95c5a52b"
+  },
+  {
+    "path": "tools/benchmark_integrated.py",
+    "status": "created",
+    "sha256": "0a9bfc670d03fd5ea267e4415d12263a6dba7980c7b7481b30939ba57e8f6659"
+  },
+  {
+    "path": "tools/benchmark_matched.py",
+    "status": "created",
+    "sha256": "6bddcf34921314d11a843fa8d61ed3066f22b0c01131baaad4f916c1156ade3b"
+  },
+  {
+    "path": "tools/benchmark_optimization_023.py",
+    "status": "created",
+    "sha256": "31ce02dcde15d6f865da81e674c1ec11c3afa14310cbf0cd7fa330ce40a8cbcf"
+  },
+  {
+    "path": "tools/benchmark_unequal_qpe.py",
+    "status": "created",
+    "sha256": "aa43ee4e3e7955ca33c71fa44c5124343c565b90aaadb6c8e869d516d304ab29"
+  },
+  {
+    "path": "tools/build_handoff.py",
+    "status": "created",
+    "sha256": "1cb6ea4f9a44b2eceb03f3eba4f230f5e6f2aaadcc9275e9f7dc4b9a0cd30084"
+  },
+  {
+    "path": "tools/capture_integration.py",
+    "status": "created",
+    "sha256": "00b494d38c703366ef18bd12ecd4db10938d4f5838bf4764857623ba8ce03994"
+  },
+  {
+    "path": "tools/check_large_cases.py",
+    "status": "created",
+    "sha256": "ac73186b5c96d44b8534443584037271736b33a87710fa8c9f77f8ba1f95df3f"
+  },
+  {
+    "path": "tools/compare_archived_colorectal.py",
+    "status": "created",
+    "sha256": "7e1eabc6cfdae46a79039399bd7a62a21e3b5bf3b8a39458eab436bee5dbbe5b"
+  },
+  {
+    "path": "tools/compare_colorectal_aggregation.py",
+    "status": "created",
+    "sha256": "20039570aff40fb13efb2566091782815cecff7b758d5a0b38cc1a578c3c8ecc"
+  },
+  {
+    "path": "tools/demo_integrated.py",
+    "status": "created",
+    "sha256": "9507c63169878d59207e3bc655f53d34ebb10e961d232e3290ab5741a24879c7"
+  },
+  {
+    "path": "tools/estimate_ibm_023.py",
+    "status": "created",
+    "sha256": "eecd760dada0dec65c922d8e526f6e8830fe6f8f826bb7a5f47d91912e174022"
+  },
+  {
+    "path": "tools/follow_colorectal_unresolved.py",
+    "status": "created",
+    "sha256": "917c1feb7a7ef5dd8cb51dd70908100fd28b15c9743613b06695a367ad2b789f"
+  },
+  {
+    "path": "tools/package_integrated.py",
+    "status": "created",
+    "sha256": "b4391a0326ace492526a22cdbdc2d7e1ff5405c0e0598a7c6dcee521ddacdb68"
+  },
+  {
+    "path": "tools/prepare_ibm_024.py",
+    "status": "created",
+    "sha256": "66e6232468ba650999636a2b54d569ddb4740faa1b342b28d5fad6ef844f4749"
+  },
+  {
+    "path": "tools/reproduce_case3_replicates.py",
+    "status": "created",
+    "sha256": "8c9d998559fec8f94ad5ff5c10e11c57aa8bf9956fa11b24af1a31607b254ed2"
+  },
+  {
+    "path": "tools/reproduce_colorectal.py",
+    "status": "created",
+    "sha256": "65cf0497d90fbbcdabb7223ea358ec4a6568ac40f793713d32d5264f4ad77bce"
+  },
+  {
+    "path": "tools/reproduce_mcf7_stochastic.py",
+    "status": "created",
+    "sha256": "28bfe9873a89a47abf3aa00c05f083c6280b6a707eea9466d523bf9e103a5cc4"
+  },
+  {
+    "path": "tools/reproduce_yeast_mcf7.py",
+    "status": "created",
+    "sha256": "dbd559700b9cce263b1efa3de99ed30b07cbbd6fd2fa4e7e03179b540a300eb2"
+  },
+  {
+    "path": "tools/retrieve_supplement.py",
+    "status": "created",
+    "sha256": "e13896d9b5924bc975073fe0687bfd707bab0bf15b6d541ccf301309c1b94fa3"
+  },
+  {
+    "path": "tools/summarize_discovery_024.py",
+    "status": "created",
+    "sha256": "8d26052c9e98b3b46ca11aaf3fc6eaf610816193058fba552345caf3c7ffde12"
+  },
+  {
+    "path": "tools/validate_discovery_024.py",
+    "status": "created",
+    "sha256": "98aca1bef52b364a2683b59145d55f92d35e1324322eded1401e36b48ebff8e9"
+  }
+]

@@ -1,0 +1,335 @@
+{
+  "type": "figure",
+  "properties": {
+    "Tag": "GenerateStates",
+    "Position": [
+      135.8,
+      15.307692307692308,
+      83.0,
+      10.846153846153845
+    ],
+    "Units": "characters",
+    "Visible": "on",
+    "Name": "ATLANTIS - Generate States",
+    "Color": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "children": [
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "text2",
+        "Position": [
+          52.800000000000004,
+          8.340723981900451,
+          27.800000000000004,
+          2.3076923076923084
+        ],
+        "Units": "characters",
+        "String": "A T L A N T I S",
+        "Style": "text",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "ForegroundColor": [
+          0.0784313725490196,
+          0.16862745098039217,
+          0.5490196078431373
+        ],
+        "FontName": "Calibri",
+        "FontSize": 18.0,
+        "FontWeight": "bold",
+        "HorizontalAlignment": "right"
+      },
+      "children": []
+    },
+    {
+      "type": "uitools.uibuttongroup",
+      "properties": {
+        "Tag": "uibuttongroup1",
+        "Position": [
+          2.2,
+          0.8461538461538463,
+          60.400000000000006,
+          7.538461538461538
+        ],
+        "Units": "characters",
+        "Visible": "on",
+        "BackgroundColor": [
+          0.8941176470588236,
+          0.9411764705882353,
+          0.9019607843137255
+        ],
+        "ForegroundColor": [
+          0.0784313725490196,
+          0.16862745098039217,
+          0.5490196078431373
+        ],
+        "FontName": "Calibri",
+        "FontSize": 12.0,
+        "FontWeight": "bold",
+        "Title": "Network State Generation Options"
+      },
+      "children": [
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "AllCombinations",
+            "Position": [
+              1.2000000000000002,
+              4.076923076923077,
+              50.6,
+              1.9230769230769234
+            ],
+            "Units": "characters",
+            "String": "Exhaustive (Complete State Space)",
+            "Style": "radiobutton",
+            "Value": 1.0,
+            "Min": 0.0,
+            "Max": 1.0,
+            "Enable": "on",
+            "Visible": "on",
+            "BackgroundColor": [
+              0.8941176470588236,
+              0.9411764705882353,
+              0.9019607843137255
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0,
+            "FontWeight": "normal",
+            "HorizontalAlignment": "center",
+            "TooltipString": "Generate all possible network state combinations"
+          },
+          "children": []
+        },
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "RandomSample",
+            "Position": [
+              1.2000000000000002,
+              2.3936651583710415,
+              54.5,
+              1.923076923076923
+            ],
+            "Units": "characters",
+            "String": "Random Sampling (Reduced State Space)",
+            "Style": "radiobutton",
+            "Value": 0.0,
+            "Min": 0.0,
+            "Max": 1.0,
+            "Enable": "on",
+            "Visible": "on",
+            "BackgroundColor": [
+              0.8941176470588236,
+              0.9411764705882353,
+              0.9019607843137255
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0,
+            "FontWeight": "normal",
+            "HorizontalAlignment": "center",
+            "TooltipString": "Generate specified number of random network states"
+          },
+          "children": []
+        },
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "text3",
+            "Position": [
+              1.6,
+              0.8552036199095028,
+              16.2,
+              1.3076923076923075
+            ],
+            "Units": "characters",
+            "String": "Sample Size:",
+            "Style": "text",
+            "BackgroundColor": [
+              0.8941176470588236,
+              0.9411764705882353,
+              0.9019607843137255
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0,
+            "FontWeight": "normal",
+            "HorizontalAlignment": "left"
+          },
+          "children": []
+        },
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "EditSampleSize",
+            "Position": [
+              17.91428571428571,
+              0.619909502262444,
+              13.714285714285712,
+              1.705882352941177
+            ],
+            "Units": "characters",
+            "String": [],
+            "Style": "edit",
+            "Value": 0.0,
+            "Min": 0.0,
+            "Max": 1.0,
+            "Enable": "off",
+            "Visible": "on",
+            "BackgroundColor": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0,
+            "FontWeight": "normal",
+            "HorizontalAlignment": "center",
+            "TooltipString": "Enter a non-negative and -zero integer value which is smaller than the total number of possible network state combinations"
+          },
+          "children": []
+        },
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "PruneStateSpace",
+            "Position": [
+              32.6,
+              0.7692307692307693,
+              26.0,
+              1.4615384615384617
+            ],
+            "Units": "characters",
+            "String": "Prune State Space",
+            "Style": "checkbox",
+            "Enable": "off",
+            "BackgroundColor": [
+              0.8941176470588236,
+              0.9411764705882353,
+              0.9019607843137255
+            ],
+            "ForegroundColor": [
+              0.078,
+              0.169,
+              0.549
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0,
+            "HorizontalAlignment": "left",
+            "TooltipString": "Select this to prune the state space to speed up Probabilistic Analysis"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "uipanel2",
+        "Position": [
+          64.8,
+          0.8022624434389104,
+          15.799999999999997,
+          7.538461538461541
+        ],
+        "Units": "characters",
+        "BackgroundColor": [
+          0.8941176470588236,
+          0.9411764705882353,
+          0.9019607843137255
+        ],
+        "ForegroundColor": [
+          0.8941176470588236,
+          0.9411764705882353,
+          0.9019607843137255
+        ],
+        "Title": []
+      },
+      "children": [
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "Help",
+            "Position": [
+              1.0,
+              0.4208144796380139,
+              13.0,
+              2.9411764705882355
+            ],
+            "Units": "characters",
+            "String": "Help",
+            "Style": "pushbutton",
+            "BackgroundColor": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0,
+            "FontWeight": "bold"
+          },
+          "children": []
+        },
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "Ok",
+            "Position": [
+              1.0,
+              3.850678733031679,
+              13.0,
+              2.9411764705882355
+            ],
+            "Units": "characters",
+            "String": "Ok",
+            "Style": "pushbutton",
+            "BackgroundColor": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0,
+            "FontWeight": "bold"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

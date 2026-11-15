@@ -1,0 +1,178 @@
+{
+  "cycles": [
+    [
+      "000000000000000"
+    ],
+    [
+      "111111111111111"
+    ]
+  ],
+  "status": "complete_classically_certified",
+  "completion_reason": "Exhaustive F^T coverage audit; classical O(2^n*T), not a quantum certificate",
+  "search_attempts": 2,
+  "counting_calls": 1,
+  "rejected_measurements": 0,
+  "total_measurements": 256,
+  "invalid_measurements": 0,
+  "compiled_depth_max": 0,
+  "compiled_size_max": 0,
+  "compiled_2q_count_max": 0,
+  "oracle_calls_ideal": 4,
+  "search_runtime_s": 8.70568810030818,
+  "counting_runtime_s": 0.002807899843901396,
+  "simulation_runtime_s": 0.0005384001415222883,
+  "max_suppressed_leakage": 3.851859888774471e-32,
+  "classical_audit_runtime_s": 0.005823600105941296,
+  "classical_audit_states_scanned": 65536,
+  "history": [
+    {
+      "round": 0,
+      "kind": "measurements",
+      "counts": {
+        "000000000000000": 58,
+        "111111111111111": 70
+      }
+    },
+    {
+      "round": 0,
+      "kind": "new_cycle",
+      "cycle": [
+        "000000000000000"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    },
+    {
+      "round": 1,
+      "kind": "count",
+      "M_est": 16384,
+      "full_fraction": 0.0,
+      "cycles_found_before": 1
+    },
+    {
+      "round": 1,
+      "kind": "measurements",
+      "counts": {
+        "111111111111111": 128
+      }
+    },
+    {
+      "round": 1,
+      "kind": "new_cycle",
+      "cycle": [
+        "111111111111111"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    }
+  ],
+  "schema_version": 1,
+  "network": {
+    "names": [
+      "g00",
+      "g01",
+      "g02",
+      "g03",
+      "g04",
+      "g05",
+      "g06",
+      "g07",
+      "g08",
+      "g09",
+      "g10",
+      "g11",
+      "g12",
+      "g13",
+      "g14"
+    ],
+    "name": "long_chain_15",
+    "weights": null,
+    "basal": null,
+    "rules": [
+      {
+        "expression": "g00"
+      },
+      {
+        "expression": "g00"
+      },
+      {
+        "expression": "g01"
+      },
+      {
+        "expression": "g02"
+      },
+      {
+        "expression": "g03"
+      },
+      {
+        "expression": "g04"
+      },
+      {
+        "expression": "g05"
+      },
+      {
+        "expression": "g06"
+      },
+      {
+        "expression": "g07"
+      },
+      {
+        "expression": "g08"
+      },
+      {
+        "expression": "g09"
+      },
+      {
+        "expression": "g10"
+      },
+      {
+        "expression": "g11"
+      },
+      {
+        "expression": "g12"
+      },
+      {
+        "expression": "g13"
+      }
+    ],
+    "positions": {}
+  },
+  "network_hash": "a7f31a15c4871b1dd019e0111c34b9a101016cec41650175043f28a92fec6ae6",
+  "parameters": {
+    "T": 14,
+    "engine": "reduced",
+    "counting_mode": "exact",
+    "shots": 128,
+    "counting_precision": 3,
+    "counting_shots": 128,
+    "seed": 0,
+    "max_rounds": 12,
+    "stop_policy": "classical_audit",
+    "max_qubits": 22,
+    "max_reference_states": 65536,
+    "max_memory_mib": 1024,
+    "max_compiled_depth": 200000,
+    "max_compiled_gates": 500000,
+    "max_verification_steps": 10000,
+    "timeout_seconds": 120,
+    "noise_probability": 0.0
+  },
+  "resources": {
+    "eligible": true,
+    "reasons": [],
+    "logical_evolution_qubits": 225,
+    "logical_counting_qubits": 0,
+    "circuit_qubits": 225,
+    "statevector_bytes_lower_bound": 862718293348820473429344482784628181556388621521298319395315527974912,
+    "anf_terms": 15,
+    "transpiled_depth": null,
+    "transpiled_width": null,
+    "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+  },
+  "T_selection": "user supplied",
+  "taxonomy": "ideal mathematical quantum reference",
+  "basin_sizes": null,
+  "basin_size_origin": "unavailable; counting history estimates combined excluded coverage",
+  "classical_information": "enumerated F^T for exact M",
+  "total_runtime_s": 8.717445499962196
+}

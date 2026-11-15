@@ -1,0 +1,40 @@
+{
+  "table_count": 184,
+  "normalized_tables_equal": true,
+  "inputs": [
+    "EGF",
+    "ECM",
+    "alpha_q_lig",
+    "alpha_i_lig",
+    "alpha_s_lig",
+    "alpha_12_13_lig",
+    "Stress",
+    "IL1_TNF",
+    "ExtPump",
+    "Fas",
+    "WNT",
+    "Tgf-b",
+    "DNA_damage"
+  ],
+  "outputs": [
+    "Rho",
+    "CyclinD",
+    "CyclinE",
+    "CyclinA",
+    "CyclinB",
+    "Casp-3",
+    "MMP",
+    "E-cad"
+  ],
+  "added_atlantis_nodes": [],
+  "cho_initial_shape": [
+    10000,
+    201
+  ],
+  "initial_state_bit_differences": 0,
+  "initial_state_compared_bits": 2010000,
+  "cho_archive_sha256": {
+    "12918_2016_341_MOESM3_ESM.zip": "0dcaaaf85e3a4bd4a8ce72b0c586636f6b9278d0f4c4be6f6360897a43facf60",
+    "12918_2016_341_MOESM4_ESM.zip": "6f5bbbe85b66b2cdb81cd6d13bda9199e970e00119c67371835ee9bf4762f2f6"
+  }
+}

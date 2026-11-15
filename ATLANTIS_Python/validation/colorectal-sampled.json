@@ -1,0 +1,1837 @@
+[
+  {
+    "case": 3,
+    "condition": "APC+RAS+PTEN+P53",
+    "n": 1024,
+    "horizon": 200,
+    "external": {
+      "EGF": 1,
+      "ECM": 1,
+      "alpha_q_lig": 0,
+      "alpha_i_lig": 0,
+      "alpha_s_lig": 0,
+      "alpha_12_13_lig": 0,
+      "stress": 0,
+      "IL1_TNF": 0,
+      "Extpump": 0,
+      "Fas": 0,
+      "Wnt": 1,
+      "Tgf-b": 0,
+      "DNA_damage": 0
+    },
+    "projected_outputs": [
+      "Apoptosis",
+      "Cell_Adhesion",
+      "Cell_Migration",
+      "Proliferation"
+    ],
+    "distinct_attractors": 557,
+    "cycle_length_counts": {
+      "6": 23,
+      "12": 5,
+      "10": 3,
+      "18": 3,
+      "16": 4,
+      "30": 5,
+      "40": 763,
+      "36": 2,
+      "42": 4,
+      "48": 4,
+      "56": 7,
+      "60": 3,
+      "110": 20,
+      "120": 170,
+      "140": 5
+    },
+    "combined_fate_counts": {
+      "Quiescence": 37,
+      "Abnormal Proliferation + Metastasis": 557,
+      "Metastasis + Normal Proliferation": 241,
+      "Abnormal Proliferation": 4,
+      "Metastasis": 158,
+      "Normal Proliferation": 24
+    },
+    "fate_counts": {
+      "Quiescence": 37,
+      "Abnormal Proliferation": 561,
+      "Metastasis": 956,
+      "Normal Proliferation": 265,
+      "unresolved": 3
+    },
+    "marginal_wilson95": {
+      "Quiescence": [
+        0.026326583697970904,
+        0.04940635950321738
+      ],
+      "Abnormal Proliferation": [
+        0.5172453461977873,
+        0.5781000975561954
+      ],
+      "Metastasis": [
+        0.9166653321421131,
+        0.9472811377919342
+      ],
+      "Normal Proliferation": [
+        0.23290042902582944,
+        0.2864807014387885
+      ],
+      "unresolved": [
+        0.0009968475014902937,
+        0.008578032686730406
+      ]
+    }
+  },
+  {
+    "case": 3,
+    "condition": "APC+RAS+PTEN",
+    "n": 1024,
+    "horizon": 200,
+    "external": {
+      "EGF": 1,
+      "ECM": 1,
+      "alpha_q_lig": 0,
+      "alpha_i_lig": 0,
+      "alpha_s_lig": 0,
+      "alpha_12_13_lig": 0,
+      "stress": 0,
+      "IL1_TNF": 0,
+      "Extpump": 0,
+      "Fas": 0,
+      "Wnt": 1,
+      "Tgf-b": 0,
+      "DNA_damage": 0
+    },
+    "projected_outputs": [
+      "Apoptosis",
+      "Cell_Adhesion",
+      "Cell_Migration",
+      "Proliferation"
+    ],
+    "distinct_attractors": 506,
+    "cycle_length_counts": {
+      "12": 1,
+      "8": 7,
+      "16": 3,
+      "30": 13,
+      "10": 3,
+      "24": 22,
+      "40": 350,
+      "42": 29,
+      "36": 1,
+      "48": 4,
+      "60": 482,
+      "66": 20,
+      "84": 8,
+      "90": 3,
+      "120": 75,
+      "126": 2
+    },
+    "combined_fate_counts": {
+      "Abnormal Proliferation": 1,
+      "Abnormal Proliferation + Metastasis": 529,
+      "Normal Proliferation": 255,
+      "Quiescence": 40,
+      "Metastasis": 188,
+      "Metastasis + Normal Proliferation": 10
+    },
+    "fate_counts": {
+      "Abnormal Proliferation": 530,
+      "Metastasis": 727,
+      "Normal Proliferation": 265,
+      "Quiescence": 40,
+      "unresolved": 1
+    },
+    "marginal_wilson95": {
+      "Abnormal Proliferation": [
+        0.4869640978228046,
+        0.5480607590664136
+      ],
+      "Metastasis": [
+        0.68142359686044,
+        0.7369288604274432
+      ],
+      "Normal Proliferation": [
+        0.23290042902582944,
+        0.2864807014387885
+      ],
+      "Quiescence": [
+        0.02881619768758143,
+        0.05275422166180988
+      ],
+      "unresolved": [
+        0.0001724080656205127,
+        0.005510821357131506
+      ]
+    }
+  },
+  {
+    "case": 3,
+    "condition": "APC+RAS",
+    "n": 1024,
+    "horizon": 200,
+    "external": {
+      "EGF": 1,
+      "ECM": 1,
+      "alpha_q_lig": 0,
+      "alpha_i_lig": 0,
+      "alpha_s_lig": 0,
+      "alpha_12_13_lig": 0,
+      "stress": 0,
+      "IL1_TNF": 0,
+      "Extpump": 0,
+      "Fas": 0,
+      "Wnt": 1,
+      "Tgf-b": 0,
+      "DNA_damage": 0
+    },
+    "projected_outputs": [
+      "Apoptosis",
+      "Cell_Adhesion",
+      "Cell_Migration",
+      "Proliferation"
+    ],
+    "distinct_attractors": 450,
+    "cycle_length_counts": {
+      "12": 1,
+      "8": 4,
+      "16": 2,
+      "30": 344,
+      "20": 102,
+      "10": 1,
+      "24": 21,
+      "14": 1,
+      "40": 369,
+      "42": 31,
+      "36": 6,
+      "48": 4,
+      "60": 57,
+      "44": 1,
+      "90": 21,
+      "120": 56,
+      "126": 1,
+      "28": 1
+    },
+    "combined_fate_counts": {
+      "Abnormal Proliferation": 1,
+      "Abnormal Proliferation + Metastasis": 558,
+      "Normal Proliferation": 248,
+      "Quiescence": 32,
+      "Metastasis": 174,
+      "Metastasis + Normal Proliferation": 10
+    },
+    "fate_counts": {
+      "Abnormal Proliferation": 559,
+      "Metastasis": 742,
+      "Normal Proliferation": 258,
+      "Quiescence": 32,
+      "unresolved": 1
+    },
+    "marginal_wilson95": {
+      "Abnormal Proliferation": [
+        0.5152883194547453,
+        0.5761654735337687
+      ],
+      "Metastasis": [
+        0.696447656807569,
+        0.7510921812213294
+      ],
+      "Normal Proliferation": [
+        0.2263234779278326,
+        0.279436874857645
+      ],
+      "Quiescence": [
+        0.022221683203531427,
+        0.04378213308398516
+      ],
+      "unresolved": [
+        0.0001724080656205127,
+        0.005510821357131506
+      ]
+    }
+  },
+  {
+    "case": 3,
+    "condition": "APC",
+    "n": 1024,
+    "horizon": 200,
+    "external": {
+      "EGF": 1,
+      "ECM": 1,
+      "alpha_q_lig": 0,
+      "alpha_i_lig": 0,
+      "alpha_s_lig": 0,
+      "alpha_12_13_lig": 0,
+      "stress": 0,
+      "IL1_TNF": 0,
+      "Extpump": 0,
+      "Fas": 0,
+      "Wnt": 1,
+      "Tgf-b": 0,
+      "DNA_damage": 0
+    },
+    "projected_outputs": [
+      "Apoptosis",
+      "Cell_Adhesion",
+      "Cell_Migration",
+      "Proliferation"
+    ],
+    "distinct_attractors": 418,
+    "cycle_length_counts": {
+      "12": 1,
+      "16": 32,
+      "14": 1,
+      "8": 1,
+      "30": 99,
+      "24": 14,
+      "40": 759,
+      "42": 59,
+      "48": 22,
+      "60": 14,
+      "84": 1,
+      "120": 20,
+      "126": 1
+    },
+    "combined_fate_counts": {
+      "Abnormal Proliferation": 1,
+      "Normal Proliferation": 781,
+      "Quiescence": 34,
+      "Abnormal Proliferation + Metastasis": 133,
+      "Metastasis": 44,
+      "Metastasis + Normal Proliferation": 31
+    },
+    "fate_counts": {
+      "Abnormal Proliferation": 134,
+      "Normal Proliferation": 812,
+      "Quiescence": 34,
+      "Metastasis": 208,
+      "unresolved": 0
+    },
+    "marginal_wilson95": {
+      "Abnormal Proliferation": [
+        0.11157556237295276,
+        0.15290244295346658
+      ],
+      "Normal Proliferation": [
+        0.7670793332796179,
+        0.8166682815406844
+      ],
+      "Quiescence": [
+        0.023856436909323955,
+        0.0460390301436613
+      ],
+      "Metastasis": [
+        0.17961367945216467,
+        0.2288554041965959
+      ],
+      "unresolved": [
+        0.0,
+        0.0037374040400176777
+      ]
+    }
+  },
+  {
+    "case": 3,
+    "condition": "Control",
+    "n": 1024,
+    "horizon": 200,
+    "external": {
+      "EGF": 1,
+      "ECM": 1,
+      "alpha_q_lig": 0,
+      "alpha_i_lig": 0,
+      "alpha_s_lig": 0,
+      "alpha_12_13_lig": 0,
+      "stress": 0,
+      "IL1_TNF": 0,
+      "Extpump": 0,
+      "Fas": 0,
+      "Wnt": 1,
+      "Tgf-b": 0,
+      "DNA_damage": 0
+    },
+    "projected_outputs": [
+      "Apoptosis",
+      "Cell_Adhesion",
+      "Cell_Migration",
+      "Proliferation"
+    ],
+    "distinct_attractors": 419,
+    "cycle_length_counts": {
+      "12": 1,
+      "16": 32,
+      "14": 1,
+      "8": 1,
+      "30": 96,
+      "24": 14,
+      "40": 760,
+      "42": 59,
+      "48": 23,
+      "60": 14,
+      "84": 1,
+      "120": 21,
+      "126": 1
+    },
+    "combined_fate_counts": {
+      "Abnormal Proliferation": 1,
+      "Normal Proliferation": 781,
+      "Quiescence": 34,
+      "Abnormal Proliferation + Metastasis": 133,
+      "Metastasis": 44,
+      "Metastasis + Normal Proliferation": 31
+    },
+    "fate_counts": {
+      "Abnormal Proliferation": 134,
+      "Normal Proliferation": 812,
+      "Quiescence": 34,
+      "Metastasis": 208,
+      "unresolved": 0
+    },
+    "marginal_wilson95": {
+      "Abnormal Proliferation": [
+        0.11157556237295276,
+        0.15290244295346658
+      ],
+      "Normal Proliferation": [
+        0.7670793332796179,
+        0.8166682815406844
+      ],
+      "Quiescence": [
+        0.023856436909323955,
+        0.0460390301436613
+      ],
+      "Metastasis": [
+        0.17961367945216467,
+        0.2288554041965959
+      ],
+      "unresolved": [
+        0.0,
+        0.0037374040400176777
+      ]
+    }
+  },
+  {
+    "case": 4,
+    "condition": "HCT-116 AKT inhibition",
+    "n": 1024,
+    "horizon": 200,
+    "external": {
+      "EGF": 1,
+      "ECM": 1,
+      "alpha_q_lig": 0,
+      "alpha_i_lig": 0,
+      "alpha_s_lig": 0,
+      "alpha_12_13_lig": 0,
+      "stress": 0,
+      "IL1_TNF": 0,
+      "Extpump": 0,
+      "Fas": 0,
+      "Wnt": 0,
+      "Tgf-b": 1,
+      "DNA_damage": 0
+    },
+    "projected_outputs": [
+      "Apoptosis",
+      "Cell_Adhesion",
+      "Cell_Migration",
+      "Proliferation"
+    ],
+    "distinct_attractors": 460,
+    "cycle_length_counts": {
+      "4": 585,
+      "6": 26,
+      "12": 90,
+      "8": 17,
+      "10": 1,
+      "14": 11,
+      "18": 2,
+      "20": 74,
+      "24": 11,
+      "30": 154,
+      "22": 1,
+      "28": 1,
+      "40": 21,
+      "46": 24,
+      "60": 2,
+      "120": 3,
+      "48": 1
+    },
+    "combined_fate_counts": {
+      "Apoptosis + Cell Cycle Arrest": 292,
+      "Metastasis": 118,
+      "Apoptosis": 499,
+      "Abnormal Proliferation + Metastasis": 39,
+      "Abnormal Proliferation": 52,
+      "Normal Proliferation": 24
+    },
+    "fate_counts": {
+      "Apoptosis": 791,
+      "Cell Cycle Arrest": 292,
+      "Metastasis": 157,
+      "Abnormal Proliferation": 91,
+      "Normal Proliferation": 24,
+      "unresolved": 0
+    },
+    "marginal_wilson95": {
+      "Apoptosis": [
+        0.7457922629338698,
+        0.7970930188490113
+      ],
+      "Cell Cycle Arrest": [
+        0.25834607216219974,
+        0.3135723436362454
+      ],
+      "Metastasis": [
+        0.1325514721645824,
+        0.17668051696472675
+      ],
+      "Abnormal Proliferation": [
+        0.07294013925491286,
+        0.10786737461392984
+      ],
+      "Normal Proliferation": [
+        0.015799756863611528,
+        0.03463745636203033
+      ],
+      "unresolved": [
+        0.0,
+        0.0037374040400176777
+      ]
+    }
+  },
+  {
+    "case": 4,
+    "condition": "HCT-116 BCL2 inhibition",
+    "n": 1024,
+    "horizon": 200,
+    "external": {
+      "EGF": 1,
+      "ECM": 1,
+      "alpha_q_lig": 0,
+      "alpha_i_lig": 0,
+      "alpha_s_lig": 0,
+      "alpha_12_13_lig": 0,
+      "stress": 0,
+      "IL1_TNF": 0,
+      "Extpump": 0,
+      "Fas": 0,
+      "Wnt": 0,
+      "Tgf-b": 1,
+      "DNA_damage": 0
+    },
+    "projected_outputs": [
+      "Apoptosis",
+      "Cell_Adhesion",
+      "Cell_Migration",
+      "Proliferation"
+    ],
+    "distinct_attractors": 484,
+    "cycle_length_counts": {
+      "6": 26,
+      "8": 207,
+      "12": 4,
+      "14": 14,
+      "4": 1,
+      "18": 2,
+      "16": 32,
+      "24": 41,
+      "30": 139,
+      "10": 3,
+      "20": 30,
+      "40": 348,
+      "36": 4,
+      "48": 43,
+      "60": 33,
+      "66": 20,
+      "120": 69,
+      "28": 1
+    },
+    "combined_fate_counts": {
+      "Apoptosis + Cell Cycle Arrest": 41,
+      "Apoptosis": 254,
+      "Abnormal Proliferation": 1,
+      "Abnormal Proliferation + Metastasis": 548,
+      "Normal Proliferation": 99,
+      "Metastasis": 74
+    },
+    "fate_counts": {
+      "Apoptosis": 295,
+      "Cell Cycle Arrest": 41,
+      "Abnormal Proliferation": 549,
+      "Metastasis": 622,
+      "Normal Proliferation": 99,
+      "unresolved": 7
+    },
+    "marginal_wilson95": {
+      "Apoptosis": [
+        0.2611806436803261,
+        0.3165752482663221
+      ],
+      "Cell Cycle Arrest": [
+        0.029650034605617378,
+        0.053866210126508274
+      ],
+      "Abnormal Proliferation": [
+        0.5055102349785904,
+        0.5664853041825803
+      ],
+      "Metastasis": [
+        0.5771643317784334,
+        0.636876460322344
+      ],
+      "Normal Proliferation": [
+        0.08005780452511804,
+        0.11631631240559936
+      ],
+      "unresolved": [
+        0.003315209271509724,
+        0.01404297244764834
+      ]
+    }
+  },
+  {
+    "case": 4,
+    "condition": "HCT-116 CAMK2 inhibition",
+    "n": 1024,
+    "horizon": 200,
+    "external": {
+      "EGF": 1,
+      "ECM": 1,
+      "alpha_q_lig": 0,
+      "alpha_i_lig": 0,
+      "alpha_s_lig": 0,
+      "alpha_12_13_lig": 0,
+      "stress": 0,
+      "IL1_TNF": 0,
+      "Extpump": 0,
+      "Fas": 0,
+      "Wnt": 0,
+      "Tgf-b": 1,
+      "DNA_damage": 0
+    },
+    "projected_outputs": [
+      "Apoptosis",
+      "Cell_Adhesion",
+      "Cell_Migration",
+      "Proliferation"
+    ],
+    "distinct_attractors": 476,
+    "cycle_length_counts": {
+      "6": 28,
+      "8": 215,
+      "12": 4,
+      "4": 1,
+      "16": 36,
+      "24": 39,
+      "30": 132,
+      "10": 1,
+      "20": 31,
+      "14": 2,
+      "40": 378,
+      "36": 23,
+      "48": 32,
+      "60": 33,
+      "120": 65,
+      "28": 1
+    },
+    "combined_fate_counts": {
+      "Apoptosis + Cell Cycle Arrest": 29,
+      "Apoptosis": 274,
+      "Abnormal Proliferation": 1,
+      "Abnormal Proliferation + Metastasis": 565,
+      "Normal Proliferation": 78,
+      "Metastasis": 74
+    },
+    "fate_counts": {
+      "Apoptosis": 303,
+      "Cell Cycle Arrest": 29,
+      "Abnormal Proliferation": 566,
+      "Metastasis": 639,
+      "Normal Proliferation": 78,
+      "unresolved": 3
+    },
+    "marginal_wilson95": {
+      "Apoptosis": [
+        0.2687463379513606,
+        0.32457615705716225
+      ],
+      "Cell Cycle Arrest": [
+        0.019789746477255746,
+        0.040376593662057814
+      ],
+      "Abnormal Proliferation": [
+        0.5221399753545486,
+        0.5829345953131058
+      ],
+      "Metastasis": [
+        0.593944412215707,
+        0.6531754113915543
+      ],
+      "Normal Proliferation": [
+        0.06146143929473032,
+        0.09405034459856593
+      ],
+      "unresolved": [
+        0.0009968475014902937,
+        0.008578032686730406
+      ]
+    }
+  },
+  {
+    "case": 4,
+    "condition": "HCT-116 Control",
+    "n": 1024,
+    "horizon": 200,
+    "external": {
+      "EGF": 1,
+      "ECM": 1,
+      "alpha_q_lig": 0,
+      "alpha_i_lig": 0,
+      "alpha_s_lig": 0,
+      "alpha_12_13_lig": 0,
+      "stress": 0,
+      "IL1_TNF": 0,
+      "Extpump": 0,
+      "Fas": 0,
+      "Wnt": 0,
+      "Tgf-b": 1,
+      "DNA_damage": 0
+    },
+    "projected_outputs": [
+      "Apoptosis",
+      "Cell_Adhesion",
+      "Cell_Migration",
+      "Proliferation"
+    ],
+    "distinct_attractors": 489,
+    "cycle_length_counts": {
+      "6": 26,
+      "8": 207,
+      "12": 4,
+      "14": 14,
+      "4": 1,
+      "18": 2,
+      "16": 32,
+      "24": 41,
+      "30": 136,
+      "10": 3,
+      "20": 30,
+      "40": 351,
+      "36": 4,
+      "48": 43,
+      "60": 34,
+      "66": 20,
+      "120": 68,
+      "28": 1
+    },
+    "combined_fate_counts": {
+      "Apoptosis + Cell Cycle Arrest": 41,
+      "Apoptosis": 254,
+      "Abnormal Proliferation": 1,
+      "Abnormal Proliferation + Metastasis": 541,
+      "Normal Proliferation": 99,
+      "Metastasis": 81
+    },
+    "fate_counts": {
+      "Apoptosis": 295,
+      "Cell Cycle Arrest": 41,
+      "Abnormal Proliferation": 542,
+      "Metastasis": 622,
+      "Normal Proliferation": 99,
+      "unresolved": 7
+    },
+    "marginal_wilson95": {
+      "Apoptosis": [
+        0.2611806436803261,
+        0.3165752482663221
+      ],
+      "Cell Cycle Arrest": [
+        0.029650034605617378,
+        0.053866210126508274
+      ],
+      "Abnormal Proliferation": [
+        0.49867254567053715,
+        0.559702215811493
+      ],
+      "Metastasis": [
+        0.5771643317784334,
+        0.636876460322344
+      ],
+      "Normal Proliferation": [
+        0.08005780452511804,
+        0.11631631240559936
+      ],
+      "unresolved": [
+        0.003315209271509724,
+        0.01404297244764834
+      ]
+    }
+  },
+  {
+    "case": 4,
+    "condition": "HCT-116 EGFR inhibition",
+    "n": 1024,
+    "horizon": 200,
+    "external": {
+      "EGF": 1,
+      "ECM": 1,
+      "alpha_q_lig": 0,
+      "alpha_i_lig": 0,
+      "alpha_s_lig": 0,
+      "alpha_12_13_lig": 0,
+      "stress": 0,
+      "IL1_TNF": 0,
+      "Extpump": 0,
+      "Fas": 0,
+      "Wnt": 0,
+      "Tgf-b": 1,
+      "DNA_damage": 0
+    },
+    "projected_outputs": [
+      "Apoptosis",
+      "Cell_Adhesion",
+      "Cell_Migration",
+      "Proliferation"
+    ],
+    "distinct_attractors": 196,
+    "cycle_length_counts": {
+      "3": 31,
+      "4": 37,
+      "6": 14,
+      "12": 80,
+      "16": 36,
+      "18": 291,
+      "8": 54,
+      "24": 57,
+      "30": 347,
+      "36": 38,
+      "60": 39
+    },
+    "combined_fate_counts": {
+      "Apoptosis + Cell Cycle Arrest": 918,
+      "Apoptosis": 102,
+      "Normal Proliferation": 4
+    },
+    "fate_counts": {
+      "Apoptosis": 1020,
+      "Cell Cycle Arrest": 918,
+      "Normal Proliferation": 4,
+      "unresolved": 0
+    },
+    "marginal_wilson95": {
+      "Apoptosis": [
+        0.9899993755946205,
+        0.9984799188344246
+      ],
+      "Cell Cycle Arrest": [
+        0.8763202772202523,
+        0.9136848281698899
+      ],
+      "Normal Proliferation": [
+        0.0015200811655754903,
+        0.01000062440537955
+      ],
+      "unresolved": [
+        0.0,
+        0.0037374040400176777
+      ]
+    }
+  },
+  {
+    "case": 4,
+    "condition": "HCT-116 ERK inhibition",
+    "n": 1024,
+    "horizon": 200,
+    "external": {
+      "EGF": 1,
+      "ECM": 1,
+      "alpha_q_lig": 0,
+      "alpha_i_lig": 0,
+      "alpha_s_lig": 0,
+      "alpha_12_13_lig": 0,
+      "stress": 0,
+      "IL1_TNF": 0,
+      "Extpump": 0,
+      "Fas": 0,
+      "Wnt": 0,
+      "Tgf-b": 1,
+      "DNA_damage": 0
+    },
+    "projected_outputs": [
+      "Apoptosis",
+      "Cell_Adhesion",
+      "Cell_Migration",
+      "Proliferation"
+    ],
+    "distinct_attractors": 395,
+    "cycle_length_counts": {
+      "6": 32,
+      "8": 884,
+      "12": 2,
+      "14": 16,
+      "18": 2,
+      "24": 88
+    },
+    "combined_fate_counts": {
+      "Apoptosis + Cell Cycle Arrest": 53,
+      "Apoptosis": 971
+    },
+    "fate_counts": {
+      "Apoptosis": 1024,
+      "Cell Cycle Arrest": 53,
+      "unresolved": 0
+    },
+    "marginal_wilson95": {
+      "Apoptosis": [
+        0.9962625959599825,
+        1.0
+      ],
+      "Cell Cycle Arrest": [
+        0.039786304459362334,
+        0.0670798448655754
+      ],
+      "unresolved": [
+        0.0,
+        0.0037374040400176777
+      ]
+    }
+  },
+  {
+    "case": 4,
+    "condition": "HCT-116 MDM2-P53 interaction inhibition",
+    "n": 1024,
+    "horizon": 200,
+    "external": {
+      "EGF": 1,
+      "ECM": 1,
+      "alpha_q_lig": 0,
+      "alpha_i_lig": 0,
+      "alpha_s_lig": 0,
+      "alpha_12_13_lig": 0,
+      "stress": 0,
+      "IL1_TNF": 0,
+      "Extpump": 0,
+      "Fas": 0,
+      "Wnt": 0,
+      "Tgf-b": 1,
+      "DNA_damage": 0
+    },
+    "projected_outputs": [
+      "Apoptosis",
+      "Cell_Adhesion",
+      "Cell_Migration",
+      "Proliferation"
+    ],
+    "distinct_attractors": 347,
+    "cycle_length_counts": {
+      "4": 162,
+      "6": 31,
+      "8": 55,
+      "14": 8,
+      "10": 1,
+      "12": 2,
+      "22": 652,
+      "20": 82,
+      "24": 21,
+      "30": 3,
+      "28": 4,
+      "60": 3
+    },
+    "combined_fate_counts": {
+      "Apoptosis": 566,
+      "Metastasis": 205,
+      "Apoptosis + Cell Cycle Arrest": 253
+    },
+    "fate_counts": {
+      "Apoptosis": 819,
+      "Metastasis": 205,
+      "Cell Cycle Arrest": 253,
+      "unresolved": 0
+    },
+    "marginal_wilson95": {
+      "Apoptosis": [
+        0.7741958728789785,
+        0.8231725196204641
+      ],
+      "Metastasis": [
+        0.17682748037953594,
+        0.2258041271210216
+      ],
+      "Cell Cycle Arrest": [
+        0.22163095718541034,
+        0.2744002686863955
+      ],
+      "unresolved": [
+        0.0,
+        0.0037374040400176777
+      ]
+    }
+  },
+  {
+    "case": 4,
+    "condition": "HCT-116 MDM4 inhibition",
+    "n": 1024,
+    "horizon": 200,
+    "external": {
+      "EGF": 1,
+      "ECM": 1,
+      "alpha_q_lig": 0,
+      "alpha_i_lig": 0,
+      "alpha_s_lig": 0,
+      "alpha_12_13_lig": 0,
+      "stress": 0,
+      "IL1_TNF": 0,
+      "Extpump": 0,
+      "Fas": 0,
+      "Wnt": 0,
+      "Tgf-b": 1,
+      "DNA_damage": 0
+    },
+    "projected_outputs": [
+      "Apoptosis",
+      "Cell_Adhesion",
+      "Cell_Migration",
+      "Proliferation"
+    ],
+    "distinct_attractors": 455,
+    "cycle_length_counts": {
+      "6": 31,
+      "8": 209,
+      "12": 2,
+      "24": 26,
+      "16": 19,
+      "18": 13,
+      "30": 136,
+      "10": 1,
+      "20": 10,
+      "40": 301,
+      "22": 19,
+      "14": 1,
+      "44": 9,
+      "48": 6,
+      "50": 5,
+      "28": 16,
+      "60": 41,
+      "54": 43,
+      "58": 42,
+      "36": 1,
+      "108": 10,
+      "120": 46,
+      "88": 5
+    },
+    "combined_fate_counts": {
+      "Apoptosis": 242,
+      "Apoptosis + Cell Cycle Arrest": 41,
+      "Normal Proliferation": 63,
+      "Metastasis": 218,
+      "Abnormal Proliferation + Metastasis": 412,
+      "Metastasis + Normal Proliferation": 16
+    },
+    "fate_counts": {
+      "Apoptosis": 283,
+      "Cell Cycle Arrest": 41,
+      "Normal Proliferation": 79,
+      "Metastasis": 646,
+      "Abnormal Proliferation": 412,
+      "unresolved": 32
+    },
+    "marginal_wilson95": {
+      "Apoptosis": [
+        0.2498509207039102,
+        0.3045550666499259
+      ],
+      "Cell Cycle Arrest": [
+        0.029650034605617378,
+        0.053866210126508274
+      ],
+      "Normal Proliferation": [
+        0.062340154398843044,
+        0.09511745487718754
+      ],
+      "Metastasis": [
+        0.6008645344428185,
+        0.6598760668435832
+      ],
+      "Abnormal Proliferation": [
+        0.37272804443676827,
+        0.43268941728979776
+      ],
+      "unresolved": [
+        0.022221683203531427,
+        0.04378213308398516
+      ]
+    }
+  },
+  {
+    "case": 4,
+    "condition": "HCT-116 MEK inhibition",
+    "n": 1024,
+    "horizon": 200,
+    "external": {
+      "EGF": 1,
+      "ECM": 1,
+      "alpha_q_lig": 0,
+      "alpha_i_lig": 0,
+      "alpha_s_lig": 0,
+      "alpha_12_13_lig": 0,
+      "stress": 0,
+      "IL1_TNF": 0,
+      "Extpump": 0,
+      "Fas": 0,
+      "Wnt": 0,
+      "Tgf-b": 1,
+      "DNA_damage": 0
+    },
+    "projected_outputs": [
+      "Apoptosis",
+      "Cell_Adhesion",
+      "Cell_Migration",
+      "Proliferation"
+    ],
+    "distinct_attractors": 402,
+    "cycle_length_counts": {
+      "6": 32,
+      "8": 867,
+      "12": 2,
+      "14": 17,
+      "18": 2,
+      "24": 102,
+      "10": 1,
+      "60": 1
+    },
+    "combined_fate_counts": {
+      "Apoptosis + Cell Cycle Arrest": 56,
+      "Apoptosis": 967,
+      "Metastasis": 1
+    },
+    "fate_counts": {
+      "Apoptosis": 1023,
+      "Cell Cycle Arrest": 56,
+      "Metastasis": 1,
+      "unresolved": 0
+    },
+    "marginal_wilson95": {
+      "Apoptosis": [
+        0.9944891786428686,
+        0.9998275919343796
+      ],
+      "Cell Cycle Arrest": [
+        0.04235246698808856,
+        0.0703511584850522
+      ],
+      "Metastasis": [
+        0.0001724080656205127,
+        0.005510821357131506
+      ],
+      "unresolved": [
+        0.0,
+        0.0037374040400176777
+      ]
+    }
+  },
+  {
+    "case": 4,
+    "condition": "HCT-116 p38 inhibition",
+    "n": 1024,
+    "horizon": 200,
+    "external": {
+      "EGF": 1,
+      "ECM": 1,
+      "alpha_q_lig": 0,
+      "alpha_i_lig": 0,
+      "alpha_s_lig": 0,
+      "alpha_12_13_lig": 0,
+      "stress": 0,
+      "IL1_TNF": 0,
+      "Extpump": 0,
+      "Fas": 0,
+      "Wnt": 0,
+      "Tgf-b": 1,
+      "DNA_damage": 0
+    },
+    "projected_outputs": [
+      "Apoptosis",
+      "Cell_Adhesion",
+      "Cell_Migration",
+      "Proliferation"
+    ],
+    "distinct_attractors": 489,
+    "cycle_length_counts": {
+      "6": 26,
+      "8": 207,
+      "12": 4,
+      "14": 14,
+      "4": 1,
+      "18": 2,
+      "16": 32,
+      "24": 41,
+      "30": 136,
+      "10": 3,
+      "20": 30,
+      "40": 349,
+      "36": 5,
+      "48": 43,
+      "60": 35,
+      "66": 20,
+      "120": 68,
+      "28": 1
+    },
+    "combined_fate_counts": {
+      "Apoptosis + Cell Cycle Arrest": 41,
+      "Apoptosis": 254,
+      "Abnormal Proliferation": 1,
+      "Abnormal Proliferation + Metastasis": 540,
+      "Normal Proliferation": 100,
+      "Metastasis": 81
+    },
+    "fate_counts": {
+      "Apoptosis": 295,
+      "Cell Cycle Arrest": 41,
+      "Abnormal Proliferation": 541,
+      "Metastasis": 621,
+      "Normal Proliferation": 100,
+      "unresolved": 7
+    },
+    "marginal_wilson95": {
+      "Apoptosis": [
+        0.2611806436803261,
+        0.3165752482663221
+      ],
+      "Cell Cycle Arrest": [
+        0.029650034605617378,
+        0.053866210126508274
+      ],
+      "Abnormal Proliferation": [
+        0.4976962003212573,
+        0.5587327357780385
+      ],
+      "Metastasis": [
+        0.5761783984919425,
+        0.6359165682261007
+      ],
+      "Normal Proliferation": [
+        0.08095010080655085,
+        0.11736984150690088
+      ],
+      "unresolved": [
+        0.003315209271509724,
+        0.01404297244764834
+      ]
+    }
+  },
+  {
+    "case": 4,
+    "condition": "HCT-116 PAK1 inhibition",
+    "n": 1024,
+    "horizon": 200,
+    "external": {
+      "EGF": 1,
+      "ECM": 1,
+      "alpha_q_lig": 0,
+      "alpha_i_lig": 0,
+      "alpha_s_lig": 0,
+      "alpha_12_13_lig": 0,
+      "stress": 0,
+      "IL1_TNF": 0,
+      "Extpump": 0,
+      "Fas": 0,
+      "Wnt": 0,
+      "Tgf-b": 1,
+      "DNA_damage": 0
+    },
+    "projected_outputs": [
+      "Apoptosis",
+      "Cell_Adhesion",
+      "Cell_Migration",
+      "Proliferation"
+    ],
+    "distinct_attractors": 502,
+    "cycle_length_counts": {
+      "6": 26,
+      "8": 323,
+      "12": 5,
+      "14": 24,
+      "4": 1,
+      "18": 2,
+      "16": 29,
+      "24": 88,
+      "30": 119,
+      "40": 230,
+      "10": 1,
+      "48": 36,
+      "60": 43,
+      "66": 12,
+      "90": 2,
+      "120": 78,
+      "118": 4,
+      "28": 1
+    },
+    "combined_fate_counts": {
+      "Apoptosis + Cell Cycle Arrest": 60,
+      "Apoptosis": 411,
+      "Abnormal Proliferation": 1,
+      "Abnormal Proliferation + Metastasis": 405,
+      "Metastasis + Normal Proliferation": 1,
+      "Normal Proliferation": 76,
+      "Metastasis": 70
+    },
+    "fate_counts": {
+      "Apoptosis": 471,
+      "Cell Cycle Arrest": 60,
+      "Abnormal Proliferation": 406,
+      "Metastasis": 476,
+      "Normal Proliferation": 77,
+      "unresolved": 0
+    },
+    "marginal_wilson95": {
+      "Apoptosis": [
+        0.42964122010662087,
+        0.4905799392012713
+      ],
+      "Cell Cycle Arrest": [
+        0.045790826575380875,
+        0.07469610042869725
+      ],
+      "Abnormal Proliferation": [
+        0.366963854453405,
+        0.426778654976755
+      ],
+      "Metastasis": [
+        0.4344833575759357,
+        0.49546692864562814
+      ],
+      "Normal Proliferation": [
+        0.06058349111833718,
+        0.09298246739222472
+      ],
+      "unresolved": [
+        0.0,
+        0.0037374040400176777
+      ]
+    }
+  },
+  {
+    "case": 4,
+    "condition": "HCT-116 PI3K inhibition",
+    "n": 1024,
+    "horizon": 200,
+    "external": {
+      "EGF": 1,
+      "ECM": 1,
+      "alpha_q_lig": 0,
+      "alpha_i_lig": 0,
+      "alpha_s_lig": 0,
+      "alpha_12_13_lig": 0,
+      "stress": 0,
+      "IL1_TNF": 0,
+      "Extpump": 0,
+      "Fas": 0,
+      "Wnt": 0,
+      "Tgf-b": 1,
+      "DNA_damage": 0
+    },
+    "projected_outputs": [
+      "Apoptosis",
+      "Cell_Adhesion",
+      "Cell_Migration",
+      "Proliferation"
+    ],
+    "distinct_attractors": 456,
+    "cycle_length_counts": {
+      "6": 252,
+      "12": 289,
+      "8": 55,
+      "16": 69,
+      "18": 43,
+      "20": 30,
+      "24": 39,
+      "30": 133,
+      "28": 1,
+      "36": 5,
+      "40": 1,
+      "48": 9,
+      "60": 71,
+      "92": 2,
+      "120": 24
+    },
+    "combined_fate_counts": {
+      "Apoptosis + Cell Cycle Arrest": 390,
+      "Abnormal Proliferation": 87,
+      "Abnormal Proliferation + Metastasis": 20,
+      "Apoptosis": 475,
+      "Metastasis": 43,
+      "Normal Proliferation": 8
+    },
+    "fate_counts": {
+      "Apoptosis": 865,
+      "Cell Cycle Arrest": 390,
+      "Abnormal Proliferation": 107,
+      "Metastasis": 63,
+      "Normal Proliferation": 8,
+      "unresolved": 1
+    },
+    "marginal_wilson95": {
+      "Apoptosis": [
+        0.8212600086432852,
+        0.8656163514619372
+      ],
+      "Cell Cycle Arrest": [
+        0.35161460715102355,
+        0.410994696155387
+      ],
+      "Abnormal Proliferation": [
+        0.08721116935742498,
+        0.12472955063516716
+      ],
+      "Metastasis": [
+        0.04838123682930941,
+        0.07794316632297173
+      ],
+      "Normal Proliferation": [
+        0.0039639345168160835,
+        0.015340072585076319
+      ],
+      "unresolved": [
+        0.0001724080656205127,
+        0.005510821357131506
+      ]
+    }
+  },
+  {
+    "case": 4,
+    "condition": "HCT-116 PPMID inhibition",
+    "n": 1024,
+    "horizon": 200,
+    "external": {
+      "EGF": 1,
+      "ECM": 1,
+      "alpha_q_lig": 0,
+      "alpha_i_lig": 0,
+      "alpha_s_lig": 0,
+      "alpha_12_13_lig": 0,
+      "stress": 0,
+      "IL1_TNF": 0,
+      "Extpump": 0,
+      "Fas": 0,
+      "Wnt": 0,
+      "Tgf-b": 1,
+      "DNA_damage": 0
+    },
+    "projected_outputs": [
+      "Apoptosis",
+      "Cell_Adhesion",
+      "Cell_Migration",
+      "Proliferation"
+    ],
+    "distinct_attractors": 492,
+    "cycle_length_counts": {
+      "6": 26,
+      "8": 262,
+      "12": 4,
+      "14": 14,
+      "18": 2,
+      "16": 33,
+      "24": 83,
+      "30": 130,
+      "40": 302,
+      "10": 2,
+      "36": 3,
+      "48": 44,
+      "60": 29,
+      "28": 2,
+      "66": 21,
+      "20": 3,
+      "120": 61
+    },
+    "combined_fate_counts": {
+      "Apoptosis + Cell Cycle Arrest": 42,
+      "Apoptosis": 251,
+      "Abnormal Proliferation + Metastasis": 560,
+      "Abnormal Proliferation": 1,
+      "Normal Proliferation": 101,
+      "Metastasis": 66
+    },
+    "fate_counts": {
+      "Apoptosis": 293,
+      "Cell Cycle Arrest": 42,
+      "Abnormal Proliferation": 561,
+      "Metastasis": 626,
+      "Normal Proliferation": 101,
+      "unresolved": 3
+    },
+    "marginal_wilson95": {
+      "Apoptosis": [
+        0.2592907723935918,
+        0.31457346878758774
+      ],
+      "Cell Cycle Arrest": [
+        0.03048574091676788,
+        0.0549763291980921
+      ],
+      "Abnormal Proliferation": [
+        0.5172453461977873,
+        0.5781000975561954
+      ],
+      "Metastasis": [
+        0.5811093132673095,
+        0.6407147803644053
+      ],
+      "Normal Proliferation": [
+        0.08184294655950851,
+        0.11842282113667758
+      ],
+      "unresolved": [
+        0.0009968475014902937,
+        0.008578032686730406
+      ]
+    }
+  },
+  {
+    "case": 4,
+    "condition": "HCT-116 RAC inhibition",
+    "n": 1024,
+    "horizon": 200,
+    "external": {
+      "EGF": 1,
+      "ECM": 1,
+      "alpha_q_lig": 0,
+      "alpha_i_lig": 0,
+      "alpha_s_lig": 0,
+      "alpha_12_13_lig": 0,
+      "stress": 0,
+      "IL1_TNF": 0,
+      "Extpump": 0,
+      "Fas": 0,
+      "Wnt": 0,
+      "Tgf-b": 1,
+      "DNA_damage": 0
+    },
+    "projected_outputs": [
+      "Apoptosis",
+      "Cell_Adhesion",
+      "Cell_Migration",
+      "Proliferation"
+    ],
+    "distinct_attractors": 506,
+    "cycle_length_counts": {
+      "6": 26,
+      "8": 284,
+      "12": 4,
+      "14": 17,
+      "4": 1,
+      "18": 2,
+      "16": 33,
+      "24": 73,
+      "30": 126,
+      "40": 254,
+      "10": 1,
+      "36": 2,
+      "48": 41,
+      "60": 48,
+      "66": 18,
+      "28": 1,
+      "90": 2,
+      "120": 84,
+      "118": 5
+    },
+    "combined_fate_counts": {
+      "Apoptosis + Cell Cycle Arrest": 51,
+      "Apoptosis": 358,
+      "Abnormal Proliferation": 1,
+      "Abnormal Proliferation + Metastasis": 443,
+      "Normal Proliferation": 93,
+      "Metastasis + Normal Proliferation": 1,
+      "Metastasis": 75
+    },
+    "fate_counts": {
+      "Apoptosis": 409,
+      "Cell Cycle Arrest": 51,
+      "Abnormal Proliferation": 444,
+      "Metastasis": 519,
+      "Normal Proliferation": 94,
+      "unresolved": 2
+    },
+    "marginal_wilson95": {
+      "Apoptosis": [
+        0.3698453933927164,
+        0.4297345921856467
+      ],
+      "Cell Cycle Arrest": [
+        0.03808200411528848,
+        0.06489249444418058
+      ],
+      "Abnormal Proliferation": [
+        0.4035445536069891,
+        0.4641393203670759
+      ],
+      "Metastasis": [
+        0.47624607936442315,
+        0.5373746983147172
+      ],
+      "Normal Proliferation": [
+        0.0756048294914951,
+        0.1110401605255506
+      ],
+      "unresolved": [
+        0.0005357808273540998,
+        0.007093273978132259
+      ]
+    }
+  },
+  {
+    "case": 4,
+    "condition": "HCT-116 RAF inhibition",
+    "n": 1024,
+    "horizon": 200,
+    "external": {
+      "EGF": 1,
+      "ECM": 1,
+      "alpha_q_lig": 0,
+      "alpha_i_lig": 0,
+      "alpha_s_lig": 0,
+      "alpha_12_13_lig": 0,
+      "stress": 0,
+      "IL1_TNF": 0,
+      "Extpump": 0,
+      "Fas": 0,
+      "Wnt": 0,
+      "Tgf-b": 1,
+      "DNA_damage": 0
+    },
+    "projected_outputs": [
+      "Apoptosis",
+      "Cell_Adhesion",
+      "Cell_Migration",
+      "Proliferation"
+    ],
+    "distinct_attractors": 383,
+    "cycle_length_counts": {
+      "6": 28,
+      "8": 709,
+      "12": 3,
+      "14": 37,
+      "18": 2,
+      "24": 164,
+      "30": 15,
+      "40": 45,
+      "10": 1,
+      "60": 3,
+      "120": 17
+    },
+    "combined_fate_counts": {
+      "Apoptosis + Cell Cycle Arrest": 79,
+      "Apoptosis": 867,
+      "Abnormal Proliferation": 1,
+      "Abnormal Proliferation + Metastasis": 70,
+      "Metastasis": 7
+    },
+    "fate_counts": {
+      "Apoptosis": 946,
+      "Cell Cycle Arrest": 79,
+      "Abnormal Proliferation": 71,
+      "Metastasis": 77,
+      "unresolved": 0
+    },
+    "marginal_wilson95": {
+      "Apoptosis": [
+        0.9059496554014341,
+        0.9385385607052696
+      ],
+      "Cell Cycle Arrest": [
+        0.062340154398843044,
+        0.09511745487718754
+      ],
+      "Abnormal Proliferation": [
+        0.05533269912305734,
+        0.08655830709109853
+      ],
+      "Metastasis": [
+        0.06058349111833718,
+        0.09298246739222472
+      ],
+      "unresolved": [
+        0.0,
+        0.0037374040400176777
+      ]
+    }
+  },
+  {
+    "case": 4,
+    "condition": "HCT-116 RSK inhibition",
+    "n": 1024,
+    "horizon": 200,
+    "external": {
+      "EGF": 1,
+      "ECM": 1,
+      "alpha_q_lig": 0,
+      "alpha_i_lig": 0,
+      "alpha_s_lig": 0,
+      "alpha_12_13_lig": 0,
+      "stress": 0,
+      "IL1_TNF": 0,
+      "Extpump": 0,
+      "Fas": 0,
+      "Wnt": 0,
+      "Tgf-b": 1,
+      "DNA_damage": 0
+    },
+    "projected_outputs": [
+      "Apoptosis",
+      "Cell_Adhesion",
+      "Cell_Migration",
+      "Proliferation"
+    ],
+    "distinct_attractors": 451,
+    "cycle_length_counts": {
+      "6": 26,
+      "8": 210,
+      "12": 4,
+      "16": 43,
+      "14": 15,
+      "4": 1,
+      "18": 2,
+      "24": 39,
+      "30": 177,
+      "10": 2,
+      "40": 329,
+      "20": 2,
+      "36": 22,
+      "48": 55,
+      "60": 24,
+      "54": 1,
+      "120": 70
+    },
+    "combined_fate_counts": {
+      "Apoptosis + Cell Cycle Arrest": 42,
+      "Apoptosis": 255,
+      "Normal Proliferation": 120,
+      "Abnormal Proliferation": 1,
+      "Abnormal Proliferation + Metastasis": 502,
+      "Metastasis": 102
+    },
+    "fate_counts": {
+      "Apoptosis": 297,
+      "Cell Cycle Arrest": 42,
+      "Normal Proliferation": 120,
+      "Abnormal Proliferation": 503,
+      "Metastasis": 604,
+      "unresolved": 2
+    },
+    "marginal_wilson95": {
+      "Apoptosis": [
+        0.26307113957255684,
+        0.31857640313956
+      ],
+      "Cell Cycle Arrest": [
+        0.03048574091676788,
+        0.0549763291980921
+      ],
+      "Normal Proliferation": [
+        0.09890278494281118,
+        0.13833366502532737
+      ],
+      "Abnormal Proliferation": [
+        0.46068133523052757,
+        0.5218062363248634
+      ],
+      "Metastasis": [
+        0.5594364559986131,
+        0.6195794792129463
+      ],
+      "unresolved": [
+        0.0005357808273540998,
+        0.007093273978132259
+      ]
+    }
+  },
+  {
+    "case": 4,
+    "condition": "HCT-116 XIAP inhibition",
+    "n": 1024,
+    "horizon": 200,
+    "external": {
+      "EGF": 1,
+      "ECM": 1,
+      "alpha_q_lig": 0,
+      "alpha_i_lig": 0,
+      "alpha_s_lig": 0,
+      "alpha_12_13_lig": 0,
+      "stress": 0,
+      "IL1_TNF": 0,
+      "Extpump": 0,
+      "Fas": 0,
+      "Wnt": 0,
+      "Tgf-b": 1,
+      "DNA_damage": 0
+    },
+    "projected_outputs": [
+      "Apoptosis",
+      "Cell_Adhesion",
+      "Cell_Migration",
+      "Proliferation"
+    ],
+    "distinct_attractors": 449,
+    "cycle_length_counts": {
+      "6": 26,
+      "8": 203,
+      "12": 3,
+      "14": 12,
+      "18": 2,
+      "16": 29,
+      "24": 45,
+      "30": 38,
+      "40": 417,
+      "10": 3,
+      "20": 1,
+      "44": 23,
+      "48": 48,
+      "36": 4,
+      "54": 3,
+      "60": 19,
+      "120": 74,
+      "110": 40
+    },
+    "combined_fate_counts": {
+      "Apoptosis + Cell Cycle Arrest": 41,
+      "Apoptosis": 251,
+      "Normal Proliferation": 102,
+      "Abnormal Proliferation": 4,
+      "Metastasis": 9,
+      "Abnormal Proliferation + Metastasis": 581,
+      "Metastasis + Normal Proliferation": 2
+    },
+    "fate_counts": {
+      "Apoptosis": 292,
+      "Cell Cycle Arrest": 41,
+      "Normal Proliferation": 104,
+      "Abnormal Proliferation": 585,
+      "Metastasis": 592,
+      "unresolved": 34
+    },
+    "marginal_wilson95": {
+      "Apoptosis": [
+        0.25834607216219974,
+        0.3135723436362454
+      ],
+      "Cell Cycle Arrest": [
+        0.029650034605617378,
+        0.053866210126508274
+      ],
+      "Normal Proliferation": [
+        0.08452470965303346,
+        0.12157853419135564
+      ],
+      "Abnormal Proliferation": [
+        0.5407665853647006,
+        0.6012786675749062
+      ],
+      "Metastasis": [
+        0.5476398875961208,
+        0.6080261430226264
+      ],
+      "unresolved": [
+        0.023856436909323955,
+        0.0460390301436613
+      ]
+    }
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "names": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "name": "rossini4",
+  "weights": null,
+  "basal": null,
+  "rules": [
+    {
+      "expression": "A & D"
+    },
+    {
+      "expression": "A & B"
+    },
+    {
+      "expression": "C & D"
+    },
+    {
+      "expression": "B | C"
+    }
+  ],
+  "positions": {}
+}

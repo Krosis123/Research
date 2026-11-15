@@ -1,0 +1,975 @@
+[
+  {
+    "source": "ATLANTIS.m",
+    "functions": [
+      "varargout = ATLANTIS(varargin)",
+      "ATLANTIS_OpeningFcn(hObject, eventdata, handles, varargin) %#ok<*INUSL>",
+      "varargout = ATLANTIS_OutputFcn(hObject, eventdata, handles)",
+      "GenerateNetwork_Callback(hObject, eventdata, handles) %#ok<*DEFNU>",
+      "ModifyNetwork_Callback(hObject, eventdata, handles)",
+      "SketchNetwork_Callback(hObject, eventdata, handles) %#ok<*INUSD>",
+      "DeterministicAnalysis_Callback(hObject, eventdata, handles)",
+      "ProbabilisticAnalysis_Callback(hObject, eventdata, handles)",
+      "VisualizeResults_Callback(hObject, eventdata, handles)",
+      "ATLANTIS_Main_CloseRequestFcn(hObject, eventdata, handles)"
+    ],
+    "lines": 989
+  },
+  {
+    "source": "Analyses/GenerateStates.m",
+    "functions": [
+      "varargout = GenerateStates(varargin)",
+      "GenerateStates_OpeningFcn(hObject, eventdata, handles, varargin)",
+      "varargout = GenerateStates_OutputFcn(hObject, eventdata, handles) ",
+      "AllCombinations_Callback(hObject, eventdata, handles)",
+      "RandomSample_Callback(hObject, eventdata, handles)",
+      "Ok_Callback(hObject, eventdata, handles)",
+      "Help_Callback(hObject, eventdata, handles)",
+      "GenerateStates_CloseRequestFcn(hObject, eventdata, handles)"
+    ],
+    "lines": 346
+  },
+  {
+    "source": "Export Figure/exportFigure.m",
+    "functions": [
+      "bool = exportFigure(figHandle, myNetwork, resVal, str, selectedFormat)"
+    ],
+    "lines": 90
+  },
+  {
+    "source": "Export Figure/ExportFigureMenu.m",
+    "functions": [
+      "varargout = ExportFigureMenu(varargin)",
+      "ExportFigureMenu_OpeningFcn(hObject, eventdata, handles, varargin)",
+      "varargout = ExportFigureMenu_OutputFcn(hObject, eventdata, handles) ",
+      "EditResolution_Callback(hObject, eventdata, handles)",
+      "Done_Callback(hObject, eventdata, handles)",
+      "FigureExportMenu_CloseRequestFcn(hObject, eventdata, handles)"
+    ],
+    "lines": 148
+  },
+  {
+    "source": "Generate Network/GenerateNetwork.m",
+    "functions": [
+      "varargout = GenerateNetwork(varargin)",
+      "GenerateNetwork_OpeningFcn(hObject, eventdata, handles, varargin)",
+      "varargout = GenerateNetwork_OutputFcn(hObject, eventdata, handles)",
+      "Ok_Callback(hObject, eventdata, handles)",
+      "Help_Callback(hObject, eventdata, handles)",
+      "GenerateNetworkMenu_CloseRequestFcn(hObject, eventdata, handles)"
+    ],
+    "lines": 161
+  },
+  {
+    "source": "Modify Network/ModifyNetwork.m",
+    "functions": [
+      "varargout = ModifyNetwork(varargin)",
+      "NetworkModificationMenu_OpeningFcn(hObject, eventdata, handles, varargin)",
+      "varargout = NetworkModificationMenu_OutputFcn(hObject, eventdata, handles)",
+      "BrowseMutations_Callback(hObject, eventdata, handles)",
+      "Ok_Callback(hObject, eventdata, handles)",
+      "Help_Callback(hObject, eventdata, handles)",
+      "ModfiyNetworkMenu_CloseRequestFcn(hObject, eventdata, handles)"
+    ],
+    "lines": 300
+  },
+  {
+    "source": "Network Properties/NetworkDataStructure.m",
+    "functions": [
+      "NetworkDataStructure < matlab.mixin.Copyable"
+    ],
+    "lines": 90
+  },
+  {
+    "source": "Sketch Network/GraphVizMenu.m",
+    "functions": [
+      "varargout = GraphVizMenu(varargin)",
+      "GraphVizMenu_OpeningFcn(hObject, eventdata, handles, varargin)",
+      "varargout = GraphVizMenu_OutputFcn(hObject, eventdata, handles)",
+      "CustomDotFile_Callback(hObject, eventdata, handles)",
+      "Draw_Callback(hObject, eventdata, handles)",
+      "Help_Callback(hObject, eventdata, handles)",
+      "GraphVizMenu_CloseRequestFcn(hObject, eventdata, handles)"
+    ],
+    "lines": 247
+  },
+  {
+    "source": "Sketch Network/NetworkSketchingOptions.m",
+    "functions": [
+      "varargout = NetworkSketchingOptions(varargin)",
+      "NetworkSketchingOptions_OpeningFcn(hObject, eventdata, handles, varargin)",
+      "varargout = NetworkSketchingOptions_OutputFcn(hObject, eventdata, handles) ",
+      "Ok_Callback(hObject, eventdata, handles)",
+      "Help_Callback(hObject, eventdata, handles)",
+      "SketchNetworkMenu_CloseRequestFcn(hObject, eventdata, handles)"
+    ],
+    "lines": 158
+  },
+  {
+    "source": "Sketch Network/sketchGraphUsingBiograph.m",
+    "functions": [
+      "[bool, figHandle, networkSketch] = sketchGraphUsingBiograph(myNetwork)"
+    ],
+    "lines": 139
+  },
+  {
+    "source": "Sketch Network/sketchGraphUsingGraphViz.m",
+    "functions": [
+      "[bool, figHandle] = sketchGraphUsingGraphViz(dotFile,  varargin)",
+      "vec = VisibleTextColor(bgColor)",
+      "points = getPoints(splineArray)",
+      "[splineX, splineY] = multi_Coords(splineX, splineY, colours, tipPolyX, tipPolyY, tailPolyX, tailPolyY)",
+      "multi_Plot(splineX, splineY, property, value, colours)",
+      "zoom_callback(hObject, eventData)",
+      "resizeText(thisText, thisPatch)",
+      "thisColour = getColour(thisColour, colourMode)",
+      "[X, Y, val] = bezier(a, b, p, y)",
+      "arrow(style, colour, x, y)",
+      "[patchHandle] = drawNode(style, x, y, width, height, edgeColour, bgColour, property, value)",
+      "colours = defineX11Colours()"
+    ],
+    "lines": 1526
+  },
+  {
+    "source": "Supplementary Functions/addContextMenuToFigure.m",
+    "functions": [
+      "parent = addContextMenuToFigure(root, menuLabel, callBack)"
+    ],
+    "lines": 31
+  },
+  {
+    "source": "Supplementary Functions/binary2Decimal.m",
+    "functions": [
+      "decVec = binary2Decimal( binVec )"
+    ],
+    "lines": 23
+  },
+  {
+    "source": "Supplementary Functions/bringToFocus.m",
+    "functions": [
+      "bringToFocus( figHandle )"
+    ],
+    "lines": 29
+  },
+  {
+    "source": "Supplementary Functions/CancelSimulationButton.m",
+    "functions": [
+      "varargout = CancelSimulationButton(varargin)",
+      "CancelSimulationButton_OpeningFcn(hObject, eventdata, handles, varargin)",
+      "varargout = CancelSimulationButton_OutputFcn(hObject, eventdata, handles) ",
+      "CancelButton_Callback(hObject, eventdata, handles)",
+      "figure1_CloseRequestFcn(hObject, eventdata, handles)"
+    ],
+    "lines": 117
+  },
+  {
+    "source": "Supplementary Functions/cell2csv.m",
+    "functions": [
+      "cell2csv(fileName, cellArray, separator, excelYear, decimal)",
+      "x = StringX(x)"
+    ],
+    "lines": 89
+  },
+  {
+    "source": "Supplementary Functions/csv2cell.m",
+    "functions": [
+      "data = csv2cell(varargin)"
+    ],
+    "lines": 89
+  },
+  {
+    "source": "Supplementary Functions/csvimport.m",
+    "functions": [
+      "varargout = csvimport( fileName, varargin )"
+    ],
+    "lines": 327
+  },
+  {
+    "source": "Supplementary Functions/decimal2binary.m",
+    "functions": [
+      "binVec = decimal2binary( dVec, n )"
+    ],
+    "lines": 33
+  },
+  {
+    "source": "Supplementary Functions/enableATLANTIS.m",
+    "functions": [
+      "enableATLANTIS"
+    ],
+    "lines": 24
+  },
+  {
+    "source": "Supplementary Functions/enableDisableFig.m",
+    "functions": [
+      "currentState = enableDisableFig(hFig, newState)",
+      "jframe = getJFrame(hFig)"
+    ],
+    "lines": 195
+  },
+  {
+    "source": "Supplementary Functions/figExportCallBack.m",
+    "functions": [
+      "figExportCallBack(source, callBackData, figHandle)"
+    ],
+    "lines": 91
+  },
+  {
+    "source": "Supplementary Functions/generate_OutputFolderName.m",
+    "functions": [
+      "outputFolder = generate_OutputFolderName(NetworkfileName)"
+    ],
+    "lines": 31
+  },
+  {
+    "source": "Supplementary Functions/isMemorySufficient.m",
+    "functions": [
+      "[bool, memoryRequired, maxmemoryAvailable] = isMemorySufficient(x)"
+    ],
+    "lines": 45
+  },
+  {
+    "source": "Supplementary Functions/joinStr_CellArr.m",
+    "functions": [
+      "str = joinStr_CellArr(cellArr, delimiter)"
+    ],
+    "lines": 26
+  },
+  {
+    "source": "Supplementary Functions/pauseButton.m",
+    "functions": [
+      "varargout = pauseButton(varargin)",
+      "pauseButton_OpeningFcn(hObject, eventdata, handles, varargin)",
+      "varargout = pauseButton_OutputFcn(hObject, eventdata, handles) ",
+      "button_Callback(hObject, eventdata, handles)",
+      "CancelButton_CloseRequestFcn(hObject, eventdata, handles)"
+    ],
+    "lines": 118
+  },
+  {
+    "source": "Supplementary Functions/progressbar.m",
+    "functions": [
+      "progressbar(varargin)",
+      "changecolor(h, e, progpatch) %#ok<INUSL>",
+      "timestr = sec2timestr(sec)"
+    ],
+    "lines": 274
+  },
+  {
+    "source": "Supplementary Functions/restoreUImenus.m",
+    "functions": [
+      "restoreUImenus(figHandle, ~)"
+    ],
+    "lines": 20
+  },
+  {
+    "source": "Supplementary Functions/saveMatFile.m",
+    "functions": [
+      "saveMatFile(filename, varargin)"
+    ],
+    "lines": 69
+  },
+  {
+    "source": "Supplementary Functions/sortCellArr.m",
+    "functions": [
+      "Y = sortCellArr(X, DIM)"
+    ],
+    "lines": 116
+  },
+  {
+    "source": "Supplementary Functions/uniqueCellArray.m",
+    "functions": [
+      "[AA, AI, BI] = uniqueCellArray(A)"
+    ],
+    "lines": 31
+  },
+  {
+    "source": "Supplementary Functions/updateGraphics.m",
+    "functions": [
+      "updateGraphics"
+    ],
+    "lines": 73
+  },
+  {
+    "source": "Visualize Results/VisualizeResultsMenu.m",
+    "functions": [
+      "varargout = VisualizeResultsMenu(varargin)",
+      "VisualizeResultsMenu_OpeningFcn(hObject, ~, handles, varargin)",
+      "varargout = VisualizeResultsMenu_OutputFcn(~, ~, handles)",
+      "CheckPELandscape_Callback(hObject, ~, handles) %#ok<*DEFNU>",
+      "CheckBasinValues_Callback(hObject, ~, handles)",
+      "CheckProbabilityLandscape_Callback(hObject, eventdata, handles) %#ok<*INUSL>",
+      "CheckTreeMap_Callback(hObject, eventdata, handles)",
+      "ExportAttractorLandscape_Callback(hObject, eventdata, handles)",
+      "ExportTreeMap_Callback(hObject, eventdata, handles)",
+      "EditResolutionTreemap_Callback(hObject, eventdata, handles) %#ok<*INUSD>",
+      "SammonProjection_Callback(hObject, eventdata, handles)",
+      "Plot_Callback(hObject, eventdata, handles)",
+      "Help_Callback(hObject, eventdata, handles)",
+      "VisualizeResultsMenu_CloseRequestFcn(hObject, eventdata, handles)",
+      "Reset_Callback(hObject, eventdata, handles)"
+    ],
+    "lines": 575
+  },
+  {
+    "source": "Analyses/Deterministic Analysis/classify_Attractors.m",
+    "functions": [
+      "bool = classify_Attractors(obj)"
+    ],
+    "lines": 72
+  },
+  {
+    "source": "Analyses/Deterministic Analysis/DeterministicAnalysisMenu.m",
+    "functions": [
+      "varargout = DeterministicAnalysisMenu(varargin)",
+      "DeterministicAnalysisMenu_OpeningFcn(hObject, eventdata, handles, varargin)",
+      "varargout = DeterministicAnalysisMenu_OutputFcn(hObject, eventdata, handles)",
+      "CustomStates_Callback(hObject, eventdata, handles)",
+      "GenerateStates_Callback(hObject, eventdata, handles)",
+      "BrowseFixNodeStates_Callback(hObject, eventdata, handles)",
+      "BrowseCellFateLogic_Callback(hObject, eventdata, handles)",
+      "Ok_Callback(hObject, eventdata, handles)",
+      "Help_Callback(hObject, eventdata, handles)",
+      "DeterministicAnalysisMenu_CloseRequestFcn(hObject, eventdata, handles)"
+    ],
+    "lines": 561
+  },
+  {
+    "source": "Analyses/Deterministic Analysis/perform_DeterministicAnalysis.m",
+    "functions": [
+      "[bool, message] = perform_DeterministicAnalysis(myNetwork, totalProgress)"
+    ],
+    "lines": 55
+  },
+  {
+    "source": "Analyses/Probabilistic Analysis/perform_ProbabilisticAnalysis.m",
+    "functions": [
+      "[bool, message] = perform_ProbabilisticAnalysis(myNetwork, totalProgress)"
+    ],
+    "lines": 52
+  },
+  {
+    "source": "Analyses/Probabilistic Analysis/ProbabilisticAnalysisMenu.m",
+    "functions": [
+      "varargout = ProbabilisticAnalysisMenu(varargin)",
+      "ProbabilisticAnalysisMenu_OpeningFcn(hObject, eventdata, handles, varargin)",
+      "varargout = ProbabilisticAnalysisMenu_OutputFcn(hObject, eventdata, handles) ",
+      "GenerateStates_Callback(hObject, eventdata, handles)",
+      "CustomStates_Callback(hObject, eventdata, handles)",
+      "BrowseFixNodeStates_Callback(hObject, eventdata, handles)",
+      "BrowseCellFateLogic_Callback(hObject, eventdata, handles)",
+      "BrowseTrajectoryBounds_Callback(hObject, eventdata, handles)",
+      "MapTrajectory_Callback(hObject, eventdata, handles)",
+      "Ok_Callback(hObject, eventdata, handles)",
+      "Help_Callback(hObject, eventdata, handles)",
+      "ProbabilisticAnalysisMenu_CloseRequestFcn(hObject, eventdata, handles)"
+    ],
+    "lines": 762
+  },
+  {
+    "source": "Analyses/Supplementary functions/associate_CellFates.m",
+    "functions": [
+      "associatedFates  = associate_CellFates(cellFateInfo, attr, numOfUnCF)"
+    ],
+    "lines": 50
+  },
+  {
+    "source": "Analyses/Supplementary functions/fix_NodeStates.m",
+    "functions": [
+      "[bool, inputNodes] = fix_NodeStates(obj, fileInfo)"
+    ],
+    "lines": 77
+  },
+  {
+    "source": "Analyses/Supplementary functions/generate_StateCombinations_randomSampling.m",
+    "functions": [
+      "states = generate_StateCombinations_randomSampling(myNetwork, sampleSize)"
+    ],
+    "lines": 30
+  },
+  {
+    "source": "Analyses/Supplementary functions/generate_StatesCombinations.m",
+    "functions": [
+      "generate_StatesCombinations(obj)"
+    ],
+    "lines": 30
+  },
+  {
+    "source": "Analyses/Supplementary functions/parse_CellFateLogic 2.m",
+    "functions": [
+      "[bool, rawLogic] = parse_CellFateLogic(myNetwork, fileName, pathName)",
+      "Combinations = generateCombinations(varargin)"
+    ],
+    "lines": 165
+  },
+  {
+    "source": "Analyses/Supplementary functions/parse_CellFateLogic.m",
+    "functions": [
+      "[bool, rawLogic] = parse_CellFateLogic(myNetwork, fileName, pathName)",
+      "Combinations = generateCombinations(varargin)"
+    ],
+    "lines": 164
+  },
+  {
+    "source": "Analyses/Deterministic Analysis/Logic weigths method/deterministicEngine_WeightsBased.m",
+    "functions": [
+      "bool = deterministicEngine_WeightsBased(myNetwork, totalProgress)",
+      "attractor = searchForAttractor(CurrentState, ~)"
+    ],
+    "lines": 212
+  },
+  {
+    "source": "Analyses/Deterministic Analysis/Logic weigths method/synchronousAttractorSearch_WeightsBased.m",
+    "functions": [
+      "preliminarySearchResults = synchronousAttractorSearch_WeightsBased(myNetwork)"
+    ],
+    "lines": 73
+  },
+  {
+    "source": "Analyses/Deterministic Analysis/Logical expression method/deterministicEngine_RulesBased.m",
+    "functions": [
+      "bool = deterministicEngine_RulesBased(myNetwork, totalProgress)",
+      "attractor = searchForAttractor(currentState, targetNodeIndices, sourceNodeIndices, updateLogics, progressbarInfo)",
+      "nextstate = UpdateState(currentState)",
+      "updatedNode = UpdateNodeActivty(SourceNodeIndex, targetNodeIndex)"
+    ],
+    "lines": 168
+  },
+  {
+    "source": "Analyses/Deterministic Analysis/Logical expression method/synchronousAttractorSearch_RulesBased.m",
+    "functions": [
+      "preliminarySearchResults = synchronousAttractorSearch_RulesBased(myNetwork)"
+    ],
+    "lines": 96
+  },
+  {
+    "source": "Analyses/Deterministic Analysis/Supplemetary functions/attractorFrequency.m",
+    "functions": [
+      "table = attractorFrequency( vec )"
+    ],
+    "lines": 32
+  },
+  {
+    "source": "Analyses/Deterministic Analysis/Supplemetary functions/save_DeterministicAnalysisResults.m",
+    "functions": [
+      "bool = save_DeterministicAnalysisResults( myNetwork )"
+    ],
+    "lines": 209
+  },
+  {
+    "source": "Analyses/Deterministic Analysis/Supplemetary functions/summarize_AttractorActivity.m",
+    "functions": [
+      "[fracSummary, boolSummary] = summarize_AttractorActivity(attr, ub, lb)"
+    ],
+    "lines": 43
+  },
+  {
+    "source": "Analyses/Probabilistic Analysis/Supplemetary functions/find_StateTransitionProbabilities.m",
+    "functions": [
+      "bool = find_StateTransitionProbabilities(myNetwork, totalProgress)"
+    ],
+    "lines": 113
+  },
+  {
+    "source": "Analyses/Probabilistic Analysis/Supplemetary functions/find_SteadyStateProbabilities.m",
+    "functions": [
+      "bool = find_SteadyStateProbabilities(myNetwork, totalProgress)"
+    ],
+    "lines": 103
+  },
+  {
+    "source": "Analyses/Probabilistic Analysis/Supplemetary functions/map_Trajectory.m",
+    "functions": [
+      "bool = map_Trajectory(myNetwork)"
+    ],
+    "lines": 65
+  },
+  {
+    "source": "Analyses/Probabilistic Analysis/Supplemetary functions/parse_TrajectoryBounds.m",
+    "functions": [
+      "bool = parse_TrajectoryBounds(obj, fileName, pathName)"
+    ],
+    "lines": 47
+  },
+  {
+    "source": "Analyses/Probabilistic Analysis/Supplemetary functions/save_ProbabilisticAnalysisResults.m",
+    "functions": [
+      "bool = save_ProbabilisticAnalysisResults( myNetwork )"
+    ],
+    "lines": 228
+  },
+  {
+    "source": "Analyses/Probabilistic Analysis/Supplemetary functions/StateSpacePruning.m",
+    "functions": [
+      "prunnedStateSpace = StateSpacePruning(myNetwork)"
+    ],
+    "lines": 47
+  },
+  {
+    "source": "Export Figure/Supplementary Functions/append_pdfs.m",
+    "functions": [
+      "append_pdfs(varargin)"
+    ],
+    "lines": 81
+  },
+  {
+    "source": "Export Figure/Supplementary Functions/copyfig.m",
+    "functions": [
+      "fh = copyfig(fh)"
+    ],
+    "lines": 51
+  },
+  {
+    "source": "Export Figure/Supplementary Functions/crop_borders.m",
+    "functions": [
+      "[A, vA, vB, bb_rel] = crop_borders(A, bcol, padding, crop_amounts)",
+      "A = col(A)"
+    ],
+    "lines": 157
+  },
+  {
+    "source": "Export Figure/Supplementary Functions/eps2pdf.m",
+    "functions": [
+      "eps2pdf(source, dest, crop, append, gray, quality, gs_options)",
+      "fp = font_path()"
+    ],
+    "lines": 191
+  },
+  {
+    "source": "Export Figure/Supplementary Functions/export_fig.m",
+    "functions": [
+      "[imageData, alpha] = export_fig(varargin)",
+      "options = default_options()",
+      "[fig, options] = parse_args(nout, fig, varargin)",
+      "A = downsize(A, factor)",
+      "A = rgb2grey(A)",
+      "A = check_greyscale(A)",
+      "eps_remove_background(fname, count)",
+      "b = isvector(options)",
+      "b = isbitmap(options)",
+      "A = make_cell(A)",
+      "add_bookmark(fname, bookmark_text)",
+      "set_tick_mode(Hlims, ax)",
+      "change_rgb_to_cmyk(fname)  % convert RGB => CMYK within an EPS file"
+    ],
+    "lines": 1311
+  },
+  {
+    "source": "Export Figure/Supplementary Functions/fix_lines.m",
+    "functions": [
+      "fstrm = fix_lines(fstrm, fname2)"
+    ],
+    "lines": 151
+  },
+  {
+    "source": "Export Figure/Supplementary Functions/ghostscript.m",
+    "functions": [
+      "varargout = ghostscript(cmd)",
+      "path_ = gs_path",
+      "good = check_store_gs_path(path_)",
+      "good = check_gs_path(path_)",
+      "cmd = gs_command(path_)"
+    ],
+    "lines": 196
+  },
+  {
+    "source": "Export Figure/Supplementary Functions/im2gif.m",
+    "functions": [
+      "im2gif(A, varargin)",
+      "[A, options] = parse_args(A, varargin)",
+      "[A, alpha] = imread_rgb(name)"
+    ],
+    "lines": 186
+  },
+  {
+    "source": "Export Figure/Supplementary Functions/isolate_axes.m",
+    "functions": [
+      "fh = isolate_axes(ah, vis)",
+      "ah = allchildren(ah)",
+      "ph = allancestors(ah)"
+    ],
+    "lines": 130
+  },
+  {
+    "source": "Export Figure/Supplementary Functions/pdf2eps.m",
+    "functions": [
+      "pdf2eps(source, dest)"
+    ],
+    "lines": 51
+  },
+  {
+    "source": "Export Figure/Supplementary Functions/pdftops.m",
+    "functions": [
+      "varargout = pdftops(cmd)",
+      "path_ = xpdf_path",
+      "good = check_store_xpdf_path(path_)",
+      "good = check_xpdf_path(path_)",
+      "cmd = xpdf_command(path_)"
+    ],
+    "lines": 167
+  },
+  {
+    "source": "Export Figure/Supplementary Functions/print2array.m",
+    "functions": [
+      "[A, bcol] = print2array(fig, res, renderer, gs_options)",
+      "[A, err, ex] = read_tif_img(fig, res_str, renderer, tmp_nam)",
+      "fp = font_path()"
+    ],
+    "lines": 259
+  },
+  {
+    "source": "Export Figure/Supplementary Functions/print2eps.m",
+    "functions": [
+      "print2eps(name, fig, export_options, varargin)",
+      "[StoredColors, fstrm, foundFlags] = eps_maintainAlpha(fig, fstrm, StoredColors)"
+    ],
+    "lines": 529
+  },
+  {
+    "source": "Export Figure/Supplementary Functions/read_write_entire_textfile.m",
+    "functions": [
+      "fstrm = read_write_entire_textfile(fname, fstrm)"
+    ],
+    "lines": 37
+  },
+  {
+    "source": "Export Figure/Supplementary Functions/user_string.m",
+    "functions": [
+      "string = user_string(string_name, string)"
+    ],
+    "lines": 105
+  },
+  {
+    "source": "Export Figure/Supplementary Functions/using_hg2.m",
+    "functions": [
+      "tf = using_hg2(fig)"
+    ],
+    "lines": 36
+  },
+  {
+    "source": "Generate Network/Logic weigths method/NetworkInputMenu1.m",
+    "functions": [
+      "varargout = NetworkInputMenu1(varargin)",
+      "NetworkInputMenu1_OpeningFcn(hObject, eventdata, handles, varargin)",
+      "varargout = NetworkInputMenu1_OutputFcn(hObject, eventdata, handles)",
+      "BrowseNetworkFile_Callback(hObject, eventdata, handles)",
+      "Ok_Callback(hObject, eventdata, handles)",
+      "Help_Callback(hObject, eventdata, handles)",
+      "NetworkInputMenu1_CloseRequestFcn(hObject, eventdata, handles)"
+    ],
+    "lines": 258
+  },
+  {
+    "source": "Generate Network/Logic weigths method/parse_NetworkFile.m",
+    "functions": [
+      "bool = parse_NetworkFile(myNetwork, fileName, filePath)"
+    ],
+    "lines": 59
+  },
+  {
+    "source": "Generate Network/Logical expression method/NetworkInputMenu2.m",
+    "functions": [
+      "varargout = NetworkInputMenu2(varargin)",
+      "RulesBasedMenu_OpeningFcn(hObject, eventdata, handles, varargin)",
+      "varargout = RulesBasedMenu_OutputFcn(hObject, eventdata, handles)",
+      "BrowseNodeLogicTables_Callback(hObject, eventdata, handles)",
+      "BrowseNodeList_Callback(hObject, eventdata, handles)",
+      "Ok_Callback(hObject, eventdata, handles)",
+      "Help_Callback(hObject, eventdata, handles)",
+      "NetworkInputMenu2_CloseRequestFcn(hObject, eventdata, handles)"
+    ],
+    "lines": 353
+  },
+  {
+    "source": "Generate Network/Logical expression method/parse_LogicTables.m",
+    "functions": [
+      "[bool] = parse_LogicTables(myNetwork, logicTableFolderInfo, nodeList)"
+    ],
+    "lines": 116
+  },
+  {
+    "source": "Modify Network/Logic weigths method/addMutations_WeightsBased.m",
+    "functions": [
+      "bool = addMutations_WeightsBased(myNetwork, mutationFilePath, mutationFileName)"
+    ],
+    "lines": 181
+  },
+  {
+    "source": "Modify Network/Logical expression method/addMutations_RulesBased.m",
+    "functions": [
+      "bool = addMutations_RulesBased(myNetwork, mutationFilePath, mutationFileName)",
+      "combinations = truthTableGenerator( N )"
+    ],
+    "lines": 189
+  },
+  {
+    "source": "Sketch Network/Supplementary functions/addLegendsForBiograph.m",
+    "functions": [
+      "addLegendsForBiograph(figName)"
+    ],
+    "lines": 50
+  },
+  {
+    "source": "Sketch Network/Supplementary functions/generateDotFile.m",
+    "functions": [
+      "bool = generateDotFile(myNetwork)"
+    ],
+    "lines": 111
+  },
+  {
+    "source": "Sketch Network/Supplementary functions/toggleEdgeLabels.m",
+    "functions": [
+      "toggleEdgeLabels(source, callbackData, textObj)"
+    ],
+    "lines": 31
+  },
+  {
+    "source": "Visualize Results/Attractor Landscape/addPlotModificationOptionsMenu.m",
+    "functions": [
+      "addPlotModificationOptionsMenu(figHandle, rootMenu, h)"
+    ],
+    "lines": 58
+  },
+  {
+    "source": "Visualize Results/Attractor Landscape/addToggleAnnotationMenu.m",
+    "functions": [
+      "addToggleAnnotationMenu(rootMenu, prominentSteadyStateIndicies, transientStateindicies, attractorIndicies, prominentSteadyStateMarks, transientStateMarks, attractorStateMarks, arrowsObj)"
+    ],
+    "lines": 44
+  },
+  {
+    "source": "Visualize Results/Attractor Landscape/annotate_AttractorLandscape.m",
+    "functions": [
+      "[prominentSteadyStateIndicies, transientStateindicies, attractorIndicies, attractorStateMarks, transientStateMarks, prominentSteadyStateMarks, arrowsObj] = annotate_AttractorLandscape(x, y, zData, stateSpaceLen, mappingMethod, randomInd, attractorIndiciesOriginal, transientStateindiciesOriginal, prominentSteadyStateIndiciesOriginal )"
+    ],
+    "lines": 139
+  },
+  {
+    "source": "Visualize Results/Attractor Landscape/assembleToolTipData.m",
+    "functions": [
+      "[gridTipToolData, gridData] = assembleToolTipData(myNetwork, x, y, z, randomInd, stateSpaceLen, mappingMethod, stateSpace, attractorIndiciesOriginal, transientStateindiciesOriginal, prominentSteadyStateIndiciesOriginal)"
+    ],
+    "lines": 135
+  },
+  {
+    "source": "Visualize Results/Attractor Landscape/generate_AttractorLandscape.m",
+    "functions": [
+      "[errormsg, finishTime] = generate_AttractorLandscape"
+    ],
+    "lines": 319
+  },
+  {
+    "source": "Visualize Results/Cell Fate Landscape/generate_CellFateLandscape.m",
+    "functions": [
+      "[errmsg, finishTime] = generate_CellFateLandscape"
+    ],
+    "lines": 90
+  },
+  {
+    "source": "Visualize Results/Attractor Landscape/Naive Random Projection/customToolTips_NaiveMapping.m",
+    "functions": [
+      "dataTip = customToolTips_NaiveMapping(figHandle, coords, toolTipData, varargin)",
+      "toolTipInfo = generateToolTip(~, dataTip, toolTipData)"
+    ],
+    "lines": 97
+  },
+  {
+    "source": "Visualize Results/Attractor Landscape/Naive Random Projection/groupCyclicAttractors.m",
+    "functions": [
+      "[randomInd, Z] = groupCyclicAttractors(myNetwork, stateSpace, randomInd, stateSpaceLen, Z)"
+    ],
+    "lines": 109
+  },
+  {
+    "source": "Visualize Results/Attractor Landscape/Naive Random Projection/naiveMapping.m",
+    "functions": [
+      "[X, Y] = naiveMapping(states)"
+    ],
+    "lines": 21
+  },
+  {
+    "source": "Visualize Results/Attractor Landscape/Sammon Projection/customToolTips_SammonMapping.m",
+    "functions": [
+      "dataTip = customToolTips_SammonMapping(figHandle, index, toolTipData, varargin)",
+      "toolTipInfo = generateToolTip(~, dataTip, toolTipData)"
+    ],
+    "lines": 100
+  },
+  {
+    "source": "Visualize Results/Attractor Landscape/Sammon Projection/sammonMapping.m",
+    "functions": [
+      "[y, E] = sammonMapping(x, n, opts)",
+      "d = euclid(x, y)"
+    ],
+    "lines": 134
+  },
+  {
+    "source": "Visualize Results/Attractor Landscape/Sammon Projection/StateSpaceSizeSelectionMenu.m",
+    "functions": [
+      "varargout = StateSpaceSizeSelectionMenu(varargin)",
+      "StateSpaceSizeSelectionMenu_OpeningFcn(hObject, eventdata, handles, varargin)",
+      "varargout = StateSpaceSizeSelectionMenu_OutputFcn(hObject, eventdata, handles) ",
+      "StateSpaceSelection_Callback(hObject, eventdata, handles)",
+      "Help_Callback(hObject, eventdata, handles)",
+      "OptimalSize_Callback(hObject, eventdata, handles)",
+      "CustomSize_Callback(hObject, eventdata, handles)",
+      "Ok_Callback(hObject, eventdata, handles)",
+      "StateSpaceSizeSelectionMenu_CloseRequestFcn(hObject, eventdata, handles)"
+    ],
+    "lines": 192
+  },
+  {
+    "source": "Visualize Results/Attractor Landscape/Supplementary Function/addLegendsForAttractorPlots.m",
+    "functions": [
+      "addLegendsForAttractorPlots"
+    ],
+    "lines": 54
+  },
+  {
+    "source": "Visualize Results/Attractor Landscape/Supplementary Function/arrow.m",
+    "functions": [
+      "[h,yy,zz] = arrow(varargin)",
+      "out = arrow_defcheck(in,def,prop)",
+      "[H,oldaxlims,errstr] = arrow_clicks(H,ud,x,y,z,ax,oldaxlims)",
+      "[wasInterrupted,errstr] = arrow_click(lockStart,H,prop,ax)",
+      "arrow_callback(varargin)",
+      "out = arrow_point(ax,use_z)",
+      "[wasKeyPress,wasInterrupted,errstr] = arrow_wfbdown(fig)",
+      "[out,is2D] = arrow_is2DXY(ax)",
+      "out = arrow_planarkids(ax)",
+      "arrow_fixlimits(ax,lims)",
+      "out = arrow_WarpToFill(notstretched,manualcamera,curax)",
+      "out = arrow_warnlimits(ax,narrows)",
+      "arrow_copyprops(fm,to)",
+      "arrow_props",
+      "out = arrow_demo",
+      "h = arrow_demo3(in)",
+      "h = arrow_demo2(in)",
+      "out = trueornan(x)"
+    ],
+    "lines": 1460
+  },
+  {
+    "source": "Visualize Results/Attractor Landscape/Supplementary Function/generate_AttractorStateToolTipData.m",
+    "functions": [
+      "[orderInTrajectory, allAttractorNumber, basinSizes, probabilities, cellFates, attractorTypes, outputNodeActivities, avgOutputNodeActivities] = generate_AttractorStateToolTipData(attractorIndiciesOriginal, transientStateindiciesOriginal, myNetwork, stateSpace)"
+    ],
+    "lines": 100
+  },
+  {
+    "source": "Visualize Results/Attractor Landscape/Supplementary Function/generate_SteadyStatesToolTipData.m",
+    "functions": [
+      "[orderInTrajectory, allAttractorNumber, basinSizes, probabilities, cellFates, attractorTypes, outputNodeActivities, avgOutputNodeActivities] = generate_SteadyStatesToolTipData(transientStateindiciesOriginal, prominentSteadyStateIndiciesOriginal, myNetwork, stateSpace)"
+    ],
+    "lines": 109
+  },
+  {
+    "source": "Visualize Results/Attractor Landscape/Supplementary Function/InvertPlot.m",
+    "functions": [
+      "InvertPlot(source, callbackData, axesObj)"
+    ],
+    "lines": 25
+  },
+  {
+    "source": "Visualize Results/Attractor Landscape/Supplementary Function/plot_AttractorLandscape.m",
+    "functions": [
+      "[figHandle, bool, plotHandle, gridTipToolData, gridData] = plot_AttractorLandscape(myNetwork, x, y, z, plottingOptions, stateSpace)"
+    ],
+    "lines": 224
+  },
+  {
+    "source": "Visualize Results/Attractor Landscape/Supplementary Function/plot_BasinSizeLandscape.m",
+    "functions": [
+      "plot_BasinSizeLandscape(x, y, stateSpace, myNetwork, PlottingOptions2)"
+    ],
+    "lines": 98
+  },
+  {
+    "source": "Visualize Results/Attractor Landscape/Supplementary Function/plot_PotentialEnergyLandscape.m",
+    "functions": [
+      "plot_PotentialEnergyLandscape(x, y, stateSpace, myNetwork, PlottingOptions2)"
+    ],
+    "lines": 79
+  },
+  {
+    "source": "Visualize Results/Attractor Landscape/Supplementary Function/plot_ProbabilityLandscape.m",
+    "functions": [
+      "plot_ProbabilityLandscape(x, y, stateSpace, myNetwork, PlottingOptions2)"
+    ],
+    "lines": 76
+  },
+  {
+    "source": "Visualize Results/Attractor Landscape/Supplementary Function/save_StateSpace.m",
+    "functions": [
+      "save_StateSpace(myNetwork, stateSpace)"
+    ],
+    "lines": 43
+  },
+  {
+    "source": "Visualize Results/Attractor Landscape/Supplementary Function/toggleAnnotations.m",
+    "functions": [
+      "toggleAnnotations(source, callbackData, marks)"
+    ],
+    "lines": 31
+  },
+  {
+    "source": "Visualize Results/Attractor Landscape/Supplementary Function/togglePlotAlpha.m",
+    "functions": [
+      "togglePlotAlpha(source, callbackData, surfaceObj, alpha)"
+    ],
+    "lines": 25
+  },
+  {
+    "source": "Visualize Results/Attractor Landscape/Supplementary Function/togglePlotColor.m",
+    "functions": [
+      "togglePlotColor(source, callbackData, figHandle, Color)"
+    ],
+    "lines": 21
+  },
+  {
+    "source": "Visualize Results/Attractor Landscape/Supplementary Function/togglePlotVisibility.m",
+    "functions": [
+      "togglePlotVisibility(source, callbackData, PlotObj)"
+    ],
+    "lines": 28
+  },
+  {
+    "source": "Visualize Results/Attractor Landscape/Supplementary Function/toggleSurfacePlotFaceColor.m",
+    "functions": [
+      "toggleSurfacePlotFaceColor(source, callbackData, surfaceObj, faceColor)"
+    ],
+    "lines": 21
+  },
+  {
+    "source": "Visualize Results/Attractor Landscape/Naive Random Projection/Supplementary Functions/findPositions.m",
+    "functions": [
+      "[x , y] = findPositions(r, c, positionsNeeded, stateSpaceLen)",
+      "populateXY(dx, dy)"
+    ],
+    "lines": 72
+  },
+  {
+    "source": "Visualize Results/Attractor Landscape/Naive Random Projection/Supplementary Functions/findValidPositions.m",
+    "functions": [
+      "[score, distances, availablePoints] = findValidPositions(r, c, pointsNeeded, unavailablePositions, stateSpaceLen)"
+    ],
+    "lines": 39
+  },
+  {
+    "source": "Visualize Results/Cell Fate Landscape/Supplemetary Function/plot_CellFateLandscape.m",
+    "functions": [
+      "bool = plot_CellFateLandscape(myNetwork, plotTitle, showLegends, annotateBoxes, selectedColorScheme, CellFateLandsacpe)",
+      "rectangles = treemap(data,w,h)",
+      "partition = partitionArea(v,w,h)",
+      "[textObj, patchObj] = plotRectangles(rectangles,labels,colors)",
+      "outline(rectangles)"
+    ],
+    "lines": 343
+  },
+  {
+    "source": "Visualize Results/Cell Fate Landscape/Supplemetary Function/toggleBoxColors.m",
+    "functions": [
+      "toggleBoxColors(source, callbackData, patchObj, selectedColorScheme, dataSize)"
+    ],
+    "lines": 24
+  }
+]

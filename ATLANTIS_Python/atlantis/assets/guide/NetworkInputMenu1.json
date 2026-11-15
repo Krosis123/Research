@@ -1,0 +1,338 @@
+{
+  "type": "figure",
+  "properties": {
+    "Tag": "NetworkInputMenu1",
+    "Position": [
+      169.60000000000002,
+      53.23076923076923,
+      66.4,
+      14.999999999999993
+    ],
+    "Units": "characters",
+    "Visible": "on",
+    "Name": "ATLANTIS - Network Input",
+    "Color": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "children": [
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "inputNetworkFileText",
+        "Position": [
+          2.2571428571428576,
+          11.623076923076804,
+          27.71428571428572,
+          1.411764705882355
+        ],
+        "Units": "characters",
+        "String": "Network File",
+        "Style": "text",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "ForegroundColor": [
+          0.0784313725490196,
+          0.16862745098039217,
+          0.5490196078431373
+        ],
+        "FontName": "Calibri",
+        "FontSize": 12.0,
+        "FontWeight": "bold",
+        "HorizontalAlignment": "left"
+      },
+      "children": []
+    },
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "text",
+        "Position": [
+          2.4000000000000004,
+          9.174208144796284,
+          55.14285714285714,
+          2.3846153846153815
+        ],
+        "Units": "characters",
+        "String": [],
+        "Style": "text",
+        "Value": 0.0,
+        "Min": 0.0,
+        "Max": 1.0,
+        "Enable": "on",
+        "Visible": "on",
+        "BackgroundColor": [
+          0.8941176470588236,
+          0.9411764705882353,
+          0.9019607843137255
+        ],
+        "ForegroundColor": [
+          0.0784313725490196,
+          0.16862745098039217,
+          0.5490196078431373
+        ],
+        "FontName": "Calibri",
+        "FontSize": 10.0,
+        "FontWeight": "bold",
+        "HorizontalAlignment": "left",
+        "TooltipString": []
+      },
+      "children": []
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "consolePanel",
+        "Position": [
+          2.4000000000000004,
+          0.9999999999999826,
+          43.400000000000006,
+          7.384615384615385
+        ],
+        "Units": "characters",
+        "Visible": "on",
+        "BackgroundColor": [
+          0.8941176470588236,
+          0.9411764705882353,
+          0.9019607843137255
+        ],
+        "ForegroundColor": [
+          0.0784313725490196,
+          0.16862745098039217,
+          0.5490196078431373
+        ],
+        "FontName": "Calibri",
+        "FontSize": 12.0,
+        "FontWeight": "bold",
+        "Title": "Console"
+      },
+      "children": [
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "Console",
+            "Position": [
+              1.5714285714285716,
+              1.384615384615389,
+              40.00000000000001,
+              4.1764705882352935
+            ],
+            "Units": "characters",
+            "String": "Please select a network file containing node names, interaction weights and basal values.",
+            "Style": "text",
+            "BackgroundColor": [
+              0.8941176470588236,
+              0.9411764705882353,
+              0.9019607843137255
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0,
+            "FontWeight": "normal",
+            "HorizontalAlignment": "left"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "uipanel",
+      "properties": {
+        "Tag": "userControlsPanel",
+        "Position": [
+          48.400000000000006,
+          1.0153846153845751,
+          15.599999999999994,
+          7.384615384615384
+        ],
+        "Units": "characters",
+        "Visible": "on",
+        "BackgroundColor": [
+          0.8941176470588236,
+          0.9411764705882353,
+          0.9019607843137255
+        ],
+        "ForegroundColor": [
+          0.0784313725490196,
+          0.16862745098039217,
+          0.5490196078431373
+        ],
+        "FontName": "Calibri",
+        "FontSize": 12.0,
+        "FontWeight": "bold",
+        "Title": []
+      },
+      "children": [
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "Ok",
+            "Position": [
+              1.3428571428571439,
+              3.8959424863062666,
+              13.000000000000007,
+              2.9411764705882333
+            ],
+            "Units": "characters",
+            "String": "Ok",
+            "Style": "pushbutton",
+            "BackgroundColor": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0,
+            "FontWeight": "bold"
+          },
+          "children": []
+        },
+        {
+          "type": "uicontrol",
+          "properties": {
+            "Tag": "Help",
+            "Position": [
+              1.4000000000000008,
+              0.42987913788997667,
+              13.000000000000007,
+              2.9411764705882364
+            ],
+            "Units": "characters",
+            "String": "Help",
+            "Style": "pushbutton",
+            "BackgroundColor": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "ForegroundColor": [
+              0.0784313725490196,
+              0.16862745098039217,
+              0.5490196078431373
+            ],
+            "FontName": "Calibri",
+            "FontSize": 11.0,
+            "FontWeight": "bold"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "ATLANTIS_text",
+        "Position": [
+          36.4,
+          12.630769230769193,
+          27.6,
+          2.2307692307692335
+        ],
+        "Units": "characters",
+        "String": "A T L A N T I S",
+        "Style": "text",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "ForegroundColor": [
+          0.0784313725490196,
+          0.16862745098039217,
+          0.5490196078431373
+        ],
+        "FontName": "Calibri",
+        "FontSize": 18.0,
+        "FontWeight": "bold",
+        "HorizontalAlignment": "right"
+      },
+      "children": []
+    },
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "BrowseFile",
+        "Position": [
+          2.8285714285714287,
+          9.504977375565556,
+          52.42857142857144,
+          1.5294117647058822
+        ],
+        "Units": "characters",
+        "String": "Browse file...",
+        "Style": "text",
+        "Value": 0.0,
+        "Min": 0.0,
+        "Max": 1.0,
+        "Enable": "on",
+        "Visible": "on",
+        "BackgroundColor": [
+          0.8941176470588236,
+          0.9411764705882353,
+          0.9019607843137255
+        ],
+        "ForegroundColor": [
+          0.0784313725490196,
+          0.16862745098039217,
+          0.5490196078431373
+        ],
+        "FontName": "Calibri",
+        "FontSize": 12.0,
+        "FontWeight": "normal",
+        "HorizontalAlignment": "left",
+        "TooltipString": []
+      },
+      "children": []
+    },
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Tag": "BrowseNetworkFile",
+        "Position": [
+          55.800000000000004,
+          9.246153846153808,
+          8.199999999999996,
+          2.384615384615385
+        ],
+        "Units": "characters",
+        "String": [],
+        "Style": "pushbutton",
+        "Value": 0.0,
+        "Min": 0.0,
+        "Max": 1.0,
+        "Enable": "on",
+        "Visible": "on",
+        "BackgroundColor": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "ForegroundColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "FontName": "Calibri",
+        "FontSize": 8.0,
+        "FontWeight": "bold",
+        "HorizontalAlignment": "center",
+        "TooltipString": []
+      },
+      "children": []
+    }
+  ]
+}

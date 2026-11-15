@@ -1,0 +1,156 @@
+[
+  {
+    "network": "giacomantonio5.json",
+    "horizon": 4,
+    "stage": "forward",
+    "compiler": "release",
+    "marked_state": "01001",
+    "marked_inputs": 28,
+    "logical_qubits": 25,
+    "depth": 3900,
+    "two_qubit_gates": 1454
+  },
+  {
+    "network": "giacomantonio5.json",
+    "horizon": 4,
+    "stage": "forward",
+    "compiler": "optimized",
+    "marked_state": "01001",
+    "marked_inputs": 28,
+    "logical_qubits": 25,
+    "depth": 1284,
+    "two_qubit_gates": 603
+  },
+  {
+    "network": "giacomantonio5.json",
+    "horizon": 4,
+    "stage": "suppression",
+    "compiler": "release",
+    "marked_state": "01001",
+    "marked_inputs": 28,
+    "logical_qubits": 25,
+    "depth": 22202,
+    "two_qubit_gates": 8238
+  },
+  {
+    "network": "giacomantonio5.json",
+    "horizon": 4,
+    "stage": "suppression",
+    "compiler": "optimized",
+    "marked_state": "01001",
+    "marked_inputs": 28,
+    "logical_qubits": 25,
+    "depth": 8168,
+    "two_qubit_gates": 3739
+  },
+  {
+    "network": "giacomantonio5.json",
+    "horizon": 4,
+    "stage": "counting",
+    "compiler": "release",
+    "marked_state": "01001",
+    "marked_inputs": 28,
+    "logical_qubits": 26,
+    "depth": 74960,
+    "two_qubit_gates": 21330
+  },
+  {
+    "network": "giacomantonio5.json",
+    "horizon": 4,
+    "stage": "counting",
+    "compiler": "optimized",
+    "marked_state": "01001",
+    "marked_inputs": 28,
+    "logical_qubits": 26,
+    "depth": 3688,
+    "two_qubit_gates": 1708
+  },
+  {
+    "network": "giacomantonio5.json",
+    "horizon": 4,
+    "stage": "counting_p3",
+    "compiler": "optimized",
+    "marked_state": "01001",
+    "marked_inputs": 28,
+    "logical_qubits": 28,
+    "depth": 27131,
+    "two_qubit_gates": 13090
+  },
+  {
+    "network": "fpga-case4-subset15.csv",
+    "horizon": 3,
+    "stage": "forward",
+    "compiler": "release",
+    "marked_state": "010101101011111",
+    "marked_inputs": 480,
+    "logical_qubits": 60,
+    "depth": 3507,
+    "two_qubit_gates": 2309
+  },
+  {
+    "network": "fpga-case4-subset15.csv",
+    "horizon": 3,
+    "stage": "forward",
+    "compiler": "optimized",
+    "marked_state": "010101101011111",
+    "marked_inputs": 480,
+    "logical_qubits": 60,
+    "depth": 857,
+    "two_qubit_gates": 1020
+  },
+  {
+    "network": "fpga-case4-subset15.csv",
+    "horizon": 3,
+    "stage": "suppression",
+    "compiler": "release",
+    "marked_state": "010101101011111",
+    "marked_inputs": 480,
+    "logical_qubits": 60,
+    "depth": 14651,
+    "two_qubit_gates": 11242
+  },
+  {
+    "network": "fpga-case4-subset15.csv",
+    "horizon": 3,
+    "stage": "suppression",
+    "compiler": "optimized",
+    "marked_state": "010101101011111",
+    "marked_inputs": 480,
+    "logical_qubits": 60,
+    "depth": 9210,
+    "two_qubit_gates": 7787
+  },
+  {
+    "network": "fpga-case4-subset15.csv",
+    "horizon": 3,
+    "stage": "counting",
+    "compiler": "release",
+    "marked_state": "010101101011111",
+    "marked_inputs": 480,
+    "logical_qubits": 61,
+    "depth": 159861,
+    "two_qubit_gates": 50467
+  },
+  {
+    "network": "fpga-case4-subset15.csv",
+    "horizon": 3,
+    "stage": "counting",
+    "compiler": "optimized",
+    "marked_state": "010101101011111",
+    "marked_inputs": 480,
+    "logical_qubits": 61,
+    "depth": 5685,
+    "two_qubit_gates": 3909
+  },
+  {
+    "network": "fpga-case4-subset15.csv",
+    "horizon": 3,
+    "stage": "counting_p3",
+    "compiler": "optimized",
+    "marked_state": "010101101011111",
+    "marked_inputs": 480,
+    "logical_qubits": 63,
+    "depth": 40294,
+    "two_qubit_gates": 27477
+  }
+]

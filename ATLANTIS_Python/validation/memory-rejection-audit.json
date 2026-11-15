@@ -1,0 +1,20 @@
+{
+  "attempts": 20,
+  "amplitude_bytes": 536870912,
+  "guarded_bytes": 1610612736,
+  "budget_bytes": 1073741824,
+  "assessment": {
+    "eligible": false,
+    "reasons": [
+      "Statevector plus 3x working allowance exceeds 1024 MiB"
+    ],
+    "logical_evolution_qubits": 25,
+    "logical_counting_qubits": 0,
+    "circuit_qubits": 25,
+    "statevector_bytes_lower_bound": 536870912,
+    "anf_terms": null,
+    "transpiled_depth": null,
+    "transpiled_width": null,
+    "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+  }
+}

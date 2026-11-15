@@ -1,0 +1,94 @@
+{
+  "type": "figure",
+  "properties": {
+    "Units": "characters",
+    "Position": [
+      135.85714285714286,
+      68.82352941176471,
+      41.0,
+      8.529411764705884
+    ],
+    "Visible": "on",
+    "Color": [
+      1,
+      1,
+      1
+    ],
+    "Name": "Cancel",
+    "Tag": "figure1"
+  },
+  "children": [
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Units": "characters",
+        "HorizontalAlignment": "center",
+        "Max": 1,
+        "Min": 0,
+        "String": "Cancel Simulation",
+        "Style": "pushbutton",
+        "Value": 0,
+        "Position": [
+          2.4285714285714284,
+          0.8823529411764706,
+          36.0,
+          4.1764705882352935
+        ],
+        "BackgroundColor": [
+          0.94,
+          0.94,
+          0.94
+        ],
+        "ForegroundColor": [
+          1,
+          0,
+          0
+        ],
+        "Enable": "on",
+        "TooltipString": [],
+        "Visible": "on",
+        "Tag": "CancelButton",
+        "FontSize": 16,
+        "FontName": "Calibri",
+        "FontWeight": "normal"
+      },
+      "children": []
+    },
+    {
+      "type": "uicontrol",
+      "properties": {
+        "Units": "characters",
+        "HorizontalAlignment": "right",
+        "Max": 1,
+        "Min": 0,
+        "String": "A T L A N T I S",
+        "Style": "text",
+        "Value": 0,
+        "Position": [
+          10.714285714285714,
+          5.529411764705882,
+          27.57142857142857,
+          2.2941176470588234
+        ],
+        "BackgroundColor": [
+          1,
+          1,
+          1
+        ],
+        "ForegroundColor": [
+          0.0784313725490196,
+          0.16862745098039217,
+          0.5490196078431373
+        ],
+        "Enable": "on",
+        "TooltipString": [],
+        "Visible": "on",
+        "Tag": "text2",
+        "FontSize": 18,
+        "FontName": "Calibri",
+        "FontWeight": "bold"
+      },
+      "children": []
+    }
+  ]
+}

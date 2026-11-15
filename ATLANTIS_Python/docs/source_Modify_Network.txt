@@ -1,0 +1,364 @@
+
+FILE Toolbox\Modify Network\ModifyNetwork.m
+function varargout = ModifyNetwork(varargin)
+gui_Singleton = 1;
+gui_State = struct('gui_Name',       mfilename, ...
+    'gui_Singleton',  gui_Singleton, ...
+    'gui_OpeningFcn', @NetworkModificationMenu_OpeningFcn, ...
+    'gui_OutputFcn',  @NetworkModificationMenu_OutputFcn, ...
+    'gui_LayoutFcn',  [] , ...
+    'gui_Callback',   []);
+if nargin && ischar(varargin{1})
+    gui_State.gui_Callback = str2func(varargin{1});
+end
+if nargout
+    [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
+else
+    gui_mainfcn(gui_State, varargin{:});
+end
+function NetworkModificationMenu_OpeningFcn(hObject, eventdata, handles, varargin)
+handles.output = hObject;
+path = ['Supplementary Functions',filesep, 'Images', filesep];
+OpenFileImage = imread([path, 'OpenFile.jpg']);
+OpenFileImageResize = imresize(OpenFileImage, [20 20]);
+set(handles.BrowseMutations, 'CData', OpenFileImageResize);
+movegui(hObject, 'center');
+enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+updateGraphics;
+guidata(hObject, handles);
+function varargout = NetworkModificationMenu_OutputFcn(hObject, eventdata, handles)
+varargout{1} = handles.output;
+function BrowseMutations_Callback(hObject, eventdata, handles)
+myNetwork = get(0, 'UserData');
+mutationInfo = get(hObject, 'UserData');
+if ~isempty(mutationInfo)
+    choice = questdlg(['You already selected "', mutationInfo,...
+        ' ". Do you want to replace this/these file(s)?'], ...
+        'Exit', 'Yes', 'No', 'No');
+    switch choice
+        case 'Yes'
+            set(hObject, 'UserData', []);
+            if iscell(myNetwork)
+                myNetwork = myNetwork{1}.NetworkBackUp;
+            else
+                myNetwork = myNetwork.NetworkBackUp;
+            end
+        otherwise
+            return;
+    end
+end
+[filenames, pathname] = uigetfile({'*.txt', 'Plain text'; '*.csv',...
+    'Comma seperated values file'},...
+    'Select file containing mutational information'...
+    , 'MultiSelect', 'on');
+if ( pathname == 0 )
+    set(handles.BrowseFile, 'String', 'Browse file...', 'ForegroundColor', [20 43 140]./250);
+    set(handles.Console, 'String', 'File input cancelled by the user');
+    return;
+end
+GenerationMethod = myNetwork.NetworkType;
+if ~iscellstr(filenames)
+    filenames = {filenames};
+end
+bool = 0;
+if numel(filenames) > 1
+    myNetworks = cell(numel(filenames), 1);
+    for i = 1:numel(filenames)
+        tempNetwork = copy(myNetwork);
+        if strcmp(GenerationMethod, 'RulesBased')
+            bool = addMutations_RulesBased(tempNetwork, pathname, filenames{i});
+        else
+            bool = addMutations_WeightsBased(tempNetwork, pathname, filenames{i});
+        end
+        if bool
+            myNetworks{i} = tempNetwork; 
+            clear tempNetwork;
+        else
+            break;
+        end
+    end
+else % IF ONLY MUTATION FILE
+    if strcmp(GenerationMethod, 'RulesBased')
+        bool = addMutations_RulesBased(myNetwork, pathname, filenames{1});
+    else
+        bool = addMutations_WeightsBased(myNetwork, pathname, filenames{1});
+    end
+    myNetworks = myNetwork;
+end
+if bool
+    enableDisableFig(findall(0, 'tag','ModfiyNetworkMenu'), 'off');
+    enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+    uiwait(msgbox('Mutations Succesfully added to the defined network. Press Done to proceed.'));
+    enableDisableFig(findall(0, 'tag','ModfiyNetworkMenu'), 'on');
+    bringToFocus(findall(0, 'tag','ModfiyNetworkMenu'));
+    filenames = joinStr_CellArr(filenames, ' , ');
+    set(handles.BrowseFile, 'String', filenames, 'ForegroundColor', [1 0.3 0.5]);
+    set(handles.Console, 'String', 'Mutations Succesfully added to the defined network. Press Done to proceed.');
+    set(hObject, 'UserData', filenames);
+    setappdata(0, 'MutationFiles', strtrim(strsplit(filenames, ',')));
+    set(0, 'UserData', myNetworks);
+    guidata(hObject, handles);
+else
+    enableDisableFig(findall(0, 'tag','ModfiyNetworkMenu'), 'off');
+    enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+    uiwait(msgbox('Please re-input mutation files.'));
+    enableDisableFig(findall(0, 'tag','ModfiyNetworkMenu'), 'on');
+    bringToFocus(findall(0, 'tag','ModfiyNetworkMenu'));
+    set(handles.Console, 'String', 'Please re-input mutation files.');
+    set(handles.BrowseFile, 'String', 'Browse file...', 'ForegroundColor', [20 43 140]./250);
+end
+function Ok_Callback(hObject, eventdata, handles)
+bool = get(handles.BrowseMutations, 'UserData');
+if bool
+    enableDisableFig(findall(0, 'tag','ModfiyNetworkMenu'), 'off');
+    enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+    uiwait(msgbox('Mutations successfully added.', 'Success'));
+    enableDisableFig(findall(0, 'tag','ModfiyNetworkMenu'), 'on');
+    bringToFocus(findall(0, 'tag','ModfiyNetworkMenu'));
+    setappdata(0, 'DeterministicAnalysis', []);
+    enableATLANTIS;
+    delete(handles.ModfiyNetworkMenu);
+else
+    enableDisableFig(findall(0, 'tag','ModfiyNetworkMenu'), 'off');
+    enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+    uiwait(errordlg('Please select mutation file(s) to proceed.', 'Invalid Input'));
+    enableDisableFig(findall(0, 'tag','ModfiyNetworkMenu'), 'on');
+    bringToFocus(findall(0, 'tag','ModfiyNetworkMenu'));
+end
+function Help_Callback(hObject, eventdata, handles)
+choice = questdlg('Open ATLANTIS GitHub Page?', ...
+    'Help', ...
+    'Yes', 'No', 'No');
+enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+switch choice
+    case 'Yes'
+        url = 'https://github.com/BIRL/ATLANTIS';
+        web(url,'-browser');
+    otherwise
+        return;
+end
+function ModfiyNetworkMenu_CloseRequestFcn(hObject, eventdata, handles)
+choice = questdlg('Close this menu?', ...
+    'Exit', ...
+    'Yes', 'No', 'No');
+switch choice
+    case 'Yes'
+        enableATLANTIS;
+        delete(hObject);
+    otherwise
+        enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+        return;
+end
+
+FILE Toolbox\Modify Network\Logic weigths method\addMutations_WeightsBased.m
+function bool = addMutations_WeightsBased(myNetwork, mutationFilePath, mutationFileName)
+bool = 0;
+try
+    myNetwork.NetworkBackUp = copy(myNetwork);
+    token = importdata(fullfile(mutationFilePath, mutationFileName));
+    if iscell(token)
+        undefined/0;
+    end
+    if isstruct(token)
+        mutationData = token.textdata;
+        mutationType = token.data;
+        linksData = mutationType == 2; % 2 MEANS LINKS
+        NodesList = mutationData(~linksData);
+        mutationValues = mutationType(~linksData);
+        LinksList = mutationData(linksData);
+        isboolean = all((mutationValues == 1) == (mutationValues ~= 0));
+        if ~isboolean
+            undefined/0;
+        end
+        if ~iscellstr(NodesList)
+            undefined/0;
+        end        
+        if ~isempty(LinksList)
+            chk4 = strfind(LinksList, '>');
+            if ~isempty(find(cellfun(@isempty, chk4) == 1, 1))
+                undefined/0;
+            end
+        end
+        basalValues = myNetwork.BasalValues;
+        errorLog = '';
+        if ~isempty(NodesList)
+            [~, mutateNodeIndices] = ismember(cellfun(@lower, NodesList, 'un', 0), cellfun(@lower, myNetwork.NodeNames, 'un', 0));
+            for i = 1:numel(mutateNodeIndices)
+                if mutateNodeIndices(i) ~= 0
+                    if mutationValues(i) == 0
+                        basalValues( mutateNodeIndices(i) ) = -1000;
+                    else
+                        basalValues( mutateNodeIndices(i) ) = 1000;
+                    end
+                else
+                    errorLog = [errorLog, '" ', NodesList, ' -> ', num2str(mutationValues(i)),' " , '];
+                end
+            end
+        end
+        interactionWeights = myNetwork.EdgeWeights;
+        if ~isempty(LinksList)
+            NodePairs = cellfun(@(x) strsplit(x, '>'), LinksList, 'un', 0);
+            sourceNodes = cellfun(@(x) lower(x{1}) , NodePairs, 'un', 0);
+            targetNodes = cellfun(@(x) lower(x{2}) , NodePairs, 'un', 0);
+            [~, sourceNodesIndices] = ismember(cellfun(@lower, sourceNodes, 'un', 0), cellfun(@lower, myNetwork.NodeNames, 'un', 0));
+            [~, targetNodesIndices] = ismember(cellfun(@lower, targetNodes, 'un', 0), cellfun(@lower, myNetwork.NodeNames, 'un', 0));
+            for i = 1:numel(targetNodes)
+                try
+                    if sourceNodesIndices(i) == 0 || targetNodesIndices(i) == 0
+                        undefined/0;
+                    end
+                    r = sourceNodesIndices(i);
+                    c = targetNodesIndices(i);
+                    if interactionWeights(r, c) == 0
+                        undefined/0;
+                    end
+                    interactionWeights(r, c) = 0;
+                catch
+                    errorLog = [errorLog, '" ', sourceNodes{i}, ' > ', targetNodes{i},' "', ' , '];
+                end
+            end
+        end
+        if ~isequal(errorLog,'')
+            choice = questdlg(['Following mutations were not added: ',...
+                errorLog,'. Possibel reasons: 1) Node names in the mutation file are incorrect, 2) Node(s) or link(s) in mutation file not present in the network. Do you want to continue? (Select "No" to reselect the inputs).'], 'Warning', 'Yes', 'No', 'No');
+            switch choice
+                case 'Yes'
+                case 'No'
+                    return;
+            end
+        end
+    else
+        ind = strfind(mutationFileName, '.');
+        extension = mutationFileName(ind:ind + 3);
+        myNetwork.FileName = [strrep(mutationFileName, extension, ''), ' - '];
+        bool = 1;
+        return;
+    end
+catch
+    enableDisableFig(findall(0, 'tag','ModfiyNetworkMenu'), 'off');
+    enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+    uiwait(errordlg('Invalid file input. Please enter a valid file. See help for more information.', 'Invalid input'));
+    enableDisableFig(findall(0, 'tag','ModfiyNetworkMenu'), 'on');
+    return;
+end
+bool = 1;
+myNetwork.NetworkBackUp = copy(myNetwork);
+myNetwork.MutationInfo = token;
+myNetwork.BasalValues = basalValues;
+myNetwork.EdgeWeights = interactionWeights;
+ind = strfind(mutationFileName, '.');
+extension = mutationFileName(ind:ind + 3);
+myNetwork.FileName = [strrep(mutationFileName, extension, ''), ' - '];
+end
+
+FILE Toolbox\Modify Network\Logical expression method\addMutations_RulesBased.m
+function bool = addMutations_RulesBased(myNetwork, mutationFilePath, mutationFileName)
+bool = 0;
+try
+    myNetwork.NetworkBackUp = copy(myNetwork);
+    token = importdata(fullfile(mutationFilePath, mutationFileName));
+    if iscell(token)
+        undefined/0;
+    end
+    if isstruct(token)
+        mutationData = token.textdata;
+        mutationType = token.data;
+        linksData = mutationType == 2; % 2 means links
+        NodesList = mutationData(~linksData);
+        mutationValues = mutationType(~linksData);
+        LinksList = mutationData(linksData); 
+        isboolean = all((mutationValues == 1) == (mutationValues ~= 0));
+        if ~isboolean
+            undefined/0;
+        end
+        if ~iscellstr(NodesList)
+            undefined/0;
+        end
+        if ~isempty(LinksList)
+            chk4 = strfind(LinksList, '>');
+            if ~isempty(find(cellfun(@isempty, chk4) == 1, 1))
+                undefined/0;
+            end
+        end
+        NodeUpdateLogicList = myNetwork.NodeUpdateLogic;
+        errorLog = '';
+        if ~isempty(NodesList)
+            [~, mutateNodeIndices] = ismember(cellfun(@lower, NodesList, 'un', 0), cellfun(@lower, myNetwork.TargetNodeNames));
+            for i = 1:numel(mutateNodeIndices)
+                if mutateNodeIndices(i) ~= 0
+                    currentIndex = mutateNodeIndices(i);
+                    sizeOFoutputs = numel(NodeUpdateLogicList{currentIndex});
+                    NodeUpdateLogicList{currentIndex} = ones(sizeOFoutputs, 1)*mutationValues(i);
+                else
+                    errorLog = [errorLog, '" ', NodesList, ' -> ', num2str(mutationValues(i)),' " , '];
+                end
+            end
+        end
+        sourceNodeNamesList = myNetwork.SourceNodesNames;
+        sourceNodeIndices = myNetwork.SourceNodeIndices;
+        if ~isempty(LinksList)
+            NodePairs = cellfun(@(x) strsplit(x, '>'), LinksList, 'un', 0);
+            sourceNodes = cellfun(@(x) lower(x{1}) , NodePairs, 'un', 0);
+            targetNodes = cellfun(@(x) lower(x{2}) , NodePairs, 'un', 0);
+            [~, targetNodeIndices] = ismember(cellfun(@lower, targetNodes, 'un', 0), cellfun(@lower, myNetwork.TargetNodeNames));
+            for i = 1:numel(targetNodes)
+                try
+                    targetInd = targetNodeIndices(i);
+                    sourceNodesList = sourceNodeNamesList{targetInd};
+                    [~, sourceNodeInd] = ismember(sourceNodes{i}, sourceNodesList);
+                    if targetInd == 0 || sourceNodeInd == 0
+                        undefined/0;
+                    end
+                    logicTableSize = numel(sourceNodesList);
+                    logicTable = truthTableGenerator(logicTableSize);
+                    rowsToDel = logicTable(:, sourceNodeInd) == 1;
+                    NodeUpdateLogicList{targetInd}(rowsToDel) = [];
+                    sourceNodeNamesList{targetInd}(sourceNodeInd) = [];
+                    sourceNodeIndices{targetInd}(sourceNodeInd) = [];
+                catch
+                    errorLog = [errorLog, '" ', sourceNodes{i}, ' > ', targetNodes{i},' "', ' , '];
+                end
+            end
+        end
+        if ~isequal(errorLog,'')
+            errorLog = joinStr_CellArr(errorLog, ' ');
+            choice = questdlg(['Following mutations were not added: ',...
+                errorLog,'. Possibel reasons: 1) Node names in the mutation file are incorrect, 2) Node(s) or link(s) in mutation file not present in the network. Do you want to continue? (Select "No" to reselect the inputs).'], 'Warning', 'Yes', 'No', 'No');
+            switch choice
+                case 'Yes'
+                case 'No'
+                    return;
+            end
+        end
+    else
+        ind = strfind(mutationFileName, '.');
+        extension = mutationFileName(ind:ind + 3);
+        myNetwork.FileName = [strrep(mutationFileName, extension, ''), ' - '];
+        bool = 1;
+        return;
+    end
+catch
+    enableDisableFig(findall(0, 'tag','ModfiyNetworkMenu'), 'off');
+    enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+    uiwait(errordlg('Invalid file input. Please enter a valid file. See help for more information.', 'Invalid input'));
+    enableDisableFig(findall(0, 'tag','ModfiyNetworkMenu'), 'on');
+    return;
+end
+bool = 1;
+myNetwork.NetworkBackUp = copy(myNetwork);
+myNetwork.MutationInfo = token;
+myNetwork.SourceNodesNames = sourceNodeNamesList;
+myNetwork.SourceNodeIndices = sourceNodeIndices;
+myNetwork.NodeUpdateLogic = NodeUpdateLogicList;
+ind = strfind(mutationFileName, '.');
+extension = mutationFileName(ind:ind + 3);
+myNetwork.FileName = [strrep(mutationFileName, extension, ''), ' - '];
+    function combinations = truthTableGenerator( N )
+        L = 2^N;
+        combinations = zeros(L,N);
+        for s = 1:N
+            temp = [zeros(L/2^s,1); ones(L/2^s,1)];
+            combinations(:,s) = repmat(temp,2^(s-1),1);
+        end
+    end
+end

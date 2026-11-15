@@ -1,0 +1,342 @@
+{
+  "random": {
+    "runs": 24,
+    "statuses": {
+      "inconclusive_no_new_candidate": 20,
+      "complete_qpe_heuristic": 4
+    },
+    "exact_matches": 24,
+    "missed_attractors": 0,
+    "false_attractors": 0,
+    "duplicate_discoveries": 0,
+    "duplicate_shots": 352,
+    "count_calls": 40,
+    "count_bias": -0.1,
+    "count_mae": 0.95,
+    "count_rmse": 1.224744871391589,
+    "heuristic_false_completions": 0,
+    "descriptive_false_completion_wilson95": [
+      0,
+      0.13797620467497365
+    ],
+    "paired_128": {
+      "0": {
+        "runs": 6,
+        "median_wall_s": 6.046425999957137,
+        "total_transpilation_s": 2.2424848997034132,
+        "total_simulation_s": 37.611554000061005,
+        "total_counting_s": 43.97417550068349,
+        "two_qubit_gates": 163900,
+        "exact_matches": 6
+      },
+      "2": {
+        "runs": 6,
+        "median_wall_s": 6.679722849978134,
+        "total_transpilation_s": 11.519418499665335,
+        "total_simulation_s": 32.52039199951105,
+        "total_counting_s": 46.78242069995031,
+        "two_qubit_gates": 152056,
+        "exact_matches": 6
+      }
+    }
+  },
+  "longer": {
+    "runs": 12,
+    "statuses": {
+      "complete_qpe_heuristic": 12
+    },
+    "exact_matches": 12,
+    "missed_attractors": 0,
+    "false_attractors": 0,
+    "duplicate_discoveries": 0,
+    "duplicate_shots": 194,
+    "count_calls": 32,
+    "count_bias": 0.25,
+    "count_mae": 0.25,
+    "count_rmse": 0.5,
+    "heuristic_false_completions": 0,
+    "descriptive_false_completion_wilson95": [
+      0,
+      0.24249400665523077
+    ],
+    "paired_128": {
+      "0": {
+        "runs": 3,
+        "median_wall_s": 4.258355500176549,
+        "total_transpilation_s": 1.5002282003406435,
+        "total_simulation_s": 22.267451799707487,
+        "total_counting_s": 27.659248300129548,
+        "two_qubit_gates": 123868,
+        "exact_matches": 3
+      },
+      "2": {
+        "runs": 3,
+        "median_wall_s": 4.356841899920255,
+        "total_transpilation_s": 8.944755299948156,
+        "total_simulation_s": 18.97837520088069,
+        "total_counting_s": 31.276673999847844,
+        "two_qubit_gates": 116740,
+        "exact_matches": 3
+      }
+    }
+  },
+  "adversarial": {
+    "runs": 16,
+    "statuses": {
+      "inconclusive_conflicting_stop_estimates": 2,
+      "inconclusive_counting": 14
+    },
+    "exact_matches": 0,
+    "missed_attractors": 16,
+    "false_attractors": 0,
+    "duplicate_discoveries": 0,
+    "duplicate_shots": 0,
+    "count_calls": 18,
+    "count_bias": 0.3333333333333333,
+    "count_mae": 1,
+    "count_rmse": 1.0,
+    "heuristic_false_completions": 0,
+    "descriptive_false_completion_wilson95": [
+      0,
+      0.1936076805344279
+    ],
+    "paired_128": {
+      "0": {
+        "runs": 4,
+        "median_wall_s": 0.8120860999915749,
+        "total_transpilation_s": 0.17280389973893762,
+        "total_simulation_s": 2.237066099885851,
+        "total_counting_s": 3.1209422997199,
+        "two_qubit_gates": 12272,
+        "exact_matches": 0
+      },
+      "2": {
+        "runs": 4,
+        "median_wall_s": 0.8183999499306083,
+        "total_transpilation_s": 0.9419674000237137,
+        "total_simulation_s": 1.6443336997181177,
+        "total_counting_s": 3.2422181002330035,
+        "two_qubit_gates": 10779,
+        "exact_matches": 0
+      }
+    }
+  },
+  "low_shots": {
+    "runs": 8,
+    "statuses": {
+      "complete_qpe_heuristic": 4,
+      "inconclusive_counting": 1,
+      "inconclusive_conflicting_stop_estimates": 3
+    },
+    "exact_matches": 0,
+    "missed_attractors": 8,
+    "false_attractors": 0,
+    "duplicate_discoveries": 0,
+    "duplicate_shots": 0,
+    "count_calls": 15,
+    "count_bias": 1,
+    "count_mae": 1,
+    "count_rmse": 1.0,
+    "heuristic_false_completions": 4,
+    "descriptive_false_completion_wilson95": [
+      0.2152160622138829,
+      0.7847839377861171
+    ],
+    "paired_128": {}
+  },
+  "guarded_low_shots": {
+    "runs": 8,
+    "statuses": {
+      "inconclusive_coverage_evidence": 8
+    },
+    "exact_matches": 0,
+    "missed_attractors": 8,
+    "false_attractors": 0,
+    "duplicate_discoveries": 0,
+    "duplicate_shots": 0,
+    "count_calls": 8,
+    "count_bias": 1,
+    "count_mae": 1,
+    "count_rmse": 1.0,
+    "heuristic_false_completions": 0,
+    "descriptive_false_completion_wilson95": [
+      0,
+      0.3244075648838681
+    ],
+    "paired_128": {}
+  },
+  "guarded_stress": {
+    "runs": 16,
+    "statuses": {
+      "inconclusive_coverage_evidence": 10,
+      "inconclusive_counting": 6
+    },
+    "exact_matches": 0,
+    "missed_attractors": 16,
+    "false_attractors": 0,
+    "duplicate_discoveries": 0,
+    "duplicate_shots": 0,
+    "count_calls": 16,
+    "count_bias": 0.25,
+    "count_mae": 1,
+    "count_rmse": 1.0,
+    "heuristic_false_completions": 0,
+    "descriptive_false_completion_wilson95": [
+      0,
+      0.1936076805344279
+    ],
+    "paired_128": {}
+  },
+  "guarded_stress_p2": {
+    "runs": 4,
+    "statuses": {
+      "inconclusive_coverage_evidence": 4
+    },
+    "exact_matches": 0,
+    "missed_attractors": 4,
+    "false_attractors": 0,
+    "duplicate_discoveries": 0,
+    "duplicate_shots": 0,
+    "count_calls": 4,
+    "count_bias": 1,
+    "count_mae": 1,
+    "count_rmse": 1.0,
+    "heuristic_false_completions": 0,
+    "descriptive_false_completion_wilson95": [
+      0,
+      0.48989083645458353
+    ],
+    "paired_128": {}
+  },
+  "guarded_stress_p3": {
+    "runs": 4,
+    "statuses": {
+      "complete_qpe_heuristic": 4
+    },
+    "exact_matches": 4,
+    "missed_attractors": 0,
+    "false_attractors": 0,
+    "duplicate_discoveries": 0,
+    "duplicate_shots": 49,
+    "count_calls": 12,
+    "count_bias": -0.3333333333333333,
+    "count_mae": 0.3333333333333333,
+    "count_rmse": 0.5773502691896257,
+    "heuristic_false_completions": 0,
+    "descriptive_false_completion_wilson95": [
+      0,
+      0.48989083645458353
+    ],
+    "paired_128": {}
+  },
+  "additional": {
+    "runs": 12,
+    "statuses": {
+      "complete_qpe_heuristic": 12
+    },
+    "exact_matches": 12,
+    "missed_attractors": 0,
+    "false_attractors": 0,
+    "duplicate_discoveries": 0,
+    "duplicate_shots": 0,
+    "count_calls": 24,
+    "count_bias": 0,
+    "count_mae": 0,
+    "count_rmse": 0.0,
+    "heuristic_false_completions": 0,
+    "descriptive_false_completion_wilson95": [
+      0,
+      0.24249400665523077
+    ],
+    "paired_128": {
+      "0": {
+        "runs": 3,
+        "median_wall_s": 4.08454619999975,
+        "total_transpilation_s": 0.8782097999937832,
+        "total_simulation_s": 12.116025200346485,
+        "total_counting_s": 15.338727500289679,
+        "two_qubit_gates": 70973,
+        "exact_matches": 3
+      },
+      "2": {
+        "runs": 3,
+        "median_wall_s": 4.416959100170061,
+        "total_transpilation_s": 4.582862399984151,
+        "total_simulation_s": 10.337885400513187,
+        "total_counting_s": 16.84451840026304,
+        "two_qubit_gates": 66533,
+        "exact_matches": 3
+      }
+    }
+  },
+  "guarded_longer": {
+    "runs": 12,
+    "statuses": {
+      "complete_qpe_heuristic": 12
+    },
+    "exact_matches": 12,
+    "missed_attractors": 0,
+    "false_attractors": 0,
+    "duplicate_discoveries": 0,
+    "duplicate_shots": 194,
+    "count_calls": 32,
+    "count_bias": 0.25,
+    "count_mae": 0.25,
+    "count_rmse": 0.5,
+    "heuristic_false_completions": 0,
+    "descriptive_false_completion_wilson95": [
+      0,
+      0.24249400665523077
+    ],
+    "paired_128": {
+      "0": {
+        "runs": 3,
+        "median_wall_s": 4.083438100060448,
+        "total_transpilation_s": 1.5447862993460149,
+        "total_simulation_s": 20.434423399390653,
+        "total_counting_s": 25.703566000098363,
+        "two_qubit_gates": 123868,
+        "exact_matches": 3
+      },
+      "2": {
+        "runs": 3,
+        "median_wall_s": 4.370349699864164,
+        "total_transpilation_s": 6.904137899400666,
+        "total_simulation_s": 15.216406999854371,
+        "total_counting_s": 24.56485650036484,
+        "two_qubit_gates": 116740,
+        "exact_matches": 3
+      }
+    }
+  },
+  "v023_stage_breakdown": [
+    {
+      "task": "search",
+      "level": 0,
+      "transpile": 0.010508449980989099,
+      "execute": 0.03103595005813986,
+      "wall": 0.047415849985554814
+    },
+    {
+      "task": "search",
+      "level": 2,
+      "transpile": 0.01625450002029538,
+      "execute": 0.02876434999052435,
+      "wall": 0.04905050003435463
+    },
+    {
+      "task": "qpe",
+      "level": 0,
+      "transpile": 0.02873075008392334,
+      "execute": 0.5921358501072973,
+      "wall": 0.7147153998957947
+    },
+    {
+      "task": "qpe",
+      "level": 2,
+      "transpile": 0.16008055000565946,
+      "execute": 0.5141100998735055,
+      "wall": 0.7957169499713928
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+[
+  {
+    "archive_row_one_based": 328,
+    "transient": 64,
+    "period": 140,
+    "first_repeat": 204,
+    "fate": "Abnormal Proliferation + Metastasis"
+  },
+  {
+    "archive_row_one_based": 511,
+    "transient": 16,
+    "period": 240,
+    "first_repeat": 256,
+    "fate": "Abnormal Proliferation"
+  },
+  {
+    "archive_row_one_based": 2158,
+    "transient": 128,
+    "period": 210,
+    "first_repeat": 338,
+    "fate": "Abnormal Proliferation + Metastasis"
+  },
+  {
+    "archive_row_one_based": 2199,
+    "transient": 14,
+    "period": 210,
+    "first_repeat": 224,
+    "fate": "Quiescence"
+  },
+  {
+    "archive_row_one_based": 2336,
+    "transient": 12,
+    "period": 210,
+    "first_repeat": 222,
+    "fate": "Abnormal Proliferation"
+  },
+  {
+    "archive_row_one_based": 3251,
+    "transient": 16,
+    "period": 210,
+    "first_repeat": 226,
+    "fate": "Quiescence"
+  },
+  {
+    "archive_row_one_based": 3269,
+    "transient": 20,
+    "period": 240,
+    "first_repeat": 260,
+    "fate": "Abnormal Proliferation"
+  },
+  {
+    "archive_row_one_based": 3400,
+    "transient": 20,
+    "period": 240,
+    "first_repeat": 260,
+    "fate": "Abnormal Proliferation"
+  },
+  {
+    "archive_row_one_based": 3720,
+    "transient": 86,
+    "period": 120,
+    "first_repeat": 206,
+    "fate": "Metastasis"
+  },
+  {
+    "archive_row_one_based": 4236,
+    "transient": 50,
+    "period": 210,
+    "first_repeat": 260,
+    "fate": "Abnormal Proliferation + Metastasis"
+  },
+  {
+    "archive_row_one_based": 4329,
+    "transient": 68,
+    "period": 140,
+    "first_repeat": 208,
+    "fate": "Metastasis"
+  },
+  {
+    "archive_row_one_based": 5002,
+    "transient": 13,
+    "period": 240,
+    "first_repeat": 253,
+    "fate": "Abnormal Proliferation"
+  },
+  {
+    "archive_row_one_based": 5162,
+    "transient": 72,
+    "period": 210,
+    "first_repeat": 282,
+    "fate": "Abnormal Proliferation + Metastasis"
+  },
+  {
+    "archive_row_one_based": 5640,
+    "transient": 61,
+    "period": 140,
+    "first_repeat": 201,
+    "fate": "Abnormal Proliferation + Metastasis"
+  },
+  {
+    "archive_row_one_based": 6179,
+    "transient": 13,
+    "period": 240,
+    "first_repeat": 253,
+    "fate": "Quiescence"
+  },
+  {
+    "archive_row_one_based": 6554,
+    "transient": 19,
+    "period": 240,
+    "first_repeat": 259,
+    "fate": "Quiescence"
+  },
+  {
+    "archive_row_one_based": 6920,
+    "transient": 59,
+    "period": 210,
+    "first_repeat": 269,
+    "fate": "Abnormal Proliferation + Metastasis"
+  },
+  {
+    "archive_row_one_based": 7314,
+    "transient": 19,
+    "period": 240,
+    "first_repeat": 259,
+    "fate": "Abnormal Proliferation"
+  },
+  {
+    "archive_row_one_based": 7932,
+    "transient": 38,
+    "period": 210,
+    "first_repeat": 248,
+    "fate": "Abnormal Proliferation + Metastasis"
+  },
+  {
+    "archive_row_one_based": 8038,
+    "transient": 50,
+    "period": 210,
+    "first_repeat": 260,
+    "fate": "Abnormal Proliferation + Metastasis"
+  },
+  {
+    "archive_row_one_based": 8805,
+    "transient": 30,
+    "period": 210,
+    "first_repeat": 240,
+    "fate": "Abnormal Proliferation + Metastasis"
+  },
+  {
+    "archive_row_one_based": 9192,
+    "transient": 57,
+    "period": 210,
+    "first_repeat": 267,
+    "fate": "Abnormal Proliferation + Metastasis"
+  },
+  {
+    "archive_row_one_based": 9758,
+    "transient": 11,
+    "period": 240,
+    "first_repeat": 251,
+    "fate": "Abnormal Proliferation"
+  }
+]

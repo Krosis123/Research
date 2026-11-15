@@ -1,0 +1,1967 @@
+
+FILE Toolbox\Analyses\GenerateStates.m
+function varargout = GenerateStates(varargin)
+gui_Singleton = 1;
+gui_State = struct('gui_Name',       mfilename, ...
+                   'gui_Singleton',  gui_Singleton, ...
+                   'gui_OpeningFcn', @GenerateStates_OpeningFcn, ...
+                   'gui_OutputFcn',  @GenerateStates_OutputFcn, ...
+                   'gui_LayoutFcn',  [] , ...
+                   'gui_Callback',   []);
+if nargin && ischar(varargin{1})
+    gui_State.gui_Callback = str2func(varargin{1});
+end
+if nargout
+    [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
+else
+    gui_mainfcn(gui_State, varargin{:});
+end
+function GenerateStates_OpeningFcn(hObject, eventdata, handles, varargin)
+handles.output = hObject;
+tags = {'ATLANTIS_Main', 'DeterministicAnalysisMenu', 'ProbabilisticAnalysisMenu'};
+for i = 1:numel(tags)
+    try
+        enableDisableFig(findall(0, 'tag', tags{i}), 'off');
+    catch 
+    end
+end
+if ~isempty(findall(0,'Name', 'ATLANTIS - Probabilistic Analysis'))
+    set(handles.PruneStateSpace, 'Enable', 'on');
+    setappdata(0, 'Analysis', 'PA');
+end
+if ~isempty(findall(0,'Name', 'ATLANTIS - Deterministic Analysis'))
+    set(handles.PruneStateSpace, 'Visible', 'off');
+    setappdata(0, 'Analysis', 'DA');
+end
+movegui(hObject, 'center');
+guidata(hObject, handles);
+function varargout = GenerateStates_OutputFcn(hObject, eventdata, handles) 
+varargout{1} = handles.output;
+function AllCombinations_Callback(hObject, eventdata, handles)
+set(handles.EditSampleSize, 'Enable', 'off');
+if ~isempty(findall(0,'Name', 'ATLANTIS - Probabilistic Analysis'))
+    set(handles.PruneStateSpace, 'Enable', 'on');
+    set(handles.PruneStateSpace, 'Value', 0);
+end
+function RandomSample_Callback(hObject, eventdata, handles)
+set(handles.EditSampleSize, 'Enable', 'on');
+if ~isempty(findall(0,'Name', 'ATLANTIS - Probabilistic Analysis'))
+    set(handles.PruneStateSpace, 'Value', 1);
+    set(handles.PruneStateSpace, 'Enable', 'inactive');
+end
+function Ok_Callback(hObject, eventdata, handles)
+if strcmp(getappdata(0, 'Analysis'), 'PA');
+    tag = 'ProbabilisticAnalysisMenu';
+elseif strcmp(getappdata(0, 'Analysis'), 'DA');
+    tag = 'DeterministicAnalysisMenu';
+end
+myNetwork = get(0, 'UserData');
+generateAll = get(handles.AllCombinations, 'Value');
+if generateAll
+    [bool, memReq, memAvail] = isMemorySufficient(2^myNetwork.NodeCount * myNetwork.NodeCount);
+    if bool
+        generate_StatesCombinations(myNetwork);
+        if ~isempty(findall(0,'Name', 'ATLANTIS - Probabilistic Analysis')) && get(handles.PruneStateSpace, 'Value');
+            myNetwork.PruneStateSpace = 1;
+        else
+            myNetwork.PruneStateSpace = 0;
+        end
+        set(0, 'UserData', myNetwork);
+        enableDisableFig(findall(0, 'tag',tag), 'off');
+        enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+        enableDisableFig(findall(0, 'tag','GenerateStates'), 'off');
+        uiwait(msgbox('All possible state combinations created.'));
+        enableDisableFig(findall(0, 'tag',tag), 'on');
+        enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+        bringToFocus(findall(0, 'tag', tag));
+        guidata(hObject, handles);
+        delete(GenerateStates);
+    else
+        errormessage = ['Memory required: ', num2str(memReq/10e6), ' mb. Memory available: ', num2str(memAvail/10e6), ' mb. Consider generating specific number of states instead.'];
+        enableDisableFig(findall(0, 'tag',tag), 'off');
+        enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+        uiwait(errordlg(errormessage, 'Insufficient memory'));
+        enableDisableFig(findall(0, 'tag',tag), 'off');
+        enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+        bringToFocus(findall(0, 'tag', 'GenerateStates'));
+    end
+else
+    sampleSize = str2num(get(handles.EditSampleSize, 'String'));
+    if isempty(sampleSize) || size(sampleSize, 1) > 1 || size(sampleSize, 2) > 1
+        uiwait(errordlg('Invalid input. Please enter only numeric characters', 'Invalid input'));
+        return;
+    end
+    if sampleSize <= 0
+        uiwait(errordlg('Invalid input. Sample size cannot be less than or equal to 0.', 'Invalid input'));
+        return;
+    end
+    if sampleSize > 2^myNetwork.NodeCount
+        errormessage = ['Sample size entered is larger than total number of states' , ' (i.e. ', num2str(2^myNetwork.NodeCount) ,')','. Enter a number smaller than total number of states.'];
+        uiwait(errordlg(errormessage, 'Invalid input'));
+        return;
+    end
+    set(handles.EditSampleSize, 'String', sampleSize);
+    [bool, memReq, memAvail] = isMemorySufficient(sampleSize * myNetwork.NodeCount);
+    if bool
+        networkStateList = generate_StateCombinations_randomSampling(myNetwork, sampleSize);
+        myNetwork.NetworkStateList = networkStateList;
+        if ~isempty(findall(0,'Name', 'ATLANTIS - Probabilistic Analysis')) && get(handles.PruneStateSpace, 'Value');
+            myNetwork.PruneStateSpace = 1;
+        else
+            myNetwork.PruneStateSpace = 0;
+        end
+        set(0, 'UserData', myNetwork);
+        enableDisableFig(findall(0, 'tag',tag), 'off');
+        enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+        enableDisableFig(findall(0, 'tag','GenerateStates'), 'off');
+        uiwait(msgbox('All possible state combinations created.'));
+        enableDisableFig(findall(0, 'tag',tag), 'on');
+        enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+        bringToFocus(findall(0, 'tag', tag));
+        guidata(hObject, handles);
+        delete(GenerateStates);
+    else
+        errormessage = ['Memory required: ', num2str(memReq/10e6), ' mb. Memory available: ', num2str(memAvail/10e6), ' mb. Consider generating specific number of states instead.'];
+        enableDisableFig(findall(0, 'tag',tag), 'off');
+        enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+        uiwait(errordlg(errormessage, 'Insufficient memory'));
+        enableDisableFig(findall(0, 'tag',tag), 'off');
+        enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+        bringToFocus(findall(0, 'tag', 'GenerateStates'));
+    end
+end
+myNetwork.MappingResults = [];
+myNetwork.RandomIndicies = [];
+tags = {'DeterministicAnalysisMenu', 'ProbabilisticAnalysisMenu'};
+for i = 1:numel(tags)
+    try
+        enableDisableFig(findall(0, 'tag', tags{i}), 'on');
+        warning('off', 'all');
+        jPeer = get(findall(0, 'tag', tags{i}), 'JavaFrame');
+        jPeer.getAxisComponent.requestFocus;
+        warning('on', 'all');
+    catch 
+    end
+end
+function Help_Callback(hObject, eventdata, handles)
+choice = questdlg('Open ATLANTIS GitHub Page?', ...
+    'Help', ...
+    'Yes', 'No', 'No');
+tags = {'ATLANTIS_Main', 'DeterministicAnalysisMenu', 'ProbabilisticAnalysisMenu'};
+for i = 1:numel(tags)
+    try
+        enableDisableFig(findall(0, 'tag', tags{i}), 'off');
+    catch 
+    end
+end
+switch choice
+    case 'Yes'
+        url = 'https://github.com/BIRL/ATLANTIS';
+        web(url,'-browser');
+    otherwise
+        return;
+end
+function GenerateStates_CloseRequestFcn(hObject, eventdata, handles)
+choice = questdlg('Close this menu?', ...
+                         'Exit', ...
+                         'Yes', 'No', 'No');
+tags = {'ATLANTIS_Main', 'DeterministicAnalysisMenu', 'ProbabilisticAnalysisMenu'};
+for i = 1:numel(tags)
+    try
+        enableDisableFig(findall(0, 'tag', tags{i}), 'off');
+    catch 
+    end
+end
+switch choice
+    case 'Yes'
+        delete(hObject);
+        tags = {'DeterministicAnalysisMenu', 'ProbabilisticAnalysisMenu'};
+        for i = 1:numel(tags)
+            try
+                enableDisableFig(findall(0, 'tag', tags{i}), 'on');
+                warning('off', 'all');
+                jPeer = get(findall(0, 'tag', tags{i}), 'JavaFrame');
+                jPeer.getAxisComponent.requestFocus;
+                warning('on', 'all');
+            catch 
+            end
+        end
+    otherwise
+        return;
+end
+
+FILE Toolbox\Analyses\Deterministic Analysis\classify_Attractors.m
+function bool = classify_Attractors(obj)
+try
+    cellFateDeterminationLogic = obj.CellFateDeterminationLogic;
+    uniqueAttractors = obj.AttractorTable(:,1);
+    partialAttractorList = cellfun(@(a) a(:, obj.OutputNodesIndices),...
+        uniqueAttractors, 'un', 0);
+    upperbound = 0.2;
+    lowerbound = 0.2;
+    [attractorSummaryInFraction, attractorSummaryAsWhole] = ...
+        cellfun(@(a)summarize_AttractorActivity (a, upperbound, ...
+        lowerbound), partialAttractorList, 'un', 0);
+    associatedCellFates = cellfun(@(attr) associate_CellFates...
+        (cellFateDeterminationLogic, attr,  numel(obj.UniqueCellFates)), ...
+        attractorSummaryAsWhole);
+    attractorTable = obj.AttractorTable(:, 1:3);
+    attractorTable = horzcat(attractorTable, associatedCellFates);
+    [uniqueAssociatedCellFates , ~, ~] = unique(associatedCellFates);
+    fatePropensities = cell(numel(uniqueAssociatedCellFates), 1);
+    for i = 1:numel(fatePropensities)
+        fatePropensities{i}  = sum([attractorTable{ismember...
+            (associatedCellFates, uniqueAssociatedCellFates(i)), 3}], 2);
+    end
+    cellFateLandscape        = cell(numel(uniqueAssociatedCellFates), 2);
+    cellFateLandscape(:,1)   = uniqueAssociatedCellFates;
+    cellFateLandscape(:,2)   = fatePropensities;
+    obj.AttractorSummaryInFraction = attractorSummaryInFraction;
+    obj.AttractorSummaryAsWhole    = attractorSummaryAsWhole;
+    obj.AttractorTable             = attractorTable;
+    obj.CellFateLandscape          = flipud(sortCellArr(cellFateLandscape, 2));
+    bool = 1;
+catch
+    bool = 0;
+end
+end
+
+FILE Toolbox\Analyses\Deterministic Analysis\DeterministicAnalysisMenu.m
+function varargout = DeterministicAnalysisMenu(varargin)
+gui_Singleton = 1;
+gui_State = struct('gui_Name',       mfilename, ...
+    'gui_Singleton',  gui_Singleton, ...
+    'gui_OpeningFcn', @DeterministicAnalysisMenu_OpeningFcn, ...
+    'gui_OutputFcn',  @DeterministicAnalysisMenu_OutputFcn, ...
+    'gui_LayoutFcn',  [] , ...
+    'gui_Callback',   []);
+if nargin && ischar(varargin{1})
+    gui_State.gui_Callback = str2func(varargin{1});
+end
+if nargout
+    [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
+else
+    gui_mainfcn(gui_State, varargin{:});
+end
+function DeterministicAnalysisMenu_OpeningFcn(hObject, eventdata, handles, varargin)
+handles.output = hObject;
+path = ['Images', filesep];
+OpenFileImage = imread([path, 'OpenFile.jpg']);
+OpenFileImageResize = imresize(OpenFileImage, [20 20]);
+set(handles.BrowseFixNodeStates, 'CData', OpenFileImageResize);
+set(handles.BrowseCellFateLogic, 'CData', OpenFileImageResize);
+cellFateInfo = getappdata(0, 'CellFateLogic');
+inputNodeStatesInfo = getappdata(0, 'InputNodeStates');
+if ~isempty(cellFateInfo)
+    set(handles.BrowseFile2, 'String', cellFateInfo{2}, 'ForegroundColor', [1 0.3 0.5]);
+end
+if ~isempty(inputNodeStatesInfo)
+    set(handles.BrowseFile1, 'String', inputNodeStatesInfo{2}, 'ForegroundColor', [1 0.3 0.5]);
+end
+movegui(hObject, 'center');
+guidata(hObject, handles);
+function varargout = DeterministicAnalysisMenu_OutputFcn(hObject, eventdata, handles)
+varargout{1} = handles.output;
+function CustomStates_Callback(hObject, eventdata, handles)
+myNetwork = get(0, 'UserData');
+nodeCount = myNetwork.NodeCount;
+networkStateList = myNetwork.NetworkStateList;
+if ~isempty(networkStateList)
+    choice = questdlg('Network state list was already selected. Do you want to modify it?', ...
+        'Warning', 'Yes', 'No', 'No');
+    switch choice
+        case 'Yes'
+        otherwise
+            enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+            return;
+    end
+end
+[filename, pathname] = uigetfile({'*.mat', 'MATLAB data file'; '*.csv',...
+    'Comma seperated values file'},'Select mat file containing network state list');
+if ( pathname == 0 )
+    set(handles.Console, 'String', 'File input cancelled by the user');
+    enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+    return;
+end
+if strfind(filename, '.mat')
+    fileHandle = load(fullfile(pathname, filename));
+    varName = fieldnames(fileHandle);
+    if numel(varName) == 0 || numel(varName) > 1
+        uiwait(errordlg('The selected mat file is either empty or contains multiple variables. Please input mat file containing only one network state list.', 'Invalid mat file'));
+        enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+        return;
+    end
+    stateCombinations = getfield(fileHandle, varName{1});
+    clear fileHandle;
+elseif strfind(filename, '.csv')
+    fileInfo = importdata(fullfile(pathname, filename));
+    if isempty(fileInfo)
+        uiwait(errordlg('The selected csv file is empty. Please input valid csv. Press help for more information.', 'Invalid mat file'));
+        enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+        return;
+    end
+    if iscell(fileInfo)
+        try
+            stateCombinations = fileInfo{2,:, :};
+        catch
+            stateCombinations = [];
+        end
+    else
+        stateCombinations = fileInfo;
+    end 
+end
+try
+    if isempty(stateCombinations)
+        undefined/0;
+    end
+    isboolean = all((stateCombinations == 1) == (stateCombinations ~= 0) == 1);
+    if ~isboolean
+        undefined/0;
+    end
+    clear isboolean;
+    if ~(size(stateCombinations, 2) == nodeCount)
+        undefined/0;
+    end
+    myNetwork.NetworkStateList = stateCombinations;
+    set(0, 'UserData', myNetwork);
+    set(handles.Console, 'String', 'Selected network state list input added to the network.');
+    uiwait(msgbox('Selected network state list input added to the network', 'Success'));
+catch
+    uiwait(errordlg('The selected file is invalid. Possible reasons: 1) No variable in the mat file, 2) is not boolean, 3) variables in state list differ from node count. Please press help for more information on data input.', 'Invalid data input'));
+    set(handles.Console, 'String', 'Invalid user input.');
+    enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+    return;
+end
+function GenerateStates_Callback(hObject, eventdata, handles)
+myNetwork = get(0, 'UserData');
+networkStateList = myNetwork.NetworkStateList;
+if isempty(networkStateList)
+    run GenerateStates.m
+else
+    choice = questdlg('Network state list already generated. Do you want to modify it?', ...
+        'Warning', 'Yes', 'No', 'No');
+    switch choice
+        case 'Yes'
+            GenerateStates;
+        otherwise
+            enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+            return;
+    end
+end
+function BrowseFixNodeStates_Callback(hObject, eventdata, handles)
+fileInfo = getappdata(0, 'InputNodeStates');
+myNetwork = get(0, 'UserData');
+if ~isempty(fileInfo)
+    choice = questdlg(['You already selected "', fileInfo{2},...
+        ' ". Do you want to replace this file?'], ...
+        'Exit', 'Yes', 'No', 'No');
+    switch choice
+        case 'Yes'
+            oldNetworkStateList = getappdata(0, 'NetworkStateList');
+            myNetwork.NetworkStateList = oldNetworkStateList;
+            setappdata(0, 'InputNodeStates', []);
+            set(handles.BrowseFile1, 'String', 'Browse file...', 'ForegroundColor', [20 43 140]./250);
+        otherwise
+            enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+            return;
+    end
+end
+[filename, pathname] = uigetfile({'*.csv','Comma seperated values file';'*.txt', 'Plain text'},...
+                             'Select file containing nodes whose states are to be fixed and the state to be fixed in.');
+if ( pathname == 0 )
+    set(handles.Console, 'String', 'File input cancelled by the user');
+    enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+    return;
+end
+[bool, inputNodes] = fix_NodeStates(myNetwork, fullfile(pathname, filename));
+if bool 
+    set(handles.BrowseFile1, 'String', filename, 'ForegroundColor', [1 0.3 0.5]);
+    set(handles.Console, 'String', 'Specified nodes states successfully fixed.');
+    uiwait(msgbox(['The states of the following nodes: ', joinStr_CellArr(inputNodes, ', '), ' were fixed.'], 'Success'));
+    setappdata(0, 'InputNodeStates', {pathname, filename});
+else
+    set(handles.BrowseFile1, 'String', 'Browse file...', 'ForegroundColor', [20 43 140]./250);
+    set(handles.Console, 'String', 'Invalid file input.');
+    uiwait(errordlg('The selected file is not properly formated. Please enter a valid file or press help for more information on the file formatting.', 'Invalid input'));
+end
+guidata(hObject, handles);
+function BrowseCellFateLogic_Callback(hObject, eventdata, handles)
+fileInfo = getappdata(0, 'CellFateLogic');
+myNetwork = get(0, 'UserData');
+if ~isempty(fileInfo)
+    choice = questdlg(['You already selected "', fileInfo{2},...
+        ' ". Do you want to replace this file?'], ...
+        'Exit', 'Yes', 'No', 'No');
+    switch choice
+        case 'Yes'
+            setappdata(0, 'CellFateLogic', []);
+            myNetwork.CellFateDeterminationLogic = [];
+            set(handles.BrowseFile2, 'String', 'Browse file...', 'ForegroundColor', [20 43 140]./250);
+        otherwise
+            enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+            return;
+    end
+end
+[filename, pathname] = uigetfile({'*.csv','Comma seperated values file'},...
+                             'Select file containing cell fate determination logic.');
+if ( pathname == 0 )
+    set(handles.Console, 'String', 'File input cancelled by the user');
+    enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+    return;
+end
+[bool, logic] = parse_CellFateLogic(myNetwork, filename, pathname);
+if bool 
+    set(handles.BrowseFile2, 'String', filename, 'ForegroundColor', [1 0.3 0.5]);
+    set(handles.Console, 'String', 'Cell fate logic successfully integrated into the network.');
+    uiwait(msgbox('Cell fate logic successfully integrated into the network.', 'Success'));
+    setappdata(0, 'CellFateLogic', {pathname, filename});
+    PathName = myNetwork.ResultFolderName;
+    [~, ~] = mkdir(PathName);
+    networkFileName = getappdata(0, 'NetworkfileName');
+    str =  ' - Cell Fate Logic';
+    FileName = [networkFileName, str, '.csv'];
+    try
+        cell2csv(strcat(PathName, FileName), logic);
+    catch
+    end
+else
+    set(handles.BrowseFile2, 'String', 'Browse file...', 'ForegroundColor', [20 43 140]./250);
+    set(handles.Console, 'String', 'Invalid file input.');
+    uiwait(errordlg('The selected file is not properly formated. Please enter a valid file or press help for more information on the file formatting.', 'Invalid input'));
+end
+guidata(hObject, handles);
+function Ok_Callback(hObject, eventdata, handles)
+myNetwork = get(0, 'UserData');
+if isempty(myNetwork.NetworkStateList)
+    uiwait(errordlg('Network state list missing. Please generate or input custom network state list to proceed.', 'Missing network state list.'));
+    enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+    return;
+end
+attractorSearchDuration = str2num(get(handles.EditSearchDuration, 'String'));
+if isempty(attractorSearchDuration) || size(attractorSearchDuration, 1) > 1 || size(attractorSearchDuration, 2) > 1
+    uiwait(errordlg('Please enter appropiate cycle size value.', 'Missing or Invalid input.'));
+    enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+    return; 
+elseif attractorSearchDuration <= 10
+    uiwait(errordlg('Attractor search duration cannot less than 10. Please enter an appropiate value.', 'Error'));
+    enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+    return;
+elseif attractorSearchDuration > 1000
+    choice = questdlg('Specified attractor search duration is very large. This might make the analysis slower. Do you still continue with this value?', ...
+    'Warning', 'Yes', 'No', 'No');
+    switch choice
+        case 'Yes'
+            myNetwork.AttractorSearchDuration = attractorSearchDuration;
+        otherwise
+            uiwait(msgbox('Please update search duration value.', 'Warning'));
+            enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+            return;
+    end
+else
+    myNetwork.AttractorSearchDuration = attractorSearchDuration;
+end
+inputNodeStatesInfo = getappdata(0, 'InputNodeStates');
+if isempty(inputNodeStatesInfo)
+    choice = questdlg('States of input nodes have not been fixed. Do you want to continue without fixing input node states?', ...
+        'Warning', 'Yes', 'No', 'No');
+    switch choice
+        case 'Yes'
+        otherwise
+            enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+            return;
+    end
+end
+cellFateInfo = getappdata(0, 'CellFateLogic');
+if isempty(cellFateInfo)
+    choice = questdlg('Cell fate logic is missing. Cell fate association with attractors and cell fate landscape plotting will be unavailable. Do you want to continue without entering cell fate logic?', ...
+        'Warning', 'Yes', 'No', 'No');
+    switch choice
+        case 'Yes'
+        otherwise
+            enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+            return;
+    end
+end
+choice = questdlg('Begin deterministic analysis?', ...
+        'Warning', 'Yes', 'No', 'No');
+switch choice
+    case 'Yes'
+        guidata(hObject, handles);
+        set(0, 'UserData', myNetwork);       
+        setappdata(0, 'DeterministicAnalysis', 1);
+    otherwise
+        enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+        return;
+end
+choice = questdlg('Save results after the job(s) is/are completed?', ...
+    'Warning', 'Yes', 'No', 'No');
+switch choice
+    case 'Yes'
+        setappdata(0, 'SaveDeterministicAnalysis', 1);
+    otherwise
+        setappdata(0, 'SaveDeterministicAnalysis', 0);
+end
+delete(handles.DeterministicAnalysisMenu);
+if ~isempty(myNetwork.CellFateDeterminationLogic)
+    attractorList = cellfun(@(a) a(:, myNetwork.OutputNodesIndices), ...
+                num2cell(myNetwork.NetworkStateList, 2), 'un', 0);
+    myNetwork.AssociatedCellFates = cellfun(@(attr) associate_CellFates...
+                (myNetwork.CellFateDeterminationLogic, attr, ...
+                numel(myNetwork.UniqueCellFates)), attractorList); 
+end
+function Help_Callback(hObject, eventdata, handles)
+choice = questdlg('Open ATLANTIS GitHub Page?', ...
+    'Help', ...
+    'Yes', 'No', 'No');
+enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+switch choice
+    case 'Yes'
+        url = 'https://github.com/BIRL/ATLANTIS';
+        web(url,'-browser');
+    otherwise
+        return;
+end
+function DeterministicAnalysisMenu_CloseRequestFcn(hObject, eventdata, handles)
+choice = questdlg('Close this menu?', ...
+    'Exit', 'Yes', 'No', 'No');
+enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+switch choice
+    case 'Yes'
+        setappdata(0, 'DeterministicAnalysis', []);
+        delete(hObject);
+    otherwise
+        return;
+end
+
+FILE Toolbox\Analyses\Deterministic Analysis\perform_DeterministicAnalysis.m
+function [bool, message] = perform_DeterministicAnalysis(myNetwork, totalProgress)
+message = '';
+tic;
+networkType = myNetwork.NetworkType;
+if strcmp(networkType, 'WeightsBased')
+    bool = deterministicEngine_WeightsBased(myNetwork, totalProgress);
+else
+    bool = deterministicEngine_RulesBased(myNetwork, totalProgress);
+end
+if isempty(myNetwork.AttractorTable) 
+    message = 'Could not find any attractors. Possible reasons might be; 1) Small attractor search duration value or 2) The input network is not robust and hence does not achieve a stable state. Please retry after increasing the attractor search duration value.';
+    bool = 0;
+    return;
+end
+if bool
+    if ~isempty(myNetwork.CellFateDeterminationLogic)
+        bool = classify_Attractors(myNetwork);
+        if ~bool            
+            message = 'Something went wrong while characterizing attractors. Please reinput cell fate logic or reperform deterministic analysis.';
+            return;
+        end
+    end
+else
+    message = 'Something went wrong. Please reperform deterministic analysis. If this does not work, restart ATLANTIS. If the problem persists please report this issue.';
+    return;
+end
+disp(['total time for DA and cell fate association: ', num2str(toc)]);
+end
+
+FILE Toolbox\Analyses\Probabilistic Analysis\perform_ProbabilisticAnalysis.m
+function [bool, message] = perform_ProbabilisticAnalysis(myNetwork, totalProgress)
+tic;
+message = '';
+networkType = myNetwork.NetworkType;
+if strcmp(networkType, 'WeightsBased')
+    bool = find_StateTransitionProbabilities(myNetwork, totalProgress);
+    disp(['Time Taken to Find State Transitions Probabilities: ', num2str(toc)]);
+    if ~bool
+        message = 'Error while finding state transition probabilities (Possible erors; 1) Your system memory is insufficient. Please reduce the network state list size and try again)';
+        bool = 0;
+        return;
+    end
+    bool = find_SteadyStateProbabilities(myNetwork, totalProgress);
+    disp(['Time Taken to Find Steady State Probabilites: ', num2str(toc)]);
+    if ~bool
+        message = 'Error while finding steady state probabilities';
+        bool = 0;
+        return;
+    end
+else
+    bool = 0;
+    message = 'Probabilistic analysis for rules-based networks is currently unavailable.';
+    return;
+end
+end
+
+FILE Toolbox\Analyses\Probabilistic Analysis\ProbabilisticAnalysisMenu.m
+function varargout = ProbabilisticAnalysisMenu(varargin)
+gui_Singleton = 1;
+gui_State = struct('gui_Name',       mfilename, ...
+                   'gui_Singleton',  gui_Singleton, ...
+                   'gui_OpeningFcn', @ProbabilisticAnalysisMenu_OpeningFcn, ...
+                   'gui_OutputFcn',  @ProbabilisticAnalysisMenu_OutputFcn, ...
+                   'gui_LayoutFcn',  [] , ...
+                   'gui_Callback',   []);
+if nargin && ischar(varargin{1})
+    gui_State.gui_Callback = str2func(varargin{1});
+end
+if nargout
+    [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
+else
+    gui_mainfcn(gui_State, varargin{:});
+end
+function ProbabilisticAnalysisMenu_OpeningFcn(hObject, eventdata, handles, varargin)
+handles.output = hObject;
+path = ['Images', filesep];
+OpenFileImage = imread([path, 'OpenFile.jpg']);
+OpenFileImageResize = imresize(OpenFileImage, [20 20]);
+set(handles.BrowseFixNodeStates, 'CData', OpenFileImageResize);
+set(handles.BrowseCellFateLogic, 'CData', OpenFileImageResize);
+set(handles.BrowseTrajectoryBounds, 'CData', OpenFileImageResize);
+cellFateInfo = getappdata(0, 'CellFateLogic');
+inputNodeStatesInfo = getappdata(0, 'InputNodeStates');
+trajectoryBoundInfo = getappdata(0, 'TrajectoryBounds');
+if ~isempty(inputNodeStatesInfo)
+    set(handles.BrowseFile1, 'String', inputNodeStatesInfo{2}, 'ForegroundColor', [1 0.3 0.5]);
+end
+if ~isempty(cellFateInfo)
+    set(handles.BrowseFile2, 'String', cellFateInfo{2}, 'ForegroundColor', [1 0.3 0.5]);
+end
+if ~isempty(trajectoryBoundInfo)
+    set(handles.BrowseFile3, 'String', trajectoryBoundInfo{2}, 'ForegroundColor', [1 0.3 0.5]);
+end
+MapTrajectory_Callback(handles.MapTrajectory, eventdata, handles);
+movegui(hObject, 'center');
+guidata(hObject, handles);
+function varargout = ProbabilisticAnalysisMenu_OutputFcn(hObject, eventdata, handles) 
+varargout{1} = handles.output;
+function GenerateStates_Callback(hObject, eventdata, handles)
+myNetwork = get(0, 'UserData');
+networkStateList = myNetwork.NetworkStateList;
+if isempty(networkStateList)
+    run GenerateStates.m
+else
+    choice = questdlg('Network state list already generated. Do you want to modify it?', ...
+        'Warning', 'Yes', 'No', 'No');
+    switch choice
+        case 'Yes'
+            GenerateStates;
+        otherwise
+            enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+            return;
+    end
+end
+function CustomStates_Callback(hObject, eventdata, handles)
+myNetwork = get(0, 'UserData');
+nodeCount = myNetwork.NodeCount;
+networkStateList = myNetwork.NetworkStateList;
+if ~isempty(networkStateList)
+    choice = questdlg('Network state list was already selected. Do you want to modify it?', ...
+        'Warning', 'Yes', 'No', 'No');
+    switch choice
+        case 'Yes'
+        otherwise
+            enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+            return;
+    end
+end
+enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+[filename, pathname] = uigetfile({'*.mat', 'MATLAB data file'; '*.csv',...
+    'Comma seperated values file'},'Select mat file containing network state list');
+if ( pathname == 0 )
+    set(handles.Console, 'String', 'File input cancelled by the user');
+    return;
+end
+if strfind(filename, '.mat')
+    fileHandle = load(fullfile(pathname, filename));
+    varName = fieldnames(fileHandle);
+    if numel(varName) == 0 || numel(varName) > 1
+        uiwait(errordlg('The selected mat file is either empty or contains multiple variables. Please input mat file containing only one network state list.', 'Invalid mat file'));
+        enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+        return;
+    end
+    stateCombinations = getfield(fileHandle, varName{1});
+    clear fileHandle;
+elseif strfind(filename, '.csv')
+    fileInfo = importdata(fullfile(pathname, filename));
+    if isempty(fileInfo)
+        uiwait(errordlg('The selected csv file is empty. Please input valid csv. Press help for more information.', 'Invalid mat file'));
+        enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+        return;
+    end
+    if iscell(fileInfo)
+        try
+            stateCombinations = fileInfo{2,:, :};
+        catch
+            stateCombinations = [];
+        end
+    else
+        stateCombinations = fileInfo;
+    end 
+end
+try
+    if isempty(stateCombinations)
+        undefined/0;
+    end
+    isboolean = all((stateCombinations == 1) == (stateCombinations ~= 0));
+    if ~isboolean
+        undefined/0;
+    end
+    clear isboolean;
+    if ~(size(stateCombinations, 2) == nodeCount)
+        undefined/0;
+    end
+    myNetwork.NetworkStateList = stateCombinations;
+    set(0, 'UserData', myNetwork);
+    set(handles.Console, 'String', 'Selected network state list input added to the network.');
+    uiwait(msgbox('Selected network state list input added to the network', 'Success'));
+catch
+    uiwait(errordlg('The selected file is invalid. Possible reasons: 1) No variable in the mat file, 2) is not boolean, 3) variables in state list differ from node count. Please press help for more information on data input.', 'Invalid data input'));
+    set(handles.Console, 'String', 'Invalid user input.');
+    enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+    return;
+end
+function BrowseFixNodeStates_Callback(hObject, eventdata, handles)
+fileInfo = getappdata(0, 'InputNodeStates');
+myNetwork = get(0, 'UserData');
+if ~isempty(fileInfo)
+    choice = questdlg(['You already selected "', fileInfo{2},...
+        ' ". Do you want to replace this file?'], ...
+        'Exit', 'Yes', 'No', 'No');
+    switch choice
+        case 'Yes'
+            oldNetworkStateList = getappdata(0, 'NetworkStateList');
+            myNetwork.NetworkStateList = oldNetworkStateList;
+            setappdata(0, 'InputNodeStates', []);
+            set(handles.BrowseFile1, 'String', 'Browse file...', 'ForegroundColor', [20 43 140]./250);
+        otherwise
+            enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+            return;
+    end
+end
+[filename, pathname] = uigetfile({'*.txt', 'Plain text';'*.csv','Comma seperated values file'},...
+                             'Select file containing nodes whose states are to be fixed and the state to be fixed in.');
+enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+if ( pathname == 0 )
+    set(handles.Console, 'String', 'File input cancelled by the user');
+    return;
+end
+[bool, inputNodes] = fix_NodeStates(myNetwork, fullfile(pathname, filename));
+if bool 
+    set(handles.BrowseFile1, 'String', filename, 'ForegroundColor', [1 0.3 0.5]);
+    set(handles.Console, 'String', 'Specified nodes states successfully fixed.');
+    uiwait(msgbox(['The states of the following nodes: ', joinStr_CellArr(inputNodes, ', '), ' were fixed.'], 'Success'));
+    setappdata(0, 'InputNodeStates', {pathname, filename});
+else
+    set(handles.BrowseFile1, 'String', 'Browse file...', 'ForegroundColor', [20 43 140]./250);
+    set(handles.Console, 'String', 'Invalid file input.');
+    uiwait(errordlg('The selected file is not properly formated. Please enter a valid file or press help for more information on the file formatting.', 'Invalid input'));
+end
+guidata(hObject, handles);
+function BrowseCellFateLogic_Callback(hObject, eventdata, handles)
+fileInfo = getappdata(0, 'CellFateLogic');
+myNetwork = get(0, 'UserData');
+if ~isempty(fileInfo)
+    choice = questdlg(['You already selected "', fileInfo{2},...
+        ' ". Do you want to replace this file?'], ...
+        'Exit', 'Yes', 'No', 'No');
+    switch choice
+        case 'Yes'
+            setappdata(0, 'CellFateLogic', []);
+            myNetwork.CellFateDeterminationLogic = [];
+            set(handles.BrowseFile2, 'String', 'Browse file...', 'ForegroundColor', [20 43 140]./250);
+        otherwise
+            enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+            return;
+    end
+end
+[filename, pathname] = uigetfile({'*.csv','Comma seperated values file'},...
+                             'Select file containing cell fate determination logic.');
+enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+if ( pathname == 0 )
+    set(handles.Console, 'String', 'File input cancelled by the user');
+    return;
+end
+[bool, logic] = parse_CellFateLogic(myNetwork, filename, pathname);
+if bool 
+    set(handles.BrowseFile2, 'String', filename, 'ForegroundColor', [1 0.3 0.5]);
+    set(handles.Console, 'String', 'Cell fate logic successfully integrated into the network.');
+    uiwait(msgbox('Cell fate logic successfully integrated into the network.', 'Success'));
+    setappdata(0, 'CellFateLogic', {pathname, filename});
+    networkFileName = getappdata(0, 'NetworkfileName');
+    str =  ' - Cell Fate Logic';
+    FileName = [networkFileName, str, '.csv'];
+    PathName = myNetwork.ResultFolderName;
+    [~, ~] = mkdir(PathName); % MAKE FOLDER
+    try
+        cell2csv(strcat(PathName, FileName), logic);
+    catch
+    end
+else
+    set(handles.BrowseFile2, 'String', 'Browse file...', 'ForegroundColor', [20 43 140]./250);
+    set(handles.Console, 'String', 'Invalid file input.');
+    uiwait(errordlg('The selected file is not properly formated. Please enter a valid file or press help for more information on the file formatting.', 'Invalid input'));
+end
+guidata(hObject, handles);
+function BrowseTrajectoryBounds_Callback(hObject, eventdata, handles)
+fileInfo = getappdata(0, 'TrajectoryBounds');
+myNetwork = get(0, 'UserData');
+if ~isempty(fileInfo)
+    choice = questdlg(['You already selected "', fileInfo{2},...
+        ' ". Do you want to replace this file?'], ...
+        'Exit', 'Yes', 'No', 'No');
+    switch choice
+        case 'Yes'
+            setappdata(0, 'TrajectoryBounds', []);
+            myNetwork.TrajectoryBounds = [];
+            set(handles.BrowseFile3, 'String', 'Browse file...', 'ForegroundColor', [20 43 140]./250);
+        otherwise
+            enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+            return;
+    end
+end
+[filename, pathname] = uigetfile({'*.csv','Comma seperated values file' ; '*.txt', 'Plain text'},...
+                             'Select file containing start and end states of the trajectory.');
+enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+if ( pathname == 0 )
+    set(handles.Console, 'String', 'File input cancelled by the user');
+    return;
+end                        
+bool = parse_TrajectoryBounds(myNetwork, filename, pathname);
+if bool
+    set(handles.BrowseFile3, 'String', filename, 'ForegroundColor', [1 0.3 0.5]);
+    set(handles.Console, 'String', 'Start and end state of the successfully integrated into the network.');
+    uiwait(msgbox('Start and end state of the successfully integrated into the network.', 'Success'));
+    setappdata(0, 'TrajectoryBounds', {pathname, filename});
+else
+    set(handles.BrowseFile3, 'String', 'Browse file...', 'ForegroundColor', [20 43 140]./250);
+    set(handles.Console, 'String', 'Invalid file input.');
+    uiwait(errordlg('The selected file is not properly formated. Please enter a valid file or press help for more information on the file formatting.', 'Invalid input'));
+end
+guidata(hObject, handles);
+function MapTrajectory_Callback(hObject, eventdata, handles)
+bool = get(hObject, 'Value');
+myNetwork = get(0, 'UserData');
+if bool
+    myNetwork.MapTrajectory = 1;
+    trajectoryBoundsInfo = getappdata(0, 'TrajectoryBounds');
+    if isempty(trajectoryBoundsInfo)
+        set(handles.BrowseFile3, 'String', 'Browse file...', 'ForegroundColor', [20 43 140]./250);
+    else
+        set(handles.BrowseFile3, 'String', trajectoryBoundsInfo{2}, 'ForegroundColor', [1 0.3 0.5]);
+    end
+    set(handles.BrowseTrajectoryBounds, 'Enable', 'on');
+else
+    myNetwork.MapTrajectory = [];
+    set(handles.BrowseFile3, 'ForegroundColor', [204 204 204]./250);
+    set(handles.BrowseTrajectoryBounds, 'Enable', 'inactive');
+end
+function Ok_Callback(hObject, eventdata, handles)
+myNetwork = get(0, 'UserData');
+enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+if isempty(myNetwork.NetworkStateList)
+    uiwait(errordlg('Network state list missing. Please generate or input custom network state list to proceed.', 'Missing network state list.'));
+    return;
+end
+if size(myNetwork.NetworkStateList, 1) < 2^(myNetwork.NodeCount)
+    choice = questdlg('Random sampling has been used to generate a reduced state space. However, probabilistic analysis requires complete state space to work correctly. Do you want continue regardless?', ...
+    'Warning', 'Yes', 'No', 'No');
+    switch choice
+        case 'Yes'
+        otherwise
+            uiwait(msgbox('Please generate complete state space.', 'Warning'));
+            return;
+    end
+end
+noise = str2num(get(handles.EditNoise, 'String'));
+if isempty(noise) || size(noise, 1) > 1 || size(noise, 2) > 1
+    uiwait(errordlg('Please enter appropiate noise value.', 'Missing or Invalid input.'));
+    return; 
+elseif noise < 0
+    uiwait(errordlg('Noise cannot be negative. Please enter a positive value.', ...
+    'Warning'));
+    return;
+elseif noise > 1000
+    uiwait(errordlg('Please enter a appropiate noise value.', ...
+    'Warning'));
+    return;
+else
+    myNetwork.Noise = noise;
+end
+degradationConstant = str2num(get(handles.EditDegradationConstant, 'String'));
+if isempty(degradationConstant) || size(degradationConstant, 1) > 1 || size(degradationConstant, 2) > 1
+    uiwait(errordlg('Please enter appropiate degradation constant value (Between 0 and 1).', 'Missing or Invalid input.'));
+    return; 
+elseif degradationConstant < 0 || degradationConstant > 1
+    uiwait(errordlg('Degradation constant value has to be inbetween 0 and 1. Please input a valid value.', ...
+    'Warning'));
+    return;
+else
+    myNetwork.DegradationConstant = degradationConstant;
+end
+simulationTime = str2num(get(handles.EditSimulationTime, 'String'));
+if isempty(simulationTime) || size(simulationTime, 1) > 1 || size(simulationTime, 2) > 1
+    uiwait(errordlg('Please enter appropiate value for simulation time steps.', 'Missing or Invalid input.'));
+    return; 
+elseif simulationTime < 1
+    uiwait(errordlg('Simulation time value should be more than 1. Please enter a valid value', 'Error'));
+    return;
+elseif simulationTime > 50000 && simulationTime < 10000000
+    choice = questdlg('Specified simulation time is very large. Please note this can take long time. Do you want to continue ?', ...
+    'Warning', 'Yes', 'No', 'No');
+    switch choice
+        case 'Yes'
+            myNetwork.TimeSteps = simulationTime;
+        otherwise
+            uiwait(msgbox('Please update simulation time steps value to proceed.', 'Warning'));
+            enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+            return;
+    end
+elseif simulationTime > 10000000
+    uiwait(errordlg('Invalid simulation time. Please enter a valid value', 'Error'));
+    return;
+else
+    myNetwork.TimeSteps = simulationTime;
+end
+errorMargin = str2num(get(handles.EditErrorMargin, 'String'));
+if isempty(errorMargin) || size(errorMargin, 1) > 1 || size(errorMargin, 2) > 1
+    uiwait(errordlg('Please enter error margin value.', 'Missing or Invalid input.'));
+    return; 
+elseif errorMargin < 0
+    uiwait(errordlg('Error margin cannot be negative. Please enter an positive value.', 'Error'));
+    return;
+elseif errorMargin > 0  && errorMargin < 10e-10
+    choice = questdlg('Specified error margin value is very strigent. The simulation may take long time to reach steady states. Do you want to continue?', ...
+    'Warning', 'Yes', 'No', 'No');
+    switch choice
+        case 'Yes'
+            myNetwork.ErrorThreshold = errorMargin;
+        otherwise
+            uiwait(msgbox('Please update error margin value to proceed.', 'Warning'));
+            return;
+    end
+elseif errorMargin > 10e-4
+    uiwait(errordlg('Invalid error margin value. Please enter a value between 0 and 10e-4.', 'Error'));
+    return;
+else
+    myNetwork.ErrorThreshold = errorMargin;
+end
+mapTrajectory = get(handles.MapTrajectory, 'Value');
+if mapTrajectory == 1
+    trajectoryBoundsInfo = getappdata(0, 'TrajectoryBounds');
+    if isempty(trajectoryBoundsInfo)
+        uiwait(errordlg('Trajectroy bounds input is missing. Please input this to proceed with analysis or uncheck option of finding transient states.', 'Error'));
+        return;
+    end
+    myNetwork.MapTrajectory = 1;
+else
+    myNetwork.MapTrajectory = 0;
+end
+inputNodeStatesInfo = getappdata(0, 'InputNodeStates');
+if isempty(inputNodeStatesInfo)
+    choice = questdlg('States of input nodes have not been fixed. Do you want to continue without fixing input node states?', ...
+        'Warning', 'Yes', 'No', 'No');
+    switch choice
+        case 'Yes'
+        otherwise
+            enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+            return;
+    end
+end
+cellFateInfo = getappdata(0, 'CellFateLogic');
+if isempty(cellFateInfo)
+    choice = questdlg('Cell fate logic is missing. Please note steady states would not be characterized and associated with cell fates. Do you want to continue without entering cell fate logic?', ...
+        'Warning', 'Yes', 'No', 'No');
+    switch choice
+        case 'Yes'
+        otherwise
+            enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+            return;
+    end
+end
+choice = questdlg('Begin probabilistic analysis?', ...
+        'Warning', 'Yes', 'No', 'No');
+switch choice
+    case 'Yes'
+        guidata(hObject, handles);
+        set(0, 'UserData', myNetwork);       
+        setappdata(0, 'ProbabilisticAnalysis', 1);
+    otherwise
+        enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+        return;
+end
+choice = questdlg('Save results after the job(s) is/are completed?', ...
+    'Warning', 'Yes', 'No', 'No');
+switch choice
+    case 'Yes'
+        setappdata(0, 'SaveProbabilisticAnalysis', 1);
+    otherwise
+        setappdata(0, 'SaveProbabilisticAnalysis', 0);
+end
+delete(handles.ProbabilisticAnalysisMenu);
+if ~isempty(myNetwork.CellFateDeterminationLogic)
+    attractorList = cellfun(@(a) a(:, myNetwork.OutputNodesIndices), ...
+                num2cell(myNetwork.NetworkStateList, 2), 'un', 0);
+    myNetwork.AssociatedCellFates = cellfun(@(attr) associate_CellFates...
+                (myNetwork.CellFateDeterminationLogic, attr, ...
+                numel(myNetwork.UniqueCellFates)), attractorList); 
+end
+function Help_Callback(hObject, eventdata, handles)
+choice = questdlg('Open ATLANTIS GitHub Page?', ...
+    'Help', ...
+    'Yes', 'No', 'No');
+enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+switch choice
+    case 'Yes'
+        url = 'https://github.com/BIRL/ATLANTIS';
+        web(url,'-browser');
+    otherwise
+        return;
+end
+function ProbabilisticAnalysisMenu_CloseRequestFcn(hObject, eventdata, handles)
+choice = questdlg('Close this menu?', ...
+                         'Exit', ...
+                         'Yes', 'No', 'No');
+enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+switch choice
+    case 'Yes'
+        setappdata(0, 'ProbabilisticAnalysis', []);
+        delete(hObject);
+    otherwise
+        enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
+        return;
+end
+
+FILE Toolbox\Analyses\Supplementary functions\associate_CellFates.m
+function associatedFates  = associate_CellFates(cellFateInfo, attr, numOfUnCF)
+cellfates = cellFateInfo{:,1};
+logicList = cellFateInfo{:,2};
+associatedFates = cell(numOfUnCF, 1);
+fateIndex = 1;
+replacingNaNs = 1000;
+for i = 1:numel(logicList)
+    tempAttr = attr;
+    logic = logicList{i};
+    allNaNs = isnan(logic);
+    logic(allNaNs) = replacingNaNs;
+    tempAttr(allNaNs) = replacingNaNs;
+    if isequal(logic, tempAttr)
+        associatedFates{fateIndex} = cellfates{i};
+        fateIndex = fateIndex + 1;
+    end
+end
+emptyCells = cellfun(@isempty, associatedFates);
+associatedFates(emptyCells) = [];
+[associatedFates, ~, ~] = uniqueCellArray(associatedFates);
+associatedFates = { joinStr_CellArr(associatedFates, ' + ' ) };
+end
+
+FILE Toolbox\Analyses\Supplementary functions\fix_NodeStates.m
+function [bool, inputNodes] = fix_NodeStates(obj, fileInfo)
+bool = 0;
+inputNodes = [];
+try  
+    allData = importdata(fileInfo);
+    if isempty(allData) || ~isstruct(allData)
+        undefined/0;
+    end
+    numericData = allData.data;
+    textData = allData.textdata;
+    if all(size(numericData) ~= size(textData)) && size(numericData, 1) ~= 1
+        undefined/0;
+    end
+    [logicals, InputNodeIndicies] = ismember(cellfun(@lower, textData, 'un', 0), cellfun(@lower, obj.NodeNames, 'un', 0));
+    if sum(logicals) ~= size(numericData, 2)
+        undefined/0;
+    end
+    isboolean = all((numericData == 1) == (numericData ~= 0));
+    if ~isboolean
+        undefined/0;
+    end
+    stateVal = numericData;
+    networkStateList = obj.NetworkStateList;
+    for i = 1:size(networkStateList,1)
+        networkStateList(i,InputNodeIndicies) = stateVal;
+    end
+    bool = 1;
+    inputNodes = textData;
+    setappdata(0, 'NetworkStateList', obj.NetworkStateList);
+    obj.NetworkStateList = networkStateList;
+catch
+    bool = 0;
+    return;    
+end
+end
+
+FILE Toolbox\Analyses\Supplementary functions\generate_StateCombinations_randomSampling.m
+function states = generate_StateCombinations_randomSampling(myNetwork, sampleSize)
+states = []; % will store randomly generated states
+progressbar('Generating States. Please Wait...');
+while size(states, 1) < sampleSize
+    i = size(states, 1);
+    diff = sampleSize - size(states, 1);
+    progressbar(i/sampleSize);
+    states = vertcat(states, randi([0 1], diff,myNetwork.NodeCount)); %#ok<AGROW>
+    [a, b]=unique(states,'rows');   %#ok<ASGLU> % finding replicated rows %
+    states = states(sort(b),:);     % removing replicated rows
+end
+progressbar(1);
+end
+
+FILE Toolbox\Analyses\Supplementary functions\generate_StatesCombinations.m
+function generate_StatesCombinations(obj)
+N = obj.NodeCount;
+L = 2^N;
+combinations = zeros(L,N);
+for i=1:N
+    temp = [zeros(L/2^i,1); ones(L/2^i,1)];
+    combinations(:,i) = repmat(temp,2^(i-1),1);
+end
+obj.NetworkStateList = combinations;
+end
+
+FILE Toolbox\Analyses\Supplementary functions\parse_CellFateLogic 2.m
+function [bool, rawLogic] = parse_CellFateLogic(myNetwork, fileName, pathName)
+rawLogic = {};
+try
+    allData = csv2cell(fullfile(pathName, fileName));
+    if isempty(allData)
+       undefined/0; 
+    end
+    cellfates = allData(:,1);
+    cellfates = cellfates(2:end);
+    areNum = cellfun(@str2num, cellfates, 'un', 0);
+    empty = cellfun(@isempty, areNum);
+    if all(~empty)
+        undefined/0;
+    end
+    outputNodes = allData(1, :);
+    cellFateDeterminationLogic = outputNodes;
+    outputNodes = outputNodes(2:end);
+    [~, outputNodeIndicies] = ismember(cellfun(@lower, outputNodes, 'un', 0), cellfun(@lower, myNetwork.NodeNames, 'un', 0));
+    if sum(outputNodeIndicies == 0) > 0
+        uiwait(errordlg('Some of the nodes in this file are not present in the network. Please only input file containing nodes same as that in the network.', 'Invalid File'));
+        undefined/0;
+    end
+    row = 2;
+    nodePosisitions = [];
+    for f = 1:numel(cellfates)
+        cellFateDeterminationLogic{row, 1} = cellfates{f};
+        listOfNodestates = cell(1, numel(outputNodes));
+        for n = 1:numel(outputNodes)
+            Nodestates = eval(strcat('[' ,allData{f+1, n+1} ,']'));
+            if ~isnumeric(Nodestates)
+                undefined/0;
+            end
+            if ~isempty(Nodestates)
+                nodePosisitions = horzcat(nodePosisitions, n);
+            end
+            listOfNodestates{n} = Nodestates;
+        end
+        listOfNodestates(cellfun(@isempty, listOfNodestates)) = [];
+        combinations = generateCombinations(listOfNodestates{:});
+        rowToBeCopied = cellFateDeterminationLogic(row, :);
+        newRows = repmat(rowToBeCopied, [size(combinations, 1)-1, 1]);
+        cellFateDeterminationLogic = vertcat(cellFateDeterminationLogic, newRows);
+        lowerBound = row;
+        upperBound = row + size(combinations, 1) - 1;
+        cellFateDeterminationLogic(lowerBound:upperBound, nodePosisitions+1) = num2cell(combinations);
+        row = row + size(combinations, 1);
+        nodePosisitions = [];
+    end
+    rawLogic = cellFateDeterminationLogic;
+    rules = cellFateDeterminationLogic(2:end, 2:end);
+    rules(cellfun(@isempty, rules)) = {NaN};
+    rules = num2cell(cell2mat(rules), 2);
+    cellFateDeterminationLogic = {cellFateDeterminationLogic(2:end, 1), rules};
+    bool = 1;
+    myNetwork.CellFateDeterminationLogic = cellFateDeterminationLogic;
+    myNetwork.UniqueCellFates = cellfates;
+    myNetwork.OutputNodes = outputNodes;
+    myNetwork.OutputNodesIndices = outputNodeIndicies;
+catch
+    bool = 0;
+end
+    function Combinations = generateCombinations(varargin)
+        numberOfElements = cellfun('prodofsize', varargin);
+        indices = fliplr(arrayfun(@(n) {1:n}, numberOfElements));
+        [indices{:}] = ndgrid(indices{:});
+        Combinations = cellfun(@(c,i) {reshape(c(i(:)), [], 1)}, ...
+                            varargin, fliplr(indices));
+        Combinations = [Combinations{:}];
+    end
+end
+
+FILE Toolbox\Analyses\Supplementary functions\parse_CellFateLogic.m
+function [bool, rawLogic] = parse_CellFateLogic(myNetwork, fileName, pathName)
+rawLogic = {};
+try
+    allData = csvimport(fullfile(pathName, fileName));
+    if isempty(allData)
+       undefined/0; 
+    end
+    cellfates = allData(:,1);
+    cellfates = cellfates(2:end);
+    areNum = cellfun(@str2num, cellfates, 'un', 0);
+    empty = cellfun(@isempty, areNum);
+    if all(~empty)
+        undefined/0;
+    end
+    outputNodes = allData(1, :);
+    cellFateDeterminationLogic = outputNodes;
+    outputNodes = outputNodes(2:end);
+    [~, outputNodeIndicies] = ismember(cellfun(@lower, outputNodes, 'un', 0), cellfun(@lower, myNetwork.NodeNames, 'un', 0));
+    if sum(outputNodeIndicies == 0) > 0
+        uiwait(errordlg('Some of the nodes in this file are not present in the network. Please only input file containing nodes same as that in the network.', 'Invalid File'));
+        undefined/0;
+    end
+    row = 2;
+    nodePosisitions = [];
+    for f = 1:numel(cellfates)
+        cellFateDeterminationLogic{row, 1} = cellfates{f};
+        listOfNodestates = cell(1, numel(outputNodes));
+        for n = 1:numel(outputNodes)
+            Nodestates = eval(strcat('[' , num2str(allData{f+1, n+1}) ,']'));
+            if ~isnumeric(Nodestates)
+                undefined/0;
+            end
+            if ~isempty(Nodestates)
+                nodePosisitions = horzcat(nodePosisitions, n);
+            end
+            listOfNodestates{n} = Nodestates;
+        end
+        listOfNodestates(cellfun(@isempty, listOfNodestates)) = [];
+        combinations = generateCombinations(listOfNodestates{:});
+        rowToBeCopied = cellFateDeterminationLogic(row, :);
+        newRows = repmat(rowToBeCopied, [size(combinations, 1)-1, 1]);
+        cellFateDeterminationLogic = vertcat(cellFateDeterminationLogic, newRows);
+        lowerBound = row;
+        upperBound = row + size(combinations, 1) - 1;
+        cellFateDeterminationLogic(lowerBound:upperBound, nodePosisitions+1) = num2cell(combinations);
+        row = row + size(combinations, 1);
+        nodePosisitions = [];
+    end
+    rawLogic = cellFateDeterminationLogic;
+    rules = cellFateDeterminationLogic(2:end, 2:end);
+    rules(cellfun(@isempty, rules)) = {NaN};
+    rules = num2cell(cell2mat(rules), 2);
+    cellFateDeterminationLogic = {cellFateDeterminationLogic(2:end, 1), rules};
+    bool = 1;
+    myNetwork.CellFateDeterminationLogic = cellFateDeterminationLogic;
+    myNetwork.UniqueCellFates = cellfates;
+    myNetwork.OutputNodes = outputNodes;
+    myNetwork.OutputNodesIndices = outputNodeIndicies;
+catch
+    bool = 0;
+end
+    function Combinations = generateCombinations(varargin)
+        numberOfElements = cellfun('prodofsize', varargin);
+        indices = fliplr(arrayfun(@(n) {1:n}, numberOfElements));
+        [indices{:}] = ndgrid(indices{:});
+        Combinations = cellfun(@(c,i) {reshape(c(i(:)), [], 1)}, ...
+                            varargin, fliplr(indices));
+        Combinations = [Combinations{:}];
+    end
+end
+
+FILE Toolbox\Analyses\Deterministic Analysis\Logic weigths method\deterministicEngine_WeightsBased.m
+function bool = deterministicEngine_WeightsBased(myNetwork, totalProgress)
+try
+    cancelButton = CancelSimulationButton;
+    movegui(cancelButton, 'northeast');
+    setappdata(0,'CancelSimulation', []);
+    aij = myNetwork.EdgeWeights;
+    b   = myNetwork.BasalValues';
+    totalStates = size(myNetwork.NetworkStateList, 1);
+    progressbar(0.1, 0);
+    preliminarySearchResults = synchronousAttractorSearch_WeightsBased(myNetwork);
+    progressbar(0.4, 0);
+    [potentialAttractors, ~, FreQ] = unique(preliminarySearchResults, 'rows');
+    checked = zeros(size(potentialAttractors, 1), 1);
+    attractorTableSize = size(potentialAttractors, 1);
+    attractorTable = cell(attractorTableSize, 3);
+    iterator = 1;
+    for state = 1:size(potentialAttractors)
+        progressbar(totalProgress, state/attractorTableSize);
+        if ~checked(state)
+            currentState = potentialAttractors(state, :);
+            attractor = searchForAttractor(currentState);
+            if ~isempty(attractor)
+                attrSize = size(attractor, 1);
+                if attrSize > 1
+                    attractorTypes = 'Cyclic';
+                    [~, locA] = ismember(attractor, potentialAttractors, 'rows');
+                    locA(locA == 0) = [];
+                    checked(locA) = 1;
+                elseif attrSize == 1
+                    locA = state;
+                    attractorTypes = 'Point';
+                end
+                if numel(locA) > 1
+                    attractorsIndicies = find(ismember(FreQ, locA, 'rows') ~= 0);
+                else
+                    attractorsIndicies = find(FreQ == state);
+                end
+                if ~isempty(getappdata(0,'CancelSimulation'))
+                    cancelButton.delete;
+                    undefined/0;
+                end
+                basinSizeRatio = numel(attractorsIndicies)/totalStates;
+                present = 0;
+                for k = iterator-1:-1:1
+                    attractorList = attractorTable{k,1};
+                    [~, match] = ismember(attractorList, attractor, 'rows');
+                    if match ~= 0
+                        attractorTable{k,3} = attractorTable{k,3} + basinSizeRatio;
+                        present = 1;
+                        break;
+                    end
+                end
+                if present == 0
+                    attractorTable(iterator,:) = {attractor, attractorTypes, basinSizeRatio};
+                    iterator = iterator + 1;
+                end
+            end
+        end
+    end
+    cancelButton.delete;
+    progressbar(totalProgress, 1);
+    emptY = cellfun(@isempty, attractorTable(:, 1));
+    attractorTable(emptY, :) = [];
+    myNetwork.AttractorTable = flipud(sortCellArr(attractorTable, 3));
+    bool = 1;
+catch
+    bool = 0;
+    progressbar(totalProgress, 1);
+    cancelButton.delete;
+end
+    function attractor = searchForAttractor(CurrentState, ~)
+        attractor = [];
+        searchDuration = myNetwork.AttractorSearchDuration;
+        nextState = CurrentState;
+        trajectoryCell = cell(1, searchDuration);
+        trajectoryVec = zeros(searchDuration, myNetwork.NodeCount);
+        for step = 1:searchDuration
+            trajectoryCell{step} = CurrentState;
+            trajectoryVec(step, :) = CurrentState;
+            summation = CurrentState* aij + b;
+            indices = summation > 0;
+            nextState(indices) = 1;
+            indices = summation < 0;
+            nextState(indices) = 0;
+            indices = summation == 0;
+            nextState(indices) = CurrentState(indices);
+            index = find(cellfun(@(a) isequal(a,nextState), trajectoryCell(1:step)), 1);
+            if ~isempty(index) % IF TRUE THAN CYCLE FOUND
+                trajectoryVec(step+1:end, :) = [];
+                startMark = size(trajectoryVec, 1) - (step - index);
+                endMark = step;
+                attractor = trajectoryVec(startMark:endMark, :);
+                break;
+            end
+            CurrentState = nextState;
+        end
+    end
+end
+
+FILE Toolbox\Analyses\Deterministic Analysis\Logic weigths method\synchronousAttractorSearch_WeightsBased.m
+function preliminarySearchResults = synchronousAttractorSearch_WeightsBased(myNetwork)
+initialStates = myNetwork.NetworkStateList;
+updatedStates = initialStates;
+if size(myNetwork.BasalValues, 1) > 1
+    bi = myNetwork.BasalValues';
+else
+    bi = myNetwork.BasalValues;
+end
+basalVec = repmat(bi, [size(myNetwork.NetworkStateList, 1), 1]);
+iterator = myNetwork.NodeCount;
+similarityCount = 0;
+currentPotentialAttrsCount = 0;
+for k = 1 : iterator
+    Summation = initialStates*(myNetwork.EdgeWeights) + basalVec;
+    updatedStates(Summation > 0) = 1;
+    updatedStates(Summation < 0) = 0;
+    updatedStates(Summation == 0) = initialStates(Summation == 0);    
+    oldPotentialAttrsCount = currentPotentialAttrsCount;
+    currentPotentialAttrsCount = numel(unique(updatedStates, 'rows'));
+    if abs(oldPotentialAttrsCount - currentPotentialAttrsCount) == 0
+        similarityCount = similarityCount + 1;
+        if similarityCount >= 5
+            break;
+        end
+    else
+        similarityCount = 0;
+    end
+    initialStates = updatedStates;
+end
+preliminarySearchResults = updatedStates;
+end
+
+FILE Toolbox\Analyses\Deterministic Analysis\Logical expression method\deterministicEngine_RulesBased.m
+function bool = deterministicEngine_RulesBased(myNetwork, totalProgress)
+tic;
+try
+cancelButton = CancelSimulationButton;
+movegui(cancelButton, 'northeast');
+setappdata(0,'CancelSimulation', []);
+targetNodeIndicesList = myNetwork.TargetNodeIndices;
+sourceNodeIndicesList = myNetwork.SourceNodeIndices;
+NodeUpdateLogicList   = myNetwork.NodeUpdateLogic;
+initialStates = myNetwork.NetworkStateList;
+totalStates = size( initialStates , 1 );
+attractorList = cell(1,totalStates);
+attractorTypes = cell(1,totalStates);
+for state = 1:totalStates
+    currentState = initialStates(state,:);
+    progressbar(totalProgress, state/totalStates)
+    attractor = searchForAttractor(currentState, targetNodeIndicesList, sourceNodeIndicesList, NodeUpdateLogicList, [state,totalStates]);
+    attractorList{state} = attractor;
+    if ~isempty(getappdata(0,'CancelSimulation'))
+        cancelButton.delete;
+        undefined/0;
+    end
+    if size(attractor, 1) > 1
+        attractorTypes{state} = 'Cyclic';
+    elseif size(attractor, 1) == 1
+        attractorTypes{state} = 'Point';
+    end
+end
+cancelButton.delete;
+disp(['End of Attractor Finding'...
+    'Time: ', num2str(toc)])
+progressbar(totalProgress, 1);
+emptY = cellfun(@isempty, attractorList);
+attractorList(emptY) = [];
+attractorTypes(emptY) = [];
+attractorListSorted = cellfun(@sortrows, attractorList, 'un', 0);
+attractorStringList = cellfun(@int2str, attractorListSorted, 'un', 0);
+[uniqueAttractors , uniqueAttractorsIndicies, occurences] = uniqueCellArray(attractorStringList);
+attractorBasinSizes = attractorFrequency(occurences);
+attractorTable      = cell(numel(uniqueAttractors), 3);
+attractorTable(:,1) = cellfun(@str2num, uniqueAttractors,'un',0); % STORES ATTRACTORS
+attractorTable(:,2) = attractorTypes(uniqueAttractorsIndicies)'; % STORE ATTRACTOR TYPE
+attractorTable(:,3) = num2cell(attractorBasinSizes(:, 3), 2); % STORES BASIN RATIOS
+myNetwork.AttractorTable = flipud(sortCellArr(attractorTable, 3));
+myNetwork.AttractorList = attractorList';
+myNetwork.AttractorTypes = attractorTypes';
+bool = 1;
+disp(['End of Rules based Deterministic analysis successful', 'Time elapsed: ', num2str(toc)])
+catch
+    bool = 0;
+    progressbar(totalProgress, 1);
+    cancelButton.delete;
+    disp(['End of Rules based Deterministic analysis. Unsuccessful', 'Time elapsed', num2str(toc)]);
+end
+    function attractor = searchForAttractor(currentState, targetNodeIndices, sourceNodeIndices, updateLogics, progressbarInfo)
+        attractor = []; 
+        searchDuration = myNetwork.AttractorSearchDuration; 
+        trajectoryCell = cell(1,searchDuration);
+        trajectoryVec = zeros(searchDuration, myNetwork.NodeCount);
+        for step = 1:searchDuration
+            trajectoryCell{step} = currentState;
+            trajectoryVec(step, :) = currentState;
+            nextState = UpdateState(currentState);
+            index = find(cellfun(@(a) isequal(a,nextState), trajectoryCell(1:step)), 1); % check if updated state is already present in the trajectory
+            if ~isempty(index) % IF TRUE THAN CYCLE FOUND
+                trajectoryVec(step+1:end, :) = [];
+                startMark = size(trajectoryVec, 1) - (step - index);
+                endMark = step;
+                attractor = trajectoryVec(startMark:endMark, :);
+                break;
+            end
+            currentState = nextState;
+        end
+        function nextstate = UpdateState(currentState)
+            nextstate = currentState;
+            for i = 1:size(sourceNodeIndices,1)
+                nextstate(i) = UpdateNodeActivty(sourceNodeIndices{i}, targetNodeIndices{i});
+            end
+            function updatedNode = UpdateNodeActivty(SourceNodeIndex, targetNodeIndex)
+                updatedNode = updateLogics{targetNodeIndex}(binary2Decimal(currentState(SourceNodeIndex)) + 1);
+                if isempty(updatedNode)
+                    updatedNode = currentState(targetNodeIndex);
+                end
+            end
+        end
+    end
+end
+
+FILE Toolbox\Analyses\Deterministic Analysis\Logical expression method\synchronousAttractorSearch_RulesBased.m
+function preliminarySearchResults = synchronousAttractorSearch_RulesBased(myNetwork)
+targetNodeIndicesList = myNetwork.TargetNodeIndices;
+sourceNodeIndicesList = myNetwork.SourceNodeIndices;
+initialStates         = myNetwork.NetworkStateList;
+truthTables           = myNetwork.TruthTables;
+updatedStates = initialStates;
+iterator = myNetwork.NodeCount;
+currentPotentialAttrsCount = 0;
+similarityCount = 0;
+tic;
+for iterations = 1 : iterator
+    progressbar(iterations/(iterator*2), 0);
+    for node = 1 : myNetwork.NodeCount
+        targetNode = targetNodeIndicesList{node};
+        updatedTargetNodeStates = initialStates(:, targetNode);
+        sourceNodes = sourceNodeIndicesList{node};
+        if ~isempty(sourceNodes)
+            currentStates = initialStates(:, sourceNodes);
+            truthTable =truthTables{targetNode};
+            outputs = truthTable(:, end);
+            if sum(outputs) == 0
+                updatedTargetNodeStates(:) = 0;
+            elseif sum(outputs) == size(truthTable, 1)
+                updatedTargetNodeStates(:) = 1;
+            else
+                locA = binary2Decimal(currentStates) + 1;
+                locA(locA == 0) = updatedTargetNodeStates(locA == 0);
+                updatedTargetNodeStates = outputs(locA);
+            end
+        end
+        updatedStates(:, targetNode) = updatedTargetNodeStates;
+    end
+    oldPotentialAttrsCount = currentPotentialAttrsCount;
+    currentPotentialAttrsCount = numel(unique(updatedStates, 'rows'));
+    if abs(oldPotentialAttrsCount - currentPotentialAttrsCount) == 0
+        similarityCount = similarityCount + 1;
+        if similarityCount >= 3
+            break;
+        end
+    else
+        similarityCount = 0;
+    end
+    initialStates = updatedStates;
+end
+toc;
+preliminarySearchResults = updatedStates;
+end
+
+FILE Toolbox\Analyses\Deterministic Analysis\Supplemetary functions\attractorFrequency.m
+function table = attractorFrequency( vec )
+uniqueEle = unique(vec);
+table = zeros(numel(uniqueEle), 3);
+table(:,1) = uniqueEle;
+totalEle = numel(vec);
+for ele = 1:numel(uniqueEle)
+    freq = sum(vec == uniqueEle(ele) );
+    table(ele,2) = freq;
+    table(ele,3) = freq/totalEle;
+end
+end
+
+FILE Toolbox\Analyses\Deterministic Analysis\Supplemetary functions\save_DeterministicAnalysisResults.m
+function bool = save_DeterministicAnalysisResults( myNetwork )
+try 
+    progressbar('Saving results...');
+    if ~isempty(myNetwork.FileName)
+        PathName = [myNetwork.ResultFolderName, strrep(myNetwork.FileName, ' - ', filesep), 'Deterministic Analysis Output', filesep];
+    else
+        PathName = [myNetwork.ResultFolderName, 'Deterministic Analysis Output', filesep];
+    end
+    [~, ~] = mkdir(PathName);
+    if ~isempty(myNetwork.AttractorTable)
+        FileName1 = [myNetwork.FileName, ...
+            'Attractor Table (Stratified Average Activity)', '.csv'];
+        FileName2 = [myNetwork.FileName, ...
+            'Attractor Table (Average Activity in Fractions)', '.csv'];
+        FileName3 = [myNetwork.FileName, ...
+            'Attractor Table', '.csv'];
+        attractorTable = myNetwork.AttractorTable;
+        upperbound = 0.2;
+        lowerbound = 0.2;
+        [attractorActivityInFractions, attractorActivityAsWhole] = ...
+            cellfun(@(a)summarize_AttractorActivity (a, upperbound, lowerbound)...
+            , attractorTable(:, 1), 'un', 0);
+        attrType = attractorTable(:, 2);
+        basinSizes = attractorTable(:, 3);
+        if ~isempty(myNetwork.CellFateDeterminationLogic)
+            associatedCellFates = attractorTable(:, 4);
+        else
+            associatedCellFates = cell(size(attractorActivityAsWhole, 1), 1);
+        end
+        progressbar(0.3/1);
+        names = myNetwork.NodeNames;
+        if size(names, 1) > 1
+            names = names';
+        end
+        header = horzcat({'Attractor #'}, 'Attractor Type', 'Associated Cell Fate', 'Basin Size');
+        fid2 = fopen(strcat(PathName, FileName1), 'w');
+        fid1 = fopen(strcat(PathName, FileName2), 'w');
+        fid3 = fopen(strcat(PathName, FileName3), 'w');
+        formatToken = '%s,';
+        fprintf(fid1, formatToken, header{:, 1:4}, names{:});
+        fprintf(fid1, ['\', 'n']);
+        fprintf(fid2, formatToken, header{:, 1:4}, names{:});
+        fprintf(fid2, ['\', 'n']);
+        fprintf(fid3, formatToken, header{:, 1:4}, names{:});
+        fprintf(fid3, ['\', 'n']);
+        for i = 1:size(attractorTable, 1)
+            attr = attractorTable{i, 1};
+            attrSize = size(attr, 1);
+            attractorType = attrType{i};
+            associatedFate = associatedCellFates{i};
+            propensity = num2str(basinSizes{i});
+            states = attractorTable{i, 1};
+            attrNumb = int2str(i);
+            activityInFractions = attractorActivityInFractions{i};
+            activityInWholes = attractorActivityAsWhole{i};
+            fprintf(fid1, '%s,', attrNumb, attractorType, associatedFate, propensity);
+            fprintf(fid1, '%d,', activityInFractions(:));
+            fprintf(fid1, ['\', 'n']);
+            fprintf(fid2, '%s,', attrNumb, attractorType, associatedFate, propensity);
+            fprintf(fid2, '%d,', activityInWholes(:));
+            fprintf(fid2, ['\', 'n']);
+            for l = 1:attrSize
+                attractor = states(l, :);
+                fprintf(fid3, '%s,', attrNumb, attractorType, associatedFate, propensity);
+                fprintf(fid3, '%u,', attractor(:));
+                fprintf(fid3, ['\', 'n']);
+            end
+            fprintf(fid3, ['\', 'n']);
+        end
+        progressbar(0.7/1);
+        fclose(fid1); 
+        fclose(fid2); 
+        fclose(fid3);
+        clear associatedCellFates attractorTable attractorActivityAsWhole attractorActivityInFractions;
+    end
+    if ~isempty(myNetwork.CellFateLandscape)
+        FileName = [myNetwork.FileName, 'Cell Fate Propensites', '.csv'];
+        fid4 = fopen(strcat(PathName, FileName), 'w');
+        cellfateTable = myNetwork.CellFateLandscape;
+        header = {'Cell fate', 'Propensity'};
+        formatToken = '%s,';
+        fprintf(fid4, formatToken, header{:});
+        fprintf(fid4, ['\', 'n']);
+        cellFates = cellfateTable(:,1);
+        propensities = cellfateTable(:,2);
+        for i = 1:size(cellfateTable, 1)
+            cellFate = cellFates{i};
+            propensity = num2str(propensities{i});
+            fprintf(fid4, ['%s, %s ', '\','n'], cellFate, propensity);
+        end
+        fclose(fid4);
+    end
+    FileName = 'Network State List DA';
+    networkStateList = myNetwork.NetworkStateList;
+    csvwrite(strcat(PathName, FileName, '.csv'), networkStateList);
+    save(strcat(PathName, FileName, '.mat'), 'networkStateList', '-v7.3');
+    progressbar(1/1);
+    bool = 1;
+catch
+    bool = 0;
+    progressbar(1/1);
+    fclose all;
+end
+end
+
+FILE Toolbox\Analyses\Deterministic Analysis\Supplemetary functions\summarize_AttractorActivity.m
+function  [fracSummary, boolSummary] = summarize_AttractorActivity(attr, ub, lb)
+total = size(attr, 1);
+attr = num2cell(attr,1);
+summarizedAttr = cellfun(@sum, attr);
+fracSummary = summarizedAttr./ total;
+boolSummary = fracSummary;
+filter1 = find(boolSummary <= 1-ub);
+filter2 = find(boolSummary >= 0+lb);
+almost0 = boolSummary < 0+lb;
+almost1 = boolSummary > 1-ub;
+oscilatoryNodesindex = intersect(filter1,filter2);
+boolSummary(oscilatoryNodesindex) = 2;
+boolSummary(almost0) = 0;
+boolSummary(almost1) = 1;
+end
+
+FILE Toolbox\Analyses\Probabilistic Analysis\Supplemetary functions\find_StateTransitionProbabilities.m
+function bool = find_StateTransitionProbabilities(myNetwork, totalProgress)
+try    
+    cancelButton = CancelSimulationButton;
+    movegui(cancelButton, 'northeast');
+    setappdata(0,'CancelSimulation', []);
+    if myNetwork.PruneStateSpace == 1;
+        prunnedStateSpace = StateSpacePruning(myNetwork);
+        myNetwork.PrunnedStateSpacePA = prunnedStateSpace;
+        initialStates = prunnedStateSpace;
+    else
+        initialStates = myNetwork.NetworkStateList;
+    end
+    numberOfStates = size(initialStates, 1);
+    aij = myNetwork.EdgeWeights;
+    noise = myNetwork.Noise;
+    c = myNetwork.DegradationConstant;
+    bi = myNetwork.BasalValues';
+    Tij = ones(numberOfStates, numberOfStates);
+    nodeOnProbabilities = zeros(numberOfStates, myNetwork.NodeCount);
+    Summation = initialStates * aij + repmat(bi,[numberOfStates,1]);
+    indices = Summation > 0;
+    nodeOnProbabilities(indices) = 1/2 + 1/2*tanh(noise*Summation(indices));
+    indices = Summation < 0;
+    nodeOnProbabilities(indices) = 1 - (1/2 - 1/2*tanh(noise*Summation(indices)));
+    indices = find(Summation == 0);
+    for n = 1:length(indices)
+        if initialStates(indices(n)) == 0
+            nodeOnProbabilities(indices(n)) = c;
+        elseif initialStates(indices(n)) == 1
+            nodeOnProbabilities(indices(n)) = 1-c;
+        end
+    end
+    activeNodes = initialStates == 0;
+    inactiveNodes   = initialStates == 1;
+    for Statei = 1:numberOfStates
+        progressbar(totalProgress, Statei/numberOfStates, 0);
+        allOn = repmat(nodeOnProbabilities(Statei,:), [numberOfStates, 1]);
+        allOff = 1 - allOn;
+        allOn(activeNodes) = 1;
+        allOff(inactiveNodes) = 1;
+        Tij(Statei, :) = (prod(allOn, 2) .* prod(allOff, 2));
+        if ~isempty(getappdata(0,'CancelSimulation'))
+            cancelButton.delete;
+            undefined/0;
+        end
+    end
+    cancelButton.delete;
+    myNetwork.StateTransitionProbabilities = Tij;
+    bool = 1;
+catch
+    bool = 0;
+    progressbar(totalProgress, 1, 0);
+    cancelButton.delete;
+end
+end
+
+FILE Toolbox\Analyses\Probabilistic Analysis\Supplemetary functions\find_SteadyStateProbabilities.m
+function bool = find_SteadyStateProbabilities(myNetwork, totalProgress)
+try
+    cancelButton = CancelSimulationButton;
+    movegui(cancelButton, 'northeast');
+    setappdata(0,'CancelSimulation', []);
+    if myNetwork.PruneStateSpace == 1;
+        stateSpaceSize = size(myNetwork.PrunnedStateSpacePA, 1);
+    else
+        stateSpaceSize = size(myNetwork.NetworkStateList, 1);
+    end
+    maxSteps = myNetwork.TimeSteps;
+    Tij = myNetwork.StateTransitionProbabilities;
+    Tji = Tij';
+    initialProbabilities = ones(stateSpaceSize, 1)./(stateSpaceSize);
+    iteration = 1;
+    errorThreshold = myNetwork.ErrorThreshold;
+    while (iteration <= maxSteps)
+        fluxOut = zeros(stateSpaceSize, 1);
+        fluxIn = zeros(stateSpaceSize, 1);
+        progressbar(totalProgress, 1, iteration/maxSteps);
+        for Statei = 1:stateSpaceSize
+            fluxOut = Tij(:,Statei).* initialProbabilities...
+                + fluxOut;
+            fluxIn = Tji(:,Statei).* initialProbabilities(Statei)...
+                + fluxIn;
+        end
+        changeInProbabilities = - fluxOut + fluxIn;
+        updatedProbabilites = initialProbabilities + changeInProbabilities;
+        diff = abs(initialProbabilities - updatedProbabilites);
+        PercentageSimilar = sum( diff <= errorThreshold , 1 ) / stateSpaceSize;
+        if PercentageSimilar >= 0.98 && iteration > 10 && all(initialProbabilities >= 0)
+            disp(['Steady State Probabilities reached at iteration #: ', num2str(iteration)]);
+            myNetwork.SteadyStateTimeStep = iteration;
+            break;
+        end
+        initialProbabilities = updatedProbabilites;
+        iteration = iteration + 1;
+        if ~isempty(getappdata(0,'CancelSimulation'))
+            cancelButton.delete;
+            undefined/0;
+        end
+    end
+    cancelButton.delete;
+    myNetwork.SteadyStateProbabilities = updatedProbabilites;
+    bool = 1;
+catch
+    bool = 0;
+    progressbar(totalProgress, 1, 1);
+    cancelButton.delete;
+end
+end
+
+FILE Toolbox\Analyses\Probabilistic Analysis\Supplemetary functions\map_Trajectory.m
+function bool = map_Trajectory(myNetwork)
+try
+    trajectoryBounds = myNetwork.TrajectoryBounds;
+    data = [myNetwork.SteadyStateProbabilities, myNetwork.NetworkStateList];
+    data = flipud(sortrows(data, 1));
+    [~, ind1] = ismember(trajectoryBounds(1, :), data(:, 2:end), 'rows');
+    [~, ind2] = ismember(trajectoryBounds(2, :), data(:, 2:end), 'rows');
+    endStateIndex = ind1;
+    startStateIndex = ind2;
+    if ind1 < ind2
+        endStateIndex = ind2;
+        startStateIndex = ind1;
+    end
+    transientStates = data(startStateIndex:endStateIndex, :);
+    [~, indicies] = ismember(transientStates(:, 2:end), myNetwork.NetworkStateList, 'rows');
+    if ~isempty(myNetwork.CellFateDeterminationLogic)
+        outputNodeStates = cellfun(@(a) a(:, myNetwork.OutputNodesIndices), ...
+            num2cell(transientStates(:, 2:end), 2), 'un', 0);
+        associatedCellFates = cellfun(@(attr) associate_CellFates...
+            (myNetwork.CellFateDeterminationLogic, attr, ...
+            numel(myNetwork.UniqueCellFates)), outputNodeStates);
+    else
+        associatedCellFates = cell(size(transientStates, 1), 1);
+    end
+    myNetwork.Trajectory = {indicies, associatedCellFates, transientStates};
+    bool = 1;
+catch
+    bool = 0;
+end
+end
+
+FILE Toolbox\Analyses\Probabilistic Analysis\Supplemetary functions\parse_TrajectoryBounds.m
+function bool = parse_TrajectoryBounds(obj, fileName, pathName)
+try
+    allData = importdata(fullfile(pathName, fileName));
+    if isempty(allData) || isstruct(allData)
+       undefined/0; 
+    end
+    if ~ismatrix(allData)
+        undefined/0;
+    end
+    if size(allData, 1) ~= 2 || size(allData, 2) ~= obj.NodeCount
+        undefined/0;
+    end
+    obj.TrajectoryBounds = allData;
+    bool = 1;
+catch
+    bool = 0;
+end
+end
+
+FILE Toolbox\Analyses\Probabilistic Analysis\Supplemetary functions\save_ProbabilisticAnalysisResults.m
+function bool = save_ProbabilisticAnalysisResults( myNetwork )
+try
+    progressbar('Saving results...');
+    if ~isempty(myNetwork.FileName)
+        PathName = [myNetwork.ResultFolderName, strrep(myNetwork.FileName, ' - ', filesep), 'Probabilistic Analysis Output', filesep];
+    else
+        PathName = [myNetwork.ResultFolderName, 'Probabilistic Analysis Output', filesep];
+    end
+    [~, ~] = mkdir(PathName);
+    if myNetwork.PruneStateSpace == 1
+        stateSpace = myNetwork.PrunnedStateSpacePA;
+    else
+        stateSpace = myNetwork.NetworkStateList;
+    end
+    if ~isempty(myNetwork.SteadyStateProbabilities)
+        FileName2 = [myNetwork.FileName, 'Steady State Probabilities', '.csv'];
+        names = myNetwork.NodeNames;
+        if size(names, 1) > 1
+            names = names';
+        end
+        SSPs = myNetwork.SteadyStateProbabilities;
+        progressbar(0.2/1);
+        if ~isempty(myNetwork.CellFateDeterminationLogic)
+            associatedCellFates = myNetwork.AssociatedCellFates;
+            if size(associatedCellFates, 1) ~= size(stateSpace, 1)
+                [~, locA] = ismember(stateSpace, myNetwork.NetworkStateList, 'rows');
+                if min(locA) == 0
+                    outputNodeActivities = cellfun(@(a) a(:, myNetwork.OutputNodesIndices), ...
+                        num2cell(stateSpace, 2), 'un', 0);
+                    associatedCellFates = cellfun(@(attr) associate_CellFates...
+                        (myNetwork.CellFateDeterminationLogic, attr, ...
+                        numel(myNetwork.UniqueCellFates)), outputNodeActivities);
+                else
+                    associatedCellFates = associatedCellFates(locA);
+                end
+            end
+        else
+            associatedCellFates = cell(size(stateSpace, 1), 1);
+        end
+        header = horzcat({'Attractor #'}, 'Associated Cell Fate', 'Steady State Probability');
+        try
+            fid = fopen(strcat(PathName, FileName2), 'w');
+        catch
+            fid = fopen(strcat(PathName, FileName2,' (2)'), 'w');
+        end
+        formatToken = '%s,';
+        fprintf(fid, formatToken, header{:, 1:3}, names{:});
+        fprintf(fid, ['\', 'n']);
+        for i = 1:size(SSPs, 1)  
+            attrNumb = int2str(i);
+            associatedFate = associatedCellFates{i};
+            propensity = num2str(SSPs(i));
+            fprintf(fid, '%s,', attrNumb, associatedFate, propensity);
+            fprintf(fid, '%u,', stateSpace(i, :));
+            fprintf(fid, ['\', 'n']);
+        end
+        progressbar(0.4/1);
+        fclose(fid);
+        clear attrCount associatedCellFates SSPs
+    end
+    if ~isempty(myNetwork.Trajectory)
+        FileName = [myNetwork.FileName, 'Mapped Trajectory', '.csv'];
+        trajectory = myNetwork.Trajectory;
+        statesInTrajectory = trajectory{3}(:, 2:end);
+        stateProbabilites = trajectory{3}(:, 1);
+        stateNum = trajectory{1};
+        associatedCellFates = trajectory{2};
+        names = myNetwork.NodeNames;
+        if size(names, 1) > 1
+            names = names';
+        end
+        progressbar(0.6/1);
+        header = horzcat({'#'}, 'Associated Cell Fate', 'Probabilities', names);
+        try
+            fid = fopen(strcat(PathName, FileName), 'w');
+        catch
+            fid = fopen(strcat(PathName, FileName,' (2)'), 'w'); 
+        end
+        formatToken = '%s,';
+        fprintf(fid, formatToken, header{:, 1:3}, names{:});
+        fprintf(fid, ['\', 'n']);
+        for i = 1:size(stateNum, 1)  
+            attrNumb = int2str(stateNum(i));
+            associatedFate = associatedCellFates{i};
+            propensity = num2str(stateProbabilites(i));
+            fprintf(fid, '%s,', attrNumb, associatedFate, propensity);
+            fprintf(fid, '%u,', statesInTrajectory(i, :));
+            fprintf(fid, ['\', 'n']);
+        end
+        fclose(fid);
+        progressbar(0.8/1);
+    end
+    if ~isempty(myNetwork.SteadyStateTimeStep) && myNetwork.SteadyStateTimeStep > 0
+        FileName = [myNetwork.FileName, ' Steady State iteration'];
+        fid6 = fopen(strcat(PathName, FileName, '.txt'), 'w');        
+        fprintf(fid6, '%s', ['Iterations (Simulation Timesteps) taken to find steady state probabilities: ', num2str(myNetwork.SteadyStateTimeStep)]);
+        fclose(fid6);
+    end
+    clear data header stateProbabilites statesInTrajectory trajectory associatedCellFates
+    if myNetwork.PruneStateSpace == 1        
+        FileName = 'Prunned Network State List PA';
+    else
+        FileName = 'Network State List PA';
+    end
+    csvwrite(strcat(PathName, FileName, '.csv'), stateSpace);
+    save(strcat(PathName, FileName, '.mat'), 'stateSpace', '-v7.3');
+    progressbar(1/1);
+    bool = 1;
+catch
+    bool = 0;
+    progressbar(1/1);
+    fclose all;
+end
+end
+
+FILE Toolbox\Analyses\Probabilistic Analysis\Supplemetary functions\StateSpacePruning.m
+function prunnedStateSpace = StateSpacePruning(myNetwork)
+initialStatesList = myNetwork.NetworkStateList;
+updatedStateList = initialStatesList;
+prunnedStateSpace = [];
+if size(myNetwork.BasalValues, 1) > 1
+    bi = myNetwork.BasalValues';
+else
+    bi = myNetwork.BasalValues;
+end
+NodeStateUpdateSummmation = initialStatesList*(myNetwork.EdgeWeights) + repmat(bi, [size(initialStatesList, 1), 1]);
+indices = NodeStateUpdateSummmation > 0;
+updatedStateList(indices) = 1;
+indices = NodeStateUpdateSummmation < 0;
+updatedStateList(indices) = 0;
+indices = find(NodeStateUpdateSummmation == 0);
+updatedStateList(indices) = initialStatesList(indices);
+prunnedStateSpace = unique([prunnedStateSpace; updatedStateList], 'rows');
+end

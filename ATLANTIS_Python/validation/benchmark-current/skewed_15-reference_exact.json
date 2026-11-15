@@ -1,0 +1,178 @@
+{
+  "cycles": [
+    [
+      "000101010101010"
+    ],
+    [
+      "111010101010101"
+    ]
+  ],
+  "status": "complete_classically_certified",
+  "completion_reason": "Exhaustive F^T coverage audit; classical O(2^n*T), not a quantum certificate",
+  "search_attempts": 2,
+  "counting_calls": 1,
+  "rejected_measurements": 0,
+  "total_measurements": 256,
+  "invalid_measurements": 0,
+  "compiled_depth_max": 0,
+  "compiled_size_max": 0,
+  "compiled_2q_count_max": 0,
+  "oracle_calls_ideal": 4,
+  "search_runtime_s": 0.852823399938643,
+  "counting_runtime_s": 0.00538659980520606,
+  "simulation_runtime_s": 0.0008478001691401005,
+  "max_suppressed_leakage": 3.605340855892905e-31,
+  "classical_audit_runtime_s": 0.00759640010073781,
+  "classical_audit_states_scanned": 65536,
+  "history": [
+    {
+      "round": 0,
+      "kind": "measurements",
+      "counts": {
+        "000101010101010": 89,
+        "111010101010101": 39
+      }
+    },
+    {
+      "round": 0,
+      "kind": "new_cycle",
+      "cycle": [
+        "000101010101010"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    },
+    {
+      "round": 1,
+      "kind": "count",
+      "M_est": 24576,
+      "full_fraction": 0.0,
+      "cycles_found_before": 1
+    },
+    {
+      "round": 1,
+      "kind": "measurements",
+      "counts": {
+        "111010101010101": 128
+      }
+    },
+    {
+      "round": 1,
+      "kind": "new_cycle",
+      "cycle": [
+        "111010101010101"
+      ],
+      "retry": 0,
+      "rejected_measurements": 0
+    }
+  ],
+  "schema_version": 1,
+  "network": {
+    "names": [
+      "g00",
+      "g01",
+      "g02",
+      "g03",
+      "g04",
+      "g05",
+      "g06",
+      "g07",
+      "g08",
+      "g09",
+      "g10",
+      "g11",
+      "g12",
+      "g13",
+      "g14"
+    ],
+    "name": "skewed_15",
+    "weights": null,
+    "basal": null,
+    "rules": [
+      {
+        "expression": "(g00 & g01)"
+      },
+      {
+        "expression": "(g00 & g01)"
+      },
+      {
+        "expression": "(g00 & g01)"
+      },
+      {
+        "expression": "~(g00 & g01)"
+      },
+      {
+        "expression": "(g00 & g01)"
+      },
+      {
+        "expression": "~(g00 & g01)"
+      },
+      {
+        "expression": "(g00 & g01)"
+      },
+      {
+        "expression": "~(g00 & g01)"
+      },
+      {
+        "expression": "(g00 & g01)"
+      },
+      {
+        "expression": "~(g00 & g01)"
+      },
+      {
+        "expression": "(g00 & g01)"
+      },
+      {
+        "expression": "~(g00 & g01)"
+      },
+      {
+        "expression": "(g00 & g01)"
+      },
+      {
+        "expression": "~(g00 & g01)"
+      },
+      {
+        "expression": "(g00 & g01)"
+      }
+    ],
+    "positions": {}
+  },
+  "network_hash": "1cf92f15984c3ff7ec4f776c4817e77737353e8163f281581b1cf19bf9dfec89",
+  "parameters": {
+    "T": 1,
+    "engine": "reduced",
+    "counting_mode": "exact",
+    "shots": 128,
+    "counting_precision": 3,
+    "counting_shots": 128,
+    "seed": 0,
+    "max_rounds": 12,
+    "stop_policy": "classical_audit",
+    "max_qubits": 22,
+    "max_reference_states": 65536,
+    "max_memory_mib": 1024,
+    "max_compiled_depth": 200000,
+    "max_compiled_gates": 500000,
+    "max_verification_steps": 10000,
+    "timeout_seconds": 120,
+    "noise_probability": 0.0
+  },
+  "resources": {
+    "eligible": true,
+    "reasons": [],
+    "logical_evolution_qubits": 30,
+    "logical_counting_qubits": 0,
+    "circuit_qubits": 30,
+    "statevector_bytes_lower_bound": 17179869184,
+    "anf_terms": 21,
+    "transpiled_depth": null,
+    "transpiled_width": null,
+    "note": "MPS memory is entanglement-dependent. Transpiled limits checked before execution; worker deadline enforced."
+  },
+  "T_selection": "user supplied",
+  "taxonomy": "ideal mathematical quantum reference",
+  "basin_sizes": null,
+  "basin_size_origin": "unavailable; counting history estimates combined excluded coverage",
+  "classical_information": "enumerated F^T for exact M",
+  "total_runtime_s": 0.8710724001284689
+}
