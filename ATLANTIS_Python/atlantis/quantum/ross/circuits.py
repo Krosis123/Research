@@ -81,22 +81,27 @@ def append_update(qc, net: Network, step: int, *, relative=False):
     for i, rule in enumerate(net.rules):
         target = gene_qubit(net, step + 1, i)
         wires = [gene_qubit(net, step, source) for source in rule.inputs]
-        cube = _single_cube(tuple(rule.anf_terms))
-        terms = rule.anf_terms
-        inverted = []
-        if cube is not None:
-            support, negatives, complement = cube
-            inverted = [q for j, q in enumerate(wires) if negatives & (1 << j)]
-            terms = (support,)
-            if complement:
-                qc.x(target)
-        for q in inverted:
-            qc.x(q)
-        for term in terms:
-            controls = [q for j, q in enumerate(wires) if term & (1 << j)]
-            _toggle(qc, controls, target, relative)
-        for q in inverted:
-            qc.x(q)
+        append_rule(qc, rule, wires, target, relative=relative)
+
+
+def append_rule(qc, rule, wires, target, *, relative=False):
+    """XOR one compiled node update into target, with wires in rule input order."""
+    cube = _single_cube(tuple(rule.anf_terms))
+    terms = rule.anf_terms
+    inverted = []
+    if cube is not None:
+        support, negatives, complement = cube
+        inverted = [q for j, q in enumerate(wires) if negatives & (1 << j)]
+        terms = (support,)
+        if complement:
+            qc.x(target)
+    for q in inverted:
+        qc.x(q)
+    for term in terms:
+        controls = [q for j, q in enumerate(wires) if term & (1 << j)]
+        _toggle(qc, controls, target, relative)
+    for q in inverted:
+        qc.x(q)
 
 
 def time_evolution(net: Network,T: int, *, relative=False):

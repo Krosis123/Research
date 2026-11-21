@@ -1,0 +1,126 @@
+[
+  {
+    "case": 1,
+    "model": "NetworkFile",
+    "nodes": 11,
+    "verified_transitions": 2048,
+    "assumed_identity": [],
+    "probe": "MBF",
+    "expected_register": "10",
+    "backend": "ibm_fez",
+    "job": "dbtifd3nlcms73ajb7og",
+    "shots": 256,
+    "counts": {
+      "10": 207,
+      "00": 27,
+      "01": 3,
+      "11": 19
+    }
+  },
+  {
+    "case": 2,
+    "model": "Control_MCF7 (0)",
+    "nodes": 16,
+    "verified_transitions": 65536,
+    "assumed_identity": [],
+    "probe": "ATM",
+    "expected_register": "10",
+    "backend": "ibm_fez",
+    "job": "dbtifdrsbsbs73cb3f6g",
+    "shots": 256,
+    "counts": {
+      "10": 192,
+      "00": 56,
+      "11": 4,
+      "01": 4
+    }
+  },
+  {
+    "case": 2,
+    "model": "Etoposide",
+    "nodes": 16,
+    "verified_transitions": 65536,
+    "assumed_identity": [],
+    "probe": "ATM",
+    "expected_register": "10",
+    "backend": "ibm_fez",
+    "job": "dbtifesvruos73ccee1g",
+    "shots": 256,
+    "counts": {
+      "11": 31,
+      "10": 175,
+      "00": 46,
+      "01": 4
+    }
+  },
+  {
+    "case": 3,
+    "model": "case3",
+    "nodes": 201,
+    "verified_transitions": 128,
+    "assumed_identity": [
+      "Apoptosis",
+      "Cell_Adhesion",
+      "Cell_Migration",
+      "Proliferation",
+      "EGF",
+      "ECM",
+      "alpha_q_lig",
+      "alpha_i_lig",
+      "alpha_s_lig",
+      "alpha_12_13_lig",
+      "Stress",
+      "IL1_TNF",
+      "ExtPump",
+      "Fas",
+      "WNT",
+      "Tgf-b",
+      "DNA_damage"
+    ],
+    "probe": "Actin",
+    "expected_register": "10",
+    "backend": "ibm_fez",
+    "job": "dbtiffkvruos73ccee30",
+    "shots": 256,
+    "counts": {
+      "10": 241,
+      "00": 9,
+      "11": 6
+    }
+  },
+  {
+    "case": 4,
+    "model": "case4",
+    "nodes": 201,
+    "verified_transitions": 128,
+    "assumed_identity": [
+      "Apoptosis",
+      "Cell_Adhesion",
+      "Cell_Migration",
+      "Proliferation",
+      "EGF",
+      "ECM",
+      "alpha_q_lig",
+      "alpha_i_lig",
+      "alpha_s_lig",
+      "alpha_12_13_lig",
+      "Stress",
+      "IL1_TNF",
+      "ExtPump",
+      "Fas",
+      "WNT",
+      "Tgf-b",
+      "DNA_damage"
+    ],
+    "probe": "Actin",
+    "expected_register": "10",
+    "backend": "ibm_fez",
+    "job": "dbtifgjsbsbs73cb3fag",
+    "shots": 256,
+    "counts": {
+      "10": 238,
+      "11": 8,
+      "00": 10
+    }
+  }
+]
