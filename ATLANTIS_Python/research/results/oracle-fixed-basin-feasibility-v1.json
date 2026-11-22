@@ -1,0 +1,74 @@
+{
+  "description": "Seven identity regulators; output is their conjunction. Uniform independent bits. Known all-on target.",
+  "width": 9,
+  "marked": [
+    127,
+    255
+  ],
+  "uniform_iid_trials_95": 382,
+  "structure_aware_witness": 127,
+  "structure_aware_transition_evaluations": 1,
+  "rows": [
+    {
+      "iterations": 0,
+      "success": 0.00781249999999999,
+      "cx": 0,
+      "depth": 3
+    },
+    {
+      "iterations": 1,
+      "success": 0.06885528564453115,
+      "cx": 198,
+      "depth": 488
+    },
+    {
+      "iterations": 2,
+      "success": 0.1833701208233832,
+      "cx": 396,
+      "depth": 971
+    },
+    {
+      "iterations": 3,
+      "success": 0.33715448203292936,
+      "cx": 594,
+      "depth": 1454
+    },
+    {
+      "iterations": 4,
+      "success": 0.5111355041622196,
+      "cx": 792,
+      "depth": 1937
+    },
+    {
+      "iterations": 5,
+      "success": 0.6837354627870172,
+      "cx": 990,
+      "depth": 2420
+    },
+    {
+      "iterations": 6,
+      "success": 0.8335479177263156,
+      "cx": 1188,
+      "depth": 2903
+    },
+    {
+      "iterations": 7,
+      "success": 0.9419926133382297,
+      "cx": 1386,
+      "depth": 3386
+    },
+    {
+      "iterations": 8,
+      "success": 0.9956198656943288,
+      "cx": 1584,
+      "depth": 3869
+    },
+    {
+      "iterations": 9,
+      "success": 0.9877786386137286,
+      "cx": 1782,
+      "depth": 4352
+    }
+  ],
+  "local_simulation_and_compile_seconds": 1.4405335999908857
+}
