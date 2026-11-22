@@ -6,3 +6,5 @@ PySide6-Essentials==6.12.0
 h5py==3.16.0
 pytest==9.2.0
 -r requirements-quantum.txt
+
+z3-solver==5.4.1.0
