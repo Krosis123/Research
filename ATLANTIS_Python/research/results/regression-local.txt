@@ -1,0 +1,81 @@
+....F................................................................... [ 38%]
+........................................................................ [ 76%]
+.............................FF.............                             [100%]
+================================== FAILURES ===================================
+________________ test_classical_job_reruns_after_process_exit _________________
+
+tmp_path = WindowsPath('C:/Users/usman/AppData/Local/Temp/pytest-of-usman/pytest-42/test_classical_job_reruns_afte0')
+
+    def test_classical_job_reruns_after_process_exit(tmp_path):
+        path = tmp_path / 'jobs.db'
+>       network = load_network('examples/quantum/rossini4.json')
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+ATLANTIS_Python\tests\test_classical_recovery.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ATLANTIS_Python\atlantis\io.py:185: in load_network
+    if Path(path).stat().st_size>16*1024**2: raise ValueError('Network JSON exceeds 16 MiB limit')
+       ^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('examples/quantum/rossini4.json'), follow_symlinks = True
+
+    def stat(self, *, follow_symlinks=True):
+        """
+        Return the result of the stat() system call on this path, like
+        os.stat() does.
+        """
+>       return os.stat(self, follow_symlinks=follow_symlinks)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [WinError 3] The system cannot find the path specified: 'examples\\quantum\\rossini4.json'
+
+C:\Users\usman\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:840: FileNotFoundError
+_____________________________ test_quantum_dialog _____________________________
+
+qtapp = <PySide6.QtWidgets.QApplication(0x21ab8bd4500) at 0x0000021A920D3C40>
+
+    def test_quantum_dialog(qtapp):
+        from atlantis.gui import Application
+        w=Application();w.set_network(rossini());w.quantum_analysis();qtapp.processEvents()
+        d=w.dialogs[-1];assert d.check()['eligible']
+>       assert d.grab().save('validation/quantum-dialog.png')
+E       AssertionError: assert False
+E        +  where False = <built-in method save of PySide6.QtGui.QPixmap object at 0x0000021B535C43C0>('validation/quantum-dialog.png')
+E        +    where <built-in method save of PySide6.QtGui.QPixmap object at 0x0000021B535C43C0> = <PySide6.QtGui.QPixmap(QSize(900, 700),depth=32,devicePixelRatio=1,cacheKey=0x10c00000046) at 0x0000021B535C43C0>.save
+E        +      where <PySide6.QtGui.QPixmap(QSize(900, 700),depth=32,devicePixelRatio=1,cacheKey=0x10c00000046) at 0x0000021B535C43C0> = <built-in method grab of QuantumDialog object at 0x0000021B535C6900>()
+E        +        where <built-in method grab of QuantumDialog object at 0x0000021B535C6900> = <atlantis.quantum_ui.QuantumDialog(0x21b3f389130) at 0x0000021B535C6900>.grab
+
+ATLANTIS_Python\tests\test_quantum_integration.py:123: AssertionError
+___________________ test_five_gene_both_suppression_orders ____________________
+
+    def test_five_gene_both_suppression_orders():
+        from atlantis.io import load_network
+        from atlantis.quantum.ross.adaptive import terminal_states,reduced_probabilities
+>       q=QuantumNetwork(load_network('examples/quantum/giacomantonio5.json'));truth=exact_truth(q)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+ATLANTIS_Python\tests\test_quantum_integration.py:130: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ATLANTIS_Python\atlantis\io.py:185: in load_network
+    if Path(path).stat().st_size>16*1024**2: raise ValueError('Network JSON exceeds 16 MiB limit')
+       ^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('examples/quantum/giacomantonio5.json')
+follow_symlinks = True
+
+    def stat(self, *, follow_symlinks=True):
+        """
+        Return the result of the stat() system call on this path, like
+        os.stat() does.
+        """
+>       return os.stat(self, follow_symlinks=follow_symlinks)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [WinError 3] The system cannot find the path specified: 'examples\\quantum\\giacomantonio5.json'
+
+C:\Users\usman\AppData\Local\Programs\Python\Python312\Lib\pathlib.py:840: FileNotFoundError
+=========================== short test summary info ===========================
+FAILED ATLANTIS_Python\tests\test_classical_recovery.py::test_classical_job_reruns_after_process_exit
+FAILED ATLANTIS_Python\tests\test_quantum_integration.py::test_quantum_dialog
+FAILED ATLANTIS_Python\tests\test_quantum_integration.py::test_five_gene_both_suppression_orders
+3 failed, 185 passed, 16 warnings in 30.60s
