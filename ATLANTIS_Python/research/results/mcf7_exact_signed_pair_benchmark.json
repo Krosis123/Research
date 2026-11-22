@@ -1,0 +1,648 @@
+[
+  {
+    "environment": "off",
+    "treatment": "Control",
+    "hashes": [
+      "866ce70bdb7e8858572dd2c7d0bd4109cf4012c86cfff986f4d8c400504b483f",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "basins": {
+      "9428": 65536
+    },
+    "methods": {
+      "uniform": {
+        "p": 0.0,
+        "n95": null,
+        "support": 65536,
+        "expected_unique_rare64": 0.0,
+        "expected_unique_total64": 1.0,
+        "wins": 0,
+        "trials": 512,
+        "success95": [
+          0.0,
+          0.007178950026259453
+        ]
+      },
+      "legacy_matched": {
+        "p": 0.0,
+        "n95": null,
+        "support": 256,
+        "expected_unique_rare64": 0.0,
+        "expected_unique_total64": 1.0,
+        "wins": 0,
+        "trials": 512,
+        "success95": [
+          0.0,
+          0.007178950026259453
+        ]
+      },
+      "legacy_uniform_mixture": {
+        "p": 0.0,
+        "n95": null,
+        "support": 65536,
+        "expected_unique_rare64": 0.0,
+        "expected_unique_total64": 1.0,
+        "wins": 0,
+        "trials": 512,
+        "success95": [
+          0.0,
+          0.007178950026259453
+        ]
+      },
+      "signed_matching": {
+        "p": 0.0,
+        "n95": null,
+        "support": 65536,
+        "expected_unique_rare64": 0.0,
+        "expected_unique_total64": 1.0,
+        "wins": 0,
+        "trials": 512,
+        "success95": [
+          0.0,
+          0.007178950026259453
+        ]
+      },
+      "scrambled_matching": {
+        "p": 0.0,
+        "n95": null,
+        "support": 65536,
+        "expected_unique_rare64": 0.0,
+        "expected_unique_total64": 1.0,
+        "wins": 0,
+        "trials": 512,
+        "success95": [
+          0.0,
+          0.007178950026259453
+        ]
+      }
+    }
+  },
+  {
+    "environment": "off",
+    "treatment": "Nutlin",
+    "hashes": [
+      "866ce70bdb7e8858572dd2c7d0bd4109cf4012c86cfff986f4d8c400504b483f",
+      "3e15c65a4b62a75272862b0ab87c66ba7d7c0da0ca5789e73cdde1444a2381c7"
+    ],
+    "basins": {
+      "27859": 8112,
+      "27860": 49164,
+      "28051": 8008,
+      "28052": 130,
+      "28054": 122
+    },
+    "methods": {
+      "uniform": {
+        "p": 0.00384521484375,
+        "n95": 778,
+        "support": 65536,
+        "expected_unique_rare64": 0.23175167894195825,
+        "expected_unique_total64": 3.2313006867812892,
+        "wins": 97,
+        "trials": 512,
+        "success95": [
+          0.1564083087624299,
+          0.22613038793995688
+        ]
+      },
+      "legacy_matched": {
+        "p": 0.0,
+        "n95": null,
+        "support": 256,
+        "expected_unique_rare64": 0.0,
+        "expected_unique_total64": 2.9606852814085824,
+        "wins": 0,
+        "trials": 512,
+        "success95": [
+          0.0,
+          0.007178950026259453
+        ]
+      },
+      "legacy_uniform_mixture": {
+        "p": 0.0007690429687499982,
+        "n95": 3894,
+        "support": 65536,
+        "expected_unique_rare64": 0.048626714723488784,
+        "expected_unique_total64": 3.0332266405157817,
+        "wins": 18,
+        "trials": 512,
+        "success95": [
+          0.020966408701819816,
+          0.054994288604838286
+        ]
+      },
+      "signed_matching": {
+        "p": 0.00894584296875001,
+        "n95": 334,
+        "support": 65536,
+        "expected_unique_rare64": 0.4799645996284192,
+        "expected_unique_total64": 3.4788058023495516,
+        "wins": 222,
+        "trials": 512,
+        "success95": [
+          0.3901827019316987,
+          0.4777757677605138
+        ]
+      },
+      "scrambled_matching": {
+        "p": 0.001215442968750001,
+        "n95": 2464,
+        "support": 65536,
+        "expected_unique_rare64": 0.07631200314297115,
+        "expected_unique_total64": 3.0759961467705885,
+        "wins": 45,
+        "trials": 512,
+        "success95": [
+          0.06482977461995097,
+          0.1158368275504745
+        ]
+      }
+    }
+  },
+  {
+    "environment": "off",
+    "treatment": "Wip1 KD",
+    "hashes": [
+      "866ce70bdb7e8858572dd2c7d0bd4109cf4012c86cfff986f4d8c400504b483f",
+      "e68e3452580f539d26d13821c994d6bfa68330c9c31041b613a3fa2b17119f42"
+    ],
+    "basins": {
+      "9428": 65536
+    },
+    "methods": {
+      "uniform": {
+        "p": 0.0,
+        "n95": null,
+        "support": 65536,
+        "expected_unique_rare64": 0.0,
+        "expected_unique_total64": 1.0,
+        "wins": 0,
+        "trials": 512,
+        "success95": [
+          0.0,
+          0.007178950026259453
+        ]
+      },
+      "legacy_matched": {
+        "p": 0.0,
+        "n95": null,
+        "support": 256,
+        "expected_unique_rare64": 0.0,
+        "expected_unique_total64": 1.0,
+        "wins": 0,
+        "trials": 512,
+        "success95": [
+          0.0,
+          0.007178950026259453
+        ]
+      },
+      "legacy_uniform_mixture": {
+        "p": 0.0,
+        "n95": null,
+        "support": 65536,
+        "expected_unique_rare64": 0.0,
+        "expected_unique_total64": 1.0,
+        "wins": 0,
+        "trials": 512,
+        "success95": [
+          0.0,
+          0.007178950026259453
+        ]
+      },
+      "signed_matching": {
+        "p": 0.0,
+        "n95": null,
+        "support": 65536,
+        "expected_unique_rare64": 0.0,
+        "expected_unique_total64": 1.0,
+        "wins": 0,
+        "trials": 512,
+        "success95": [
+          0.0,
+          0.007178950026259453
+        ]
+      },
+      "scrambled_matching": {
+        "p": 0.0,
+        "n95": null,
+        "support": 65536,
+        "expected_unique_rare64": 0.0,
+        "expected_unique_total64": 1.0,
+        "wins": 0,
+        "trials": 512,
+        "success95": [
+          0.0,
+          0.007178950026259453
+        ]
+      }
+    }
+  },
+  {
+    "environment": "off",
+    "treatment": "Nutlin + Wip KD",
+    "hashes": [
+      "866ce70bdb7e8858572dd2c7d0bd4109cf4012c86cfff986f4d8c400504b483f",
+      "9a7b51ab742d01b16c6b668559bcbb1bd7ebcde948700eba9cf60a731ebd3b76"
+    ],
+    "basins": {
+      "25811": 29651,
+      "25812": 28057,
+      "26003": 7576,
+      "26004": 130,
+      "26006": 122
+    },
+    "methods": {
+      "uniform": {
+        "p": 0.00384521484375,
+        "n95": 778,
+        "support": 65536,
+        "expected_unique_rare64": 0.23175167894195825,
+        "expected_unique_total64": 3.2313666436350275,
+        "wins": 97,
+        "trials": 512,
+        "success95": [
+          0.1564083087624299,
+          0.22613038793995688
+        ]
+      },
+      "legacy_matched": {
+        "p": 0.0,
+        "n95": null,
+        "support": 256,
+        "expected_unique_rare64": 0.0,
+        "expected_unique_total64": 2.963171469816843,
+        "wins": 0,
+        "trials": 512,
+        "success95": [
+          0.0,
+          0.007178950026259453
+        ]
+      },
+      "legacy_uniform_mixture": {
+        "p": 0.0007690429687499982,
+        "n95": 3894,
+        "support": 65536,
+        "expected_unique_rare64": 0.048626714723488784,
+        "expected_unique_total64": 3.033449973388336,
+        "wins": 18,
+        "trials": 512,
+        "success95": [
+          0.020966408701819816,
+          0.054994288604838286
+        ]
+      },
+      "signed_matching": {
+        "p": 0.00894584296875001,
+        "n95": 334,
+        "support": 65536,
+        "expected_unique_rare64": 0.4799645996284192,
+        "expected_unique_total64": 3.479729119055472,
+        "wins": 222,
+        "trials": 512,
+        "success95": [
+          0.3901827019316987,
+          0.4777757677605138
+        ]
+      },
+      "scrambled_matching": {
+        "p": 0.001215442968750001,
+        "n95": 2464,
+        "support": 65536,
+        "expected_unique_rare64": 0.07631200314297115,
+        "expected_unique_total64": 3.076089599755461,
+        "wins": 45,
+        "trials": 512,
+        "success95": [
+          0.06482977461995097,
+          0.1158368275504745
+        ]
+      }
+    }
+  },
+  {
+    "environment": "on",
+    "treatment": "Control",
+    "hashes": [
+      "d06af39e28d9c7f8d99bc42fb9185847855d5f0cd799ef97ad6f9df04b1932b1",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "basins": {
+      "13460": 65536
+    },
+    "methods": {
+      "uniform": {
+        "p": 0.0,
+        "n95": null,
+        "support": 65536,
+        "expected_unique_rare64": 0.0,
+        "expected_unique_total64": 1.0,
+        "wins": 0,
+        "trials": 512,
+        "success95": [
+          0.0,
+          0.007178950026259453
+        ]
+      },
+      "legacy_matched": {
+        "p": 0.0,
+        "n95": null,
+        "support": 256,
+        "expected_unique_rare64": 0.0,
+        "expected_unique_total64": 1.0,
+        "wins": 0,
+        "trials": 512,
+        "success95": [
+          0.0,
+          0.007178950026259453
+        ]
+      },
+      "legacy_uniform_mixture": {
+        "p": 0.0,
+        "n95": null,
+        "support": 65536,
+        "expected_unique_rare64": 0.0,
+        "expected_unique_total64": 1.0,
+        "wins": 0,
+        "trials": 512,
+        "success95": [
+          0.0,
+          0.007178950026259453
+        ]
+      },
+      "signed_matching": {
+        "p": 0.0,
+        "n95": null,
+        "support": 65536,
+        "expected_unique_rare64": 0.0,
+        "expected_unique_total64": 1.0,
+        "wins": 0,
+        "trials": 512,
+        "success95": [
+          0.0,
+          0.007178950026259453
+        ]
+      },
+      "scrambled_matching": {
+        "p": 0.0,
+        "n95": null,
+        "support": 65536,
+        "expected_unique_rare64": 0.0,
+        "expected_unique_total64": 1.0,
+        "wins": 0,
+        "trials": 512,
+        "success95": [
+          0.0,
+          0.007178950026259453
+        ]
+      }
+    }
+  },
+  {
+    "environment": "on",
+    "treatment": "Nutlin",
+    "hashes": [
+      "d06af39e28d9c7f8d99bc42fb9185847855d5f0cd799ef97ad6f9df04b1932b1",
+      "3e15c65a4b62a75272862b0ab87c66ba7d7c0da0ca5789e73cdde1444a2381c7"
+    ],
+    "basins": {
+      "13460": 35016,
+      "27859": 7866,
+      "27860": 7549,
+      "28051": 13466,
+      "28052": 1471,
+      "28054": 168
+    },
+    "methods": {
+      "uniform": {
+        "p": 0.0025634765625,
+        "n95": 1168,
+        "support": 65536,
+        "expected_unique_rare64": 0.15148977631554972,
+        "expected_unique_total64": 4.916920183011836,
+        "wins": 61,
+        "trials": 512,
+        "success95": [
+          0.09237026401229939,
+          0.15039877084647452
+        ]
+      },
+      "legacy_matched": {
+        "p": 0.0,
+        "n95": null,
+        "support": 256,
+        "expected_unique_rare64": 0.0,
+        "expected_unique_total64": 4.21157889366792,
+        "wins": 0,
+        "trials": 512,
+        "success95": [
+          0.0,
+          0.007178950026259453
+        ]
+      },
+      "legacy_uniform_mixture": {
+        "p": 0.000512695312499999,
+        "n95": 5842,
+        "support": 65536,
+        "expected_unique_rare64": 0.03228815255862194,
+        "expected_unique_total64": 4.412836598367825,
+        "wins": 17,
+        "trials": 512,
+        "success95": [
+          0.01945868698795647,
+          0.052630293172314976
+        ]
+      },
+      "signed_matching": {
+        "p": 0.0024566953124999947,
+        "n95": 1218,
+        "support": 65536,
+        "expected_unique_rare64": 0.14565650590630752,
+        "expected_unique_total64": 4.868154531903886,
+        "wins": 72,
+        "trials": 512,
+        "success95": [
+          0.11168395813116617,
+          0.17378850508086463
+        ]
+      },
+      "scrambled_matching": {
+        "p": 0.0009061453125000004,
+        "n95": 3305,
+        "support": 65536,
+        "expected_unique_rare64": 0.05636853948676057,
+        "expected_unique_total64": 4.865925090906654,
+        "wins": 30,
+        "trials": 512,
+        "success95": [
+          0.03987841979893665,
+          0.0825923942870529
+        ]
+      }
+    }
+  },
+  {
+    "environment": "on",
+    "treatment": "Wip1 KD",
+    "hashes": [
+      "d06af39e28d9c7f8d99bc42fb9185847855d5f0cd799ef97ad6f9df04b1932b1",
+      "e68e3452580f539d26d13821c994d6bfa68330c9c31041b613a3fa2b17119f42"
+    ],
+    "basins": {
+      "33972": 62541,
+      "58579": 192,
+      "58580": 4,
+      "58771": 2760,
+      "58804": 20,
+      "58806": 19
+    },
+    "methods": {
+      "uniform": {
+        "p": 0.0035858154296875,
+        "n95": 834,
+        "support": 65536,
+        "expected_unique_rare64": 0.2128286688461477,
+        "expected_unique_total64": 2.149137770499836,
+        "wins": 107,
+        "trials": 512,
+        "success95": [
+          0.17455567920989282,
+          0.24681269754611485
+        ]
+      },
+      "legacy_matched": {
+        "p": 0.004119873046875,
+        "n95": 726,
+        "support": 256,
+        "expected_unique_rare64": 0.23219272301319327,
+        "expected_unique_total64": 1.9821175318344122,
+        "wins": 117,
+        "trials": 512,
+        "success95": [
+          0.19282597624136455,
+          0.26737329996523646
+        ]
+      },
+      "legacy_uniform_mixture": {
+        "p": 0.004013061523437477,
+        "n95": 745,
+        "support": 65536,
+        "expected_unique_rare64": 0.22874226369695239,
+        "expected_unique_total64": 2.0380719222948067,
+        "wins": 119,
+        "trials": 512,
+        "success95": [
+          0.1964937409499196,
+          0.27147183825154003
+        ]
+      },
+      "signed_matching": {
+        "p": 0.0033765630859374967,
+        "n95": 886,
+        "support": 65536,
+        "expected_unique_rare64": 0.2060957939544673,
+        "expected_unique_total64": 2.16699234659388,
+        "wins": 106,
+        "trials": 512,
+        "success95": [
+          0.17273519907319734,
+          0.2447501500033538
+        ]
+      },
+      "scrambled_matching": {
+        "p": 0.004018863085937501,
+        "n95": 744,
+        "support": 65536,
+        "expected_unique_rare64": 0.2298878650282693,
+        "expected_unique_total64": 2.1724078440326413,
+        "wins": 121,
+        "trials": 512,
+        "success95": [
+          0.20016588141077196,
+          0.2755660377241222
+        ]
+      }
+    }
+  },
+  {
+    "environment": "on",
+    "treatment": "Nutlin + Wip KD",
+    "hashes": [
+      "d06af39e28d9c7f8d99bc42fb9185847855d5f0cd799ef97ad6f9df04b1932b1",
+      "9a7b51ab742d01b16c6b668559bcbb1bd7ebcde948700eba9cf60a731ebd3b76"
+    ],
+    "basins": {
+      "58579": 11838,
+      "58580": 6240,
+      "58771": 35271,
+      "58804": 11797,
+      "58806": 390
+    },
+    "methods": {
+      "uniform": {
+        "p": 0.005950927734375,
+        "n95": 502,
+        "support": 65536,
+        "expected_unique_rare64": 0.3175029841615,
+        "expected_unique_total64": 4.315841609727486,
+        "wins": 147,
+        "trials": 512,
+        "success95": [
+          0.2482714750795105,
+          0.32842561199171166
+        ]
+      },
+      "legacy_matched": {
+        "p": 0.0,
+        "n95": null,
+        "support": 256,
+        "expected_unique_rare64": 0.0,
+        "expected_unique_total64": 3.9999122097235325,
+        "wins": 0,
+        "trials": 512,
+        "success95": [
+          0.0,
+          0.007178950026259453
+        ]
+      },
+      "legacy_uniform_mixture": {
+        "p": 0.0011901855468750087,
+        "n95": 2516,
+        "support": 65536,
+        "expected_unique_rare64": 0.07338511343224274,
+        "expected_unique_total64": 4.073225367166163,
+        "wins": 40,
+        "trials": 512,
+        "success95": [
+          0.05639779599588579,
+          0.10486635710025514
+        ]
+      },
+      "signed_matching": {
+        "p": 0.005435785546875008,
+        "n95": 550,
+        "support": 65536,
+        "expected_unique_rare64": 0.2944934644048435,
+        "expected_unique_total64": 4.293563893641489,
+        "wins": 155,
+        "trials": 512,
+        "success95": [
+          0.2631993352829099,
+          0.34456476659751034
+        ]
+      },
+      "scrambled_matching": {
+        "p": 0.002120035546874993,
+        "n95": 1412,
+        "support": 65536,
+        "expected_unique_rare64": 0.12700574526500585,
+        "expected_unique_total64": 4.125520450592273,
+        "wins": 66,
+        "trials": 512,
+        "success95": [
+          0.10111644958008395,
+          0.16106263849967187
+        ]
+      }
+    }
+  }
+]

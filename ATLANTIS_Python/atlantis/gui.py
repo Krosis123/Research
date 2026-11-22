@@ -73,7 +73,7 @@ class Application(GuideWindow):
 
     def context(self,position):
         menu=W.QMenu(self)
-        for title,callback in [('Open Python Network...',self.open_network),('Save Network...',self.save_network),('Configure External and Fixed Nodes...',self.configure_inputs),('Edit / Create Network...',self.edit_network),('Export Analysis Results...',self.export_results),('Open Saved Results...',self.open_results),('Recover Classical Job...',self.recover_classical_job),('Load Saved Mapping...',self.load_mapping),('Save Regulatory DOT...',self.save_dot),('User Manual',self.help)]:
+        for title,callback in [('Open Python Network...',self.open_network),('Bounded attractor and basin search...',self.bounded_search),('Save Network...',self.save_network),('Configure External and Fixed Nodes...',self.configure_inputs),('Edit / Create Network...',self.edit_network),('Export Analysis Results...',self.export_results),('Open Saved Results...',self.open_results),('Recover Classical Job...',self.recover_classical_job),('Load Saved Mapping...',self.load_mapping),('Save Regulatory DOT...',self.save_dot),('User Manual',self.help)]:
             a=menu.addAction(title); a.triggered.connect(lambda _,f=callback:self.safe(f))
         menu.exec(self.mapToGlobal(position))
 
@@ -137,8 +137,34 @@ class Application(GuideWindow):
             self.set_network(network); w.accept()
         w.bind('Ok',load)
 
+    def bounded_search(self):
+        from .bounded_basins import bounded_basins
+        import json
+        if not self.networks:
+            raise ValueError("Open a network first")
+        net = self.networks[0].copy()
+        budget,ok = W.QInputDialog.getInt(self,"Bounded search",f"{net.name}: maximum starts (period and transient up to 6)",65536,1,10000000)
+        if not ok:
+            return
+        path,_ = W.QFileDialog.getSaveFileName(self,"Save bounded basin results","bounded-basins.json","JSON (*.json)")
+        if not path:
+            return
+        def complete(result):
+            Path(path).write_text(json.dumps(result),encoding="utf-8")
+            scope = "Exhaustive" if result["exhaustive"] else "Uniform sample"
+            W.QMessageBox.information(self,"Bounded basins",f"{scope}: {len(result['basins'])} sampled/enumerated cycles across {result['starts']} starts. Symbolic results by period are in the report. Outside bounds: {result['unresolved']}. Results saved to {path}")
+        def work(progress,cancel):
+            report = bounded_basins(net,budget,progress=progress,cancel=cancel)
+            if not report["exhaustive"] and net.rules is not None:
+                from .symbolic_cycles import symbolic_cycles
+                progress(0.95,"Searching for additional cycles by Boolean constraints")
+                report["symbolic_periods"] = symbolic_cycles(net,cancel=cancel)
+                report["symbolic_basin_definition"] = "For each listed cycle C, its bounded basin is exactly the starting states x with F^6(x) in C. Sample histogram counts are separate."
+            return report
+        self.start_job(work,complete)
+
     def open_network(self):
-        p=self.file('Open Network','Python network (*.json);;Weighted network (*.csv *.txt)')
+        p=self.file('Open Network','Boolean or Python network (*.bnet *.json);;Weighted network (*.csv *.txt)')
         if p: self.set_network(io.load_network(p))
     def save_network(self):
         if not self.networks: raise ValueError('Load or create a network first')

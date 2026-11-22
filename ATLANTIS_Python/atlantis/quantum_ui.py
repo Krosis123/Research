@@ -13,6 +13,7 @@ class QuantumDialog(W.QDialog):
         self.account=IBMAccount();self.backend_name=''
         self.finished.connect(lambda _:self.account.disconnect())
         self.setWindowTitle('ATLANTIS | Quantum analysis & experiments'); self.resize(900,700)
+        self.setStyleSheet('QDialog { background-color: white; } QLabel { color: #202020; background-color: white; }')
         layout=W.QVBoxLayout(self)
         label=W.QLabel('Use the loaded ATLANTIS network. Reference = classical amplitude model; Aer = actual circuits.\nT is user supplied. Finite QPE completion is heuristic. Exact M uses classical enumeration.')
         label.setWordWrap(True); layout.addWidget(label)
@@ -22,42 +23,60 @@ class QuantumDialog(W.QDialog):
         self.counting=W.QComboBox(); self.counting.addItems(['exact','qpe_ideal','qpe_aer']); form.addRow('Counting',self.counting)
         self.stop=W.QComboBox(); self.stop.addItems(['classical_audit','qpe','bounded']); form.addRow('Stopping policy',self.stop)
         self.fields={}
-        for name,value,lo,hi in [('T',3,1,10000),('shots',256,1,100000),('counting_precision',3,1,10),
+        field_labels = ['Evolution steps (T)', 'Search shots', 'Counting precision (bits)', 'Counting shots',
+                        'Random seed', 'Maximum rounds', 'Maximum qubits', 'Memory limit (MiB)', 'Timeout (seconds)']
+        for label_text, (name,value,lo,hi) in zip(field_labels, [('T',3,1,10000),('shots',256,1,100000),('counting_precision',3,1,10),
             ('counting_shots',128,1,100000),('seed',42,0,2147483647),('max_rounds',12,1,1000),
-            ('max_qubits',22,1,1000),('max_memory_mib',1024,1,1048576),('timeout_seconds',120,1,3600)]:
-            box=W.QSpinBox();box.setRange(lo,hi);box.setValue(value);self.fields[name]=box;form.addRow(name.replace('_',' '),box)
+            ('max_qubits',22,1,1000),('max_memory_mib',1024,1,1048576),('timeout_seconds',120,1,3600)]):
+            box=W.QSpinBox();box.setRange(lo,hi);box.setValue(value);self.fields[name]=box;form.addRow(label_text,box)
         self.noise=W.QDoubleSpinBox();self.noise.setRange(0,.2);self.noise.setDecimals(4);self.noise.setSingleStep(.001)
         form.addRow('Depolarizing gate noise probability',self.noise)
         row=W.QHBoxLayout();layout.addLayout(row)
         for title,callback in [('Preflight',self.check),('Run',self.launch),('Compare classical',self.compare),
                                ('Export JSON',self.export),('Plot measurements',self.plot),('Job history',self.history),('IBM account',self.ibm)]:
             b=W.QPushButton(title);row.addWidget(b);b.clicked.connect(lambda _,f=callback:self.safe(f))
-        self.scientific_status=W.QLabel()
+        root = Path(__file__).resolve().parents[2]
+        runner = root / "ATLANTIS_Python/tools/erbb004_update.py"
+        if runner.is_file() and (root / "research_sources/erbb004.bnet").is_file():
+            benchmark = W.QPushButton("Run fixed ErbB benchmark on IBM (one update, 256 shots)")
+            layout.addWidget(benchmark)
+            def open_benchmark():
+                import subprocess
+                import sys
+                python = Path(sys.executable).with_name("python.exe")
+                subprocess.Popen([str(python), "-i", str(runner)], cwd=root,
+                                 creationflags=subprocess.CREATE_NEW_CONSOLE)
+            benchmark.clicked.connect(lambda: self.safe(open_benchmark))
+        self.scientific_status=W.QLabel('Status: Ready.')
         self.scientific_status.setWordWrap(True)
         layout.addWidget(self.scientific_status)
+        layout.addWidget(W.QLabel('Analysis output and error details'))
         self.output=W.QPlainTextEdit();self.output.setReadOnly(True);layout.addWidget(self.output)
 
     def safe(self, callback):
         try:
             callback()
         except Exception as error:
-            self.show_error(str(error))
+            self.show_error(str(error), callback.__name__.capitalize() + ' failed', 'ATL-Q-' + callback.__name__.upper())
 
-    def show_error(self, message, heading='Error'):
-        self.scientific_status.setText(f'{heading}. See the details below.')
-        self.output.appendPlainText(f'\n{heading}\n{message}')
+    def show_error(self, message, heading='Analysis failed', code='ATL-Q-RUN'):
+        self.scientific_status.setText(f"[{code}] {heading.rstrip('.')}. See the details below.")
+        self.output.appendPlainText(f"\n[{code}] {heading.rstrip('.')}\n{message}")
 
     def settings(self):
         return Settings(engine=self.engine.currentText(),counting_mode=self.counting.currentText(),
             stop_policy=self.stop.currentText(),noise_probability=self.noise.value(),**{k:v.value() for k,v in self.fields.items()})
 
-    def selected(self): return self.app.networks[self.network.currentIndex()].copy()
+    def selected(self):
+        if self.network.currentIndex() < 0:
+            raise ValueError('Load a network in Generate Network first.')
+        return self.app.networks[self.network.currentIndex()].copy()
 
     def check(self):
         assessment=preflight(self.selected(),self.settings())
         self.scientific_status.setText(
             'Preflight passed. Execution has not started.' if assessment['eligible']
-            else 'Resource or configuration rejection. No circuit was executed.')
+            else '[ATL-Q-PREFLIGHT] Preflight rejected these settings. No circuit was executed. ' + ' '.join(assessment['reasons']))
         self.output.setPlainText(json.dumps(assessment,indent=2));return assessment
 
     def launch(self):
@@ -123,23 +142,23 @@ class QuantumDialog(W.QDialog):
         # Initial distribution only; suppressed rounds are different distributions.
         counts=records[0]['counts'];total=sum(counts.values())
         ax.bar(list(counts),[v/total for v in counts.values()]);ax.tick_params(axis='x',rotation=60)
-        ax.set_ylabel('Observed frequency');ax.set_title(self.result['taxonomy']+' — first search round')
+        ax.set_xlabel('Measured state');ax.set_ylabel('Observed frequency');ax.set_title(self.result['taxonomy']+' — first search round')
         fig.tight_layout();self.app.show_figure(fig,'Quantum measurements')
 
     def history(self):
         store=JobStore();rows=store.list()
         d=W.QDialog(self);d.setWindowTitle('Persistent quantum jobs');box=W.QVBoxLayout(d)
-        listing=W.QListWidget();box.addWidget(listing)
+        listing=W.QListWidget();box.addWidget(W.QLabel('Saved jobs (creation time | status | ID)'));box.addWidget(listing)
         for row in rows:listing.addItem(row['created']+' | '+row['status']+' | '+row['id'])
         def open_selected():
             i=listing.currentRow()
             if i>=0 and rows[i]['result']:self.complete(json.loads(rows[i]['result']));d.accept()
-        b=W.QPushButton('Open selected result');b.clicked.connect(open_selected);box.addWidget(b)
+        b=W.QPushButton('Open selected result');b.clicked.connect(lambda:self.safe(open_selected));box.addWidget(b)
         b=W.QPushButton('Mark interrupted jobs after restart')
         def recover():
             if self.app.job and self.app.job.isRunning():raise ValueError('An active job is still running')
             store.recover();d.accept()
-        b.clicked.connect(lambda:self.app.safe(recover));box.addWidget(b);d.resize(800,400);d.exec()
+        b.clicked.connect(lambda:self.safe(recover));box.addWidget(b);d.resize(800,400);d.exec()
 
     def ibm(self):
         from .quantum.ibm import IBMAccount
@@ -150,7 +169,7 @@ class QuantumDialog(W.QDialog):
             try:
                 callback()
             except Exception as error:
-                status.appendPlainText(f'\nError\n{error}')
+                status.appendPlainText(f'\n[ATL-Q-IBM] The IBM account or job request failed.\n{error}')
         layout.addRow('API key (memory only)',token);layout.addRow('Instance CRN',instance);layout.addRow('QPU',backends)
         def connect():
             secret=token.text();token.clear()
@@ -161,7 +180,7 @@ class QuantumDialog(W.QDialog):
         b=W.QPushButton('Connect / discover QPUs');b.clicked.connect(lambda:show_account_status(connect));layout.addRow(b)
         b=W.QPushButton('Disconnect');b.clicked.connect(lambda:(account.disconnect(),token.clear(),backends.clear(),status.setPlainText('Disconnected')));layout.addRow(b)
         backends.currentTextChanged.connect(lambda name:setattr(self,'backend_name',name))
-        layout.addRow(status)
+        layout.addRow('Account and job status',status)
         job_id=W.QLineEdit();job_id.setPlaceholderText('Paste an existing IBM job ID')
         layout.addRow('Existing provider job ID',job_id)
         def provider_status():status.setPlainText(account.status(job_id.text()))

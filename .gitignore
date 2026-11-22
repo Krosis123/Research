@@ -9,3 +9,16 @@ __pycache__/
 __pycache__/
 .venv/
 .env
+.venv-atlantis/
+.venv-atlantis-clean022/
+.venv-atlantis-clean023/
+.venv-atlantis-clean024/
+ATLANTIS_Python/.graphviz/
+ATLANTIS_Python/.pytest_cache/
+research_sources/
+dist/
+wheel-smoke/
+ATLANTIS_Python/build/
+ATLANTIS_Python/atlantis_python.egg-info/
+
+/*.zip

@@ -1,6 +1,6 @@
 """Translate canonical ATLANTIS models to reversible ANF without changing dynamics."""
 import numpy as np
-from ..model import decimal_to_binary
+from ..model import TruthRule
 from ..expressions import ExpressionRule
 from .ross.model import Rule
 
@@ -16,12 +16,20 @@ class QuantumNetwork:
         self.rules = []
         for target in range(self.n):
             r = network.rules[target] if network.weights is None else None
-            if isinstance(r, ExpressionRule):
+            if isinstance(r, TruthRule):
+                # Row-index bit zero is the last source in the imported table.
+                inputs = tuple(reversed(r.sources))
+                values = r.outputs.copy()
+                for j in range(len(inputs)):
+                    halves = values.reshape(-1, 2, 1 << j)
+                    halves[:, 1] ^= halves[:, 0]
+                terms = tuple(map(int, np.flatnonzero(values)))
+            elif isinstance(r, ExpressionRule):
                 inputs = tuple(r.sources)
                 terms = r.anf(max_terms=max_terms)
             else:
                 if network.weights is not None:
-                    inputs = tuple(sorted(set(np.flatnonzero(network.weights[:,target])) | {target}))
+                    inputs = tuple(sorted(set(map(int, np.flatnonzero(network.weights[:,target]))) | {target}))
                 else: inputs = tuple(r.sources) if r else (target,)
                 if len(inputs)>max_fanin:
                     raise ValueError(f'Node {network.names[target]} requires {len(inputs)} inputs; bounded table compiler limit is {max_fanin}. Use a symbolic rule where possible.')
@@ -48,6 +56,8 @@ class QuantumNetwork:
                     else:simplified.add(reduced)
             if network.names[target] in network.clamped:
                 simplified={0} if network.clamped[network.names[target]] else set()
+            if len(simplified) > max_terms:
+                raise ValueError(f"Node {network.names[target]} exceeds ANF term budget {max_terms}")
             self.rules.append(Rule('',inputs,(),tuple(sorted(simplified))))
 
     def step(self,x):

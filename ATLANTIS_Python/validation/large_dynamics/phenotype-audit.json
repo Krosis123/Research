@@ -1,0 +1,29 @@
+{
+  "free_inputs": [
+    "v_IFNA",
+    "v_IFNG",
+    "v_CASP7_Activator",
+    "v_IRF2_Activator",
+    "v_Virus",
+    "v_CASP6_Activator"
+  ],
+  "marker": "v_Apoptosis",
+  "branches": 64,
+  "discovery_draws": 8,
+  "holdout_draws": 64,
+  "misses": 0,
+  "upper95": 0.04572970233076244,
+  "stop": true,
+  "discovered_cycles": 8,
+  "exact_cycles": 64,
+  "observed_marker_classes": [
+    [
+      0,
+      1
+    ],
+    [
+      1
+    ]
+  ],
+  "exact_unseen_marker_mass": 0.0
+}
