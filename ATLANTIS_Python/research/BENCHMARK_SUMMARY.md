@@ -12,3 +12,5 @@ Raw experiment configurations, cycle words, ordered discovery sequences and audi
 ### Follow-up with a longer horizon
 
 For 99 independently audited rare ErbB targets under the fixed all-zero external input condition, fresh trials give an estimated 51 independent draws for a 95% chance of first discovery under the global bias mixture, 52 under the SCC mixture, and 109 under uniform sampling. Scrambled SCC requires an estimated 116. Estimates are specific to this frozen target set and condition. Analogous discovery of any genuinely rare attractor could include additional unlabelled outcomes. No quantum sampling advantage was tested or established by these classical controls.
+
+For discovering *any verified rare attractor* in the fixed-input ErbB benchmark, symbolic search yielded 80 replayed cycles independently certified below 1% using simultaneous upper confidence bounds. This is a stronger baseline than trajectory sampling alone. For finding a random starting state in a particular frozen target set, the sampling comparisons address a different output.
