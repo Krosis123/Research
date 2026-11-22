@@ -178,6 +178,9 @@ def load_mapping(path):
 
 
 def load_network(path):
+    if Path(path).suffix.lower()=='.bnet':
+        from .bounded_basins import load_bnet
+        return load_bnet(path)
     if Path(path).suffix.lower()!='.json': return load_weighted(path)
     if Path(path).stat().st_size>16*1024**2: raise ValueError('Network JSON exceeds 16 MiB limit')
     d=json.loads(Path(path).read_text(encoding='utf-8'))

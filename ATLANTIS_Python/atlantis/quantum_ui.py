@@ -35,6 +35,18 @@ class QuantumDialog(W.QDialog):
         for title,callback in [('Preflight',self.check),('Run',self.launch),('Compare classical',self.compare),
                                ('Export JSON',self.export),('Plot measurements',self.plot),('Job history',self.history),('IBM account',self.ibm)]:
             b=W.QPushButton(title);row.addWidget(b);b.clicked.connect(lambda _,f=callback:self.safe(f))
+        root = Path(__file__).resolve().parents[2]
+        runner = root / "ATLANTIS_Python/tools/erbb004_update.py"
+        if runner.is_file() and (root / "research_sources/erbb004.bnet").is_file():
+            benchmark = W.QPushButton("Run fixed ErbB benchmark on IBM (one update, 256 shots)")
+            layout.addWidget(benchmark)
+            def open_benchmark():
+                import subprocess
+                import sys
+                python = Path(sys.executable).with_name("python.exe")
+                subprocess.Popen([str(python), "-i", str(runner)], cwd=root,
+                                 creationflags=subprocess.CREATE_NEW_CONSOLE)
+            benchmark.clicked.connect(lambda: self.safe(open_benchmark))
         self.scientific_status=W.QLabel('Status: Ready.')
         self.scientific_status.setWordWrap(True)
         layout.addWidget(self.scientific_status)
