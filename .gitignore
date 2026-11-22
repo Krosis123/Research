@@ -20,3 +20,5 @@ dist/
 wheel-smoke/
 ATLANTIS_Python/build/
 ATLANTIS_Python/atlantis_python.egg-info/
+
+/*.zip
