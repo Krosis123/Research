@@ -1,0 +1,4150 @@
+{
+  "uniform": {
+    "seconds": 13.607433199998923,
+    "rows": [
+      {
+        "seed": 12000,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12001,
+        "first": 31,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12002,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12003,
+        "first": 28,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12004,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 24,
+        "unresolved": 0
+      },
+      {
+        "seed": 12005,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12006,
+        "first": 25,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12007,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12008,
+        "first": 1,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12009,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12010,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12011,
+        "first": 19,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12012,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12013,
+        "first": 28,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12014,
+        "first": 13,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12015,
+        "first": 1,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 32,
+        "unresolved": 0
+      },
+      {
+        "seed": 12016,
+        "first": 13,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12017,
+        "first": 3,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12018,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12019,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12020,
+        "first": 1,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12021,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 24,
+        "unresolved": 0
+      },
+      {
+        "seed": 12022,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12023,
+        "first": 4,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12024,
+        "first": 8,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12025,
+        "first": 9,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12026,
+        "first": 1,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12027,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12028,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12029,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12030,
+        "first": 5,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12031,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12032,
+        "first": 1,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12033,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12034,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12035,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12036,
+        "first": 19,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12037,
+        "first": 27,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12038,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12039,
+        "first": 12,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12040,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12041,
+        "first": 26,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12042,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12043,
+        "first": 6,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12044,
+        "first": 20,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 32,
+        "unresolved": 0
+      },
+      {
+        "seed": 12045,
+        "first": 15,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12046,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12047,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12048,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12049,
+        "first": 11,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12050,
+        "first": 4,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12051,
+        "first": 21,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12052,
+        "first": 23,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12053,
+        "first": 9,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12054,
+        "first": 13,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12055,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12056,
+        "first": 3,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12057,
+        "first": 13,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 32,
+        "unresolved": 0
+      },
+      {
+        "seed": 12058,
+        "first": 2,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12059,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12060,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12061,
+        "first": 5,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12062,
+        "first": 24,
+        "hits": 2,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12063,
+        "first": 23,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12064,
+        "first": 30,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12065,
+        "first": 9,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12066,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12067,
+        "first": 22,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12068,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12069,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12070,
+        "first": 5,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12071,
+        "first": 3,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12072,
+        "first": 17,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12073,
+        "first": 22,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12074,
+        "first": 31,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12075,
+        "first": 10,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 24,
+        "unresolved": 0
+      },
+      {
+        "seed": 12076,
+        "first": 13,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12077,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12078,
+        "first": 8,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12079,
+        "first": 8,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12080,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12081,
+        "first": 9,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12082,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12083,
+        "first": 13,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12084,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12085,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12086,
+        "first": 24,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12087,
+        "first": 12,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12088,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12089,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12090,
+        "first": 12,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12091,
+        "first": 10,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12092,
+        "first": 18,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12093,
+        "first": 9,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12094,
+        "first": 25,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12095,
+        "first": 7,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12096,
+        "first": 1,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12097,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12098,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12099,
+        "first": 17,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12100,
+        "first": 10,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12101,
+        "first": 1,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12102,
+        "first": 16,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12103,
+        "first": 4,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12104,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12105,
+        "first": 12,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12106,
+        "first": 1,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12107,
+        "first": 5,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12108,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12109,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12110,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12111,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12112,
+        "first": 5,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12113,
+        "first": 25,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12114,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12115,
+        "first": 25,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12116,
+        "first": 26,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12117,
+        "first": 22,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12118,
+        "first": 16,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12119,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12120,
+        "first": 2,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12121,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12122,
+        "first": 15,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12123,
+        "first": 30,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12124,
+        "first": 13,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12125,
+        "first": 1,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12126,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12127,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 27,
+        "unresolved": 0
+      }
+    ],
+    "successes": 78,
+    "per_draw": 0.02734375,
+    "n95_estimated": 109,
+    "rate_ci": [
+      0.0225668197603146,
+      0.03280976100808288
+    ],
+    "mean_distinct": 0.8671875
+  },
+  "scc_mixture": {
+    "seconds": 13.485109600005671,
+    "rows": [
+      {
+        "seed": 12000,
+        "first": 8,
+        "hits": 4,
+        "distinct": 4,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12001,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12002,
+        "first": 1,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12003,
+        "first": 7,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12004,
+        "first": 15,
+        "hits": 2,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12005,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12006,
+        "first": 9,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12007,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12008,
+        "first": 16,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12009,
+        "first": 14,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12010,
+        "first": 24,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12011,
+        "first": 19,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12012,
+        "first": 28,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12013,
+        "first": 3,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12014,
+        "first": 17,
+        "hits": 4,
+        "distinct": 4,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12015,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12016,
+        "first": 13,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12017,
+        "first": 2,
+        "hits": 3,
+        "distinct": 2,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12018,
+        "first": 14,
+        "hits": 3,
+        "distinct": 2,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12019,
+        "first": 20,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12020,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 24,
+        "unresolved": 0
+      },
+      {
+        "seed": 12021,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 24,
+        "unresolved": 0
+      },
+      {
+        "seed": 12022,
+        "first": 2,
+        "hits": 4,
+        "distinct": 3,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12023,
+        "first": 22,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12024,
+        "first": 8,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12025,
+        "first": 9,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12026,
+        "first": 1,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12027,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12028,
+        "first": 2,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12029,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12030,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12031,
+        "first": 12,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12032,
+        "first": 30,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12033,
+        "first": 1,
+        "hits": 2,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12034,
+        "first": 13,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12035,
+        "first": 1,
+        "hits": 3,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12036,
+        "first": 32,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12037,
+        "first": 13,
+        "hits": 5,
+        "distinct": 4,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12038,
+        "first": 10,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12039,
+        "first": 1,
+        "hits": 2,
+        "distinct": 1,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12040,
+        "first": 11,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12041,
+        "first": 4,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12042,
+        "first": 28,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12043,
+        "first": 6,
+        "hits": 3,
+        "distinct": 2,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12044,
+        "first": 5,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12045,
+        "first": 15,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12046,
+        "first": 7,
+        "hits": 3,
+        "distinct": 1,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12047,
+        "first": 10,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 24,
+        "unresolved": 0
+      },
+      {
+        "seed": 12048,
+        "first": 11,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12049,
+        "first": 3,
+        "hits": 4,
+        "distinct": 3,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12050,
+        "first": 26,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12051,
+        "first": 11,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12052,
+        "first": 18,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12053,
+        "first": 9,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 23,
+        "unresolved": 0
+      },
+      {
+        "seed": 12054,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12055,
+        "first": 14,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 24,
+        "unresolved": 0
+      },
+      {
+        "seed": 12056,
+        "first": 11,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12057,
+        "first": 15,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12058,
+        "first": 9,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12059,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12060,
+        "first": 13,
+        "hits": 2,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12061,
+        "first": 5,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12062,
+        "first": 13,
+        "hits": 3,
+        "distinct": 2,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12063,
+        "first": 18,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12064,
+        "first": 29,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12065,
+        "first": 9,
+        "hits": 5,
+        "distinct": 5,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12066,
+        "first": 1,
+        "hits": 4,
+        "distinct": 2,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12067,
+        "first": 8,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12068,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12069,
+        "first": 29,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12070,
+        "first": 5,
+        "hits": 4,
+        "distinct": 2,
+        "coverage": 24,
+        "unresolved": 0
+      },
+      {
+        "seed": 12071,
+        "first": 17,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12072,
+        "first": 14,
+        "hits": 4,
+        "distinct": 3,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12073,
+        "first": 18,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 24,
+        "unresolved": 0
+      },
+      {
+        "seed": 12074,
+        "first": 24,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12075,
+        "first": 1,
+        "hits": 4,
+        "distinct": 4,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12076,
+        "first": 13,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12077,
+        "first": 9,
+        "hits": 3,
+        "distinct": 2,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12078,
+        "first": 12,
+        "hits": 3,
+        "distinct": 1,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12079,
+        "first": 3,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 23,
+        "unresolved": 0
+      },
+      {
+        "seed": 12080,
+        "first": 3,
+        "hits": 2,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12081,
+        "first": 6,
+        "hits": 4,
+        "distinct": 4,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12082,
+        "first": 31,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12083,
+        "first": 32,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12084,
+        "first": 20,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12085,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12086,
+        "first": 12,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12087,
+        "first": 12,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 24,
+        "unresolved": 0
+      },
+      {
+        "seed": 12088,
+        "first": 5,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12089,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12090,
+        "first": 12,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12091,
+        "first": 2,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12092,
+        "first": 28,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12093,
+        "first": 6,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12094,
+        "first": 7,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12095,
+        "first": 3,
+        "hits": 5,
+        "distinct": 3,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12096,
+        "first": 1,
+        "hits": 4,
+        "distinct": 2,
+        "coverage": 24,
+        "unresolved": 0
+      },
+      {
+        "seed": 12097,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12098,
+        "first": 29,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12099,
+        "first": 17,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12100,
+        "first": 10,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12101,
+        "first": 1,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12102,
+        "first": 16,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12103,
+        "first": 4,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12104,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12105,
+        "first": 12,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12106,
+        "first": 1,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12107,
+        "first": 4,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12108,
+        "first": 9,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12109,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12110,
+        "first": 7,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12111,
+        "first": 32,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12112,
+        "first": 3,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12113,
+        "first": 17,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12114,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12115,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12116,
+        "first": 1,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12117,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12118,
+        "first": 15,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12119,
+        "first": 17,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12120,
+        "first": 15,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12121,
+        "first": 2,
+        "hits": 2,
+        "distinct": 1,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12122,
+        "first": 11,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12123,
+        "first": 9,
+        "hits": 3,
+        "distinct": 2,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12124,
+        "first": 8,
+        "hits": 5,
+        "distinct": 4,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12125,
+        "first": 16,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12126,
+        "first": 17,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12127,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 28,
+        "unresolved": 0
+      }
+    ],
+    "successes": 107,
+    "per_draw": 0.05615234375,
+    "n95_estimated": 52,
+    "rate_ci": [
+      0.04929872103324436,
+      0.06364727060865907
+    ],
+    "mean_distinct": 1.5546875
+  },
+  "permuted_scc": {
+    "seconds": 14.021653500036336,
+    "rows": [
+      {
+        "seed": 12000,
+        "first": 2,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12001,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12002,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12003,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12004,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12005,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12006,
+        "first": 25,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12007,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12008,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12009,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12010,
+        "first": 26,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12011,
+        "first": 19,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12012,
+        "first": 11,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12013,
+        "first": 3,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12014,
+        "first": 17,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12015,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12016,
+        "first": 13,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12017,
+        "first": 8,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12018,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12019,
+        "first": 20,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12020,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12021,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 24,
+        "unresolved": 0
+      },
+      {
+        "seed": 12022,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12023,
+        "first": 22,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12024,
+        "first": 8,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12025,
+        "first": 3,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12026,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12027,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12028,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12029,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 23,
+        "unresolved": 0
+      },
+      {
+        "seed": 12030,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12031,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12032,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12033,
+        "first": 21,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12034,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12035,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12036,
+        "first": 19,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12037,
+        "first": 20,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12038,
+        "first": 10,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12039,
+        "first": 14,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12040,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12041,
+        "first": 25,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 32,
+        "unresolved": 0
+      },
+      {
+        "seed": 12042,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12043,
+        "first": 6,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12044,
+        "first": 20,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12045,
+        "first": 15,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12046,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12047,
+        "first": 6,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12048,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12049,
+        "first": 11,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12050,
+        "first": 26,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12051,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12052,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12053,
+        "first": 9,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12054,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12055,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12056,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12057,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12058,
+        "first": 28,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12059,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12060,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12061,
+        "first": 5,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12062,
+        "first": 24,
+        "hits": 2,
+        "distinct": 1,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12063,
+        "first": 6,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12064,
+        "first": 18,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12065,
+        "first": 9,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12066,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12067,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12068,
+        "first": 27,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12069,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12070,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12071,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12072,
+        "first": 8,
+        "hits": 4,
+        "distinct": 4,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12073,
+        "first": 22,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12074,
+        "first": 21,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12075,
+        "first": 10,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12076,
+        "first": 13,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12077,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12078,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12079,
+        "first": 8,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12080,
+        "first": 23,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12081,
+        "first": 9,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12082,
+        "first": 13,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12083,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12084,
+        "first": 20,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12085,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12086,
+        "first": 24,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12087,
+        "first": 12,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12088,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12089,
+        "first": 17,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 24,
+        "unresolved": 0
+      },
+      {
+        "seed": 12090,
+        "first": 12,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12091,
+        "first": 28,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12092,
+        "first": 28,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12093,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12094,
+        "first": 25,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12095,
+        "first": 7,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12096,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12097,
+        "first": 10,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12098,
+        "first": 5,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12099,
+        "first": 17,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12100,
+        "first": 10,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12101,
+        "first": 1,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12102,
+        "first": 13,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12103,
+        "first": 4,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12104,
+        "first": 22,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12105,
+        "first": 12,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12106,
+        "first": 1,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12107,
+        "first": 8,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12108,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12109,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12110,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12111,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12112,
+        "first": 7,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12113,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12114,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12115,
+        "first": 32,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12116,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12117,
+        "first": 14,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12118,
+        "first": 16,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12119,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12120,
+        "first": 15,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12121,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12122,
+        "first": 15,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12123,
+        "first": 30,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12124,
+        "first": 13,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12125,
+        "first": 16,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12126,
+        "first": 28,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12127,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 28,
+        "unresolved": 0
+      }
+    ],
+    "successes": 72,
+    "per_draw": 0.025634765625,
+    "n95_estimated": 116,
+    "rate_ci": [
+      0.02101345468650876,
+      0.030948320139813
+    ],
+    "mean_distinct": 0.8125
+  },
+  "global_bias": {
+    "seconds": 13.349302599963266,
+    "rows": [
+      {
+        "seed": 12000,
+        "first": 5,
+        "hits": 4,
+        "distinct": 3,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12001,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12002,
+        "first": 1,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12003,
+        "first": 7,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12004,
+        "first": 15,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12005,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 24,
+        "unresolved": 0
+      },
+      {
+        "seed": 12006,
+        "first": 25,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12007,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12008,
+        "first": 22,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12009,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12010,
+        "first": 26,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 23,
+        "unresolved": 0
+      },
+      {
+        "seed": 12011,
+        "first": 19,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12012,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12013,
+        "first": 3,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12014,
+        "first": 17,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12015,
+        "first": 16,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12016,
+        "first": 9,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12017,
+        "first": 2,
+        "hits": 2,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12018,
+        "first": 14,
+        "hits": 5,
+        "distinct": 2,
+        "coverage": 24,
+        "unresolved": 0
+      },
+      {
+        "seed": 12019,
+        "first": 32,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12020,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12021,
+        "first": 3,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 24,
+        "unresolved": 0
+      },
+      {
+        "seed": 12022,
+        "first": 11,
+        "hits": 2,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12023,
+        "first": 4,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12024,
+        "first": 8,
+        "hits": 4,
+        "distinct": 3,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12025,
+        "first": 9,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12026,
+        "first": 1,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12027,
+        "first": 14,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12028,
+        "first": 13,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12029,
+        "first": 10,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12030,
+        "first": 5,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12031,
+        "first": 8,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12032,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12033,
+        "first": 1,
+        "hits": 3,
+        "distinct": 2,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12034,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12035,
+        "first": 1,
+        "hits": 4,
+        "distinct": 2,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12036,
+        "first": 10,
+        "hits": 3,
+        "distinct": 2,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12037,
+        "first": 23,
+        "hits": 4,
+        "distinct": 3,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12038,
+        "first": 10,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12039,
+        "first": 1,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12040,
+        "first": 7,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 32,
+        "unresolved": 0
+      },
+      {
+        "seed": 12041,
+        "first": 4,
+        "hits": 3,
+        "distinct": 2,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12042,
+        "first": 28,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 24,
+        "unresolved": 0
+      },
+      {
+        "seed": 12043,
+        "first": 6,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12044,
+        "first": 13,
+        "hits": 3,
+        "distinct": 2,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12045,
+        "first": 15,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12046,
+        "first": 7,
+        "hits": 4,
+        "distinct": 3,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12047,
+        "first": 21,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12048,
+        "first": 11,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12049,
+        "first": 3,
+        "hits": 3,
+        "distinct": 2,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12050,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12051,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12052,
+        "first": 18,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12053,
+        "first": 9,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 24,
+        "unresolved": 0
+      },
+      {
+        "seed": 12054,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 24,
+        "unresolved": 0
+      },
+      {
+        "seed": 12055,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12056,
+        "first": 11,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12057,
+        "first": 15,
+        "hits": 2,
+        "distinct": 1,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12058,
+        "first": 15,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12059,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12060,
+        "first": 13,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12061,
+        "first": 5,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12062,
+        "first": 13,
+        "hits": 3,
+        "distinct": 2,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12063,
+        "first": 23,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12064,
+        "first": 22,
+        "hits": 3,
+        "distinct": 2,
+        "coverage": 24,
+        "unresolved": 0
+      },
+      {
+        "seed": 12065,
+        "first": 9,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12066,
+        "first": 1,
+        "hits": 4,
+        "distinct": 2,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12067,
+        "first": 12,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12068,
+        "first": 27,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12069,
+        "first": 7,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12070,
+        "first": 5,
+        "hits": 3,
+        "distinct": 1,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12071,
+        "first": 5,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12072,
+        "first": 14,
+        "hits": 4,
+        "distinct": 3,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12073,
+        "first": 18,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12074,
+        "first": 21,
+        "hits": 4,
+        "distinct": 2,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12075,
+        "first": 7,
+        "hits": 4,
+        "distinct": 4,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12076,
+        "first": 13,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12077,
+        "first": 28,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12078,
+        "first": 12,
+        "hits": 3,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12079,
+        "first": 3,
+        "hits": 4,
+        "distinct": 4,
+        "coverage": 23,
+        "unresolved": 0
+      },
+      {
+        "seed": 12080,
+        "first": 3,
+        "hits": 3,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12081,
+        "first": 9,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12082,
+        "first": 31,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12083,
+        "first": 8,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12084,
+        "first": 20,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12085,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 31,
+        "unresolved": 0
+      },
+      {
+        "seed": 12086,
+        "first": 12,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12087,
+        "first": 12,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12088,
+        "first": 5,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12089,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 24,
+        "unresolved": 0
+      },
+      {
+        "seed": 12090,
+        "first": 8,
+        "hits": 3,
+        "distinct": 2,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12091,
+        "first": 10,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12092,
+        "first": 28,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12093,
+        "first": 6,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12094,
+        "first": 25,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12095,
+        "first": 3,
+        "hits": 5,
+        "distinct": 3,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12096,
+        "first": 1,
+        "hits": 3,
+        "distinct": 1,
+        "coverage": 22,
+        "unresolved": 0
+      },
+      {
+        "seed": 12097,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12098,
+        "first": 21,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12099,
+        "first": 16,
+        "hits": 3,
+        "distinct": 3,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12100,
+        "first": 10,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12101,
+        "first": 1,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12102,
+        "first": 16,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12103,
+        "first": 4,
+        "hits": 4,
+        "distinct": 4,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12104,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12105,
+        "first": 12,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12106,
+        "first": 1,
+        "hits": 5,
+        "distinct": 5,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12107,
+        "first": 8,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12108,
+        "first": 9,
+        "hits": 2,
+        "distinct": 1,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12109,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12110,
+        "first": 7,
+        "hits": 2,
+        "distinct": 1,
+        "coverage": 24,
+        "unresolved": 0
+      },
+      {
+        "seed": 12111,
+        "first": 32,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12112,
+        "first": 3,
+        "hits": 2,
+        "distinct": 1,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12113,
+        "first": 17,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12114,
+        "first": 11,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12115,
+        "first": 22,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12116,
+        "first": 1,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12117,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 32,
+        "unresolved": 0
+      },
+      {
+        "seed": 12118,
+        "first": 15,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12119,
+        "first": 17,
+        "hits": 2,
+        "distinct": 1,
+        "coverage": 24,
+        "unresolved": 0
+      },
+      {
+        "seed": 12120,
+        "first": 15,
+        "hits": 2,
+        "distinct": 1,
+        "coverage": 27,
+        "unresolved": 0
+      },
+      {
+        "seed": 12121,
+        "first": 2,
+        "hits": 3,
+        "distinct": 2,
+        "coverage": 25,
+        "unresolved": 0
+      },
+      {
+        "seed": 12122,
+        "first": 15,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12123,
+        "first": 9,
+        "hits": 3,
+        "distinct": 2,
+        "coverage": 28,
+        "unresolved": 0
+      },
+      {
+        "seed": 12124,
+        "first": 8,
+        "hits": 4,
+        "distinct": 3,
+        "coverage": 30,
+        "unresolved": 0
+      },
+      {
+        "seed": 12125,
+        "first": 16,
+        "hits": 2,
+        "distinct": 2,
+        "coverage": 26,
+        "unresolved": 0
+      },
+      {
+        "seed": 12126,
+        "first": 17,
+        "hits": 1,
+        "distinct": 1,
+        "coverage": 29,
+        "unresolved": 0
+      },
+      {
+        "seed": 12127,
+        "first": null,
+        "hits": 0,
+        "distinct": 0,
+        "coverage": 28,
+        "unresolved": 0
+      }
+    ],
+    "successes": 108,
+    "per_draw": 0.05712890625,
+    "n95_estimated": 51,
+    "rate_ci": [
+      0.05021722747943529,
+      0.0646803645618263
+    ],
+    "mean_distinct": 1.4921875
+  }
+}
